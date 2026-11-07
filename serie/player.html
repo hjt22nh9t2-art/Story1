@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Nebelsand Player</title>
+<style>html,body{margin:0;background:#000}canvas{width:270px;height:480px}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+  const ep = new URLSearchParams(location.search).get('ep') || 'teil_01';
+  const mod = await import(`/${ep}/episode.js`);
+  try { await mod.init(); window.DURATION = mod.DURATION; window.renderFrame = mod.renderFrame; window.renderCover = mod.renderCover; window.ready = true; }
+  catch (e) { window.initError = String(e && e.stack || e); console.error(e); }
+</script>
+</body></html>
