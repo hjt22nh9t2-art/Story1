@@ -3,3 +3,6 @@ serie/teil_*/roh/seg/
 serie/teil_*/roh/stills/
 serie/teil_*/roh/*.log
 __pycache__/
+serie/teil_*/roh/video_stumm.mp4
+serie/teil_*/roh/master.wav
+serie/teil_*/roh/final.mp4

@@ -89,7 +89,7 @@ const shots = [
       jonasExt.root.visible = true; jonasExt.idle(t); jonasExt.lookUp(0.6);
       const jp = boat.localToWorld(v3(1.4, 0.55, 0)); jonasExt.root.position.copy(jp); jonasExt.root.rotation.y = Math.PI;
       beamToward(v3(-7.6, 2, z), 1.4);
-      placeCamera(E.camera, jp.clone().add(v3(0.3, 1.3, 2.2)), v3(-3, 6, -3), 48, t, 1);
+      placeCamera(E.camera, jp.clone().add(v3(1.3, 1.55, 2.0)), v3(-3, 6, -3), 48, t, 1);
       return { exposure: 1.15 };
     } },
   // 5 „Ein Leuchtturm.“ – Untersicht
@@ -194,8 +194,9 @@ const shots = [
   // 18 Jonas' Gesicht – „Dann …“
   { a: 46.25, b: 47.05, scene: 'room', run(t, l) {
       room.update(t, { lampLevel: 0.6 }); jonasIn.root.visible = true; jonasIn.idle(t); jonasIn.sit();
-      jonasIn.root.position.set(0, 0, -0.42); jonasIn.root.rotation.y = Math.PI; jonasIn.torso.rotation.x = 0.15; jonasIn.head.rotation.y = -0.45; jonasIn.neck.rotation.x = 0.1;
-      placeCamera(E.camera, v3(0.12, 1.47, -1.05 + l * 0.05), v3(0, 1.43, -0.5), 38, t, 0.5);
+      jonasIn.root.position.set(0, 0, -0.42); jonasIn.root.rotation.y = Math.PI; jonasIn.torso.rotation.x = 0.15; jonasIn.head.rotation.y = 0.45; jonasIn.neck.rotation.x = 0.15;
+      room.radio.clockTex.userData.draw('3:32'); room.scene.updateMatrixWorld(true);
+      placeCamera(E.camera, v3(1.55 - l * 0.15, 1.75, 0.05), v3(0.1, 1.15, -0.9), 40, t, 0.5);
       return { exposure: 1.1 };
     } },
   // 19 3:33 – harter Schnitt, Ziffern springen

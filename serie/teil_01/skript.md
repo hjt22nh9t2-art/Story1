@@ -30,7 +30,7 @@
 | 2 | 2,3–4,7 | **HOOK:** Haustür von innen. Ein Schlag, die Tür zittert, hinter dem Milchglas ist ein Schatten zu sehen | Lautes Klopfen, „… klopfte es an meiner Tür.“ |
 | 3 | 4,7–7,3 | Luftaufnahme: winzige Insel, der Lichtkegel kreist, Jonas steht klein vor dem Haus | „Dabei bin ich der einzige Mensch …“ |
 | 4 | 7,3–9,5 | Postboot im Nebel von der Seite, Jonas steht am Bug | Bootsmotor, Möwen |
-| 5 | 9,5–11,7 | Über die Schulter: Jonas sieht den Turm aus dem Nebel auftauchen | „… auf Nebelsand abgesetzt.“ |
+| 5 | 9,5–11,7 | Jonas’ Blick vom Boot: Der Turm taucht leuchtend aus dem Nebel auf | „… auf Nebelsand abgesetzt.“ |
 | 6 | 11,7–12,4 | Schnitt: Turm in extremer Untersicht | „Ein Leuchtturm.“ |
 | 7 | 12,4–13,25 | Schnitt: Wärterhaus mit warmen Fenstern | „Ein Haus.“ |
 | 8 | 13,25–14,15 | Schnitt: Jonas kommt den Steg entlang | Schritte auf Holz, „Ein Steg.“ |
@@ -44,7 +44,7 @@
 | 16 | 36,9–40,65 | Jonas ist am Tisch eingeschlafen, die Öllampe brennt herunter | Funkrauschen setzt ein |
 | 17 | 40,65–42,35 | Nahaufnahme Funkgerät, nervöse Handkamera | Lautes Rauschen, „Nur Rauschen.“ |
 | 18 | 42,35–46,25 | Radiowecker: **3:32** | „Ich sah auf die Uhr …“ |
-| 19 | 46,25–47,05 | Jonas’ Gesicht im Lampenlicht | „Dann …“ |
+| 19 | 46,25–47,05 | Jonas sitzt als Silhouette vor Öllampe und Logbuch und starrt zur Uhr | „Dann …“ |
 | 20 | 47,05–49,9 | **Harter Schnitt:** Die Ziffern springen auf **3:33** | Klick, Bass-Schlag, die Musik fällt ab |
 | 21 | 49,9–51,6 | Leuchtturm von außen: Die Lampe flackert und erlischt | Brummen, „Und das Licht ging aus.“, Power-down |
 | 22 | 51,6–56,8 | **CLIFFHANGER:** Dunkler Flur, Lichtspalt unter der Tür, dort erscheinen zwei Schatten (Füße). Es klopft dreimal, Wasser läuft unter der Tür herein, dann erscheint eine Gestalt hinter dem Milchglas | Stille, 3× Klopfen (52,6 / 53,3 / 54,0), Schreck-Sound bei 54,9 |

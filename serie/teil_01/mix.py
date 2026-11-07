@@ -99,12 +99,12 @@ put(rs, 37.6, 0)
 clk = sfx.stereo((sfx.hp(sfx.noise(0.05, 4), 2000) * np.exp(-np.arange(secs(0.05)) / SR * 80)).astype(np.float32))
 put(clk, 47.05, -10); put(sfx.sub_hit(2.0, 50), 47.05, -8)
 # Licht stirbt
-put(sfx.set_rms(sfx.lamp_flicker(0.65), -24), 50.3, 0); put(sfx.power_down(1.4), 50.9, -12)
+put(sfx.set_rms(sfx.lamp_flicker(0.65), -24), 50.3, 0); put(sfx.power_down(1.4), 50.9, -26)
 # Dreimal Klopfen
 for i, t0 in enumerate([52.6, 53.3, 54.0]): put(sfx.knock(20 + i, 1.4, 0.45), t0, -1.5)
 for i, t0 in enumerate([53.7, 54.45, 55.9]): put(sfx.drip(i), t0, -26)
 put(sfx.whoosh_riser(0.6), 54.3, -20)
-put(sfx.sting(2.6), 54.9, 0)
+put(sfx.sting(2.6), 54.9, -6)
 
 # ---------------- Summe
 mix += voice_st

@@ -19,7 +19,8 @@
 - Nebel `FogExp2` Farbe `#163a42`, Dichte 0.016–0.026; Hintergrund `#10303a`
 - Mond `#5f8fa8` (Richtungslicht 2.2) + Hemisphäre `#5f93a0`/`#0c1618` (1.1) + Fill `#3d7080` (0.9)
 - Lampenlicht nur Orange: `#ffa04a` / heiß `#ffd29a`; Leuchtfeuer-Kegel `#ffc68a`, eine Umdrehung pro 9 s
-- Post: ACES-Tonemapping, Bloom 0.55 (Schwelle 0.78), Split-Toning (Schatten Blaugrün), 12 % entsättigt, Vignette, animiertes Filmkorn, leichte chromatische Aberration
+- Post: ACES-Tonemapping, Bloom 0.55 (Schwelle 0.78), Split-Toning (Schatten Blaugrün), 12 % entsättigt, Vignette, leichte chromatische Aberration
+- Filmkorn wird NICHT eingerendert, sondern beim Export mit `noise=c0s=3:c0f=t` (ffmpeg) aufgelegt. Eingerendertes Pixelkorn hätte 544 MB pro Minute ergeben, und Entrauschen erzeugt Geisterschrift bei Untertiteln
 - Kamera: Handkamera-Wackler über `handheld()` in `assets/lib.js`, vertikales FOV 34–62°
 - Untertitel: Montserrat 900, 84 px, weiß mit schwarzem Rand (17 % der Schriftgröße), aktives Wort orange `#ffb04a`, max. 3 Wörter pro Einblendung, Mitte bei y = 1410 px. Frei bleiben unten 250 px und rechts 150 px
 - Titel: Anton 180 px „TEIL X/10“ + Serienname Montserrat 800 34 px, 0–3 s
@@ -35,7 +36,8 @@
 - Rendern: `cd serie && npm i && node render.mjs teil_01 --workers 3` (≈ 45 min für 60 s)
 - Testbilder: `node render.mjs teil_01 --stills 1,12.5,30` · Cover: `node render.mjs teil_01 --cover teil_01/cover.png`
 - Ton: `python3 teil_01/mix.py` (numpy/scipy, alle Geräusche prozedural in `assets/sound/sfx.py`)
-- Export: H.264 `-crf 18 -preset veryfast`, AAC 192 kbps, `-movflags +faststart`
+- Export: `bash teil_01/export.sh` → H.264 `-crf 18 -preset veryfast`, AAC 192 kbps, `-movflags +faststart`
+- Mastering: KEIN dynamisches `loudnorm` (es hebt die Stille vor dem Schreck an). Stattdessen feste Verstärkung, 15 ms Einblendung, Limiter mit 4-fachem Oversampling → ≈ −14,8 LUFS / −1,4 dBTP
 
 ## Für Teil 2 verbessern
 - Nebelbänke dichter in Bodennähe, mehr Lichtstreuung um den Kegel

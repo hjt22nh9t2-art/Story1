@@ -80,7 +80,7 @@ export function createEngine() {
     bloom.strength = post.bloom ?? 0.55;
     const u = grade.uniforms;
     u.uTime.value = t; u.uFade.value = post.fade ?? 1; u.uFlash.value = post.flash ?? 0; u.uVignette.value = post.vignette ?? 1;
-    u.uGrain.value = post.grain ?? 1; u.uChroma.value = post.chroma ?? 1; u.uFlicker.value = post.flicker ?? 0;
+    u.uGrain.value = post.grain ?? 0; // Filmkorn kommt beim Export (ffmpeg noise) – komprimiert sauberer u.uChroma.value = post.chroma ?? 1; u.uFlicker.value = post.flicker ?? 0;
     composer.render();
     ctx.globalAlpha = 1; ctx.drawImage(glCanvas, 0, 0);
   }
