@@ -137,14 +137,13 @@ function buildTower() {
 }
 
 // Lichtkegel: additiver Shader, weich, leicht verrauscht
-function buildBeam() {
-  const L = 95, R = 9;
+function buildBeam(L = 95, R = 9, k = 0.22, color = 0xffc68a) {
   const g = new THREE.ConeGeometry(R, L, 48, 24, true);
   g.translate(0, -L / 2, 0); // Spitze im Ursprung, öffnet nach -y
   g.rotateZ(Math.PI / 2);    // öffnet nach +x
   const mat = new THREE.ShaderMaterial({
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
-    uniforms: { uTime: { value: 0 }, uInt: { value: 1 }, uColor: { value: new THREE.Color(0xffc68a) }, uL: { value: L } },
+    uniforms: { uTime: { value: 0 }, uInt: { value: 1 }, uK: { value: k }, uColor: { value: new THREE.Color(color) }, uL: { value: L } },
     vertexShader: `
       varying float vAlong; varying vec3 vN; varying vec3 vView; varying vec3 vW;
       uniform float uL;
@@ -157,7 +156,7 @@ function buildBeam() {
       }`,
     fragmentShader: `
       varying float vAlong; varying vec3 vN; varying vec3 vView; varying vec3 vW;
-      uniform float uTime; uniform float uInt; uniform vec3 uColor;
+      uniform float uTime; uniform float uInt; uniform float uK; uniform vec3 uColor;
       float h(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,37.719)))*43758.5453); }
       float n3(vec3 p){ vec3 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f);
         return mix(mix(mix(h(i),h(i+vec3(1,0,0)),f.x),mix(h(i+vec3(0,1,0)),h(i+vec3(1,1,0)),f.x),f.y),
@@ -166,13 +165,16 @@ function buildBeam() {
         float edge = pow(abs(dot(normalize(vN), vView)), 1.6);
         float along = pow(1.0 - clamp(vAlong,0.0,1.0), 1.8) * smoothstep(0.0, 0.04, vAlong);
         float n = 0.55 + 0.6 * n3(vW * 0.18 + vec3(uTime*0.35, 0.0, uTime*0.2)) * n3(vW*0.05 - uTime*0.1);
-        float a = edge * along * n * uInt * 0.22;
+        float a = edge * along * n * uInt * uK;
         gl_FragColor = vec4(uColor * a, a);
       }`,
   });
   const m = new THREE.Mesh(g, mat); m.frustumCulled = false; m.renderOrder = 10;
   return m;
 }
+
+// Volumetrischer Lichtkegel (Leuchtfeuer, Taschenlampe): öffnet entlang +x
+export const makeLightCone = (L, R, k, color) => buildBeam(L, R, k, color);
 
 function buildHouse() {
   const h = new THREE.Group(); h.name = 'house';

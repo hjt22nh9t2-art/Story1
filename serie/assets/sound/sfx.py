@@ -270,3 +270,37 @@ def drip(seed=0):
     f = 900 + 1400 * np.exp(-t * 40)
     x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 35)
     return reverb(stereo(x.astype(np.float32)), 0.8, 0.4, seed=seed)
+
+
+# ------------------------------------------------------------ ab Teil 2
+def creak(d=1.2, seed=20, pitch=1.0, rough=1.0):
+    """Holzknarren: Reibungs-Impulse mit wandernder Rate durch Resonanzfilter"""
+    n = secs(d); t = np.arange(n) / SR
+    r = np.random.default_rng(seed)
+    rate = (35 + 60 * (0.5 + 0.5 * slow_lfo(n, 2.5, seed))) * pitch
+    ph = np.cumsum(rate) / SR
+    imp = (np.diff(np.floor(ph), prepend=0) > 0).astype(np.float32) * (0.6 + 0.4 * r.random(n))
+    x = np.zeros(n, np.float32)
+    for f, q in ((380 * pitch, 18), (820 * pitch, 22), (1450 * pitch, 26)):
+        w = 2 * np.pi * f / SR; rr = np.exp(-w / (2 * q))
+        x += signal.lfilter([1 - rr], [1, -2 * rr * np.cos(w), rr * rr], imp).astype(np.float32)
+    x += bp(noise(d, seed), 300, 2500) * 0.05 * rough
+    env = np.sin(np.pi * np.clip(t / d, 0, 1)) ** 0.6
+    return reverb(stereo((x * env).astype(np.float32)), 0.9, 0.3, seed=seed)
+
+
+def latch(seed=30):
+    d = 0.12; n = secs(d); t = np.arange(n) / SR
+    x = hp(noise(d, seed), 1200) * np.exp(-t * 90) + np.sin(2 * np.pi * 900 * t) * np.exp(-t * 60) * 0.4
+    return stereo(x.astype(np.float32))
+
+
+def fabric(d=1.0, seed=31):
+    n = secs(d); t = np.arange(n) / SR
+    x = bp(noise(d, seed), 600, 5000) * (0.4 + 0.6 * np.abs(slow_lfo(n, 8, seed))) * np.sin(np.pi * np.clip(t / d, 0, 1))
+    return stereo(x.astype(np.float32), 0.4)
+
+
+def reverse_whoosh(d=0.8, seed=32):
+    x = whoosh_riser(d, seed)
+    return x

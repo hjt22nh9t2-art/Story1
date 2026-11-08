@@ -1,6 +1,6 @@
 // Figuren: Jonas (stilisiert, Gesicht nur angedeutet), sein nasser Doppelgänger, die Ertrunkenen
 import * as THREE from 'three';
-import { PALETTE } from './world.js';
+import { PALETTE, makeLightCone } from './world.js';
 import { makeFogTexture, rng } from './lib.js';
 
 const cap = (r, l, mat) => { const m = new THREE.Mesh(new THREE.CapsuleGeometry(r, l, 6, 14), mat); m.castShadow = true; m.receiveShadow = true; return m; };
@@ -78,7 +78,10 @@ export function createJonas({ wet = false } = {}) {
     root.add(drips);
   }
 
-  const J = { root, hip, torso, neck, head, armL, armR, legL, legR, torch, torchLight, lens, drips };
+  // Volumetrischer Kegel der Taschenlampe (ab Teil 2)
+  const torchCone = makeLightCone(6, 1.25, 0.32, 0xffd9b0); torchCone.rotation.y = -Math.PI / 2; torchCone.position.z = 0.13; torch.add(torchCone);
+  torchCone.material.uniforms.uInt.value = 0; torchCone.visible = false;
+  const J = { root, hip, torso, neck, head, armL, armR, legL, legR, torch, torchLight, lens, drips, torchCone };
 
   // Posen/Animation
   J.walk = (t, speed = 1, amp = 1) => {
@@ -96,7 +99,9 @@ export function createJonas({ wet = false } = {}) {
     hip.position.y = 0.95; torso.rotation.set(0.02 + Math.sin(t * 1.4) * 0.012, 0, 0);
     armL.sh.rotation.x = 0.05; armR.sh.rotation.x = 0.05; armL.el.rotation.x = -0.15; armR.el.rotation.x = -0.15;
   };
-  J.holdTorch = (on = 1) => { armR.sh.rotation.x = -0.9; armR.el.rotation.x = -0.5; torchLight.intensity = 60 * on; lens.material.emissiveIntensity = 8 * on; };
+  J.holdTorch = (on = 1, cone = 0) => { armR.sh.rotation.x = -0.9; armR.el.rotation.x = -0.5; torchLight.intensity = 60 * on; lens.material.emissiveIntensity = 8 * on;
+    torchCone.visible = cone > 0; torchCone.material.uniforms.uInt.value = cone * on; };
+  J.torchOff = () => { torchLight.intensity = 0; lens.material.emissiveIntensity = 0; torchCone.visible = false; };
   J.sit = () => {
     hip.position.y = 0.55; legL.th.rotation.x = legR.th.rotation.x = -1.5; legL.kn.rotation.x = legR.kn.rotation.x = 1.5;
   };

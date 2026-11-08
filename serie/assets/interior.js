@@ -239,14 +239,40 @@ export function createHallway() {
   const plaster = makeNoiseTexture({ seed: 51, base: '#7d817f', var: 40, scaleX: 10, scaleY: 10 }); plaster.repeat.set(2, 1);
   const wallM = std({ color: 0x9da3a0, map: plaster, roughness: 0.95 });
   const wood = makeNoiseTexture({ seed: 52, base: '#3d2f22', var: 25, scaleX: 3, scaleY: 40, streak: 16 }); wood.repeat.set(3, 3);
-  const floor = new THREE.Mesh(new THREE.PlaneGeometry(4, 7), std({ color: 0x7d6a55, map: wood, roughness: 0.75 })); floor.rotation.x = -Math.PI / 2; floor.position.z = -1; floor.receiveShadow = true; scene.add(floor);
-  const back = new THREE.Mesh(new THREE.PlaneGeometry(4, 3), wallM); back.position.set(0, 1.5, -4); scene.add(back);
-  const left = new THREE.Mesh(new THREE.PlaneGeometry(7, 3), wallM); left.rotation.y = Math.PI / 2; left.position.set(-1.5, 1.5, -1); left.receiveShadow = true; scene.add(left);
-  const right = new THREE.Mesh(new THREE.PlaneGeometry(7, 3), wallM); right.rotation.y = -Math.PI / 2; right.position.set(1.5, 1.5, -1); scene.add(right);
-  const ceil = new THREE.Mesh(new THREE.PlaneGeometry(4, 7), std({ color: 0x1b1d1d })); ceil.rotation.x = Math.PI / 2; ceil.position.set(0, 2.7, -1); scene.add(ceil);
+  const floorM = std({ color: 0x7d6a55, map: wood, roughness: 0.75 });
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(4, 8.5), floorM); floor.rotation.x = -Math.PI / 2; floor.position.z = 0.25; floor.receiveShadow = true; scene.add(floor);
+  // Vorderwand mit Türöffnung
+  for (const [w, h, x, y] of [[0.95, 3, -1.025, 1.5], [0.95, 3, 1.025, 1.5], [1.1, 0.8, 0, 2.6]]) { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), wallM); m.position.set(x, y, -4); scene.add(m); }
+  const left = new THREE.Mesh(new THREE.PlaneGeometry(8.5, 3), wallM); left.rotation.y = Math.PI / 2; left.position.set(-1.5, 1.5, 0.25); left.receiveShadow = true; scene.add(left);
+  const right = new THREE.Mesh(new THREE.PlaneGeometry(8.5, 3), wallM); right.rotation.y = -Math.PI / 2; right.position.set(1.5, 1.5, 0.25); right.receiveShadow = true; scene.add(right);
+  const backW = new THREE.Mesh(new THREE.PlaneGeometry(4, 6), wallM); backW.rotation.y = Math.PI; backW.position.set(0, 3, 4.5); scene.add(backW);
+  const ceilM = std({ color: 0x1b1d1d });
+  const ceilA = new THREE.Mesh(new THREE.PlaneGeometry(1.9, 8.5), ceilM); ceilA.rotation.x = Math.PI / 2; ceilA.position.set(0.55, 2.7, 0.25); scene.add(ceilA);
+  const ceilB = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 4.8), ceilM); ceilB.rotation.x = Math.PI / 2; ceilB.position.set(-0.95, 2.7, -1.6); scene.add(ceilB);
+  // Draußen: Veranda + Nebelwand (sichtbar, wenn die Tür offen ist)
+  const porch = new THREE.Mesh(new THREE.PlaneGeometry(4, 3.5), std({ color: 0x2a3033, roughness: 0.35, metalness: 0.1 })); porch.rotation.x = -Math.PI / 2; porch.position.set(0, -0.02, -5.75); scene.add(porch);
+  const fogC = document.createElement('canvas'); fogC.width = 64; fogC.height = 256; { const g = fogC.getContext('2d'); const gr = g.createLinearGradient(0, 0, 0, 256); gr.addColorStop(0, '#173740'); gr.addColorStop(0.6, '#3f6f78'); gr.addColorStop(1, '#22434a'); g.fillStyle = gr; g.fillRect(0, 0, 64, 256); }
+  const fogTex = new THREE.CanvasTexture(fogC); fogTex.colorSpace = THREE.SRGBColorSpace;
+  const outside = new THREE.Mesh(new THREE.PlaneGeometry(10, 6), new THREE.MeshBasicMaterial({ map: fogTex, fog: false })); outside.position.set(0, 2, -7.5); scene.add(outside);
+  // Treppe ins Obergeschoss (links, steigt Richtung +z)
+  const STEPS = 12, RISE = 0.225, RUN = 0.28, SX = -0.95, SZ = 0.4;
+  const stairM = std({ color: 0x5a4632, map: wood, roughness: 0.7 });
+  const stepTops = [];
+  for (let i = 0; i < STEPS; i++) {
+    const h = (i + 1) * RISE; const st = new THREE.Mesh(new THREE.BoxGeometry(0.9, h, RUN), stairM);
+    st.position.set(SX, h / 2, SZ + i * RUN + RUN / 2); st.castShadow = st.receiveShadow = true; scene.add(st);
+    const nose = new THREE.Mesh(new THREE.BoxGeometry(0.94, 0.03, RUN + 0.03), std({ color: 0x3e2f22, roughness: 0.6 })); nose.position.set(SX, h + 0.015, SZ + i * RUN + RUN / 2 - 0.015); scene.add(nose);
+    stepTops.push({ x: SX, y: h + 0.03, z: SZ + i * RUN + RUN / 2 });
+  }
+  const railM = std({ color: 0x2b2118, roughness: 0.5 });
+  const railLen = Math.hypot(STEPS * RUN, STEPS * RISE); const ang = Math.atan2(STEPS * RISE, STEPS * RUN);
+  const rail = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.06, railLen), railM); rail.position.set(SX + 0.47, 0.95 + STEPS * RISE / 2, SZ + STEPS * RUN / 2); rail.rotation.x = -ang; scene.add(rail);
+  for (let i = 0; i < STEPS; i += 1) { const b = new THREE.Mesh(new THREE.BoxGeometry(0.03, 0.9, 0.03), railM); b.position.set(SX + 0.47, (i + 1) * RISE + 0.45, SZ + i * RUN + RUN / 2); scene.add(b); }
+  const post = new THREE.Mesh(new THREE.BoxGeometry(0.09, 1.1, 0.09), railM); post.position.set(SX + 0.47, 0.55, SZ); scene.add(post);
+  const upper = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.05, 1.2), std({ color: 0x050505 })); upper.position.set(-0.95, 3.6, 3.9); scene.add(upper);
   // Holzvertäfelung
   const wain = std({ color: 0x2c3a35, roughness: 0.6 });
-  for (const s of [-1, 1]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.04, 1.0, 7), wain); p.position.set(s * 1.48, 0.5, -1); scene.add(p); }
+  for (const s of [-1, 1]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.04, 1.0, 8.5), wain); p.position.set(s * 1.48, 0.5, 0.25); scene.add(p); }
   // Tür (Drehpunkt am Scharnier)
   const doorPivot = new THREE.Group(); doorPivot.position.set(-0.5, 0, -3.97); scene.add(doorPivot);
   const doorM = std({ color: 0x24382f, roughness: 0.55, map: makeNoiseTexture({ seed: 53, base: '#555', var: 30, scaleX: 2, scaleY: 30, streak: 8 }) });
@@ -279,12 +305,12 @@ export function createHallway() {
   const doorLight = new THREE.SpotLight(0x6fa0b8, 4, 8, 0.7, 0.9, 1.2); doorLight.position.set(0, 1.6, -4.4); doorLight.target.position.set(0, 0, 0); scene.add(doorLight, doorLight.target);
   const warm = new THREE.PointLight(PALETTE.lamp, 1.2, 6, 2); warm.position.set(0.8, 2.3, 1.5); scene.add(warm);
 
-  return { scene, doorPivot, door, frost, gapTex, water, dust, doorLight, warm, hemi,
+  return { scene, doorPivot, door, frost, gapTex, water, dust, doorLight, warm, hemi, stepTops, outside, fillH,
     knocks: [], // Zeiten in Szene-Lokalzeit
-    update(t, { light = 1, figure = 0, feet = 0, water: wl = 0, knocks = [], warmLevel = 1 } = {}) {
+    update(t, { light = 1, figure = 0, feet = 0, water: wl = 0, knocks = [], warmLevel = 1, doorOpen = 0 } = {}) {
       let jolt = 0, dustAmt = 0;
       for (const k of knocks) { const d = t - k; if (d >= 0) { jolt += Math.exp(-d * 18) * Math.sin(d * 90) * (d < 0.4 ? 1 : 0); dustAmt = Math.max(dustAmt, d < 1.6 ? 1 - d / 1.6 : 0); } }
-      doorPivot.rotation.y = jolt * 0.006; door.position.z = jolt * 0.008;
+      doorPivot.rotation.y = jolt * 0.006 - 1.35 * doorOpen; door.position.z = jolt * 0.008;
       frost.userData.draw(light, figure, Math.sin(t * 0.7) * 6);
       gapTex.userData.draw(light * 0.9, feet);
       water.scale.set(Math.max(0.001, wl * 0.9), Math.max(0.001, wl * 0.6), 1);
@@ -299,5 +325,86 @@ export function createHallway() {
       }
       pos.needsUpdate = true; dust.material.opacity = 0.45 * dustAmt;
       hemi.intensity = 0.75 * (0.5 + 0.5 * light);
+    } };
+}
+
+// ---------- Obergeschoss: Treppenabsatz + Schlafzimmer (ab Teil 2) ----------
+export function createBedroom() {
+  const scene = new THREE.Scene(); scene.background = new THREE.Color(0x020405); scene.fog = new THREE.FogExp2(0x061014, 0.07);
+  const plaster = makeNoiseTexture({ seed: 61, base: '#80847f', var: 40, scaleX: 10, scaleY: 10 }); plaster.repeat.set(2, 1);
+  const wallM = std({ color: 0x9aa09c, map: plaster, roughness: 0.95 });
+  const wood = makeNoiseTexture({ seed: 62, base: '#3d2f22', var: 25, scaleX: 3, scaleY: 40, streak: 16 }); wood.repeat.set(3, 3);
+  const floorM = std({ color: 0xa08a70, map: wood, roughness: 0.72 });
+  const H = 2.5;
+  const add = (m) => { m.receiveShadow = true; scene.add(m); return m; };
+  const plane = (w, h, mat) => new THREE.Mesh(new THREE.PlaneGeometry(w, h), mat);
+  // Zimmer x -2..2, z -2.5..2 ; Absatz x -0.8..0.8, z 2..4.5
+  const f1 = add(plane(4, 4.5, floorM)); f1.rotation.x = -Math.PI / 2; f1.position.set(0, 0, -0.25);
+  const f2 = add(plane(1.6, 1.8, floorM)); f2.rotation.x = -Math.PI / 2; f2.position.set(0, 0, 2.9);
+  const hole = add(plane(1.6, 0.8, new THREE.MeshBasicMaterial({ color: 0x000000 }))); hole.rotation.x = -Math.PI / 2; hole.position.set(0, 0.002, 4.1);
+  const wl = add(plane(4.5, H, wallM)); wl.rotation.y = Math.PI / 2; wl.position.set(-2, H / 2, -0.25);
+  const wr = add(plane(4.5, H, wallM)); wr.rotation.y = -Math.PI / 2; wr.position.set(2, H / 2, -0.25);
+  const wb = add(plane(4, H, wallM)); wb.position.set(0, H / 2, -2.5);
+  for (const [w, h, x, y] of [[1.55, H, -1.225, H / 2], [1.55, H, 1.225, H / 2], [0.9, 0.4, 0, 2.3]]) { const m = add(plane(w, h, wallM)); m.rotation.y = Math.PI; m.position.set(x, y, 2); const m2 = m.clone(); m2.rotation.y = 0; m2.position.z = 2.001; scene.add(m2); }
+  const lw1 = add(plane(2.5, H, wallM)); lw1.rotation.y = Math.PI / 2; lw1.position.set(-0.8, H / 2, 3.25);
+  const lw2 = add(plane(2.5, H, wallM)); lw2.rotation.y = -Math.PI / 2; lw2.position.set(0.8, H / 2, 3.25);
+  const ceil = add(plane(4, 7, std({ color: 0x1e2020 }))); ceil.rotation.x = Math.PI / 2; ceil.position.set(0, H, 1);
+  // Tür (Scharnier links), öffnet ins Zimmer
+  const doorPivot = new THREE.Group(); doorPivot.position.set(-0.45, 0, 2); scene.add(doorPivot);
+  const door = new THREE.Mesh(new THREE.BoxGeometry(0.9, 2.05, 0.05), std({ color: 0x8c8a80, roughness: 0.7 })); door.position.set(0.45, 1.025, 0); door.castShadow = true; doorPivot.add(door);
+  const knob = new THREE.Mesh(new THREE.SphereGeometry(0.035, 10, 8), std({ color: 0x8a6a2a, metalness: 0.9, roughness: 0.3 })); knob.position.set(0.8, 1.0, 0.05); doorPivot.add(knob);
+  // Bett
+  const bed = new THREE.Group(); bed.position.set(-1.3, 0, -1.4); scene.add(bed);
+  const frameM = std({ color: 0x3a2a1e, map: wood, roughness: 0.6 });
+  const frame = new THREE.Mesh(new THREE.BoxGeometry(1.15, 0.32, 2.05), frameM); frame.position.y = 0.2; frame.castShadow = true; bed.add(frame);
+  const headb = new THREE.Mesh(new THREE.BoxGeometry(1.2, 1.0, 0.07), frameM); headb.position.set(0, 0.55, -1.03); bed.add(headb);
+  const matt = new THREE.Mesh(new THREE.BoxGeometry(1.08, 0.18, 1.98), std({ color: 0xa8a49a, roughness: 0.9 })); matt.position.y = 0.45; bed.add(matt);
+  const pillow = new THREE.Mesh(new THREE.CapsuleGeometry(0.14, 0.6, 4, 10), std({ color: 0xe6e2d6, roughness: 0.9 })); pillow.rotation.z = Math.PI / 2; pillow.scale.set(1, 1, 0.55); pillow.position.set(0, 0.6, -0.78); bed.add(pillow);
+  // Decke: Quader mit verformbarer Oberseite (Delle, wenn sich jemand setzt)
+  const bg = new THREE.BoxGeometry(1.14, 0.1, 1.5, 36, 1, 44);
+  const bp = bg.attributes.position; const base = Float32Array.from(bp.array);
+  const blanketTex = makeNoiseTexture({ seed: 63, base: '#5a6a72', var: 22, scaleX: 30, scaleY: 30 });
+  const blanket = new THREE.Mesh(bg, std({ color: 0x9cb0b8, map: blanketTex, roughness: 0.97 })); blanket.position.set(0, 0.59, 0.2); blanket.castShadow = blanket.receiveShadow = true; bed.add(blanket);
+  const shapeBlanket = (dent = 0, dx = 0.42, dz = 0.25) => {
+    for (let i = 0; i < bp.count; i++) {
+      const x = base[i * 3], y0 = base[i * 3 + 1], z = base[i * 3 + 2];
+      let y = y0;
+      if (y0 > 0) {
+        y += 0.012 * Math.sin(x * 11 + z * 6) + 0.015 * Math.sin(z * 5.5);
+        const d = Math.hypot((x - dx) * 1.3, z - dz); y -= dent * 0.13 * Math.exp(-d * d / 0.04);
+      }
+      bp.setXYZ(i, x, y, z);
+    }
+    bp.needsUpdate = true; bg.computeVertexNormals();
+  };
+  shapeBlanket(0);
+  // nasser Fleck auf der Decke (wächst)
+  const stainC = document.createElement('canvas'); stainC.width = stainC.height = 256; { const g = stainC.getContext('2d'); g.fillStyle = '#000'; g.fillRect(0, 0, 256, 256); g.filter = 'blur(8px)'; g.fillStyle = '#fff'; const r = rng(91); g.beginPath(); for (let i = 0; i <= 30; i++) { const a = i / 30 * Math.PI * 2, rad = 60 + r() * 45; const x = 128 + Math.cos(a) * rad, y = 128 + Math.sin(a) * rad * 1.3; i ? g.lineTo(x, y) : g.moveTo(x, y); } g.fill(); }
+  const stain = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 0.5), std({ color: 0x050809, roughness: 0.05, metalness: 0.4, transparent: true, opacity: 0, alphaMap: new THREE.CanvasTexture(stainC), depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4 }));
+  stain.rotation.x = -Math.PI / 2; stain.position.set(0.42, 0.62, 0.45); bed.add(stain);
+  // Nachttisch + Radiowecker (zeigt immer noch 3:33)
+  const ns = new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.55, 0.4), frameM); ns.position.set(-0.45, 0.275, -2.2); ns.castShadow = true; scene.add(ns);
+  const clockTex = makeClockTex(); clockTex.userData.draw('3:33');
+  const cb = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.1, 0.1), std({ color: 0x1c1b19, roughness: 0.5 })); cb.position.set(-0.45, 0.6, -2.15); cb.rotation.y = 0.5; scene.add(cb);
+  const cf = new THREE.Mesh(new THREE.PlaneGeometry(0.19, 0.085), new THREE.MeshBasicMaterial({ map: clockTex, toneMapped: false })); cf.position.z = 0.051; cb.add(cf);
+  const clockGlow = new THREE.PointLight(0xff8a30, 0.6, 1.5, 2); clockGlow.position.set(-0.4, 0.7, -2.0); scene.add(clockGlow);
+  // Fenster rechts + Mondlicht
+  const win = new THREE.Group(); win.position.set(1.99, 1.4, -0.8); win.rotation.y = -Math.PI / 2; scene.add(win);
+  const fogC = document.createElement('canvas'); fogC.width = 64; fogC.height = 128; { const g = fogC.getContext('2d'); const gr = g.createLinearGradient(0, 0, 0, 128); gr.addColorStop(0, '#1a3a44'); gr.addColorStop(1, '#3d6a74'); g.fillStyle = gr; g.fillRect(0, 0, 64, 128); }
+  const pane = new THREE.Mesh(new THREE.PlaneGeometry(0.8, 1.0), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(fogC), fog: false })); win.add(pane);
+  const wfm = std({ color: 0xd6d3c8, roughness: 0.8 });
+  for (const [w, h, x, y] of [[0.95, 0.07, 0, 0.53], [0.95, 0.07, 0, -0.53], [0.07, 1.1, 0.45, 0], [0.07, 1.1, -0.45, 0], [0.04, 1.0, 0, 0], [0.8, 0.04, 0, 0]]) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.08), wfm); m.position.set(x, y, 0.03); win.add(m); }
+  const moon = new THREE.SpotLight(0x6a9ab2, 15, 9, 0.6, 0.7, 1.1); moon.position.set(2.8, 2.1, -0.8); moon.target.position.set(-0.8, 0, -1.0); moon.castShadow = true; moon.shadow.mapSize.set(1024, 1024); moon.shadow.radius = 4; scene.add(moon, moon.target);
+  // Schrank, Teppich, Stuhl mit Kleidung
+  const wardrobe = new THREE.Mesh(new THREE.BoxGeometry(1.0, 2.0, 0.55), frameM); wardrobe.position.set(1.4, 1.0, -2.15); wardrobe.castShadow = true; scene.add(wardrobe);
+  const rug = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 1.0), std({ color: 0x5a2f28, roughness: 1, map: makeNoiseTexture({ seed: 64, base: '#555', var: 30, scaleX: 40, scaleY: 40 }) })); rug.rotation.x = -Math.PI / 2; rug.position.set(0.5, 0.004, 0.3); scene.add(rug);
+  const chair = new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.45, 0.45), frameM); chair.position.set(1.5, 0.225, 0.9); scene.add(chair);
+  const cloth = new THREE.Mesh(new THREE.CapsuleGeometry(0.15, 0.4, 4, 8), std({ color: PALETTE.jacket, roughness: 0.6 })); cloth.rotation.z = Math.PI / 2; cloth.scale.z = 0.5; cloth.position.set(1.5, 0.52, 0.9); scene.add(cloth);
+  const hemi = new THREE.HemisphereLight(0x3a5e6a, 0x080605, 0.8); scene.add(hemi);
+  const fill = new THREE.PointLight(0x4f8090, 2.2, 6, 1.6); fill.position.set(0.3, 2.2, 1.0); scene.add(fill);
+  return { scene, doorPivot, bed, blanket, stain, clockTex, moon, hemi, fill, win,
+    update(t, { doorOpen = 0.18, dent = 0, stain: st = 0 } = {}) {
+      doorPivot.rotation.y = 1.45 * doorOpen;
+      shapeBlanket(dent); stain.material.opacity = 0.85 * st; stain.scale.setScalar(0.4 + 0.8 * st);
     } };
 }
