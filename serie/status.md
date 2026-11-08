@@ -5,8 +5,9 @@
 |---|---|---|
 | 1 | Die Ankunft | ✅ fertig (`teil_01/teil_01.mp4`) |
 | 2 | Die Spuren | ✅ fertig (`teil_02/teil_02.mp4`) |
-| 3 | Das Funkgerät | ⏳ wartet auf „Weiter mit Teil 3“ |
-| 4–10 | – | offen |
+| 3 | Das Funkgerät | ✅ fertig (`teil_03/teil_03.mp4`) |
+| 4 | Das Foto | ⏳ wartet auf „Weiter mit Teil 4“ |
+| 5–10 | – | offen |
 
 ## Stimme (für alle Teile beibehalten)
 - **Dienst:** Speko `audio.synthesize`, geroutet zu ElevenLabs
@@ -49,7 +50,18 @@
 - Achtung: Im Wachraum `room.update(t, { beam: 0 })` setzen, wenn kein Leuchtfeuer-Streiflicht gewünscht ist (sonst weißer Blitz alle 9 s)
 - Taschenlampen-Spots innen: Intensität 6–30 (darüber brennt das Bild aus); Spuren draußen mit `lift: 0.07`
 
-## Für Teil 3 verbessern
-- Funkgerät-Nahaufnahmen mit animierter Skala/Nadel, Stimmenverzerrung (Funk-Filter) für den Fischer
-- Bett-Delle im Cliffhanger deutlicher (Decke heller, Seitenlicht)
-- Mehr Kamerabewegung bei Dialog-Momenten
+## Nebenstimmen
+- **Fischer / Funkstimme der Ertrunkenen:** ElevenLabs „Roman – Friendly & Approachable“ (Voice-ID `1YST1S3BrkT7E0wcLKQD`, `eleven_v3_conversational`), Tags `[panicked]`, `[whispers]`. Im Mix `sfx.radio_voice()` (350–2800 Hz, leichte Sättigung) bei −20 dB. Untertitel eisblau (`COLORS.radio`, Wort-Flag `f: 1` in timing.json)
+- Mehrere Sprecher: `timing.json` → `segmente` = [Sprecher, Take-Start, Take-Ende, Video-Start]
+
+## Neu in Teil 3 (wiederverwendbar)
+- Funkgerät mit Seefunk-Skala (Canvas-Textur) und Nadel: `room.update(t, { radio, tune })`
+- Logbuch: `book.redTex` (Eintrag in roter Tinte zur „Margarete“, „Das Licht war AUS.“)
+- Wachraum-Fenster: `room.update(t, { ghost, hand })` → Silhouette draußen + nasser Handabdruck auf der Scheibe
+- `createGhostBoat()` (dunkler Kutter mit Laterne, `userData.update(t, level)`)
+- `sfx.py`: `radio_voice`, `squelch`, `bubbles`, `glass_hit`
+
+## Für Teil 4 verbessern
+- Keller als neuer Ort (Gewölbe, eine nackte Glühbirne, Regale, Kisten)
+- Foto von 1953 als Textur (Schwarzweiß, Körnung, Wärter = Jonas-Silhouette, Gestalt dahinter)
+- Spiegel mit echter Reflexion (Reflector) für den Cliffhanger
