@@ -304,3 +304,39 @@ def fabric(d=1.0, seed=31):
 def reverse_whoosh(d=0.8, seed=32):
     x = whoosh_riser(d, seed)
     return x
+
+
+# ------------------------------------------------------------ ab Teil 3
+def radio_voice(x, drive=2.5, seed=40, dropouts=True):
+    """Seefunk-Klang: Bandpass 350–2800 Hz, leichte Verzerrung, Aussetzer"""
+    y = bp(x, 350, 2800, 3)
+    y = np.tanh(y * drive) / np.tanh(drive)
+    if dropouts:
+        n = len(y); m = 0.75 + 0.25 * np.clip(slow_lfo(n, 5, seed) * 2, -1, 1)
+        y = y * m
+    return y.astype(np.float32)
+
+
+def squelch(d=0.35, seed=41):
+    n = secs(d); t = np.arange(n) / SR
+    x = hp(noise(d, seed), 800) * np.exp(-t * 9) * 0.8
+    return stereo(bp(x, 500, 5000).astype(np.float32))
+
+
+def bubbles(d=3.0, seed=42):
+    n = secs(d); t = np.arange(n) / SR; x = np.zeros(n, np.float32); r = np.random.default_rng(seed)
+    for _ in range(int(d * 14)):
+        s = int(r.random() * (n - secs(0.1))); ln = secs(r.uniform(0.03, 0.09)); tt = np.arange(ln) / SR
+        f = r.uniform(250, 900) * (1 + tt * 12)
+        x[s:s + ln] += np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 40) * r.uniform(0.2, 1)
+    x += lp(noise(d, seed + 1), 300) * 0.6
+    return stereo(lp(x, 2000).astype(np.float32), 0.5)
+
+
+def glass_hit(seed=43):
+    d = 1.2; n = secs(d); t = np.arange(n) / SR
+    x = np.zeros(n)
+    for f, a, dec in ((140, 1.0, 14), (720, 0.35, 20), (1830, 0.2, 9), (3100, 0.12, 12)):
+        x += a * np.sin(2 * np.pi * f * t) * np.exp(-t * dec)
+    x += hp(noise(d, seed), 2000) * np.exp(-t * 60) * 0.5
+    return reverb(stereo(x.astype(np.float32)), 1.0, 0.3, seed=seed)

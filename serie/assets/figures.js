@@ -1,6 +1,6 @@
 // Figuren: Jonas (stilisiert, Gesicht nur angedeutet), sein nasser Doppelgänger, die Ertrunkenen
 import * as THREE from 'three';
-import { PALETTE, makeLightCone } from './world.js';
+import { PALETTE, makeLightCone, buildBoat } from './world.js';
 import { makeFogTexture, rng } from './lib.js';
 
 const cap = (r, l, mat) => { const m = new THREE.Mesh(new THREE.CapsuleGeometry(r, l, 6, 14), mat); m.castShadow = true; m.receiveShadow = true; return m; };
@@ -144,4 +144,22 @@ export function createShadowCard() {
   x.beginPath(); x.moveTo(40, 512); x.quadraticCurveTo(50, 220, 128, 180); x.quadraticCurveTo(206, 220, 216, 512); x.fill();
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
   return new THREE.Mesh(new THREE.PlaneGeometry(1, 2), new THREE.MeshBasicMaterial({ map: t, transparent: true, depthWrite: false, opacity: 0 }));
+}
+
+// Geisterkutter „Margarete“ (1953): dunkler, nasser Rumpf, schwankende Laterne – im Nebel kaum zu sehen
+export function createGhostBoat() {
+  const b = buildBoat(); b.name = 'ghostBoat';
+  b.traverse((o) => { if (o.isMesh) { o.material = o.material.clone(); o.material.color?.multiplyScalar(0.35); o.material.roughness = 0.2; if (o.material.emissiveIntensity) o.material.emissiveIntensity = 0; } });
+  const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d');
+  const gr = g.createRadialGradient(64, 64, 0, 64, 64, 64); gr.addColorStop(0, 'rgba(255,220,170,1)'); gr.addColorStop(0.25, 'rgba(255,160,80,0.55)'); gr.addColorStop(1, 'rgba(255,140,60,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, 128, 128);
+  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+  const lantern = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }));
+  lantern.position.set(1.8, 2.2, 0); lantern.scale.setScalar(2.2); b.add(lantern);
+  const light = new THREE.PointLight(PALETTE.lamp, 6, 12, 1.8); light.position.copy(lantern.position); b.add(light);
+  b.userData.update = (t, level = 1) => {
+    const f = (0.75 + 0.25 * Math.sin(t * 7.3) * Math.sin(t * 3.1)) * level;
+    lantern.material.opacity = f; light.intensity = 6 * f; lantern.position.y = 2.2 + Math.sin(t * 1.4) * 0.08;
+  };
+  return b;
 }

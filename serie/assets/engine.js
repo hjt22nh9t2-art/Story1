@@ -9,7 +9,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 
 export const W = 1080, H = 1920, FPS = 30;
 export const SAFE = { bottom: 250, right: 150, left: 60, top: 170 };
-export const COLORS = { sub: '#ffffff', subHi: '#ffb04a', stroke: '#000000' };
+export const COLORS = { sub: '#ffffff', subHi: '#ffb04a', stroke: '#000000', radio: '#cfeef6', radioHi: '#7fd8ff' }; // radio = Stimmen aus dem Funkgerät
 
 const GradeShader = {
   uniforms: {
@@ -127,7 +127,7 @@ export function drawSubtitles(ctx, chunks, t, opts = {}) {
       ctx.shadowColor = 'rgba(0,0,0,0.65)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 4;
       ctx.lineWidth = size * 0.17; ctx.strokeStyle = COLORS.stroke; ctx.textAlign = 'center'; ctx.strokeText(w.text, 0, 0);
       ctx.shadowColor = 'transparent';
-      ctx.fillStyle = hi ? COLORS.subHi : past ? '#ffffff' : 'rgba(255,255,255,0.92)'; ctx.fillText(w.text, 0, 0);
+      ctx.fillStyle = w.f ? (hi ? COLORS.radioHi : COLORS.radio) : (hi ? COLORS.subHi : past ? '#ffffff' : 'rgba(255,255,255,0.92)'); ctx.fillText(w.text, 0, 0);
       ctx.restore(); x += ww + space; idx++;
     }
     y += lh;

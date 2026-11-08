@@ -31,11 +31,24 @@ function paperBase(g, w, h, seed) {
   g.strokeStyle = 'rgba(160,40,40,0.4)'; g.beginPath(); g.moveTo(170, 0); g.lineTo(170, h); g.stroke();
 }
 
-export function makeLogPage({ entries = LOG_ENTRIES, last = false, seed = 1, title = 'Leuchtfeuer Nebelsand – Logbuch' } = {}) {
+export function makeLogPage({ entries = LOG_ENTRIES, last = false, red = false, seed = 1, title = 'Leuchtfeuer Nebelsand – Logbuch' } = {}) {
   const w = 1024, h = 1400; const c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d');
   paperBase(g, w, h, seed);
   g.fillStyle = '#1f2a3d'; g.textBaseline = 'alphabetic';
-  if (!last) {
+  if (red) {
+    // Eintrag in roter Tinte (ab Teil 3): Fischkutter „Margarete“
+    g.font = '700 46px Caveat'; g.fillStyle = 'rgba(31,42,61,0.75)'; g.fillText('Okt. 1953', 60, 110);
+    g.fillText('W 8, Nebel. Sicht null.', 60, 238);
+    g.save(); g.translate(60, 420); g.rotate(-0.025); g.fillStyle = '#8c1010';
+    g.font = '700 74px Caveat'; g.fillText('Fischkutter „Margarete“', 0, 0);
+    g.font = '700 62px Caveat';
+    g.fillText('gesunken am 17. Oktober 1953', 0, 128); g.fillText('03:33 Uhr. Nördlich vom Wrack.', 0, 256);
+    g.fillText('Keine Überlebenden.', 0, 384);
+    g.font = '700 70px Caveat'; g.fillText('Das Licht war AUS.', 0, 560);
+    g.strokeStyle = '#8c1010'; g.lineWidth = 5; g.lineCap = 'round'; g.beginPath(); g.moveTo(0, 585); g.lineTo(560, 578); g.stroke();
+    g.restore();
+    g.fillStyle = 'rgba(140,16,16,0.7)'; g.beginPath(); g.arc(820, 1120, 18, 0, 7); g.fill(); g.beginPath(); g.arc(850, 1150, 7, 0, 7); g.fill();
+  } else if (!last) {
     g.font = '700 54px Caveat'; g.fillText(title, 60, 100);
     let y = 207; const r = rng(seed + 5);
     for (const [d, txt] of entries) {
@@ -81,7 +94,8 @@ export function createLogbook() {
   const flipBack = new THREE.Mesh(new THREE.PlaneGeometry(W, H), std({ map: makeLogPage({ seed: 8, entries: LOG_ENTRIES.slice(2, 7) }), roughness: 0.9 }));
   flipBack.rotation.x = Math.PI / 2; flipBack.rotation.z = Math.PI; flipBack.position.x = W / 2; flipBack.position.y = -0.001; hinge.add(flipBack);
   const lastTex = makeLogPage({ last: true, seed: 12 });
-  const book = { grp, left, right, hinge, W, H, lastTex,
+  const redTex = makeLogPage({ red: true, seed: 17 });
+  const book = { grp, left, right, hinge, W, H, lastTex, redTex, flipFront, flipBack,
     flip: (k) => { hinge.rotation.z = Math.PI * Math.min(1, Math.max(0, k)); hinge.visible = k > 0.001 && k < 0.999; },
     showLast: () => { right.material.map = lastTex; right.material.needsUpdate = true; },
   };
@@ -109,7 +123,15 @@ export function createRadio() {
   const grp = new THREE.Group(); grp.name = 'radio';
   const body = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.22, 0.2), std({ color: 0x2c2a26, roughness: 0.55, metalness: 0.3 })); body.position.y = 0.11; body.castShadow = true; grp.add(body);
   const grille = new THREE.Mesh(new THREE.PlaneGeometry(0.16, 0.14), std({ color: 0x0d0d0c, roughness: 0.9, map: makeNoiseTexture({ seed: 2, base: '#111', var: 25, scaleX: 60, scaleY: 60 }) })); grille.position.set(-0.11, 0.11, 0.101); grp.add(grille);
-  const dial = new THREE.Mesh(new THREE.PlaneGeometry(0.17, 0.05), std({ color: 0x221a10, emissive: 0xff9a40, emissiveIntensity: 0.35 })); dial.position.set(0.09, 0.16, 0.101); grp.add(dial);
+  const dialC = document.createElement('canvas'); dialC.width = 512; dialC.height = 150; { const g = dialC.getContext('2d');
+    const gr = g.createLinearGradient(0, 0, 0, 150); gr.addColorStop(0, '#f2c07a'); gr.addColorStop(1, '#c9873c'); g.fillStyle = gr; g.fillRect(0, 0, 512, 150);
+    g.strokeStyle = '#3a210c'; g.fillStyle = '#3a210c'; g.lineWidth = 2;
+    for (let i = 0; i <= 60; i++) { const x = 20 + i * 7.87; const h = i % 10 === 0 ? 40 : i % 5 === 0 ? 28 : 16; g.beginPath(); g.moveTo(x, 150 - 18); g.lineTo(x, 150 - 18 - h); g.stroke(); }
+    g.font = '700 30px Montserrat'; g.textAlign = 'center'; ['1,6', '2', '2,5', '3', '4', '5', '6'].forEach((tx, i) => g.fillText(tx, 20 + i * 78.7, 48));
+    g.font = '700 20px Montserrat'; g.textAlign = 'left'; g.fillText('MHz', 14, 20); g.textAlign = 'right'; g.fillText('SEEFUNK', 500, 20); }
+  const dialTex = new THREE.CanvasTexture(dialC); dialTex.colorSpace = THREE.SRGBColorSpace;
+  const dial = new THREE.Mesh(new THREE.PlaneGeometry(0.17, 0.05), std({ color: 0xffffff, map: dialTex, emissive: 0xffffff, emissiveMap: dialTex, emissiveIntensity: 0.35 })); dial.position.set(0.09, 0.16, 0.101); grp.add(dial);
+  const needle = new THREE.Mesh(new THREE.BoxGeometry(0.004, 0.044, 0.002), new THREE.MeshBasicMaterial({ color: 0x3a0a04 })); needle.position.set(0.09, 0.16, 0.103); grp.add(needle);
   const knobM = std({ color: 0x9a9890, roughness: 0.3, metalness: 0.8 });
   for (const x of [0.05, 0.14]) { const k = new THREE.Mesh(new THREE.CylinderGeometry(0.022, 0.022, 0.02, 14), knobM); k.rotation.x = Math.PI / 2; k.position.set(x, 0.07, 0.11); grp.add(k); }
   const led = new THREE.Mesh(new THREE.SphereGeometry(0.008, 8, 6), std({ color: 0x220000, emissive: 0xff3b1a, emissiveIntensity: 4 })); led.position.set(0.18, 0.16, 0.102); grp.add(led);
@@ -119,7 +141,7 @@ export function createRadio() {
   const clockTex = makeClockTex();
   const clockBody = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.1, 0.09), std({ color: 0x1c1b19, roughness: 0.5 })); clockBody.position.set(0.36, 0.05, 0.05); clockBody.rotation.y = -0.35; grp.add(clockBody);
   const face = new THREE.Mesh(new THREE.PlaneGeometry(0.17, 0.085), new THREE.MeshBasicMaterial({ map: clockTex, toneMapped: false })); face.position.set(0, 0, 0.046); clockBody.add(face);
-  return { grp, led, dial, clockTex, clockBody, face };
+  return { grp, led, dial, needle, clockTex, clockBody, face, mic };
 }
 
 export function createOilLamp() {
@@ -150,6 +172,17 @@ export function createWatchRoom() {
   // Fenster (Blick nach draußen, Leuchtfeuer streicht vorbei)
   const winGrp = new THREE.Group(); winGrp.position.set(0, 1.7, -3.12); scene.add(winGrp);
   const outside = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 1.2), new THREE.MeshBasicMaterial({ color: 0x0d2730 })); winGrp.add(outside);
+  // Silhouette vor dem Fenster (ab Teil 3) + nasser Handabdruck auf der Scheibe
+  const ghostC = document.createElement('canvas'); ghostC.width = 256; ghostC.height = 384; { const g = ghostC.getContext('2d'); g.filter = 'blur(9px)'; g.fillStyle = '#000';
+    g.beginPath(); g.ellipse(132, 120, 44, 56, 0.05, 0, 7); g.fill(); g.beginPath(); g.moveTo(14, 400); g.quadraticCurveTo(34, 210, 130, 182); g.quadraticCurveTo(222, 210, 246, 400); g.fill(); }
+  const ghost = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 1.35), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(ghostC), transparent: true, opacity: 0, depthWrite: false, fog: false }));
+  ghost.position.set(0.02, -0.1, 0.01); winGrp.add(ghost);
+  const handC = document.createElement('canvas'); handC.width = handC.height = 512; { const g = handC.getContext('2d'); g.filter = 'blur(4px)'; g.fillStyle = '#fff';
+    g.beginPath(); g.ellipse(256, 330, 78, 88, 0, 0, 7); g.fill();
+    [[150, 290, -0.95, 20, 64], [196, 165, -0.28, 19, 82], [252, 140, -0.02, 20, 92], [306, 158, 0.2, 19, 82], [352, 214, 0.45, 16, 62]].forEach(([x, y, a, rx, ry]) => { g.save(); g.translate(x, y); g.rotate(a); g.beginPath(); g.ellipse(0, 0, rx, ry, 0, 0, 7); g.fill(); g.restore(); });
+    g.globalAlpha = 0.7; [[215, 400, 70], [250, 410, 95], [290, 400, 60]].forEach(([x, y, l]) => { g.fillRect(x, y, 7, l); g.beginPath(); g.arc(x + 3.5, y + l, 7, 0, 7); g.fill(); }); }
+  const hand = new THREE.Mesh(new THREE.PlaneGeometry(0.2, 0.2), new THREE.MeshBasicMaterial({ alphaMap: new THREE.CanvasTexture(handC), color: 0x7fa3ad, transparent: true, opacity: 0, depthWrite: false, fog: false }));
+  hand.position.set(0.12, 0.12, 0.03); hand.rotation.z = -0.15; winGrp.add(hand);
   const frameM = std({ color: 0xd6d3c8, roughness: 0.8 });
   for (const [w, h, x, y] of [[1.05, 0.08, 0, 0.62], [1.05, 0.08, 0, -0.62], [0.08, 1.3, 0.5, 0], [0.08, 1.3, -0.5, 0], [0.04, 1.2, 0, 0], [0.9, 0.04, 0, 0]]) {
     const f = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.1), frameM); f.position.set(x, y, 0.04); winGrp.add(f);
@@ -188,14 +221,16 @@ export function createWatchRoom() {
   const sweep = new THREE.SpotLight(0xffc890, 0, 14, 0.3, 0.7, 1.0); sweep.position.set(0, 2.0, -3.6); scene.add(sweep, sweep.target);
 
   const jonas = null;
-  return { scene, table, book, lamp, radio, chair, outside, sweep, moonIn, winGrp, hemi, coat,
-    update(t, { beamPeriod = 9, lampLevel = 1, beam = 1 } = {}) {
+  return { scene, table, book, lamp, radio, chair, outside, sweep, moonIn, winGrp, hemi, coat, ghost, hand,
+    update(t, { beamPeriod = 9, lampLevel = 1, beam = 1, radio: rl = 1, tune = 0, ghost: gh = 0, hand: hd = 0 } = {}) {
       lamp.flicker(t, lampLevel);
       const ph = ((t / beamPeriod) % 1); const hit = Math.pow(Math.max(0, Math.cos((ph - 0.5) * Math.PI * 2)), 40) * beam;
       outside.material.color.setRGB(0.05 + hit * 0.9, 0.15 + hit * 0.7, 0.19 + hit * 0.45);
       sweep.intensity = hit * 60; sweep.target.position.set(Math.sin(ph * Math.PI * 2) * 3, 0.5, 1);
-      radio.led.material.emissiveIntensity = 2 + 3 * Math.max(0, noise2(t * 9, 4));
-      radio.dial.material.emissiveIntensity = 0.3 + 0.12 * noise2(t * 3, 2);
+      radio.led.material.emissiveIntensity = (2 + 3 * Math.max(0, noise2(t * 9, 4))) * rl;
+      radio.dial.material.emissiveIntensity = (0.3 + 0.12 * noise2(t * 3, 2)) * rl;
+      radio.needle.position.x = 0.09 + 0.07 * Math.sin(noise2(t * 0.8 * (1 + tune * 4), 7) * 2) * (0.3 + tune);
+      ghost.material.opacity = gh; hand.material.opacity = hd * 0.42;
     } };
 }
 
