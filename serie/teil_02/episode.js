@@ -80,12 +80,12 @@ const shots = [
     } },
   // ---- WAS BISHER GESCHAH
   { a: 3.6, b: 5.1, scene: 'room', recap: true, run(t, l) {
-      room.update(t, { lampLevel: 0.8 }); room.book.right.material.map = room.book.lastTex; room.book.flip(1);
+      room.update(t, { lampLevel: 0.8, beam: 0 }); room.book.right.material.map = room.book.lastTex; room.book.flip(1);
       placeCamera(E.camera, v3(0.08, 1.12 - l * 0.04, -0.98), v3(0.075, 0.82, -1.115), 34, t, 0.5); E.camera.rotateZ(-0.06);
       return flashback;
     } },
   { a: 5.1, b: 6.9, scene: 'room', recap: true, run(t, l) {
-      room.update(t, { lampLevel: 0.6 }); room.radio.clockTex.userData.draw('3:33', l < 0.1 ? 1 : 0); room.scene.updateMatrixWorld(true);
+      room.update(t, { lampLevel: 0.6, beam: 0 }); room.radio.clockTex.userData.draw('3:33', l < 0.1 ? 1 : 0); room.scene.updateMatrixWorld(true);
       const fp = room.radio.face.getWorldPosition(v3(0, 0, 0)); const n = v3(0, 0, 1).applyQuaternion(room.radio.face.getWorldQuaternion(new THREE.Quaternion()));
       placeCamera(E.camera, fp.clone().addScaledVector(n, 0.32 - l * 0.03), fp, 30, t, 0.4);
       return flashback;
@@ -271,10 +271,10 @@ export function renderFrame(t, type = 'image/jpeg') {
 }
 
 export function renderCover() {
-  const shot = shots[shots.length - 2];
-  const post = shot.run(52.4, 52.4 - shot.a); post.exposure = 1.45;
-  placeCamera(E.camera, v3(0.1, 1.55, -0.1), v3(-0.6, 0.15, -1.0), 50, 0, 0);
-  E.render(bedroom.scene, 52.4, post);
+  const shot = shots.find((x) => x.a <= 18 && x.b > 18);
+  const post = shot.run(18.2, 18.2 - shot.a); post.exposure = 1.5;
+  world.update(18.2, E.camera);
+  E.render(world.scene, 18.2, post);
   const c = E.ctx; const cx = 495;
   const g = c.createLinearGradient(0, 0, 0, 700); g.addColorStop(0, 'rgba(0,0,0,0.75)'); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.fillRect(0, 0, 1080, 700);
   const g2 = c.createLinearGradient(0, 1250, 0, 1920); g2.addColorStop(0, 'rgba(0,0,0,0)'); g2.addColorStop(1, 'rgba(0,0,0,0.85)'); c.fillStyle = g2; c.fillRect(0, 1250, 1080, 670);

@@ -4,8 +4,9 @@
 | Teil | Titel | Status |
 |---|---|---|
 | 1 | Die Ankunft | ✅ fertig (`teil_01/teil_01.mp4`) |
-| 2 | Die Spuren | ⏳ wartet auf „Weiter mit Teil 2“ |
-| 3–10 | – | offen |
+| 2 | Die Spuren | ✅ fertig (`teil_02/teil_02.mp4`) |
+| 3 | Das Funkgerät | ⏳ wartet auf „Weiter mit Teil 3“ |
+| 4–10 | – | offen |
 
 ## Stimme (für alle Teile beibehalten)
 - **Dienst:** Speko `audio.synthesize`, geroutet zu ElevenLabs
@@ -39,7 +40,16 @@
 - Export: `bash teil_01/export.sh` → H.264 `-crf 18 -preset veryfast`, AAC 192 kbps, `-movflags +faststart`
 - Mastering: KEIN dynamisches `loudnorm` (es hebt die Stille vor dem Schreck an). Stattdessen feste Verstärkung, 15 ms Einblendung, Limiter mit 4-fachem Oversampling → ≈ −14,8 LUFS / −1,4 dBTP
 
-## Für Teil 2 verbessern
-- Nebelbänke dichter in Bodennähe, mehr Lichtstreuung um den Kegel
-- Füße im Lichtspalt und die nassen Fußspuren als Material vorbereiten (Teil 2)
-- Längere, fließende Kamerafahrten im Haus
+## Neu in Teil 2 (wiederverwendbar)
+- `assets/props.js`: `createFootprints(path)` (nasse Barfuß-Abdrücke, L/R gespiegelt), `createStairPrints`, `createPuddle`
+- `assets/interior.js`: Flur mit Treppe (12 Stufen), Türöffnung mit Nebel dahinter (`doorOpen`); `createBedroom()` mit Absatz, Bett (Decke mit `dent`/`stain`), Wecker auf 3:33, Fenster mit Mondlicht
+- `figures.js`: volumetrischer Taschenlampen-Kegel (`holdTorch(on, cone)`)
+- `sfx.py`: `creak`, `latch`, `fabric`
+- Rückblick-Look: `exposure 0.9, chroma 2.2, flicker 0.12, vignette 1.4` + Tafel „WAS BISHER GESCHAH“
+- Achtung: Im Wachraum `room.update(t, { beam: 0 })` setzen, wenn kein Leuchtfeuer-Streiflicht gewünscht ist (sonst weißer Blitz alle 9 s)
+- Taschenlampen-Spots innen: Intensität 6–30 (darüber brennt das Bild aus); Spuren draußen mit `lift: 0.07`
+
+## Für Teil 3 verbessern
+- Funkgerät-Nahaufnahmen mit animierter Skala/Nadel, Stimmenverzerrung (Funk-Filter) für den Fischer
+- Bett-Delle im Cliffhanger deutlicher (Decke heller, Seitenlicht)
+- Mehr Kamerabewegung bei Dialog-Momenten
