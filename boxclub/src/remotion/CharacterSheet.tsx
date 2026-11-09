@@ -25,7 +25,7 @@ export const CharacterSheet: React.FC<CharacterSheetProps> = ({ character: c }) 
     <AbsoluteFill style={{ background: '#f4ead2', fontFamily: 'Montserrat, sans-serif', color: '#1a1410' }}>
       <div style={{ position: 'absolute', left: 50, top: 30, fontFamily: 'Anton, Impact, sans-serif', fontSize: 64 }}>{c.name}{c.nickname ? ` „${c.nickname}“` : ''}</div>
       <div style={{ position: 'absolute', left: 52, top: 112, fontWeight: 800, fontSize: 26 }}>{c.roleTitle} · {c.age} J. · {c.heightCm} cm · {c.weightKg} kg {c.weightClass ? `· ${c.weightClass}` : ''}</div>
-      <svg viewBox={`-200 ${-H * 1.12} 1700 ${H * 1.2}`} width={1700} height={720} style={{ position: 'absolute', left: 50, top: 170 }}>
+      <svg viewBox={`-200 ${-H * 1.12} 1700 ${H * 1.22}`} width={1700} height={760} style={{ position: 'absolute', left: 50, top: 170 }}>
         {/* Größenraster */}
         {[0, 50, 100, 150, 200].map((cm) => (
           <g key={cm}><path d={`M-200,${-cm * 4.2} H1500`} stroke="#c9b98f" strokeWidth={2} strokeDasharray="8 8" /><text x={-195} y={-cm * 4.2 - 6} fontSize={22} fill="#8a7a55">{cm} cm</text></g>
@@ -33,12 +33,10 @@ export const CharacterSheet: React.FC<CharacterSheetProps> = ({ character: c }) 
         {VIEWS.map((v, i) => (
           <g key={i} transform={`translate(${120 + i * 300} 0)`}>
             <CharacterRig look={c.look} heightCm={c.heightCm} frame={10} emotion={v.e} action={v.a} actionT={0.7} mouth={v.mouth} />
+            <text x={0} y={H * 0.075} textAnchor="middle" fontFamily="Montserrat, sans-serif" fontWeight={800} fontSize={H * 0.032} fill="#1a1410">{v.label}</text>
           </g>
         ))}
       </svg>
-      {VIEWS.map((v, i) => (
-        <div key={i} style={{ position: 'absolute', top: 895, left: 50 + (120 + i * 300 - (-200)) * (1700 / 1700) - 130, width: 260, textAlign: 'center', fontWeight: 800, fontSize: 22 }}>{v.label}</div>
-      ))}
       <div style={{ position: 'absolute', left: 50, top: 950, display: 'flex', gap: 18 }}>
         {swatches.map(([n, col]) => (
           <div key={n} style={{ textAlign: 'center', fontSize: 18, fontWeight: 800 }}>

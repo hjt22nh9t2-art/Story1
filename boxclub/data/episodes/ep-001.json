@@ -1,0 +1,421 @@
+{
+  "id": "ep-001",
+  "number": 1,
+  "title": "Null Boxer",
+  "status": "gerendert",
+  "createdAt": "2026-11-09T12:00:00.000Z",
+  "publishedAt": null,
+  "generator": "handgeschrieben (Pilot)",
+  "userIdeas": "",
+  "resolvesDecisionId": null,
+  "hook": "Wir gründen einen Boxverein. Kleines Problem: Wir haben einen Ring, eine Trainerin – und genau null Boxer.",
+  "summary": "Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß.",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "strasse",
+      "shot": "zoom",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "Wir gründen einen Boxverein!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": "glocke",
+          "pauseAfter": 0.3,
+          "audio": {
+            "file": "episodes/ep-001/voice/l1.mp3",
+            "durationSec": 1.8,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "guenther-wallach",
+          "text": "Kleines Problem: ein Ring, eine Trainerin … und genau null Boxer.",
+          "emotion": "verlegen",
+          "action": "achselzucken",
+          "sfx": "kratzer",
+          "pauseAfter": 0.25,
+          "audio": {
+            "file": "episodes/ep-001/voice/l2.mp3",
+            "durationSec": 4.52,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Günther vor der Halle, breitet stolz die Arme aus. Bei „null Boxer“ friert das Bild kurz ein."
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "halle",
+      "shot": "schwenk",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l3",
+          "speaker": "guenther-wallach",
+          "text": "Der Boxclub Rostfaust. Hier hat schon mein Vater geboxt!",
+          "emotion": "stolz",
+          "action": "zeigen",
+          "sfx": "whoosh",
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l3.mp3",
+            "durationSec": 2.98,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "paule-kruse",
+          "text": "Und seitdem hat hier keiner mehr geputzt.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.3,
+          "audio": {
+            "file": "episodes/ep-001/voice/l4.mp3",
+            "durationSec": 2.27,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "guenther-wallach",
+          "text": "Paule. Hausmeister, Kassenwart – und einziges Mitglied.",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l5.mp3",
+            "durationSec": 3.92,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        }
+      ],
+      "overlay": "MITGLIEDER: 1",
+      "music": "aufbruch",
+      "direction": "Schwenk durch die Halle: Risse, Ring, leckender Sandsack. Paule fegt."
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "ring",
+      "shot": "dolly",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l6",
+          "speaker": "guenther-wallach",
+          "text": "Und das ist Rosa. Bronze bei der EM!",
+          "emotion": "stolz",
+          "action": "zeigen",
+          "sfx": "sandsack",
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l6.mp3",
+            "durationSec": 2.74,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "rosa-brandt",
+          "text": "Ich trainiere keine Hobbyboxer. Ich trainiere Kämpfer.",
+          "emotion": "entschlossen",
+          "action": "arme_verschraenkt",
+          "sfx": "pfiff",
+          "pauseAfter": 0.3,
+          "audio": {
+            "file": "episodes/ep-001/voice/l7.mp3",
+            "durationSec": 3.45,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "guenther-wallach",
+          "text": "Wir haben nur … noch keine.",
+          "emotion": "verlegen",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l8.mp3",
+            "durationSec": 2.09,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "rosa-brandt",
+          "text": "Dann such welche.",
+          "emotion": "neutral",
+          "action": "seufzen",
+          "sfx": null,
+          "pauseAfter": 0.25,
+          "audio": {
+            "file": "episodes/ep-001/voice/l9.mp3",
+            "durationSec": 1.67,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "training",
+      "direction": "Rosa im Ring an der Ecke, Arme verschränkt. Günther vor den Seilen."
+    },
+    {
+      "id": "s4",
+      "beat": "entwicklung",
+      "location": "buero",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "paule-kruse",
+          "position": "links",
+          "facing": "rechts"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l10",
+          "speaker": "paule-kruse",
+          "text": "Fünfhundert Euro in der Kasse. Pacht: zweihundertfünfzig. Pro Monat.",
+          "emotion": "neutral",
+          "action": "keine",
+          "sfx": "kasse",
+          "pauseAfter": 0.25,
+          "audio": {
+            "file": "episodes/ep-001/voice/l10.mp3",
+            "durationSec": 4.52,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l11",
+          "speaker": "guenther-wallach",
+          "text": "Dann brauchen wir schnell einen Boxer. Dat wird ganz groß!",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l11.mp3",
+            "durationSec": 3.32,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l12",
+          "speaker": "paule-kruse",
+          "text": "Hast du über den Sandsack auch gesagt.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": "sandsack",
+          "pauseAfter": 0.25,
+          "audio": {
+            "file": "episodes/ep-001/voice/l12.mp3",
+            "durationSec": 2.01,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        }
+      ],
+      "overlay": "KASSE: 500 €  ·  PACHT: 250 €/MONAT",
+      "music": "komisch",
+      "direction": "Paule mit kariertem Heft am Schreibtisch voller Rechnungen."
+    },
+    {
+      "id": "s5",
+      "beat": "entscheidung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links"
+        },
+        {
+          "characterId": "bruno-kessler",
+          "position": "ganz_rechts",
+          "facing": "links"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l13",
+          "speaker": "rosa-brandt",
+          "text": "Zwei Bewerber. Emre, siebzehn. Schnell, frech, null Erfahrung.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": "tuer",
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l13.mp3",
+            "durationSec": 5.93,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l14",
+          "speaker": "rosa-brandt",
+          "text": "Bruno, sechsunddreißig. Ex-Profi. Harte Fäuste, kaputtes Knie.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-001/voice/l14.mp3",
+            "durationSec": 5.02,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l15",
+          "speaker": "paule-kruse",
+          "text": "Den Bruno kenn ich. Das gibt Ärger.",
+          "emotion": "traurig",
+          "action": "kopfschuetteln",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.3,
+          "audio": {
+            "file": "episodes/ep-001/voice/l15.mp3",
+            "durationSec": 2.48,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        },
+        {
+          "id": "l16",
+          "speaker": "guenther-wallach",
+          "text": "Wen holen wir zuerst? Den jungen Anfänger – oder den Ex-Profi? Ab in die Kommentare!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.9,
+          "audio": {
+            "file": "episodes/ep-001/voice/l16.mp3",
+            "durationSec": 4.7,
+            "provider": "elevenlabs (vorproduziert)"
+          }
+        }
+      ],
+      "overlay": "A: EMRE  ·  B: BRUNO",
+      "music": "spannung",
+      "direction": "Rosa zeigt auf die zwei Kandidaten am Hallentor. Paule murmelt. Günther fragt in die Kamera."
+    }
+  ],
+  "decision": {
+    "question": "Wen sollen wir als Erstes verpflichten?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Emre (17) – den jungen Anfänger",
+        "consequenceHint": "Billig, hungrig, braucht Jahre. Rosa muss bei null anfangen.",
+        "plan": "verpflichten:emre-yildiz"
+      },
+      {
+        "key": "B",
+        "label": "Bruno „Der Bär“ (36) – den erfahrenen Ex-Profi",
+        "consequenceHint": "Sofort kampfbereit, bringt Aufmerksamkeit – aber Knie und Vergangenheit sind ein Risiko.",
+        "plan": "verpflichten:bruno-kessler"
+      }
+    ]
+  },
+  "cliffhanger": "Paule kennt Bruno – und offenbar nichts Gutes.",
+  "stateChanges": [
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "der-traum",
+      "value": "Günther eröffnet den Club neu. Ziel: wieder größter Boxverein Kranstadts.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "die-pacht",
+      "value": "500 € in der Kasse, 250 € Pacht pro Monat – das Geld reicht höchstens zwei Monate.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "paules-geheimnis",
+      "value": "Paule kennt Bruno Kessler von früher und sagt: „Das gibt Ärger.“",
+      "reason": "Neuer Handlungsstrang"
+    }
+  ],
+  "newCharacterIds": [],
+  "socialCaption": "Folge 1: Wir haben einen Boxclub. Und null Boxer. 🥊 Wen sollen wir verpflichten – A: Emre oder B: Bruno? Schreib A oder B in die Kommentare!",
+  "hashtags": [
+    "#boxclub",
+    "#boxen",
+    "#serie",
+    "#animation",
+    "#rostfaust",
+    "#teil1"
+  ],
+  "video": {
+    "file": "episodes/ep-001/boxclub_folge_001.mp4",
+    "poster": "episodes/ep-001/poster.jpg",
+    "renderedAt": "2026-11-09T22:23:04.822Z",
+    "durationSec": 60.8
+  }
+}
