@@ -1,0 +1,50 @@
+[
+  {
+    "id": "strasse",
+    "name": "Depotstraße 7 (außen)",
+    "description": "Backsteinhalle eines alten Straßenbahndepots, verblichenes Schild „BOXCLUB ROSTFAUST“, rostiges Rolltor, Schienen im Kopfsteinpflaster.",
+    "unlocked": true
+  },
+  {
+    "id": "halle",
+    "name": "Die Halle",
+    "description": "Hohe Backsteinwände mit Rissen, Oberlichter, ein Boxring mit roter und blauer Ecke, zwei Sandsäcke (einer leckt Sand), vergilbte Kampfplakate von 1987.",
+    "unlocked": true
+  },
+  {
+    "id": "ring",
+    "name": "Der Ring",
+    "description": "Nahansicht des alten Rings: geflickte Seile, rote und blaue Eckpolster, die alte Messingglocke am Pfosten.",
+    "unlocked": true
+  },
+  {
+    "id": "empfang",
+    "name": "Empfang",
+    "description": "Holztresen mit Geldkassette, karierte Mitgliederliste, Pokale vom Vater, Kaffeemaschine von 1990.",
+    "unlocked": true
+  },
+  {
+    "id": "buero",
+    "name": "Günthers Büro",
+    "description": "Winziger Raum mit Schreibtisch voller Rechnungen, Foto vom Vater im Ring, Wanduhr, Fenster zur Halle.",
+    "unlocked": true
+  },
+  {
+    "id": "umkleide",
+    "name": "Umkleide",
+    "description": "Grüne Blechspinde, Holzbank, kaputte Dusche, die tropft.",
+    "unlocked": true
+  },
+  {
+    "id": "eventhalle",
+    "name": "Kranstadt Arena",
+    "description": "Veranstaltungshalle für Turniere mit Zuschauerrängen und Scheinwerfern.",
+    "unlocked": false
+  },
+  {
+    "id": "rivalengym",
+    "name": "Titan Boxing Gym",
+    "description": "Hochglanz-Gym in der Innenstadt: Glas, LED-Licht, zehn Sandsäcke, zwei Ringe.",
+    "unlocked": false
+  }
+]

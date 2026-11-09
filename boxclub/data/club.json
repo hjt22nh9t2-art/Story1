@@ -1,0 +1,80 @@
+{
+  "clubName": "Boxclub Rostfaust Kranstadt",
+  "city": "Kranstadt",
+  "address": "Depotstraße 7",
+  "founded": "Neugründung 2026 – Tradition seit 1961",
+  "money": 500,
+  "monthlyCosts": 380,
+  "monthlyIncome": 15,
+  "members": 1,
+  "reputation": 5,
+  "facilityCondition": 28,
+  "equipment": [
+    {
+      "id": "ring",
+      "name": "Boxring (rot/blau)",
+      "count": 1,
+      "condition": 45
+    },
+    {
+      "id": "sandsack",
+      "name": "Sandsack",
+      "count": 2,
+      "condition": 30
+    },
+    {
+      "id": "handschuhe",
+      "name": "Paar Boxhandschuhe",
+      "count": 4,
+      "condition": 35
+    },
+    {
+      "id": "springseil",
+      "name": "Springseil",
+      "count": 3,
+      "condition": 60
+    },
+    {
+      "id": "spiegel",
+      "name": "Wandspiegel (gesprungen)",
+      "count": 1,
+      "condition": 20
+    },
+    {
+      "id": "hantelbank",
+      "name": "Hantelbank",
+      "count": 1,
+      "condition": 40
+    },
+    {
+      "id": "glocke",
+      "name": "Ringglocke (Messing, 1961)",
+      "count": 1,
+      "condition": 95
+    }
+  ],
+  "fights": [],
+  "rivalries": [],
+  "sponsors": [],
+  "storylines": [
+    {
+      "id": "der-traum",
+      "title": "Der Traum vom großen Verein",
+      "status": "offen",
+      "startedEpisode": 1,
+      "updates": []
+    },
+    {
+      "id": "die-pacht",
+      "title": "Die Pacht für die Depothalle",
+      "status": "offen",
+      "startedEpisode": 1,
+      "updates": []
+    }
+  ],
+  "decisions": [],
+  "chapter": "Akt 1 – Null Boxer",
+  "timeline": [],
+  "lastEpisode": 0,
+  "nextEpisodeNote": ""
+}
