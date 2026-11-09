@@ -340,3 +340,26 @@ def glass_hit(seed=43):
         x += a * np.sin(2 * np.pi * f * t) * np.exp(-t * dec)
     x += hp(noise(d, seed), 2000) * np.exp(-t * 60) * 0.5
     return reverb(stereo(x.astype(np.float32)), 1.0, 0.3, seed=seed)
+
+
+# ------------------------------------------------------------ ab Teil 4
+def bulb_hum(d, seed=50):
+    n = secs(d); t = np.arange(n) / SR
+    x = (np.sin(2 * np.pi * 100 * t) * 0.6 + np.sin(2 * np.pi * 200 * t) * 0.25 + np.sin(2 * np.pi * 300 * t) * 0.1) * (0.9 + 0.1 * slow_lfo(n, 3, seed))
+    x += bp(noise(d, seed), 2000, 6000) * 0.05
+    return stereo(x.astype(np.float32))
+
+
+def glass_tone(d=4.0, f0=1180, seed=51):
+    """singender, unheimlicher Glaston (Spiegel)"""
+    n = secs(d); t = np.arange(n) / SR
+    x = sum(a * np.sin(2 * np.pi * f0 * m * t * (1 + 0.002 * np.sin(2 * np.pi * 0.3 * t))) for m, a in ((1, 1), (2.01, 0.25), (2.98, 0.12)))
+    env = np.minimum(1, t / 1.5) * np.minimum(1, (d - t) / 0.4)
+    return reverb(stereo((x * env).astype(np.float32), 0.6), 2.0, 0.5, seed=seed)
+
+
+def bulb_pop(seed=52):
+    d = 0.9; n = secs(d); t = np.arange(n) / SR
+    x = hp(noise(d, seed), 1500) * np.exp(-t * 30) * 1.2 + np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 25) * 0.3
+    x += lp(noise(d, seed + 1), 400) * np.exp(-t * 18) * 0.6
+    return reverb(stereo(x.astype(np.float32)), 0.8, 0.35, seed=seed)

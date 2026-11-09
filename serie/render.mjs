@@ -35,6 +35,13 @@ async function openPage() {
   return page;
 }
 
+if (opt('photo', null)) {
+  const page = await openPage();
+  const data = await page.evaluate(() => window.mod.photoPNG());
+  fs.writeFileSync(opt('photo'), Buffer.from(data.split(',')[1], 'base64'));
+  console.log('foto ->', opt('photo')); await browser.close(); server.close(); process.exit(0);
+}
+
 if (opt('cover', null)) {
   const page = await openPage();
   const data = await page.evaluate(() => window.renderCover());

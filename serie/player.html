@@ -6,7 +6,7 @@
 <script type="module">
   const ep = new URLSearchParams(location.search).get('ep') || 'teil_01';
   const mod = await import(`/${ep}/episode.js`);
-  try { await mod.init(); window.DURATION = mod.DURATION; window.renderFrame = mod.renderFrame; window.renderCover = mod.renderCover; window.ready = true; }
+  try { await mod.init(); window.DURATION = mod.DURATION; window.renderFrame = mod.renderFrame; window.renderCover = mod.renderCover; window.mod = mod; window.ready = true; }
   catch (e) { window.initError = String(e && e.stack || e); console.error(e); }
 </script>
 </body></html>

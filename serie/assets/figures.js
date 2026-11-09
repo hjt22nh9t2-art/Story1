@@ -29,15 +29,15 @@ export function createJonas({ wet = false } = {}) {
   const neck = new THREE.Group(); neck.position.y = 0.78; torso.add(neck);
   const head = new THREE.Group(); head.position.y = 0.16; neck.add(head);
   const skull = new THREE.Mesh(new THREE.SphereGeometry(0.15, 24, 18), skinMat); skull.scale.set(0.95, 1.12, 1); skull.castShadow = true; head.add(skull);
-  const nose = new THREE.Mesh(new THREE.ConeGeometry(0.025, 0.06, 8), skinMat); nose.rotation.x = Math.PI / 2; nose.position.set(0, -0.01, 0.15); head.add(nose);
-  const eyeL = new THREE.Mesh(new THREE.SphereGeometry(0.014, 8, 6), eyeMat); eyeL.position.set(-0.05, 0.025, 0.135); head.add(eyeL);
+  const nose = new THREE.Mesh(new THREE.ConeGeometry(0.025, 0.06, 8), skinMat); nose.rotation.x = Math.PI / 2; nose.position.set(0, -0.03, 0.15); head.add(nose);
+  const eyeL = new THREE.Mesh(new THREE.SphereGeometry(0.014, 8, 6), eyeMat); eyeL.position.set(-0.05, 0.005, 0.137); head.add(eyeL);
   const eyeR = eyeL.clone(); eyeR.position.x = 0.05; head.add(eyeR);
-  const brow = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.015, 0.02), new THREE.MeshStandardMaterial({ color: 0x3a2a20 })); brow.position.set(0, 0.06, 0.135); head.add(brow);
-  const beard = new THREE.Mesh(new THREE.SphereGeometry(0.135, 16, 10, 0, Math.PI * 2, Math.PI * 0.55, Math.PI * 0.4), new THREE.MeshStandardMaterial({ color: 0x3b2c22, roughness: 1 }));
+  const brow = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.015, 0.02), new THREE.MeshStandardMaterial({ color: 0x3a2a20 })); brow.position.set(0, 0.035, 0.137); head.add(brow);
+  const beard = new THREE.Mesh(new THREE.SphereGeometry(0.139, 32, 20, 0, Math.PI * 2, Math.PI * 0.66, Math.PI * 0.3), new THREE.MeshStandardMaterial({ color: 0x6a5240, roughness: 1 }));
   beard.position.set(0, 0.0, 0.02); head.add(beard);
   // Wollmütze mit Umschlag
-  const beanie = new THREE.Mesh(new THREE.SphereGeometry(0.162, 22, 14, 0, Math.PI * 2, 0, Math.PI * 0.52), beanieMat); beanie.position.y = 0.035; beanie.scale.set(1, 1.15, 1.04); beanie.castShadow = true; head.add(beanie);
-  const cuff = new THREE.Mesh(new THREE.TorusGeometry(0.155, 0.035, 10, 26), beanieMat); cuff.rotation.x = Math.PI / 2; cuff.position.y = 0.05; cuff.scale.set(1, 1.04, 1); head.add(cuff);
+  const beanie = new THREE.Mesh(new THREE.SphereGeometry(0.162, 22, 14, 0, Math.PI * 2, 0, Math.PI * 0.52), beanieMat); beanie.position.y = 0.06; beanie.scale.set(1, 1.15, 1.04); beanie.castShadow = true; head.add(beanie);
+  const cuff = new THREE.Mesh(new THREE.TorusGeometry(0.155, 0.035, 10, 26), beanieMat); cuff.rotation.x = Math.PI / 2; cuff.position.y = 0.075; cuff.scale.set(1, 1.04, 1); head.add(cuff);
 
   const mkArm = (side) => {
     const sh = new THREE.Group(); sh.position.set(side * 0.33, 0.66, 0); torso.add(sh);
