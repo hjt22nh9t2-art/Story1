@@ -6,8 +6,9 @@
 | 1 | Die Ankunft | ✅ fertig (`teil_01/teil_01.mp4`) |
 | 2 | Die Spuren | ✅ fertig (`teil_02/teil_02.mp4`) |
 | 3 | Das Funkgerät | ✅ fertig (`teil_03/teil_03.mp4`) |
-| 4 | Das Foto | ⏳ wartet auf „Weiter mit Teil 4“ |
-| 5–10 | – | offen |
+| 4 | Das Foto | ✅ fertig (`teil_04/teil_04.mp4`) |
+| 5 | Das Wrack | ⏳ wartet auf „Weiter mit Teil 5“ |
+| 6–10 | – | offen |
 
 ## Stimme (für alle Teile beibehalten)
 - **Dienst:** Speko `audio.synthesize`, geroutet zu ElevenLabs
@@ -61,7 +62,15 @@
 - `createGhostBoat()` (dunkler Kutter mit Laterne, `userData.update(t, level)`)
 - `sfx.py`: `radio_voice`, `squelch`, `bubbles`, `glass_hit`
 
-## Für Teil 4 verbessern
-- Keller als neuer Ort (Gewölbe, eine nackte Glühbirne, Regale, Kisten)
-- Foto von 1953 als Textur (Schwarzweiß, Körnung, Wärter = Jonas-Silhouette, Gestalt dahinter)
-- Spiegel mit echter Reflexion (Reflector) für den Cliffhanger
+## Neu in Teil 4 (wiederverwendbar)
+- `assets/cellar.js`: Keller mit Tonnengewölbe, Steinwand-Textur, Treppe, pendelnde Glühbirne (`update(t, { bulb, swing, fill })`), Werkbank, Kiste mit Fotos, `keyPhoto`, Regale, Rettungsring
+- Spiegel = `Reflector` (`cellar.mirror`). Figuren auf `layers.set(1)` sind NUR im Spiegel sichtbar (`mirror.camera.layers.enable(1)`)
+- `assets/photo.js`: `makeOldPhoto(E, scene, { pos, target, fov, caption })` erzeugt aus der 3D-Welt einen verblassten Abzug von 1953 (Korn, Kratzer, Rand, Handschrift)
+- Jonas-Gesicht überarbeitet: Augen unter der Mütze sichtbar, Bart weicher (gilt ab Teil 4)
+- Nahaufnahmen von kleinen Objekten: `camera.near` auf 0.005 setzen, sonst wird das Objekt abgeschnitten
+- `sfx.py`: `bulb_hum`, `glass_tone`, `bulb_pop`
+
+## Für Teil 5 verbessern
+- Watt bei Ebbe: Wasser weit zurückgezogen (Meeresspiegel senken), nasser Schlick mit Spiegelungen, Priele
+- Wrack begehbar (größer, mit Innenraum), Logbuch darin mit Jonas’ Handschrift
+- Flut als animierte, schnell steigende Wasserfläche
