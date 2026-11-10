@@ -72,6 +72,23 @@ export function applyChange(w: World, ch: StateChange, ep: number): string {
       else { c.sponsors.push({ name: ch.target, amountPerMonth: ch.amount, since: ep }); c.monthlyIncome += ch.amount; }
       return `Sponsor ${ch.target}: ${ch.amount} €/Monat`;
     }
+    case 'veranstaltung': {
+      // value: "Name | Orts-ID | Art | Boxer-ID | Plätze | Tage"   amount = Kosten
+      const [name = 'Veranstaltung', locationId = 'eventhalle', kind = 'Kampf', boxerId = '', seats = '100', days = '5'] = ch.value.split('|').map((x) => x.trim());
+      if (ch.reason === 'abgeschlossen') { c.upcomingEvent = null; return `Veranstaltung beendet: ${name}`; }
+      c.upcomingEvent = { name, locationId, kind, boxerId, seats: Number(seats) || 100, seatsFilled: 0, daysLeft: Number(days) || 5, cost: ch.amount, announcedEpisode: ep, note: ch.reason };
+      return `Veranstaltung angesetzt: ${name} in ${days} Tagen (${seats} Plätze)`;
+    }
+    case 'plaetze': {
+      if (!c.upcomingEvent) throw new Error('plaetze: keine Veranstaltung angesetzt');
+      c.upcomingEvent.seatsFilled = clamp(Math.round(ch.amount), 0, c.upcomingEvent.seats);
+      return `Arena: ${c.upcomingEvent.seatsFilled}/${c.upcomingEvent.seats} Plätze gefüllt (${ch.reason || 'Community'})`;
+    }
+    case 'countdown': {
+      if (!c.upcomingEvent) throw new Error('countdown: keine Veranstaltung angesetzt');
+      c.upcomingEvent.daysLeft = Math.max(0, Math.round(ch.amount));
+      return `Noch ${c.upcomingEvent.daysLeft} Tage bis ${c.upcomingEvent.name}`;
+    }
     case 'ort_freischalten': {
       const l = w.locations.find((x) => x.id === ch.target);
       if (!l) throw new Error(`ort_freischalten: Ort ${ch.target} unbekannt`);

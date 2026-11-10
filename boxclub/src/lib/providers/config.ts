@@ -46,7 +46,7 @@ export function getConfig(): ProviderConfig {
   return {
     story, tts, image, keys,
     claudeModel: e.CLAUDE_MODEL || 'claude-opus-5-5',
-    elevenlabsModel: e.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
+    elevenlabsModel: e.ELEVENLABS_MODEL || 'eleven_v3',
     openaiTtsModel: e.OPENAI_TTS_MODEL || 'gpt-4o-mini-tts',
     openaiImageModel: e.OPENAI_IMAGE_MODEL || 'gpt-image-1',
   };

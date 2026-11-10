@@ -33,7 +33,7 @@ export const characters: Character[] = [
     weaknesses: ['Finanzen', 'verspricht zu viel', 'unterschätzt Probleme'],
     goal: 'Den Boxclub Rostfaust wieder zum größten Verein der Stadt machen – wie zu Vaters Zeiten.',
     catchphrase: 'Dat wird ganz groß!',
-    voice: { elevenlabsVoiceId: '5faieqDE3osz75KiOI2M', openaiVoice: 'ash', instructions: 'Älterer Mann aus dem Ruhrgebiet, warm, begeistert, etwas rau.', demoPitch: 0.85 },
+    voice: { elevenlabsVoiceId: '5faieqDE3osz75KiOI2M', openaiVoice: 'ash', instructions: 'Älterer Mann aus dem Ruhrgebiet, warm, begeistert, etwas rau.', demoPitch: 0.85, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt.' },
     look: {
       skin: '#e9b48e',
       hair: { style: 'haarkranz', color: '#d9d4cc' },
@@ -70,7 +70,7 @@ export const characters: Character[] = [
     weaknesses: ['ungeduldig mit Faulheit', 'stur', 'schlecht im Verkaufen'],
     goal: 'Einen Boxer bis zur Deutschen Meisterschaft bringen – auf ihre Art.',
     catchphrase: 'Nochmal.',
-    voice: { elevenlabsVoiceId: 'le3O97c6UClnRdpxkDTb', openaiVoice: 'sage', instructions: 'Frau Mitte 50, tiefe ruhige Stimme, knapp und streng.', demoPitch: 1.05 },
+    voice: { elevenlabsVoiceId: 'le3O97c6UClnRdpxkDTb', openaiVoice: 'sage', instructions: 'Frau Mitte 50, tiefe ruhige Stimme, knapp und streng.', demoPitch: 1.05, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Rhea“ (deutsch, weiblich, tief). Seit Folge 1 festgelegt.' },
     look: {
       skin: '#d7a184',
       hair: { style: 'stoppel', color: '#9b9b98' },
@@ -107,7 +107,7 @@ export const characters: Character[] = [
     weaknesses: ['Rücken', 'Pessimismus', 'erzählt nicht alles, was er weiß'],
     goal: 'Dass die Halle nicht abgerissen wird, solange er lebt.',
     catchphrase: 'Hab ich schon mal erlebt.',
-    voice: { elevenlabsVoiceId: '6i9HBATmN8DhZRFTlPOK', openaiVoice: 'echo', instructions: 'Sehr alter Mann, trocken, langsam, leicht brummig, sarkastisch.', demoPitch: 0.75 },
+    voice: { elevenlabsVoiceId: '1YST1S3BrkT7E0wcLKQD', openaiVoice: 'echo', instructions: 'Sehr alter Mann, trocken, langsam, leicht brummig, sarkastisch.', demoPitch: 0.75, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme.' },
     look: {
       skin: '#efc6a4',
       hair: { style: 'kurz', color: '#ededed' },
@@ -145,7 +145,7 @@ export const characters: Character[] = [
     goal: 'Profiboxer werden und seiner Mutter eine Wohnung kaufen.',
     catchphrase: 'Ich bin schneller als dein Gedanke.',
     stats: { technik: 2, kraft: 4, kondition: 3, disziplin: 4 },
-    voice: { elevenlabsVoiceId: '1YST1S3BrkT7E0wcLKQD', openaiVoice: 'verse', instructions: 'Junger Mann, 17, schnell, frech, energiegeladen.', demoPitch: 1.25 },
+    voice: { elevenlabsVoiceId: 'TX3LPaxmHKxFdv7VOQHJ', openaiVoice: 'verse', instructions: 'Junger Mann, 17, schnell, frech, energiegeladen.', demoPitch: 1.25, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt.' },
     look: {
       skin: '#c48a62',
       hair: { style: 'locken', color: '#1b1612' },
@@ -184,7 +184,7 @@ export const characters: Character[] = [
     catchphrase: 'Einmal noch.',
     stats: { technik: 7, kraft: 9, kondition: 4, disziplin: 6 },
     record: { siege: 14, niederlagen: 3, unentschieden: 0 },
-    voice: { elevenlabsVoiceId: 'nPczCjzI2devNBz1zQrb', openaiVoice: 'onyx', instructions: 'Großer Mann Mitte 30, sehr tiefe ruhige Stimme, melancholisch.', demoPitch: 0.65 },
+    voice: { elevenlabsVoiceId: 'nPczCjzI2devNBz1zQrb', openaiVoice: 'onyx', instructions: 'Großer Mann Mitte 30, sehr tiefe ruhige Stimme, melancholisch.', demoPitch: 0.65, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen.' },
     look: {
       skin: '#f0c09a',
       hair: { style: 'glatze', color: '#3a2a1e' },
@@ -222,7 +222,7 @@ export const characters: Character[] = [
     goal: 'Beweisen, dass er mehr ist als seine Akte.',
     catchphrase: 'Und jetzt?',
     stats: { technik: 7, kraft: 6, kondition: 7, disziplin: 2 },
-    voice: { elevenlabsVoiceId: 'N2lVS1w4EtoT3dr4eOWO', openaiVoice: 'ballad', instructions: 'Junger Mann, 21, rau, leise, provokant.', demoPitch: 1.1 },
+    voice: { elevenlabsVoiceId: 'N2lVS1w4EtoT3dr4eOWO', openaiVoice: 'ballad', instructions: 'Junger Mann, 21, rau, leise, provokant.', demoPitch: 1.1, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen.' },
     look: {
       skin: '#e8b996',
       hair: { style: 'stoppel', color: '#e6d27a' },
@@ -259,7 +259,7 @@ export const characters: Character[] = [
     weaknesses: ['Arroganz', 'unterschätzt Herz'],
     goal: 'Den Rostfaust-Club schlucken oder plattmachen.',
     catchphrase: 'Nichts Persönliches, Günther. Nur Business.',
-    voice: { elevenlabsVoiceId: 'cjVigY5qzO86Huf0OWal', openaiVoice: 'alloy', instructions: 'Mann Ende 40, glatt, freundlich-herablassend.', demoPitch: 0.95 },
+    voice: { elevenlabsVoiceId: 'cjVigY5qzO86Huf0OWal', openaiVoice: 'alloy', instructions: 'Mann Ende 40, glatt, freundlich-herablassend.', demoPitch: 0.95, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen.' },
     look: {
       skin: '#e3b08c',
       hair: { style: 'zurueckgegelt', color: '#1e1e22' },
@@ -286,7 +286,7 @@ export const locations: Location[] = [
   { id: 'empfang', name: 'Empfang', description: 'Holztresen mit Geldkassette, karierte Mitgliederliste, Pokale vom Vater, Kaffeemaschine von 1990.', unlocked: true },
   { id: 'buero', name: 'Günthers Büro', description: 'Winziger Raum mit Schreibtisch voller Rechnungen, Foto vom Vater im Ring, Wanduhr, Fenster zur Halle.', unlocked: true },
   { id: 'umkleide', name: 'Umkleide', description: 'Grüne Blechspinde, Holzbank, kaputte Dusche, die tropft.', unlocked: true },
-  { id: 'eventhalle', name: 'Kranstadt Arena', description: 'Veranstaltungshalle für Turniere mit Zuschauerrängen und Scheinwerfern.', unlocked: false },
+  { id: 'eventhalle', name: 'Kranstadt Arena', description: 'Kleine Veranstaltungshalle am Hafen: Boxring in der Mitte, Tribüne mit genau 100 roten Klappsitzen in 5 Reihen, Scheinwerfer, Banner „KAMPFABEND“. Wiederverwendbar für alle Kampfabende.', unlocked: false },
   { id: 'rivalengym', name: 'Titan Boxing Gym', description: 'Hochglanz-Gym in der Innenstadt: Glas, LED-Licht, zehn Sandsäcke, zwei Ringe.', unlocked: false },
 ];
 
@@ -322,4 +322,5 @@ export const club: ClubState = {
   timeline: [],
   lastEpisode: 0,
   nextEpisodeNote: '',
+  upcomingEvent: null,
 };

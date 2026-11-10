@@ -1,0 +1,562 @@
+{
+  "id": "ep-002",
+  "number": 2,
+  "title": "Fünf Tage",
+  "status": "veroeffentlicht",
+  "createdAt": "2026-11-10T16:00:33.786Z",
+  "publishedAt": "2026-11-10T16:19:44.594Z",
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Erster Boxer Emre, Kampfabend in 5 Tagen, Arena mit 100 Plätzen, 1 neuer Follower = 1 symbolischer Platz.",
+  "resolvesDecisionId": "d-001",
+  "hook": "Wir haben unseren ersten Boxer! Aber in nur fünf Tagen wartet bereits sein erster großer Kampf!",
+  "summary": "Die Community hat entschieden: Emre (17) wird offiziell Mitglied Nr. 2, Bruno wird nicht verpflichtet. Rosa sieht Talent, aber keine Technik. Günther bekommt einen Anruf: In fünf Tagen darf Emre bei einem Kampfabend in der Kranstadt Arena (100 Plätze) einen Schaukampf boxen. Die Arena-Miete kostet 200 €, die Kasse sinkt auf 300 €. Bleibt die Halle leer, ist das Geld weg. Günther bittet die Zuschauer um Hilfe: Jeder neue Follower füllt symbolisch einen Platz.",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "halle",
+      "shot": "zoom",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "emre-yildiz",
+          "position": "rechts",
+          "facing": "links",
+          "action": "schlagen"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "Wir haben unseren ersten Boxer! Aber in nur fünf Tagen wartet bereits sein erster großer Kampf!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": "glocke",
+          "pauseAfter": 0.12,
+          "audio": {
+            "file": "episodes/ep-002/voice/l1.mp3",
+            "durationSec": 5.49,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "UNSER 1. BOXER: EMRE",
+      "music": "training",
+      "direction": "Hook: Emre hämmert im Hintergrund auf den Sandsack, Günther jubelt in die Kamera.",
+      "seats": null
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l2",
+          "speaker": "guenther-wallach",
+          "text": "Emre Yıldız – offiziell Mitglied Nummer zwei!",
+          "emotion": "stolz",
+          "action": "zeigen",
+          "sfx": "stempel",
+          "pauseAfter": 0.1,
+          "audio": {
+            "file": "episodes/ep-002/voice/l2.mp3",
+            "durationSec": 2.69,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "paule-kruse",
+          "text": "Endlich mal jemand, der jünger ist als die Hantelbank.",
+          "emotion": "froh",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-002/voice/l3.mp3",
+            "durationSec": 2.3,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "rosa-brandt",
+          "text": "Talent hast du. Technik nicht. Noch nicht.",
+          "emotion": "neutral",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "audio": {
+            "file": "episodes/ep-002/voice/l4.mp3",
+            "durationSec": 2.87,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "emre-yildiz",
+          "text": "Ich zeige euch, dass ich das Zeug zum Boxer habe!",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "audio": {
+            "file": "episodes/ep-002/voice/l5.mp3",
+            "durationSec": 2.09,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "MITGLIEDER: 2",
+      "music": "aufbruch",
+      "direction": "Emre kommt offiziell als Mitglied. Günther, Rosa und Paule begrüßen ihn.",
+      "seats": null
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "paule-kruse",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l6",
+          "speaker": "guenther-wallach",
+          "text": "Ein Boxabend? In fünf Tagen? Und unser Emre darf boxen?!",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": "telefon",
+          "pauseAfter": 0.12,
+          "audio": {
+            "file": "episodes/ep-002/voice/l6.mp3",
+            "durationSec": 3.92,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "paule-kruse",
+          "text": "Haken an der Sache: Die Arena hat hundert Plätze. Und uns kennt keiner.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "audio": {
+            "file": "episodes/ep-002/voice/l7.mp3",
+            "durationSec": 3.66,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "paule-kruse",
+          "text": "Zweihundert Euro Miete. Bleibt sie leer, ist das Geld weg.",
+          "emotion": "traurig",
+          "action": "keine",
+          "sfx": "kasse",
+          "pauseAfter": 0.2,
+          "audio": {
+            "file": "episodes/ep-002/voice/l8.mp3",
+            "durationSec": 2.9,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "SCHAUKAMPF IN 5 TAGEN",
+      "music": "spannung",
+      "direction": "Das alte Telefon klingelt. Günther hebt ab und traut seinen Ohren nicht.",
+      "seats": null
+    },
+    {
+      "id": "s4",
+      "beat": "handlung",
+      "location": "ring",
+      "shot": "dolly",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "emre-yildiz",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l9",
+          "speaker": "rosa-brandt",
+          "text": "Leer oder voll. Wir treten an.",
+          "emotion": "entschlossen",
+          "action": "arme_verschraenkt",
+          "sfx": "pfiff",
+          "pauseAfter": 0.2,
+          "audio": {
+            "file": "episodes/ep-002/voice/l9.mp3",
+            "durationSec": 2.35,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "emre-yildiz",
+          "text": "Ich bin bereit. Ich werde euch nicht enttäuschen!",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "audio": {
+            "file": "episodes/ep-002/voice/l10.mp3",
+            "durationSec": 2.38,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "KASSE: 500 € → 300 €",
+      "music": "training",
+      "direction": "Im Ring. Rosa will antreten. Emre ist nervös, fasst sich dann ein Herz.",
+      "seats": null
+    },
+    {
+      "id": "s5",
+      "beat": "entwicklung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l11",
+          "speaker": "guenther-wallach",
+          "text": "Das ist unsere große Chance. Wir brauchen eure Hilfe!",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "audio": {
+            "file": "episodes/ep-002/voice/l11.mp3",
+            "durationSec": 2.93,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l12",
+          "speaker": "guenther-wallach",
+          "text": "Wir wollen die Arena in fünf Tagen komplett füllen!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "audio": {
+            "file": "episodes/ep-002/voice/l12.mp3",
+            "durationSec": 2.85,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l13",
+          "speaker": "guenther-wallach",
+          "text": "Jeder neue Follower ist ein Platz. Hundert – und wir sind ausverkauft!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": "publikum",
+          "pauseAfter": 0.1,
+          "audio": {
+            "file": "episodes/ep-002/voice/l13.mp3",
+            "durationSec": 3.19,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l14",
+          "speaker": "paule-kruse",
+          "text": "Keine Sorge, sitzen müsst ihr nicht. Folgen reicht.",
+          "emotion": "froh",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "audio": {
+            "file": "episodes/ep-002/voice/l14.mp3",
+            "durationSec": 2.35,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l15",
+          "speaker": "guenther-wallach",
+          "text": "Folge dem Boxclub Rostfaust und hilf uns, die Arena vollzubekommen!",
+          "emotion": "froh",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "audio": {
+            "file": "episodes/ep-002/voice/l15.mp3",
+            "durationSec": 3.24,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Die Kranstadt Arena: 100 rote Klappsitze. Während Günther spricht, füllen sie sich Platz für Platz.",
+      "seats": {
+        "from": 0,
+        "to": 100,
+        "total": 100,
+        "hud": true
+      }
+    },
+    {
+      "id": "s6",
+      "beat": "entscheidung",
+      "location": "ring",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "emre-yildiz",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l16",
+          "speaker": "rosa-brandt",
+          "text": "In fünf Tagen sehen wir, ob du wirklich bereit bist.",
+          "emotion": "entschlossen",
+          "action": "keine",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.2,
+          "audio": {
+            "file": "episodes/ep-002/voice/l16.mp3",
+            "durationSec": 3.58,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Cliffhanger: Rosa sieht Emre lange an.",
+      "seats": null
+    },
+    {
+      "id": "s7",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "zoom",
+      "cast": [],
+      "lines": [
+        {
+          "id": "l17",
+          "speaker": "guenther-wallach",
+          "text": "Schaffen wir es, die Arena mit euch zusammen zu füllen?",
+          "emotion": "neutral",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.35,
+          "audio": {
+            "file": "episodes/ep-002/voice/l17.mp3",
+            "durationSec": 2.3,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "NOCH 5 TAGE BIS ZUM KAMPFABEND!",
+      "music": "spannung",
+      "direction": "Die leere Arena. Günther aus dem Off.",
+      "seats": {
+        "from": 0,
+        "to": 0,
+        "total": 100,
+        "hud": false
+      }
+    }
+  ],
+  "decision": {
+    "question": "Schaffen wir es, die Arena zu füllen?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Ja – 100 neue Follower: ausverkauft!",
+        "consequenceHint": "Volle Arena – Emre boxt vor Publikum, der Club wird in Kranstadt bekannt.",
+        "plan": "arena:voll"
+      },
+      {
+        "key": "B",
+        "label": "Noch nicht – unter 100 neuen Followern",
+        "consequenceHint": "Halbleere Halle – Emre boxt trotzdem, aber die 200 € Miete schmerzen.",
+        "plan": "arena:teil"
+      }
+    ]
+  },
+  "cliffhanger": "In fünf Tagen boxt Emre seinen ersten Schaukampf – ist er bereit, und wird die Arena voll?",
+  "stateChanges": [
+    {
+      "op": "figur_status",
+      "amount": 0,
+      "target": "emre-yildiz",
+      "value": "aktiv",
+      "reason": "Community-Entscheidung Folge 1 (A)"
+    },
+    {
+      "op": "mitglieder",
+      "amount": 1,
+      "target": "",
+      "value": "",
+      "reason": "Emre tritt ein (Mitglied Nr. 2)"
+    },
+    {
+      "op": "einnahmen",
+      "amount": 15,
+      "target": "",
+      "value": "",
+      "reason": "Emres Mitgliedsbeitrag"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Emre ist offizielles Mitglied Nr. 2. Rosa: Talent ja, Technik noch nicht.",
+      "reason": "Der Weg von Emre"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "paules-geheimnis",
+      "value": "Bruno wurde von der Community nicht verpflichtet. Was Paule über ihn weiß, bleibt vorerst offen.",
+      "reason": ""
+    },
+    {
+      "op": "ort_freischalten",
+      "amount": 0,
+      "target": "eventhalle",
+      "value": "",
+      "reason": "Kampfabend"
+    },
+    {
+      "op": "geld",
+      "amount": -200,
+      "target": "",
+      "value": "",
+      "reason": "Miete Kranstadt Arena (Kampfabend)"
+    },
+    {
+      "op": "veranstaltung",
+      "amount": 200,
+      "target": "",
+      "value": "Kampfabend Kranstadt Arena | eventhalle | Schaukampf | emre-yildiz | 100 | 5",
+      "reason": "Community-Aktion: 1 neuer Follower = 1 symbolischer Platz"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "kampfabend",
+      "value": "In 5 Tagen: Emres erster Schaukampf in der Kranstadt Arena. 100 Plätze, 200 € Miete bezahlt. Jeder neue Follower füllt symbolisch einen Platz.",
+      "reason": "Der erste Kampfabend"
+    },
+    {
+      "op": "kapitel",
+      "amount": 0,
+      "target": "",
+      "value": "Akt 1 – Der erste Kampf",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [],
+  "socialCaption": "Folge 2: Unser erster Boxer – und in 5 Tagen schon sein erster Kampf! 🥊 Die Arena hat 100 Plätze. Jeder neue Follower füllt symbolisch einen davon. Hilfst du uns, sie vollzubekommen?",
+  "hashtags": [
+    "#boxclub",
+    "#boxen",
+    "#boxing",
+    "#animation",
+    "#serie",
+    "#fyp",
+    "#rostfaust",
+    "#teil2"
+  ],
+  "endCard": {
+    "type": "arena",
+    "headline": "NOCH 5 TAGE BIS ZUM KAMPFABEND",
+    "lines": [
+      "1 neuer Follower = 1 Platz in der Arena",
+      "Folge dem Boxclub Rostfaust 🥊"
+    ],
+    "seatsFilled": 0,
+    "seatsTotal": 100
+  },
+  "video": {
+    "file": "episodes/ep-002/boxclub_folge_002.mp4",
+    "poster": "episodes/ep-002/poster.jpg",
+    "renderedAt": "2026-11-10T16:19:12.009Z",
+    "durationSec": 57.5
+  }
+}

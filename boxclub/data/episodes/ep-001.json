@@ -2,9 +2,9 @@
   "id": "ep-001",
   "number": 1,
   "title": "Null Boxer",
-  "status": "gerendert",
+  "status": "veroeffentlicht",
   "createdAt": "2026-11-09T12:00:00.000Z",
-  "publishedAt": null,
+  "publishedAt": "2026-11-10T15:54:49.209Z",
   "generator": "handgeschrieben (Pilot)",
   "userIdeas": "",
   "resolvesDecisionId": null,
@@ -20,7 +20,8 @@
         {
           "characterId": "guenther-wallach",
           "position": "mitte",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         }
       ],
       "lines": [
@@ -55,7 +56,8 @@
       ],
       "overlay": "",
       "music": "aufbruch",
-      "direction": "Günther vor der Halle, breitet stolz die Arme aus. Bei „null Boxer“ friert das Bild kurz ein."
+      "direction": "Günther vor der Halle, breitet stolz die Arme aus. Bei „null Boxer“ friert das Bild kurz ein.",
+      "seats": null
     },
     {
       "id": "s2",
@@ -66,12 +68,14 @@
         {
           "characterId": "guenther-wallach",
           "position": "links",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         },
         {
           "characterId": "paule-kruse",
           "position": "rechts",
-          "facing": "links"
+          "facing": "links",
+          "action": "keine"
         }
       ],
       "lines": [
@@ -120,7 +124,8 @@
       ],
       "overlay": "MITGLIEDER: 1",
       "music": "aufbruch",
-      "direction": "Schwenk durch die Halle: Risse, Ring, leckender Sandsack. Paule fegt."
+      "direction": "Schwenk durch die Halle: Risse, Ring, leckender Sandsack. Paule fegt.",
+      "seats": null
     },
     {
       "id": "s3",
@@ -131,12 +136,14 @@
         {
           "characterId": "guenther-wallach",
           "position": "links",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         },
         {
           "characterId": "rosa-brandt",
           "position": "rechts",
-          "facing": "links"
+          "facing": "links",
+          "action": "keine"
         }
       ],
       "lines": [
@@ -199,7 +206,8 @@
       ],
       "overlay": "",
       "music": "training",
-      "direction": "Rosa im Ring an der Ecke, Arme verschränkt. Günther vor den Seilen."
+      "direction": "Rosa im Ring an der Ecke, Arme verschränkt. Günther vor den Seilen.",
+      "seats": null
     },
     {
       "id": "s4",
@@ -210,12 +218,14 @@
         {
           "characterId": "paule-kruse",
           "position": "links",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         },
         {
           "characterId": "guenther-wallach",
           "position": "rechts",
-          "facing": "links"
+          "facing": "links",
+          "action": "keine"
         }
       ],
       "lines": [
@@ -264,7 +274,8 @@
       ],
       "overlay": "KASSE: 500 €  ·  PACHT: 250 €/MONAT",
       "music": "komisch",
-      "direction": "Paule mit kariertem Heft am Schreibtisch voller Rechnungen."
+      "direction": "Paule mit kariertem Heft am Schreibtisch voller Rechnungen.",
+      "seats": null
     },
     {
       "id": "s5",
@@ -275,27 +286,32 @@
         {
           "characterId": "emre-yildiz",
           "position": "ganz_links",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         },
         {
           "characterId": "rosa-brandt",
           "position": "links",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         },
         {
           "characterId": "guenther-wallach",
           "position": "mitte",
-          "facing": "rechts"
+          "facing": "rechts",
+          "action": "keine"
         },
         {
           "characterId": "paule-kruse",
           "position": "rechts",
-          "facing": "links"
+          "facing": "links",
+          "action": "keine"
         },
         {
           "characterId": "bruno-kessler",
           "position": "ganz_rechts",
-          "facing": "links"
+          "facing": "links",
+          "action": "keine"
         }
       ],
       "lines": [
@@ -358,7 +374,8 @@
       ],
       "overlay": "A: EMRE  ·  B: BRUNO",
       "music": "spannung",
-      "direction": "Rosa zeigt auf die zwei Kandidaten am Hallentor. Paule murmelt. Günther fragt in die Kamera."
+      "direction": "Rosa zeigt auf die zwei Kandidaten am Hallentor. Paule murmelt. Günther fragt in die Kamera.",
+      "seats": null
     }
   ],
   "decision": {
@@ -414,6 +431,13 @@
     "#rostfaust",
     "#teil1"
   ],
+  "endCard": {
+    "type": "abstimmung",
+    "headline": "",
+    "lines": [],
+    "seatsFilled": 0,
+    "seatsTotal": 100
+  },
   "video": {
     "file": "episodes/ep-001/boxclub_folge_001.mp4",
     "poster": "episodes/ep-001/poster.jpg",

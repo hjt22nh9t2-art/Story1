@@ -1,7 +1,7 @@
 /** Folge 1 – „Null Boxer“. Handgeschriebenes Pilot-Drehbuch. */
-import type { Episode } from '../lib/types';
+import type { EpisodeInput as Episode } from '../lib/types';
 
-const L = (id: string, speaker: string, text: string, extra: Partial<Episode['scenes'][0]['lines'][0]> = {}) => ({
+const L = (id: string, speaker: string, text: string, extra: Record<string, unknown> = {}) => ({
   id, speaker, text, emotion: 'neutral' as const, action: 'keine' as const, sfx: null, pauseAfter: 0.15, audio: null, ...extra,
 });
 
@@ -97,7 +97,7 @@ export const episode1: Episode = {
   stateChanges: [
     { op: 'handlung', amount: 0, target: 'der-traum', value: 'Günther eröffnet den Club neu. Ziel: wieder größter Boxverein Kranstadts.', reason: '' },
     { op: 'handlung', amount: 0, target: 'die-pacht', value: '500 € in der Kasse, 250 € Pacht pro Monat – das Geld reicht höchstens zwei Monate.', reason: '' },
-    { op: 'handlung', amount: 0, target: 'paules-geheimnis', value: 'Paule kennt Bruno Kessler von früher und sagt: „Das gibt Ärger.“', reason: 'Neuer Handlungsstrang' },
+    { op: 'handlung', amount: 0, target: 'paules-geheimnis', value: 'Paule kennt Bruno Kessler von früher und sagt: „Das gibt Ärger.“', reason: 'Paules Geheimnis um Bruno' },
   ],
   newCharacterIds: [],
   socialCaption: 'Folge 1: Wir haben einen Boxclub. Und null Boxer. 🥊 Wen sollen wir verpflichten – A: Emre oder B: Bruno? Schreib A oder B in die Kommentare!',

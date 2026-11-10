@@ -34,7 +34,10 @@
       "elevenlabsVoiceId": "5faieqDE3osz75KiOI2M",
       "openaiVoice": "ash",
       "instructions": "Älterer Mann aus dem Ruhrgebiet, warm, begeistert, etwas rau.",
-      "demoPitch": 0.85
+      "demoPitch": 0.85,
+      "elevenlabsModel": "eleven_v3",
+      "locked": true,
+      "note": "ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt."
     },
     "look": {
       "skin": "#e9b48e",
@@ -69,8 +72,8 @@
         "schluesselbund"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 1,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": ""
@@ -110,7 +113,10 @@
       "elevenlabsVoiceId": "le3O97c6UClnRdpxkDTb",
       "openaiVoice": "sage",
       "instructions": "Frau Mitte 50, tiefe ruhige Stimme, knapp und streng.",
-      "demoPitch": 1.05
+      "demoPitch": 1.05,
+      "elevenlabsModel": "eleven_v3",
+      "locked": true,
+      "note": "ElevenLabs „Rhea“ (deutsch, weiblich, tief). Seit Folge 1 festgelegt."
     },
     "look": {
       "skin": "#d7a184",
@@ -145,8 +151,8 @@
         "pfeife"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 1,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": ""
@@ -183,10 +189,13 @@
       "unentschieden": 0
     },
     "voice": {
-      "elevenlabsVoiceId": "6i9HBATmN8DhZRFTlPOK",
+      "elevenlabsVoiceId": "1YST1S3BrkT7E0wcLKQD",
       "openaiVoice": "echo",
       "instructions": "Sehr alter Mann, trocken, langsam, leicht brummig, sarkastisch.",
-      "demoPitch": 0.75
+      "demoPitch": 0.75,
+      "elevenlabsModel": "eleven_v3",
+      "locked": true,
+      "note": "ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme."
     },
     "look": {
       "skin": "#efc6a4",
@@ -223,8 +232,8 @@
         "zahnstocher"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 1,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": ""
@@ -235,7 +244,7 @@
     "nickname": "",
     "role": "boxer",
     "roleTitle": "Boxtalent (Anfänger)",
-    "status": "kandidat",
+    "status": "aktiv",
     "age": 17,
     "heightCm": 176,
     "weightKg": 63,
@@ -267,10 +276,13 @@
       "unentschieden": 0
     },
     "voice": {
-      "elevenlabsVoiceId": "1YST1S3BrkT7E0wcLKQD",
+      "elevenlabsVoiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "openaiVoice": "verse",
       "instructions": "Junger Mann, 17, schnell, frech, energiegeladen.",
-      "demoPitch": 1.25
+      "demoPitch": 1.25,
+      "elevenlabsModel": "eleven_v3",
+      "locked": true,
+      "note": "ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt."
     },
     "look": {
       "skin": "#c48a62",
@@ -305,8 +317,8 @@
         "kopfhoerer"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 1,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": ""
@@ -352,7 +364,10 @@
       "elevenlabsVoiceId": "nPczCjzI2devNBz1zQrb",
       "openaiVoice": "onyx",
       "instructions": "Großer Mann Mitte 30, sehr tiefe ruhige Stimme, melancholisch.",
-      "demoPitch": 0.65
+      "demoPitch": 0.65,
+      "elevenlabsModel": "eleven_v3",
+      "locked": false,
+      "note": "Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen."
     },
     "look": {
       "skin": "#f0c09a",
@@ -387,8 +402,8 @@
         "goldkette"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 1,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": ""
@@ -434,7 +449,10 @@
       "elevenlabsVoiceId": "N2lVS1w4EtoT3dr4eOWO",
       "openaiVoice": "ballad",
       "instructions": "Junger Mann, 21, rau, leise, provokant.",
-      "demoPitch": 1.1
+      "demoPitch": 1.1,
+      "elevenlabsModel": "eleven_v3",
+      "locked": false,
+      "note": "Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen."
     },
     "look": {
       "skin": "#e8b996",
@@ -510,7 +528,10 @@
       "elevenlabsVoiceId": "cjVigY5qzO86Huf0OWal",
       "openaiVoice": "alloy",
       "instructions": "Mann Ende 40, glatt, freundlich-herablassend.",
-      "demoPitch": 0.95
+      "demoPitch": 0.95,
+      "elevenlabsModel": "eleven_v3",
+      "locked": false,
+      "note": "Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen."
     },
     "look": {
       "skin": "#e3b08c",

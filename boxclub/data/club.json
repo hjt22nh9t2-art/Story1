@@ -3,10 +3,10 @@
   "city": "Kranstadt",
   "address": "Depotstraße 7",
   "founded": "Neugründung 2026 – Tradition seit 1961",
-  "money": 500,
+  "money": 300,
   "monthlyCosts": 380,
-  "monthlyIncome": 15,
-  "members": 1,
+  "monthlyIncome": 30,
+  "members": 2,
   "reputation": 5,
   "facilityCondition": 28,
   "equipment": [
@@ -62,19 +62,139 @@
       "title": "Der Traum vom großen Verein",
       "status": "offen",
       "startedEpisode": 1,
-      "updates": []
+      "updates": [
+        {
+          "episode": 1,
+          "text": "Günther eröffnet den Club neu. Ziel: wieder größter Boxverein Kranstadts."
+        }
+      ]
     },
     {
       "id": "die-pacht",
       "title": "Die Pacht für die Depothalle",
       "status": "offen",
       "startedEpisode": 1,
-      "updates": []
+      "updates": [
+        {
+          "episode": 1,
+          "text": "500 € in der Kasse, 250 € Pacht pro Monat – das Geld reicht höchstens zwei Monate."
+        }
+      ]
+    },
+    {
+      "id": "paules-geheimnis",
+      "title": "Paules Geheimnis um Bruno",
+      "status": "offen",
+      "startedEpisode": 1,
+      "updates": [
+        {
+          "episode": 1,
+          "text": "Paule kennt Bruno Kessler von früher und sagt: „Das gibt Ärger.“"
+        },
+        {
+          "episode": 2,
+          "text": "Bruno wurde von der Community nicht verpflichtet. Was Paule über ihn weiß, bleibt vorerst offen."
+        }
+      ]
+    },
+    {
+      "id": "entwicklung-emre-yildiz",
+      "title": "Der Weg von Emre",
+      "status": "offen",
+      "startedEpisode": 2,
+      "updates": [
+        {
+          "episode": 2,
+          "text": "Emre ist offizielles Mitglied Nr. 2. Rosa: Talent ja, Technik noch nicht."
+        }
+      ]
+    },
+    {
+      "id": "kampfabend",
+      "title": "Der erste Kampfabend",
+      "status": "offen",
+      "startedEpisode": 2,
+      "updates": [
+        {
+          "episode": 2,
+          "text": "In 5 Tagen: Emres erster Schaukampf in der Kranstadt Arena. 100 Plätze, 200 € Miete bezahlt. Jeder neue Follower füllt symbolisch einen Platz."
+        }
+      ]
     }
   ],
-  "decisions": [],
-  "chapter": "Akt 1 – Null Boxer",
-  "timeline": [],
-  "lastEpisode": 0,
-  "nextEpisodeNote": ""
+  "decisions": [
+    {
+      "id": "d-001",
+      "episode": 1,
+      "question": "Wen sollen wir als Erstes verpflichten?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Emre (17) – den jungen Anfänger",
+          "consequenceHint": "Billig, hungrig, braucht Jahre. Rosa muss bei null anfangen.",
+          "plan": "verpflichten:emre-yildiz"
+        },
+        {
+          "key": "B",
+          "label": "Bruno „Der Bär“ (36) – den erfahrenen Ex-Profi",
+          "consequenceHint": "Sofort kampfbereit, bringt Aufmerksamkeit – aber Knie und Vergangenheit sind ein Risiko.",
+          "plan": "verpflichten:bruno-kessler"
+        }
+      ],
+      "status": "umgesetzt",
+      "winner": "A",
+      "votes": {},
+      "note": "Community-Entscheidung: Emre wird verpflichtet. Bruno wird vorerst NICHT verpflichtet – endgültig.",
+      "resolvedInEpisode": 2
+    },
+    {
+      "id": "d-002",
+      "episode": 2,
+      "question": "Schaffen wir es, die Arena zu füllen?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Ja – 100 neue Follower: ausverkauft!",
+          "consequenceHint": "Volle Arena – Emre boxt vor Publikum, der Club wird in Kranstadt bekannt.",
+          "plan": "arena:voll"
+        },
+        {
+          "key": "B",
+          "label": "Noch nicht – unter 100 neuen Followern",
+          "consequenceHint": "Halbleere Halle – Emre boxt trotzdem, aber die 200 € Miete schmerzen.",
+          "plan": "arena:teil"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
+      "votes": {},
+      "note": "",
+      "resolvedInEpisode": null
+    }
+  ],
+  "chapter": "Akt 1 – Der erste Kampf",
+  "timeline": [
+    {
+      "episode": 1,
+      "text": "Folge 1 „Null Boxer“: Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß."
+    },
+    {
+      "episode": 2,
+      "text": "Folge 2 „Fünf Tage“: Die Community hat entschieden: Emre (17) wird offiziell Mitglied Nr. 2, Bruno wird nicht verpflichtet. Rosa sieht Talent, aber keine Technik. Günther bekommt einen Anruf: In fünf Tagen darf Emre bei einem Kampfabend in der Kranstadt Arena (100 Plätze) einen Schaukampf boxen. Die Arena-Miete kostet 200 €, die Kasse sinkt auf 300 €. Bleibt die Halle leer, ist das Geld weg. Günther bittet die Zuschauer um Hilfe: Jeder neue Follower füllt symbolisch einen Platz."
+    }
+  ],
+  "lastEpisode": 2,
+  "nextEpisodeNote": "In fünf Tagen boxt Emre seinen ersten Schaukampf – ist er bereit, und wird die Arena voll?",
+  "upcomingEvent": {
+    "name": "Kampfabend Kranstadt Arena",
+    "locationId": "eventhalle",
+    "kind": "Schaukampf",
+    "boxerId": "emre-yildiz",
+    "seats": 100,
+    "seatsFilled": 0,
+    "daysLeft": 5,
+    "cost": 200,
+    "announcedEpisode": 2,
+    "note": "Community-Aktion: 1 neuer Follower = 1 symbolischer Platz"
+  }
 }

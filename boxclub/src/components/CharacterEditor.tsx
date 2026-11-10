@@ -29,7 +29,12 @@ export function CharacterEditor({ initial, isNew, appearances }: { initial: Char
         reason = prompt(`${c.name} ist seit Folge ${initial.firstEpisode} zu sehen. Ein neues Aussehen braucht einen Story-Grund (gilt ab der nächsten Folge):`) ?? '';
         if (!reason) { setBusy(false); return; }
       }
-      const body = { ...c, id: isNew ? c.id || slug(c.name) : c.id, lookChangeReason: reason };
+      let voiceChangeConfirmed = false;
+      if (!isNew && initial.voice.locked && JSON.stringify(c.voice) !== JSON.stringify(initial.voice)) {
+        voiceChangeConfirmed = confirm(`Die Stimme von ${c.name} ist festgelegt. Wirklich ändern?`);
+        if (!voiceChangeConfirmed) { setBusy(false); return; }
+      }
+      const body = { ...c, id: isNew ? c.id || slug(c.name) : c.id, lookChangeReason: reason, voiceChangeConfirmed };
       const saved = await api<Character>(isNew ? '/api/characters' : `/api/characters/${c.id}`, isNew ? 'POST' : 'PUT', body);
       setMsg('Gespeichert.');
       if (isNew) router.push(`/charaktere/${saved.id}`); else { setC(saved); router.refresh(); }
@@ -119,7 +124,7 @@ export function CharacterEditor({ initial, isNew, appearances }: { initial: Char
           ))}</div>
         </div>
         <div className="card">
-          <h3>Stimme</h3>
+          <h3>Stimme {c.voice.locked ? '🔒' : ''}</h3>{c.voice.note && <p className="muted" style={{ fontSize: 13 }}>{c.voice.note}</p>}
           <div className="grid g4">
             <label className="f"><span>ElevenLabs Voice-ID</span><input value={c.voice.elevenlabsVoiceId} onChange={(e) => set('voice', { ...c.voice, elevenlabsVoiceId: e.target.value })} /></label>
             <label className="f"><span>OpenAI-Stimme</span><select value={c.voice.openaiVoice} onChange={(e) => set('voice', { ...c.voice, openaiVoice: e.target.value })}>{['alloy', 'ash', 'ballad', 'coral', 'echo', 'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse'].map((v) => <option key={v}>{v}</option>)}</select></label>

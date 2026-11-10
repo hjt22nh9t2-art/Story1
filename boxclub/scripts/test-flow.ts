@@ -23,12 +23,15 @@ if (store.getClub().lastEpisode === 0) {
   const r = svc.publish('ep-001');
   console.log('Folge 1 veröffentlicht:', r.log.length, 'Änderungen');
 }
-const signed = new Set<string>();
-for (let n = 2; n <= 9; n++) {
+// unveröffentlichte Entwürfe in der Testkopie verwerfen
+for (const e of store.listEpisodes()) if (e.status !== 'veroeffentlicht') store.deleteEpisode(e.id);
+const signed = new Set<string>(store.getCharacters().filter((c) => c.role === 'boxer' && c.status === 'aktiv').map((c) => c.id));
+const start = store.getClub().lastEpisode + 1;
+for (let n = start; n <= start + 7; n++) {
   const club = store.getClub();
-  const open = club.decisions.find((d) => d.status === 'offen')!;
-  const winner = (['A', 'B'] as const)[n % 2];
-  svc.setDecisionResult(open.id, winner, { A: 100 + n, B: 90 }, '');
+  const open = club.decisions.find((d) => d.status === 'offen' || d.status === 'entschieden')!;
+  const winner = open.winner ?? (['A', 'B'] as const)[n % 2];
+  if (open.status === 'offen') svc.setDecisionResult(open.id, winner, { A: 100 + n, B: 90 }, '');
   const moneyBefore = store.getClub().money;
   const { episode, validation } = await gen.generateNextEpisode('', { provider });
   console.log(`\nFolge ${n} „${episode.title}“ (Entscheidung ${winner}: ${open.options.find((o) => o.key === winner)?.label}) – ${validation.estimatedSec.toFixed(0)} s`);

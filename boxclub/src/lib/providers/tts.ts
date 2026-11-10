@@ -23,7 +23,7 @@ async function elevenlabs(text: string, c: Character | undefined): Promise<Buffe
     headers: { 'xi-api-key': process.env.ELEVENLABS_API_KEY!, 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
     body: JSON.stringify({
       text,
-      model_id: cfg.elevenlabsModel,
+      model_id: c?.voice.elevenlabsModel || cfg.elevenlabsModel,
       voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.35, use_speaker_boost: true },
     }),
   });

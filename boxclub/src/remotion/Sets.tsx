@@ -551,36 +551,85 @@ function umkleide(frame: number, c: SetClub): SetLayers {
   };
 }
 
-function eventhalle(frame: number): SetLayers {
+/** Feste Reihenfolge, in der sich die 100 Plätze füllen (verstreut, deterministisch). */
+const SEAT_ORDER = (() => {
+  const idx = Array.from({ length: 100 }, (_, i) => i);
+  return idx.sort((x, y) => rnd(x * 3.7 + 11) - rnd(y * 3.7 + 11));
+})();
+const FAN_COLORS = ['#c8302a', '#2a54b8', '#d9a63a', '#4f7a5a', '#8c1d2c', '#6b5a45', '#3d6b8c', '#a8763f', '#7a4f8c', '#e6e0d2'];
+
+/** Tribüne mit genau 100 Plätzen (5 Reihen × 20). filled = Anzahl besetzter Plätze. */
+export const ArenaSeats: React.FC<{ filled: number; frame: number }> = ({ filled, frame }) => {
+  const taken = new Set(SEAT_ORDER.slice(0, Math.max(0, Math.min(100, Math.floor(filled)))));
+  const rows: React.ReactNode[] = [];
+  for (let r = 0; r < 5; r++) {
+    const sp = 46 + r * 4.5;           // Sitzabstand (Perspektive: vorne breiter)
+    const y = 690 + r * 92;            // Reihenhöhe
+    const sc = 0.74 + r * 0.07;
+    const x0 = 540 - (sp * 19) / 2;
+    rows.push(<rect key={`st${r}`} x={x0 - 40} y={y + 30 * sc} width={sp * 19 + 80} height={62} fill={r % 2 ? '#24283a' : '#1e2232'} />);
+    for (let k = 0; k < 20; k++) {
+      const i = r * 20 + k;
+      const x = x0 + k * sp;
+      const on = taken.has(i);
+      const bob = on ? Math.abs(Math.sin(frame * 0.18 + i)) * -4 : 0;
+      rows.push(
+        <g key={i} transform={`translate(${x} ${y}) scale(${sc})`}>
+          {/* Klappsitz */}
+          <rect x={-17} y={-6} width={34} height={36} rx={7} fill="#b3262e" stroke={INK} strokeWidth={3} />
+          <rect x={-19} y={26} width={38} height={10} rx={4} fill="#8c1d22" stroke={INK} strokeWidth={3} />
+          {on && (
+            <g transform={`translate(0 ${bob})`}>
+              <rect x={-16} y={-14} width={32} height={34} rx={13} fill={FAN_COLORS[i % FAN_COLORS.length]} stroke={INK} strokeWidth={3} />
+              <circle cx={0} cy={-28} r={13} fill={['#e9b48e', '#c48a62', '#f0c09a', '#8d5a3c', '#d7a184'][i % 5]} stroke={INK} strokeWidth={3} />
+              {i % 7 === 0 && <rect x={-14} y={-44} width={28} height={9} rx={4} fill={FAN_COLORS[(i + 3) % FAN_COLORS.length]} stroke={INK} strokeWidth={2} />}
+              {i % 9 === 2 && <path d="M12,-10 L24,-44" stroke={INK} strokeWidth={4} strokeLinecap="round" />}
+            </g>
+          )}
+        </g>,
+      );
+    }
+  }
+  return <g>{rows}</g>;
+};
+
+function eventhalle(frame: number, opts: SetOpts): SetLayers {
+  const filled = opts.seatsFilled ?? 0;
+  const full = filled >= 100;
   return {
-    tint: 'rgba(120,140,255,0.06)',
+    tint: 'rgba(120,140,255,0.05)',
     back: (
       <g>
-        <rect x={-500} y={0} width={2100} height={1920} fill="#0f1220" />
-        {[0, 1, 2, 3].map((r) => (
-          <g key={r}>
-            {Array.from({ length: 26 }).map((_, i) => {
-              const x = -480 + i * 82 + (r % 2) * 40, y = 700 + r * 110 + Math.abs(Math.sin(frame * 0.2 + i + r)) * -10;
-              return <g key={i} fill={r > 1 ? '#1d2236' : '#161a2a'}><circle cx={x} cy={y} r={26} /><rect x={x - 32} y={y + 20} width={64} height={90} rx={20} /></g>;
-            })}
-          </g>
+        <rect x={-500} y={0} width={2100} height={1920} fill="#121524" />
+        {/* Dachträger */}
+        {[-300, 100, 500, 900, 1300].map((x, i) => <path key={i} d={`M${x},0 L${x + 120},260`} stroke="#23283c" strokeWidth={22} />)}
+        <path d="M-500,140 H1600" stroke="#23283c" strokeWidth={26} />
+        {/* Banner */}
+        <rect x={190} y={215} width={700} height={130} rx={10} fill="#8c1d2c" stroke={INK} strokeWidth={6} />
+        <text x={540} y={305} fontFamily="Anton, Impact, sans-serif" fontSize={78} textAnchor="middle" fill="#f4ead2" letterSpacing={6}>KAMPFABEND</text>
+        <text x={540} y={392} fontFamily="Anton, Impact, sans-serif" fontSize={40} textAnchor="middle" fill="#f08a24" letterSpacing={8}>KRANSTADT ARENA</text>
+        {/* Scheinwerferkegel */}
+        {[-150, 240, 840, 1230].map((x, i) => (
+          <path key={i} d={`M${x},250 L${x + 50},250 L${540 + (i - 1.5) * 90},1250 L${540 + (i - 1.5) * 90 - 150},1250 Z`} fill="#fff" opacity={0.06 + Math.sin(frame * 0.05 + i) * 0.02} />
         ))}
-        {[-200, 300, 800, 1300].map((x, i) => (
-          <path key={i} d={`M${x},0 L${x + 60},0 L${540 + (i - 1.5) * 120},1300 L${540 + (i - 1.5) * 120 - 160},1300 Z`} fill="#fff" opacity={0.07 + Math.sin(frame * 0.05 + i) * 0.03} />
-        ))}
-        <text x={540} y={300} fontFamily="Anton" fontSize={90} textAnchor="middle" fill="#f08a24" opacity={0.85}>KRANSTADT ARENA</text>
-        <path d="M-500,1180 L1600,1180 L1600,1920 L-500,1920 Z" fill="#e3e7ef" />
-        <ellipse cx={540} cy={1450} rx={700} ry={260} fill="url(#spot)" />
+        <ArenaSeats filled={filled} frame={frame} />
+        {/* Hallenboden */}
+        <path d="M-500,1200 L1600,1200 L1600,1920 L-500,1920 Z" fill="#2c3040" />
+        <ellipse cx={540} cy={1430} rx={720} ry={250} fill="url(#spot)" opacity={full ? 0.9 : 0.6} />
       </g>
     ),
     mid: (
       <g>
-        <CornerPost x={-130} y={760} h={430} color="#c8302a" />
-        <CornerPost x={1210} y={760} h={430} color="#2a54b8" />
-        <RingRopes x0={-130} x1={1210} y={810} gap={110} />
+        {/* Ring in der Mitte, etwas zurückgesetzt */}
+        <path d="M120,1240 L960,1240 L1010,1330 L70,1330 Z" fill="#e3e7ef" stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+        <rect x={70} y={1330} width={940} height={60} fill="#1f3f8a" stroke={INK} strokeWidth={6} />
+        <text x={540} y={1374} fontFamily="Anton, Impact, sans-serif" fontSize={38} textAnchor="middle" fill="#f4ead2">BOXCLUB ROSTFAUST</text>
+        <CornerPost x={120} y={1030} h={215} color="#c8302a" />
+        <CornerPost x={960} y={1030} h={215} color="#2a54b8" />
+        <RingRopes x0={120} x1={960} y={1060} gap={58} />
       </g>
     ),
-    front: <RingRopes x0={-400} x1={1480} y={1735} gap={95} colors={['#c8302a', '#f2f2f2']} />,
+    front: <Dust frame={frame} n={14} color="#dfe6ff" />,
   };
 }
 
@@ -603,7 +652,9 @@ function rivalengym(frame: number): SetLayers {
   };
 }
 
-export function getSet(location: string, frame: number, club: SetClub): SetLayers {
+export interface SetOpts { seatsFilled?: number }
+
+export function getSet(location: string, frame: number, club: SetClub, opts: SetOpts = {}): SetLayers {
   switch (location) {
     case 'halle': return halle(frame, club);
     case 'ring': return ring(frame, club);
@@ -611,7 +662,7 @@ export function getSet(location: string, frame: number, club: SetClub): SetLayer
     case 'buero': return buero(frame, club);
     case 'empfang': return empfang(frame, club);
     case 'umkleide': return umkleide(frame, club);
-    case 'eventhalle': return eventhalle(frame);
+    case 'eventhalle': return eventhalle(frame, opts);
     case 'rivalengym': return rivalengym(frame);
     default: return halle(frame, club);
   }

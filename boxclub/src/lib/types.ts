@@ -67,6 +67,11 @@ export const CharacterSchema = z.object({
     instructions: z.string().default(''),
     /** Tonhöhe der Demo-„Brabbelstimme“, falls keine echte TTS konfiguriert ist */
     demoPitch: z.number().default(1),
+    /** ElevenLabs-Modell dieser Stimme (leer = Standard aus .env) */
+    elevenlabsModel: z.string().default(''),
+    /** Etablierte Stimme: Änderung nur mit ausdrücklicher Bestätigung */
+    locked: z.boolean().default(false),
+    note: z.string().default(''),
   }),
   look: CharacterLookSchema,
   /** Folge, in der die Figur erstmals vorkam (null = noch nie gezeigt) */
@@ -160,6 +165,19 @@ export const ClubStateSchema = z.object({
   timeline: z.array(z.object({ episode: z.number().int(), text: z.string() })),
   lastEpisode: z.number().int(),
   nextEpisodeNote: z.string().default(''),
+  /** Anstehende Veranstaltung (z. B. Kampfabend) inkl. Community-Sitzplätzen */
+  upcomingEvent: z.object({
+    name: z.string(),
+    locationId: z.string(),
+    kind: z.string(),
+    boxerId: z.string(),
+    seats: z.number().int(),
+    seatsFilled: z.number().int(),
+    daysLeft: z.number().int(),
+    cost: z.number(),
+    announcedEpisode: z.number().int(),
+    note: z.string().default(''),
+  }).nullable().default(null),
 });
 export type ClubState = z.infer<typeof ClubStateSchema>;
 
@@ -171,7 +189,7 @@ export type ClubState = z.infer<typeof ClubStateSchema>;
  */
 export const STATE_OPS = [
   'geld', 'mitglieder', 'ruf', 'zustand_halle', 'figur_status', 'ausruestung', 'ausruestung_zustand',
-  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen',
+  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown',
 ] as const;
 export const StateChangeSchema = z.object({
   op: z.enum(STATE_OPS),
@@ -217,13 +235,19 @@ export const SceneSchema = z.object({
   beat: z.enum(BEATS),
   location: z.enum(LOCATION_KEYS),
   shot: z.enum(SHOTS),
-  cast: z.array(z.object({ characterId: z.string(), position: z.enum(POSITIONS), facing: z.enum(['links', 'rechts']).default('rechts') })),
+  cast: z.array(z.object({
+    characterId: z.string(), position: z.enum(POSITIONS), facing: z.enum(['links', 'rechts']).default('rechts'),
+    /** Daueraktion, solange die Figur nicht spricht (z. B. Sandsack schlagen) */
+    action: z.enum(ACTIONS).default('keine'),
+  })),
   lines: z.array(LineSchema).min(1),
   /** Einblendung, z. B. „KONTOSTAND: 500 €“ */
   overlay: z.string().default(''),
   music: z.enum(MUSIC).default('aufbruch'),
   /** Regieanweisung (nur zur Info) */
   direction: z.string().default(''),
+  /** Arena-Sitzplätze in dieser Szene: von → bis (animiert); null = keine Anzeige */
+  seats: z.object({ from: z.number(), to: z.number(), total: z.number().default(100), hud: z.boolean().default(true) }).nullable().default(null),
 });
 export type Scene = z.infer<typeof SceneSchema>;
 
@@ -249,9 +273,19 @@ export const EpisodeSchema = z.object({
   newCharacterIds: z.array(z.string()).default([]),
   socialCaption: z.string().default(''),
   hashtags: z.array(z.string()).default([]),
+  /** Endtafel: klassische Abstimmung oder Arena-/Follower-Aufruf */
+  endCard: z.object({
+    type: z.enum(['abstimmung', 'arena']),
+    headline: z.string().default(''),
+    lines: z.array(z.string()).default([]),
+    seatsFilled: z.number().default(0),
+    seatsTotal: z.number().default(100),
+  }).default({ type: 'abstimmung', headline: '', lines: [], seatsFilled: 0, seatsTotal: 100 }),
   video: z.object({ file: z.string(), poster: z.string(), renderedAt: z.string(), durationSec: z.number() }).nullable().default(null),
 });
 export type Episode = z.infer<typeof EpisodeSchema>;
+/** Eingabeform (Defaults optional) – für handgeschriebene Drehbücher */
+export type EpisodeInput = z.input<typeof EpisodeSchema>;
 
 export const LocationsSchema = z.array(LocationSchema);
 export const CharactersSchema = z.array(CharacterSchema);

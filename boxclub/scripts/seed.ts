@@ -7,6 +7,7 @@ import path from 'node:path';
 import * as store from '../src/lib/store';
 import { characters, club, locations } from '../src/seed/world';
 import { episode1 } from '../src/seed/episode1';
+import { EpisodeSchema } from '../src/lib/types';
 import { ensureLibrary } from '../src/lib/audio/synth';
 
 const reset = process.argv.includes('--reset');
@@ -23,7 +24,7 @@ store.saveCharacters(characters);
 store.saveLocations(locations);
 store.saveSnapshot(0);
 // Pilotfolge übernehmen – vorhandene Sprachaufnahmen (vorproduziert) werden eingebunden
-const ep = structuredClone(episode1);
+const ep = EpisodeSchema.parse(structuredClone(episode1));
 for (const s of ep.scenes) for (const l of s.lines) {
   const rel = `episodes/${ep.id}/voice/${l.id}.mp3`;
   const abs = path.join(store.MEDIA_DIR, rel);

@@ -38,8 +38,8 @@
   {
     "id": "eventhalle",
     "name": "Kranstadt Arena",
-    "description": "Veranstaltungshalle für Turniere mit Zuschauerrängen und Scheinwerfern.",
-    "unlocked": false
+    "description": "Kleine Veranstaltungshalle am Hafen: Boxring in der Mitte, Tribüne mit genau 100 roten Klappsitzen in 5 Reihen, Scheinwerfer, Banner „KAMPFABEND“. Wiederverwendbar für alle Kampfabende.",
+    "unlocked": true
   },
   {
     "id": "rivalengym",

@@ -31,6 +31,18 @@ export default function Dashboard() {
         <div className="card"><div className="label">Ruf · Halle</div><div className="stat">{club.reputation} · {club.facilityCondition}%</div></div>
       </div>
 
+      {club.upcomingEvent && (
+        <div className="card" style={{ borderColor: '#7a5e2a' }}>
+          <div className="row between">
+            <div><div className="label">Nächste Veranstaltung · noch {club.upcomingEvent.daysLeft} Tage</div><h2 style={{ margin: '6px 0' }}>{club.upcomingEvent.name}</h2>
+              <div className="muted">{club.upcomingEvent.kind} · Boxer: {chars.find((c) => c.id === club.upcomingEvent!.boxerId)?.name} · Kosten {club.upcomingEvent.cost} €</div></div>
+            <div className="stat">{club.upcomingEvent.seatsFilled} / {club.upcomingEvent.seats}</div>
+          </div>
+          <div className="bar" style={{ marginTop: 10 }}><div style={{ width: `${(club.upcomingEvent.seatsFilled / club.upcomingEvent.seats) * 100}%` }} /></div>
+          <div className="muted" style={{ fontSize: 12, marginTop: 6 }}>1 neuer Follower = 1 symbolischer Platz (Korrekturbuchung „plaetze“ unter Boxclub)</div>
+        </div>
+      )}
+
       <div className="grid g2">
         <div className="card hero">
           <div className="label">Aktuelle Episode</div>

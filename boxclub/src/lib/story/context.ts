@@ -49,6 +49,17 @@ Genau 5 Szenen, eine pro Beat, in dieser Reihenfolge. 2–4 Zeilen pro Szene. Je
   * handlung (target=Strang-ID, value=Fortschritt, reason=Titel bei neuem Strang oder "abgeschlossen")
   * sponsor (target=Name, amount=€/Monat, 0 = weg), ort_freischalten (target=Orts-ID), kapitel (value=Titel)
   * laufende_kosten / einnahmen (amount=€/Monat ±)
+  * veranstaltung (value="Name | Orts-ID | Art | Boxer-ID | Plätze | Tage", amount=Kosten; reason="abgeschlossen" beendet sie)
+  * plaetze (amount=Anzahl gefüllter Plätze, absolut), countdown (amount=verbleibende Tage)
+
+## Community-Arena (seit Folge 2)
+Zu Kampfabenden zählt jeder NEUE Follower symbolisch als ein gefüllter Sitzplatz in der Arena (Kranstadt Arena: 100 Plätze).
+Das ist eine spielerische Mechanik der Serie – behaupte nie, dass TikTok für Follower Geld auszahlt.
+Der Produzent trägt die echte Zahl neuer Follower als Abstimmungsergebnis ein; setze sie mit "plaetze" um und zeige sie in der Arena-Szene
+(Szene mit location "eventhalle", Feld seats {from, to}).
+
+## Stimmen
+Die Stimmen aller Figuren sind festgelegt (Paule ist männlich). Nie Stimmen ändern.
 - decision.options: Schlüssel A, B (optional C); label kurz und zugespitzt; consequenceHint = was daraus folgen könnte.
 - socialCaption: 1–2 Sätze für TikTok mit Aufruf zum Abstimmen; hashtags: 5–7 Stück.`;
 
@@ -74,7 +85,7 @@ export function buildContext(world: World, episodes: Episode[], ideas: string, n
     parts.push('# Community-Entscheidung\nKeine Entscheidung umzusetzen. "resolvesDecisionId" = "".');
   }
   if (ideas.trim()) parts.push(`# Ideen des Produzenten für diese Folge (einbauen, sofern konsistent)\n${ideas.trim()}`);
-  parts.push(`# Vereinsstand (nach Folge ${club.lastEpisode})\nVerein: ${club.clubName}, ${club.address}, ${club.city}\nKapitel: ${club.chapter}\nKasse: ${club.money} € | Kosten/Monat: ${club.monthlyCosts} € | Einnahmen/Monat: ${club.monthlyIncome} €\nMitglieder: ${club.members} | Ruf: ${club.reputation}/100 | Hallenzustand: ${club.facilityCondition}/100\nAusrüstung: ${club.equipment.map((e) => `${e.id} (${e.name}) ×${e.count}, Zustand ${e.condition}`).join('; ')}\nSponsoren: ${club.sponsors.map((s) => `${s.name} ${s.amountPerMonth} €/Monat`).join('; ') || 'keine'}\nKämpfe: ${club.fights.map((f) => `F${f.episode} ${f.boxerId} vs ${f.opponent} (${f.opponentClub}) ${f.result}`).join('; ') || 'noch keine'}\nRivalitäten: ${club.rivalries.map((r) => `${r.club} (${r.leader}) Intensität ${r.intensity}: ${r.notes}`).join('; ') || 'keine'}`);
+  parts.push(`# Vereinsstand (nach Folge ${club.lastEpisode})\nVerein: ${club.clubName}, ${club.address}, ${club.city}\nKapitel: ${club.chapter}\nKasse: ${club.money} € | Kosten/Monat: ${club.monthlyCosts} € | Einnahmen/Monat: ${club.monthlyIncome} €\nMitglieder: ${club.members} | Ruf: ${club.reputation}/100 | Hallenzustand: ${club.facilityCondition}/100\nAusrüstung: ${club.equipment.map((e) => `${e.id} (${e.name}) ×${e.count}, Zustand ${e.condition}`).join('; ')}\nSponsoren: ${club.sponsors.map((s) => `${s.name} ${s.amountPerMonth} €/Monat`).join('; ') || 'keine'}\nKämpfe: ${club.fights.map((f) => `F${f.episode} ${f.boxerId} vs ${f.opponent} (${f.opponentClub}) ${f.result}`).join('; ') || 'noch keine'}\nAnstehende Veranstaltung: ${club.upcomingEvent ? `${club.upcomingEvent.name} (${club.upcomingEvent.kind}, Boxer ${club.upcomingEvent.boxerId}) in ${club.upcomingEvent.daysLeft} Tagen, ${club.upcomingEvent.seatsFilled}/${club.upcomingEvent.seats} Plätze gefüllt, Kosten ${club.upcomingEvent.cost} €` : 'keine'}\nRivalitäten: ${club.rivalries.map((r) => `${r.club} (${r.leader}) Intensität ${r.intensity}: ${r.notes}`).join('; ') || 'keine'}`);
   parts.push(`# Handlungsstränge\n${club.storylines.map((s) => `- [${s.status}] ${s.id} „${s.title}“ (seit F${s.startedEpisode}): ${s.updates.map((u) => `F${u.episode}: ${u.text}`).join(' → ') || '—'}`).join('\n')}`);
   parts.push(`# Charakterdatenbank\n${world.characters.map(charLine).join('\n')}`);
   parts.push(`# Schauplätze\n${world.locations.map((l) => `- ${l.id}: ${l.name} – ${l.unlocked ? 'freigeschaltet' : 'GESPERRT'} – ${l.description}`).join('\n')}`);

@@ -1,6 +1,6 @@
 # Charakterbibel – BOXCLUB
 
-Automatisch erzeugt aus `data/characters.json` (2026-11-09).
+Automatisch erzeugt aus `data/characters.json` (2026-11-10).
 Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind die verbindliche Referenz.
 
 ## Günther Wallach „Günni“
@@ -10,7 +10,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | | |
 |---|---|
 | Rolle | Vereinsgründer & Präsident (gruender) |
-| Status | aktiv |
+| Status | aktiv · seit Folge 1 · Aussehen gesperrt |
 | Alter / Größe / Gewicht | 63 J. · 174 cm · 92 kg  |
 | Persönlichkeit | Unverbesserlicher Optimist und Träumer. Redet groß, rechnet schlecht, gibt nie auf. Hat ein riesiges Herz und keinen Plan B. |
 | Hintergrund | Ehemaliger Kranführer im Kranstädter Hafen. Sein Vater gründete 1961 den Boxclub Rostfaust, der 2009 schloss. Mit seiner Abfindung hat Günther die alte Depothalle zurückgepachtet, um den Club wiederzubeleben. |
@@ -32,7 +32,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | | |
 |---|---|
 | Rolle | Cheftrainerin (trainer) |
-| Status | aktiv |
+| Status | aktiv · seit Folge 1 · Aussehen gesperrt |
 | Alter / Größe / Gewicht | 54 J. · 168 cm · 78 kg  |
 | Persönlichkeit | Streng, wortkarg, absolut fair. Lobt selten – wenn doch, bedeutet es alles. Duldet keine Ausreden, schützt ihre Boxer aber wie eine Löwin. |
 | Hintergrund | EM-Bronze 1994 im Amateurboxen. Danach 20 Jahre Trainerin im großen Titan-Gym, bis sie gefeuert wurde, weil sie einen verletzten Boxer nicht in den Ring schicken wollte. Günther ist der Einzige, der sie danach angerufen hat. |
@@ -54,7 +54,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | | |
 |---|---|
 | Rolle | Hausmeister, Kassenwart & Mitglied Nr. 1 (mitarbeiter) |
-| Status | aktiv |
+| Status | aktiv · seit Folge 1 · Aussehen gesperrt |
 | Alter / Größe / Gewicht | 74 J. · 162 cm · 61 kg  |
 | Persönlichkeit | Trocken, sarkastisch, unerschütterlich. Weiß alles über jeden in Kranstadt. Bremst Günthers Fantasien mit Zahlen. |
 | Hintergrund | Seit 1979 Hausmeister der Depothalle. Hat die Schlüssel nie abgegeben – auch nicht, als der Club 2009 schloss. Führt die Kasse in einem karierten Schulheft. |
@@ -67,7 +67,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | Kleidung | hemd #6f7b5a/#55603f, latzhose #3c5a7a, Schuhe #3b2c22 |
 | Kopf | Haut #efc6a4, Haare kurz #ededed, Bart stoppeln, Nase spitz, Augen #6b6b6b |
 | Accessoires | muetze, brille, zahnstocher |
-| Stimme | ElevenLabs `6i9HBATmN8DhZRFTlPOK` · OpenAI `echo` |
+| Stimme | ElevenLabs `1YST1S3BrkT7E0wcLKQD` · OpenAI `echo` |
 
 ## Emre Yıldız
 
@@ -76,7 +76,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | | |
 |---|---|
 | Rolle | Boxtalent (Anfänger) (boxer) |
-| Status | kandidat |
+| Status | aktiv · seit Folge 1 · Aussehen gesperrt |
 | Alter / Größe / Gewicht | 17 J. · 176 cm · 63 kg Leichtgewicht |
 | Persönlichkeit | Frech, schnell, ungeduldig, extrem ehrgeizig. Hinter der großen Klappe steckt Angst, seine Familie zu enttäuschen. |
 | Hintergrund | Fährt nach der Schule Essen aus, um seiner Mutter mit der Miete zu helfen. Hat nie trainiert, aber Straßenreflexe wie eine Katze. Sein Vorbild ist Muhammad Ali – er kennt jedes Video. |
@@ -89,7 +89,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | Kleidung | hoodie #11938a/#f7d038, jeans #3d5a87, Schuhe #f4f4f4 |
 | Kopf | Haut #c48a62, Haare locken #1b1612, Bart keiner, Nase klein, Augen #3a2a1e |
 | Accessoires | kopfhoerer |
-| Stimme | ElevenLabs `1YST1S3BrkT7E0wcLKQD` · OpenAI `verse` |
+| Stimme | ElevenLabs `TX3LPaxmHKxFdv7VOQHJ` · OpenAI `verse` |
 
 ## Bruno Kessler „Der Bär“
 
@@ -98,7 +98,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | | |
 |---|---|
 | Rolle | Ex-Profi (Schwergewicht) (boxer) |
-| Status | kandidat |
+| Status | kandidat · seit Folge 1 · Aussehen gesperrt |
 | Alter / Größe / Gewicht | 36 J. · 189 cm · 106 kg Schwergewicht |
 | Persönlichkeit | Ruhig, gutmütig, schwermütig. Schämt sich für seinen Absturz. Wenn er lacht, lacht die ganze Halle mit. |
 | Hintergrund | Profibilanz 14–3. Nach einer Knieverletzung und schlechten Managern stand er mit nichts da. Arbeitet heute als Türsteher. Paule kennt eine Geschichte über ihn, die er (noch) nicht erzählt. |

@@ -105,7 +105,10 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
     return `translate(540 960) scale(${z}) translate(${-fx} ${-fy})`;
   };
 
-  const set = getSet(ts.scene.location, gf, props.club);
+  // Arena-Plätze: von → bis über die Szene (ab 0,6 s, weich)
+  const seats = ts.scene.seats;
+  const seatsFilled = seats ? interpolate(localSec, [0.6, Math.max(1.2, (ts.end - ts.start) * 0.85)], [seats.from, seats.to], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad) }) : undefined;
+  const set = getSet(ts.scene.location, gf, props.club, { seatsFilled });
 
   return (
     <AbsoluteFill>
@@ -130,6 +133,9 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
               action = lastOwn.line.action; actionT = 1;
             } else if (lastOwn?.line.action === 'arme_verschraenkt') {
               action = 'arme_verschraenkt'; actionT = 1;
+            } else if (c.action && c.action !== 'keine') {
+              // Daueraktion aus der Besetzung (z. B. trainiert im Hintergrund)
+              action = c.action; actionT = c.action === 'auftritt' ? localSec / 1.2 : 0.7;
             }
             let mouth = 0;
             if (speaking) {
@@ -161,7 +167,8 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
       <AbsoluteFill style={{ background: 'radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%)' }} />
       {/* Weißblitz beim Schnitt */}
       <AbsoluteFill style={{ background: '#fff', opacity: interpolate(f, [0, 5], [ts.index === 0 ? 0 : 0.35, 0], { extrapolateRight: 'clamp' }) }} />
-      {ts.scene.overlay && <OverlayStamp text={ts.scene.overlay} f={f - 12} />}
+      {ts.scene.overlay && <OverlayStamp text={ts.scene.overlay} f={f - (ts.index === 0 ? 84 : 12)} />}
+      {seats && seats.hud && seatsFilled !== undefined && <SeatHud filled={seatsFilled} total={seats.total} f={f} />}
     </AbsoluteFill>
   );
 };
@@ -176,6 +183,27 @@ const OverlayStamp: React.FC<{ text: string; f: number }> = ({ text, f }) => {
     <div style={{ position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: o }}>
       <div style={{ transform: `scale(${s}) rotate(-3deg)`, background: '#f4ead2', color: '#8c1d2c', border: '8px solid #8c1d2c', borderRadius: 14, padding: '14px 34px', fontFamily: 'Anton, Impact, sans-serif', fontSize: 62, letterSpacing: 3, boxShadow: '0 10px 0 rgba(0,0,0,0.35)', maxWidth: 900, textAlign: 'center', lineHeight: 1.1 }}>
         {text}
+      </div>
+    </div>
+  );
+};
+
+/** Sitzplatz-Zähler „ARENA 37/100“ – 1 neuer Follower = 1 Platz */
+const SeatHud: React.FC<{ filled: number; total: number; f: number }> = ({ filled, total, f }) => {
+  const o = interpolate(f, [8, 16], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const n = Math.round(filled);
+  const pct = Math.min(1, n / total);
+  return (
+    <div style={{ position: 'absolute', top: 470, left: 90, right: 170, opacity: o, fontFamily: 'Montserrat, sans-serif', color: '#fff' }}>
+      <div style={{ background: 'rgba(12,10,14,0.82)', border: '5px solid #f4ead2', borderRadius: 22, padding: '18px 26px', boxShadow: '0 10px 0 rgba(0,0,0,0.35)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 50, letterSpacing: 2 }}>ARENA</div>
+          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 64, color: n >= total ? '#7dff9b' : '#ffd23f' }}>{n} / {total}</div>
+        </div>
+        <div style={{ height: 26, background: '#2a2530', borderRadius: 99, overflow: 'hidden', border: '3px solid #000', margin: '8px 0 10px' }}>
+          <div style={{ width: `${pct * 100}%`, height: '100%', background: 'linear-gradient(90deg, #c8302a, #ffd23f)' }} />
+        </div>
+        <div style={{ fontWeight: 900, fontSize: 34 }}>1 neuer Follower = 1 Platz 🥊</div>
       </div>
     </div>
   );
@@ -225,7 +253,38 @@ const Subtitles: React.FC<{ lines: TimedLine[]; chars: Map<string, Character>; u
   );
 };
 
+/** Endtafel „Arena füllen“ – Mitmach-Aufruf statt Abstimmung */
+const ArenaEndCard: React.FC<{ ep: Episode }> = ({ ep }) => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [0, 8], [0, 1], { extrapolateRight: 'clamp' });
+  const ec = ep.endCard;
+  const filled = Math.round(ec.seatsFilled);
+  return (
+    <AbsoluteFill style={{ opacity: o }}>
+      <AbsoluteFill style={{ background: 'rgba(10,8,8,0.97)' }} />
+      <div style={{ position: 'absolute', top: 330, left: 70, right: 150, fontFamily: 'Montserrat, sans-serif', color: '#fff', textAlign: 'center' }}>
+        <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 50, color: '#ffd23f', letterSpacing: 3 }}>{ec.headline || 'HILF UNS!'}</div>
+        <div style={{ fontWeight: 900, fontSize: 66, lineHeight: 1.08, margin: '10px 0 26px' }}>{ep.decision.question}</div>
+        {/* 10 × 10 Mini-Arena */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(20, 1fr)', gap: 7, width: 760, margin: '0 auto', padding: 18, background: '#1e2232', borderRadius: 18, border: '5px solid #f4ead2' }}>
+          {Array.from({ length: ec.seatsTotal }).map((_, i) => {
+            const on = i < filled;
+            const pop = interpolate(f, [10 + (i % 20), 16 + (i % 20)], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+            return <div key={i} style={{ height: 22, borderRadius: 5, background: on ? '#ffd23f' : '#b3262e', border: '2px solid #000', transform: `scale(${0.6 + pop * 0.4})` }} />;
+          })}
+        </div>
+        <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 64, marginTop: 14 }}>{filled} / {ec.seatsTotal} PLÄTZE</div>
+        {ec.lines.map((l, i) => (
+          <div key={i} style={{ fontWeight: i === 0 ? 900 : 800, fontSize: i === 0 ? 44 : 38, color: i === 0 ? '#fff' : '#f4ead2', marginTop: 12, lineHeight: 1.15 }}>{l}</div>
+        ))}
+        <div style={{ marginTop: 26, display: 'inline-block', fontFamily: 'Anton, Impact, sans-serif', fontSize: 58, color: '#1a1410', background: '#ffd23f', padding: '6px 26px', borderRadius: 12, transform: `rotate(-2deg) scale(${interpolate(f, [20, 28], [0.6, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2)) })})` }}>FOLGE {ep.number + 1} KOMMT BALD!</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const EndCard: React.FC<{ ep: Episode }> = ({ ep }) => {
+  if (ep.endCard?.type === 'arena') return <ArenaEndCard ep={ep} />;
   const f = useCurrentFrame();
   const o = interpolate(f, [0, 8], [0, 1], { extrapolateRight: 'clamp' });
   const colors: Record<string, string> = { A: '#c8302a', B: '#2a54b8', C: '#d9a63a' };

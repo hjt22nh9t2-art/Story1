@@ -19,6 +19,9 @@ export const PUT = (req: Request, { params }: Ctx) => handle(async () => {
     if (!reason) throw new Error(`${old.name} ist bereits in Folge ${old.firstEpisode} aufgetreten – das Aussehen ist gesperrt. Eine Änderung braucht einen Story-Grund (z. B. „neue Vereinsjacke in Folge 12“).`);
     next.lookHistory = [...old.lookHistory, { episode: store.getClub().lastEpisode + 1, reason }];
   }
+  if (old.voice.locked && JSON.stringify({ ...next.voice, locked: true }) !== JSON.stringify({ ...old.voice, locked: true }) && !body.voiceChangeConfirmed) {
+    throw new Error(`Die Stimme von ${old.name} ist festgelegt. Änderung nur mit ausdrücklicher Bestätigung (Häkchen „Stimme wirklich ändern“).`);
+  }
   all[i] = next;
   store.saveCharacters(all);
   return next;
