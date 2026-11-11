@@ -48,7 +48,7 @@ export function validateEpisode(ep: Episode, world: World, opts: { isNext?: bool
   const open = club.decisions.filter((d) => d.status === 'offen');
   if (open.length) warnings.push(`Offene Abstimmung aus Folge ${open[0].episode}: Ergebnis noch nicht eingetragen.`);
 
-  if (ep.decision.options.length < 2 || ep.decision.options.length > 3) errors.push('Am Ende braucht es 2–3 Entscheidungsmöglichkeiten.');
+  if (ep.decision.options.length < 2 || ep.decision.options.length > 4) errors.push('Am Ende braucht es 2–4 Entscheidungsmöglichkeiten.');
   const beats = ep.scenes.map((s) => s.beat);
   if (beats[0] !== 'einstieg') warnings.push('Die erste Szene sollte der Einstieg (Hook) sein.');
   if (beats[beats.length - 1] !== 'entscheidung') warnings.push('Die letzte Szene sollte die Community-Entscheidung enthalten.');

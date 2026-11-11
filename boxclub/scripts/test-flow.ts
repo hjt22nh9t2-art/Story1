@@ -30,7 +30,7 @@ const start = store.getClub().lastEpisode + 1;
 for (let n = start; n <= start + 7; n++) {
   const club = store.getClub();
   const open = club.decisions.find((d) => d.status === 'offen' || d.status === 'entschieden')!;
-  const winner = open.winner ?? (['A', 'B'] as const)[n % 2];
+  const winner = (open.winner ?? (['A', 'B'] as const)[n % 2]) as 'A' | 'B' | 'C' | 'D';
   if (open.status === 'offen') svc.setDecisionResult(open.id, winner, { A: 100 + n, B: 90 }, '');
   const moneyBefore = store.getClub().money;
   const { episode, validation } = await gen.generateNextEpisode('', { provider });

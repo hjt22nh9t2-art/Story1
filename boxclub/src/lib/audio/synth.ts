@@ -230,6 +230,17 @@ const SFX: Record<string, () => Buf> = {
   telefon: () => { const o = new Float32Array(sec(1.6)); for (let r = 0; r < 2; r++) mixIn(o, mul(add(osc('sin', 440, 0.6, 0.5), osc('sin', 480, 0.6, 0.5)), mul(osc('sq', 20, 0.6, 0.5), env(sec(0.6), 0.01, 0.1, 1))), sec(r * 0.8)); return normalize(o, 0.6); },
   kratzer: () => normalize(lowpass(mul(osc('saw', (t) => 900 * (1 - Math.sin(Math.PI * Math.min(1, t / 0.35))) + 120, 0.45, 1), env(sec(0.45), 0.005, 0.4)), 3000), 0.7),
   trommelwirbel: () => { const o = new Float32Array(sec(1.6)); for (let i = 0; i < 40; i++) mixIn(o, snare(), sec(i * 0.035), 0.2 + (i / 40) * 0.6); mixIn(o, SFX.schlag(), sec(1.4), 0.8); return normalize(o, 0.75); },
+  krach: () => {
+    // schwerer Aufprall + rieselnder Sand
+    const n = sec(1.6); const o = new Float32Array(n);
+    mixIn(o, mul(osc('sin', (t) => 60 * Math.exp(-t * 5) + 32, 0.6, 1), env(sec(0.6), 0.002, 0.55)), 0);
+    const b = new Float32Array(sec(0.35)); for (let i = 0; i < b.length; i++) b[i] = noise(); lowpass(b, 900);
+    mixIn(o, mul(b, env(b.length, 0.001, 0.3)), 0, 0.9);
+    const sand = new Float32Array(sec(1.3)); for (let i = 0; i < sand.length; i++) sand[i] = noise() * (rand() < 0.3 ? 1 : 0.2); highpass(sand, 2500);
+    mixIn(o, mul(sand, env(sand.length, 0.05, 1.2, 0)), sec(0.15), 0.25);
+    return normalize(o, 0.8);
+  },
+  quietschen: () => normalize(lowpass(mul(osc('saw', (t) => 420 + 120 * Math.sin(t * 9) + 80 * Math.sin(t * 31), 0.9, 0.5), env(sec(0.9), 0.08, 0.6, 0.3, 0.2)), 2200), 0.6),
   stempel: () => { const n = sec(0.25); return normalize(mul(add(osc('sin', (t) => 140 * Math.exp(-t * 20) + 50, 0.25), lowpass(Float32Array.from({ length: n }, () => noise()), 1200)), env(n, 0.001, 0.2)), 0.8); },
 };
 

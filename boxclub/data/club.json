@@ -19,7 +19,7 @@
     {
       "id": "sandsack",
       "name": "Sandsack",
-      "count": 2,
+      "count": 1,
       "condition": 30
     },
     {
@@ -106,6 +106,10 @@
         {
           "episode": 2,
           "text": "Emre ist offizielles Mitglied Nr. 2. Rosa: Talent ja, Technik noch nicht."
+        },
+        {
+          "episode": 3,
+          "text": "Erstes Training. Der alte Sandsack reißt ab; Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa: „Wirst du nicht.“"
         }
       ]
     },
@@ -118,6 +122,22 @@
         {
           "episode": 2,
           "text": "In 5 Tagen: Emres erster Schaukampf in der Kranstadt Arena. 100 Plätze, 200 € Miete bezahlt. Jeder neue Follower füllt symbolisch einen Platz."
+        },
+        {
+          "episode": 3,
+          "text": "Noch 4 Tage. Arena: 31/100 Plätze."
+        }
+      ]
+    },
+    {
+      "id": "ausruestung",
+      "title": "Neue Ausrüstung",
+      "status": "offen",
+      "startedEpisode": 3,
+      "updates": [
+        {
+          "episode": 3,
+          "text": "Ausrüstung marode: Handschuhe mit Löchern, keine Pratzen, kein Speedball, ein Sandsack übrig. Community stimmt ab (A Boxsack, B Handschuhe, C Pratzen, D Speedball). Preise stehen noch nicht fest."
         }
       ]
     }
@@ -165,6 +185,44 @@
           "plan": "arena:teil"
         }
       ],
+      "status": "umgesetzt",
+      "winner": "B",
+      "votes": {
+        "neueFollowerGesamt": 31
+      },
+      "note": "Zwischenstand vor Folge 3: 31 von 100 Plätzen (31 Follower laut Produzent). Kampfabend hat noch nicht stattgefunden – Aktion läuft weiter.",
+      "resolvedInEpisode": 3
+    },
+    {
+      "id": "d-003",
+      "episode": 3,
+      "question": "Was kaufen wir als Erstes?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Neuer Boxsack",
+          "consequenceHint": "Ersetzt den abgerissenen Sack – Emre kann wieder Schlagkraft trainieren.",
+          "plan": "kaufen:boxsack"
+        },
+        {
+          "key": "B",
+          "label": "Neue Boxhandschuhe",
+          "consequenceHint": "Kein Loch mehr im Daumen – schützt Emres Hände vor dem Kampf.",
+          "plan": "kaufen:handschuhe"
+        },
+        {
+          "key": "C",
+          "label": "Pratzen für das Training",
+          "consequenceHint": "Rosa kann endlich mit Emre an Technik und Kombinationen arbeiten.",
+          "plan": "kaufen:pratzen"
+        },
+        {
+          "key": "D",
+          "label": "Speedball-Equipment",
+          "consequenceHint": "Trainiert Timing und Reflexe – Emres größte Stärke.",
+          "plan": "kaufen:speedball"
+        }
+      ],
       "status": "offen",
       "winner": null,
       "votes": {},
@@ -181,18 +239,44 @@
     {
       "episode": 2,
       "text": "Folge 2 „Fünf Tage“: Die Community hat entschieden: Emre (17) wird offiziell Mitglied Nr. 2, Bruno wird nicht verpflichtet. Rosa sieht Talent, aber keine Technik. Günther bekommt einen Anruf: In fünf Tagen darf Emre bei einem Kampfabend in der Kranstadt Arena (100 Plätze) einen Schaukampf boxen. Die Arena-Miete kostet 200 €, die Kasse sinkt auf 300 €. Bleibt die Halle leer, ist das Geld weg. Günther bittet die Zuschauer um Hilfe: Jeder neue Follower füllt symbolisch einen Platz."
+    },
+    {
+      "episode": 3,
+      "text": "Folge 3 „Emre braucht besseres Equipment!“: Emres erstes Training: Schon beim ersten Jab reißt der alte Sandsack von der Decke. Rosas Bestandsaufnahme zeigt: Die Handschuhe haben Löcher, Pratzen und Speedball gibt es gar nicht. Günthers Klebeband-Idee scheitert – das Klebeband hält schon den Ring zusammen. Paule rechnet: 300 € in der Kasse, die Pacht ist bald fällig – es reicht für genau eine Anschaffung. Emre fürchtet, in vier Tagen wegen kaputter Ausrüstung zu verlieren. Die Community soll entscheiden, was zuerst gekauft wird. Zum Schluss schlägt Emre auf den letzten Sandsack – und der quietscht verdächtig."
     }
   ],
-  "lastEpisode": 2,
-  "nextEpisodeNote": "In fünf Tagen boxt Emre seinen ersten Schaukampf – ist er bereit, und wird die Arena voll?",
+  "lastEpisode": 3,
+  "nextEpisodeNote": "Emre trainiert am letzten Sandsack weiter – und der quietscht schon verdächtig. Was kauft der Club – und hält der Sack bis zum Kampf?",
+  "community": {
+    "followers": 31,
+    "likes": null,
+    "likeEuroRate": 2,
+    "likesBooked": 0
+  },
+  "metrics": [
+    {
+      "episode": 2,
+      "reportedAt": "2026-11-11T16:33:26.004Z",
+      "views": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "newFollowers": null,
+      "followersTotal": 31,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge)."
+    }
+  ],
   "upcomingEvent": {
     "name": "Kampfabend Kranstadt Arena",
     "locationId": "eventhalle",
     "kind": "Schaukampf",
     "boxerId": "emre-yildiz",
     "seats": 100,
-    "seatsFilled": 0,
-    "daysLeft": 5,
+    "seatsFilled": 31,
+    "daysLeft": 4,
     "cost": 200,
     "announcedEpisode": 2,
     "note": "Community-Aktion: 1 neuer Follower = 1 symbolischer Platz"

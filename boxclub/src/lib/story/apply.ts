@@ -89,6 +89,22 @@ export function applyChange(w: World, ch: StateChange, ep: number): string {
       c.upcomingEvent.daysLeft = Math.max(0, Math.round(ch.amount));
       return `Noch ${c.upcomingEvent.daysLeft} Tage bis ${c.upcomingEvent.name}`;
     }
+    case 'follower': {
+      c.community.followers = Math.round(ch.amount);
+      return `Community: ${c.community.followers} Follower (${ch.reason || 'Meldung Produzent'})`;
+    }
+    case 'likes': {
+      c.community.likes = Math.round(ch.amount);
+      return `Community: ${c.community.likes} Likes (${ch.reason || 'Meldung Produzent'})`;
+    }
+    case 'kennzahlen': {
+      // value = JSON mit views, likes, comments, shares, newFollowers, followersTotal, avgWatchSec, avgWatchedPct, fullViewsPct, note
+      const m = JSON.parse(ch.value || '{}');
+      c.metrics = c.metrics.filter((x) => x.episode !== ch.amount);
+      c.metrics.push({ episode: ch.amount, reportedAt: new Date().toISOString(), views: null, likes: null, comments: null, shares: null, newFollowers: null, followersTotal: null, avgWatchSec: null, avgWatchedPct: null, fullViewsPct: null, note: '', ...m });
+      c.metrics.sort((a, b) => a.episode - b.episode);
+      return `Kennzahlen für Folge ${ch.amount} gespeichert`;
+    }
     case 'ort_freischalten': {
       const l = w.locations.find((x) => x.id === ch.target);
       if (!l) throw new Error(`ort_freischalten: Ort ${ch.target} unbekannt`);

@@ -12,9 +12,11 @@ Dashboard → Abstimmung eintragen → „Neue Episode erstellen“ → Drehbuch
 
 ---
 
+> **Projektdateien:** `SERIES_BIBLE.md` · `CHARACTERS_AND_VOICES.md` · `PRODUCTION_STANDARDS.md` · `series_state.json` · `EPISODE_LOG.md`
+
 ## 1. Schnellstart
 
-Voraussetzungen: **Node.js ≥ 20**, **FFmpeg/ffprobe** im `PATH`. Chrome lädt Remotion beim ersten
+Voraussetzungen: **Node.js ≥ 20**, **FFmpeg/ffprobe** im `PATH`, **Python 3 mit numpy + scipy** (`pip install -r requirements.txt`) für den Audio-Mischer. Chrome lädt Remotion beim ersten
 Rendern selbst herunter (oder `REMOTION_BROWSER` setzen).
 
 ```bash
@@ -112,6 +114,8 @@ jeweiligen Sprecher (Totale, Halbnah, Nah, Schwenk, Zoom, Dolly) mit Parallaxe i
 | `npm run render -- ep-002` | Folge auf der Kommandozeile rendern |
 | `npm run stills -- ep-002 2,15,40` | Testbilder einzelner Sekunden (`data/renders/…-stills/`) |
 | `npm run bibel` | visuelle Charakterbibel erzeugen (`docs/CHARAKTERBIBEL.md` + PNGs) |
+| `npx tsx scripts/projektdateien.ts` | Projektdateien aktualisieren (series_state.json, CHARACTERS_AND_VOICES.md, EPISODE_LOG.md) |
+| `python3 scripts/mix.py <timeline.json> <out.wav>` | Audio-Mischer (wird von `render` automatisch aufgerufen; braucht `pip install -r requirements.txt`) |
 | `npm run test:flow` | End-to-End-Test über 8 Folgen auf einer Datenkopie (`-- claude` mit KI) |
 | `npm run studio` | Remotion Studio (Komposition direkt bearbeiten) |
 | `npm run typecheck` | TypeScript-Prüfung |

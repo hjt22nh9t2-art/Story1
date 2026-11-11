@@ -36,7 +36,7 @@ export const DraftSchema = z.object({
     cast: z.array(z.object({ characterId: z.string(), position: z.enum(POSITIONS), facing: z.enum(['links', 'rechts']) })),
     lines: z.array(z.object({ speaker: z.string(), text: z.string(), emotion: z.enum(EMOTIONS), action: z.enum(ACTIONS), sfx: z.enum([...SFX, 'keine']) })),
   })),
-  decision: z.object({ question: z.string(), options: z.array(z.object({ key: z.enum(['A', 'B', 'C']), label: z.string(), consequenceHint: z.string() })) }),
+  decision: z.object({ question: z.string(), options: z.array(z.object({ key: z.enum(['A', 'B', 'C', 'D']), label: z.string(), consequenceHint: z.string() })) }),
   stateChanges: z.array(z.object({ op: z.enum(STATE_OPS), amount: z.number(), target: z.string(), value: z.string(), reason: z.string() })),
   socialCaption: z.string(),
   hashtags: z.array(z.string()),

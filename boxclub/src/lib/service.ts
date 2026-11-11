@@ -116,7 +116,7 @@ export function unpublishLast() {
   return ep;
 }
 
-export function setDecisionResult(decisionId: string, winner: 'A' | 'B' | 'C', votes: Record<string, number>, note: string) {
+export function setDecisionResult(decisionId: string, winner: 'A' | 'B' | 'C' | 'D', votes: Record<string, number>, note: string) {
   const club = store.getClub();
   const d = club.decisions.find((x) => x.id === decisionId);
   if (!d) throw new Error('Entscheidung nicht gefunden');

@@ -1,6 +1,6 @@
 # Charakterbibel – BOXCLUB
 
-Automatisch erzeugt aus `data/characters.json` (2026-11-10).
+Automatisch erzeugt aus `data/characters.json` (2026-11-11).
 Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind die verbindliche Referenz.
 
 ## Günther Wallach „Günni“
@@ -45,7 +45,7 @@ Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind 
 | Kleidung | trainingsjacke #1d1f24/#f08a24, trainingshose #1d1f24, Schuhe #e9e9e9 |
 | Kopf | Haut #d7a184, Haare stoppel #9b9b98, Bart keiner, Nase krumm, Augen #5c4a32, Blumenkohlohr |
 | Accessoires | pfeife |
-| Stimme | ElevenLabs `le3O97c6UClnRdpxkDTb` · OpenAI `sage` |
+| Stimme | ElevenLabs `EXAVITQu4vr4xnSDxMaL` · OpenAI `sage` |
 
 ## Paul Kruse „Paule“
 

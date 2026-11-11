@@ -163,10 +163,10 @@ export function EpisodeEditor({ initial, characters, locations, tts, isNext }: {
                 <button className="btn small" disabled={s.lines.length <= 1} onClick={() => updScene(si, { lines: s.lines.filter((_, k) => k !== li) })}>×</button>
               </div>
             ))}
-            <button className="btn small" style={{ marginTop: 6 }} disabled={!s.cast.length} onClick={() => updScene(si, { lines: [...s.lines, { id: newId('l'), speaker: s.cast[0]?.characterId ?? '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, audio: null }] })}>＋ Zeile</button>
+            <button className="btn small" style={{ marginTop: 6 }} disabled={!s.cast.length} onClick={() => updScene(si, { lines: [...s.lines, { id: newId('l'), speaker: s.cast[0]?.characterId ?? '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, delayBefore: 0, audio: null }] })}>＋ Zeile</button>
           </div>
         ))}
-        <button className="btn" onClick={() => update({ scenes: [...ep.scenes, { id: newId('s'), beat: 'handlung', location: 'halle', shot: 'halbnah', music: 'aufbruch', overlay: '', direction: '', seats: null, cast: [], lines: [{ id: newId('l'), speaker: '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, audio: null }] }] })}>＋ Szene hinzufügen</button>
+        <button className="btn" onClick={() => update({ scenes: [...ep.scenes, { id: newId('s'), beat: 'handlung', location: 'halle', shot: 'halbnah', music: 'aufbruch', overlay: '', direction: '', seats: null, props: [], setOverrides: {}, cast: [], lines: [{ id: newId('l'), speaker: '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, delayBefore: 0, audio: null }] }] })}>＋ Szene hinzufügen</button>
 
         <div className="card">
           <h3>Community-Entscheidung am Ende</h3>
@@ -176,10 +176,10 @@ export function EpisodeEditor({ initial, characters, locations, tts, isNext }: {
               <b style={{ fontFamily: 'Anton', fontSize: 24 }}>{o.key}</b>
               <input value={o.label} disabled={published} onChange={(e) => update({ decision: { ...ep.decision, options: ep.decision.options.map((x, k) => (k === i ? { ...x, label: e.target.value } : x)) } })} />
               <input value={o.consequenceHint} disabled={published} placeholder="mögliche Folgen" onChange={(e) => update({ decision: { ...ep.decision, options: ep.decision.options.map((x, k) => (k === i ? { ...x, consequenceHint: e.target.value } : x)) } })} />
-              <button className="btn small" disabled={published || ep.decision.options.length <= 2} onClick={() => update({ decision: { ...ep.decision, options: ep.decision.options.filter((_, k) => k !== i).map((x, k) => ({ ...x, key: (['A', 'B', 'C'] as const)[k] })) } })}>×</button>
+              <button className="btn small" disabled={published || ep.decision.options.length <= 2} onClick={() => update({ decision: { ...ep.decision, options: ep.decision.options.filter((_, k) => k !== i).map((x, k) => ({ ...x, key: (['A', 'B', 'C', 'D'] as const)[k] })) } })}>×</button>
             </div>
           ))}
-          {!published && ep.decision.options.length < 3 && <button className="btn small" style={{ marginTop: 8 }} onClick={() => update({ decision: { ...ep.decision, options: [...ep.decision.options, { key: 'C', label: '', consequenceHint: '', plan: '' }] } })}>＋ Option C</button>}
+          {!published && ep.decision.options.length < 4 && <button className="btn small" style={{ marginTop: 8 }} onClick={() => update({ decision: { ...ep.decision, options: [...ep.decision.options, { key: (['A', 'B', 'C', 'D'] as const)[ep.decision.options.length], label: '', consequenceHint: '', plan: '' }] } })}>＋ Option {(['A', 'B', 'C', 'D'])[ep.decision.options.length]}</button>}
         </div>
 
         <div className="card">

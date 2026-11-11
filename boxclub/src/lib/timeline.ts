@@ -33,6 +33,7 @@ export function buildTimeline(ep: Pick<Episode, 'scenes'>): EpisodeTimeline {
     const sStart = si === 0 ? 0 : t;
     const lines: TimedLine[] = [];
     for (const line of scene.lines) {
+      t += line.delayBefore ?? 0;
       const d = lineDuration(line);
       const tl: TimedLine = { line, sceneIndex: si, start: t, end: t + d, startFrame: Math.round(t * FPS), endFrame: Math.round((t + d) * FPS) };
       lines.push(tl); all.push(tl);

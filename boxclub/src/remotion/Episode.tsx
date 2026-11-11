@@ -7,7 +7,7 @@ import { AbsoluteFill, Audio, Easing, Sequence, interpolate, staticFile, useCurr
 import type { Character, Episode } from '../lib/types';
 import { FPS, buildTimeline, subtitleChunks, type TimedLine, type TimedScene } from '../lib/timeline';
 import { CharacterRig, type Action, type Emotion } from './Character';
-import { FLOOR, SetDefs, getSet, type SetClub } from './Sets';
+import { FLOOR, Sandbag, SetDefs, getSet, type SetClub } from './Sets';
 
 export interface EpisodeProps {
   episode: Episode;
@@ -108,7 +108,8 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
   // Arena-Plätze: von → bis über die Szene (ab 0,6 s, weich)
   const seats = ts.scene.seats;
   const seatsFilled = seats ? interpolate(localSec, [0.6, Math.max(1.2, (ts.end - ts.start) * 0.85)], [seats.from, seats.to], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad) }) : undefined;
-  const set = getSet(ts.scene.location, gf, props.club, { seatsFilled });
+  const setClub = ts.scene.setOverrides?.sandbags !== undefined ? { ...props.club, sandbags: ts.scene.setOverrides.sandbags } : props.club;
+  const set = getSet(ts.scene.location, gf, setClub, { seatsFilled });
 
   return (
     <AbsoluteFill>
@@ -117,6 +118,7 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
         <g transform={layer(0.72)}>{set.back}</g>
         <g transform={layer(1)}>
           {set.mid}
+          {(ts.scene.props ?? []).map((pr, k) => <PropSandbag key={k} p={pr} localSec={localSec} gf={gf} />)}
           {ts.scene.cast.map((c, i) => {
             const ch = chars.get(c.characterId);
             if (!ch) return null;
@@ -173,6 +175,58 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
   );
 };
 
+/* ---------------------------------------------------------- Requisiten */
+
+const BAG_TOP = 600; // Kettenende; Sack reicht von y≈685 bis y≈1105
+const PropSandbag: React.FC<{ p: { x: number; fallAt: number | null; fallen: boolean; color: string; hitAt: number | null }; localSec: number; gf: number }> = ({ p, localSec, gf }) => {
+  const fallDur = 0.36;
+  const tFall = p.fallAt === null ? -1 : localSec - p.fallAt;
+  // liegt am Boden
+  const lying = p.fallen || (p.fallAt !== null && tFall >= fallDur + 0.22);
+  if (lying) {
+    const settle = p.fallen ? 1 : Math.min(1, (tFall - fallDur - 0.22) / 0.15);
+    return (
+      <g>
+        <path d={`M${p.x},0 L${p.x},${BAG_TOP - 160}`} stroke="#444" strokeWidth={5} />
+        <path d={`M${p.x},${BAG_TOP - 160} l-8,26 l10,18`} stroke="#444" strokeWidth={4} fill="none" />
+        <ellipse cx={p.x + 120} cy={FLOOR - 4} rx={250} ry={26} fill="#d9c08a" stroke="#a88f5d" strokeWidth={3} />
+        <g transform={`translate(${p.x + 120} ${FLOOR - 62 - (1 - settle) * 6})`}>
+          <rect x={-210} y={-62} width={420} height={124} rx={56} fill={p.color} stroke="#1a1410" strokeWidth={5} />
+          <rect x={-150} y={-62} width={22} height={124} fill="#1a1410" opacity={0.5} />
+          <rect x={128} y={-62} width={22} height={124} fill="#1a1410" opacity={0.5} />
+          <path d="M150,-20 l30,8 l-24,14 l26,10" stroke="#3a1410" strokeWidth={6} fill="none" />
+          {Array.from({ length: 8 }).map((_, i) => <circle key={i} cx={200 + (i % 4) * 9} cy={-6 + Math.floor(i / 4) * 14} r={5} fill="#d9c08a" />)}
+        </g>
+      </g>
+    );
+  }
+  if (p.fallAt !== null && tFall >= 0) {
+    // Fall + Aufprall-Kippen
+    const tf = Math.min(tFall, fallDur);
+    const dy = 0.5 * ((2 * (FLOOR - 1105)) / (fallDur * fallDur)) * tf * tf;
+    const tip = tFall > fallDur ? Math.min(1, (tFall - fallDur) / 0.22) : 0;
+    const burst = tFall > fallDur ? tFall - fallDur : 0;
+    return (
+      <g>
+        <path d={`M${p.x},0 L${p.x},${BAG_TOP - 160}`} stroke="#444" strokeWidth={5} />
+        <g transform={`translate(0 ${dy}) rotate(${tip * 90} ${p.x + 62} ${1105})`}>
+          <Sandbag x={p.x} frame={0} color={p.color} top={BAG_TOP} />
+        </g>
+        {burst > 0 && Array.from({ length: 22 }).map((_, i) => {
+          const a = (i / 22) * Math.PI;
+          const r = burst * (260 + (i % 5) * 60);
+          return <circle key={i} cx={p.x + 60 + Math.cos(a) * r} cy={FLOOR - 20 - Math.sin(a) * r * 0.55 + burst * burst * 900} r={7 - (i % 3)} fill="#d9c08a" opacity={Math.max(0, 1 - burst * 2.2)} />;
+        })}
+        {burst > 0 && <ellipse cx={p.x + 80} cy={FLOOR - 30} rx={120 + burst * 500} ry={40 + burst * 120} fill="#e8d9b0" opacity={Math.max(0, 0.6 - burst * 1.3)} />}
+      </g>
+    );
+  }
+  // hängt (ggf. schwingt nach einem Treffer)
+  const th = p.hitAt === null ? -1 : localSec - p.hitAt;
+  const swing = th >= 0 ? Math.sin(th * 7) * 9 * Math.exp(-th * 1.4) : Math.sin(gf * 0.05) * 1.5;
+  return <g transform={`rotate(${swing} ${p.x} 0)`}><Sandbag x={p.x} frame={0} color={p.color} top={BAG_TOP} /></g>;
+};
+
 /* ---------------------------------------------------------- Einblendungen */
 
 const OverlayStamp: React.FC<{ text: string; f: number }> = ({ text, f }) => {
@@ -181,7 +235,7 @@ const OverlayStamp: React.FC<{ text: string; f: number }> = ({ text, f }) => {
   const o = interpolate(f, [0, 4], [0, 1], { extrapolateRight: 'clamp' });
   return (
     <div style={{ position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: o }}>
-      <div style={{ transform: `scale(${s}) rotate(-3deg)`, background: '#f4ead2', color: '#8c1d2c', border: '8px solid #8c1d2c', borderRadius: 14, padding: '14px 34px', fontFamily: 'Anton, Impact, sans-serif', fontSize: 62, letterSpacing: 3, boxShadow: '0 10px 0 rgba(0,0,0,0.35)', maxWidth: 900, textAlign: 'center', lineHeight: 1.1 }}>
+      <div style={{ transform: `scale(${s}) rotate(-3deg)`, background: '#f4ead2', color: '#8c1d2c', border: '8px solid #8c1d2c', borderRadius: 14, padding: '14px 34px', fontFamily: 'Anton, Impact, sans-serif', fontSize: 62, letterSpacing: 3, boxShadow: '0 10px 0 rgba(0,0,0,0.35)', maxWidth: 900, textAlign: 'center', lineHeight: 1.1, whiteSpace: 'pre-line' }}>
         {text}
       </div>
     </div>
@@ -287,23 +341,23 @@ const EndCard: React.FC<{ ep: Episode }> = ({ ep }) => {
   if (ep.endCard?.type === 'arena') return <ArenaEndCard ep={ep} />;
   const f = useCurrentFrame();
   const o = interpolate(f, [0, 8], [0, 1], { extrapolateRight: 'clamp' });
-  const colors: Record<string, string> = { A: '#c8302a', B: '#2a54b8', C: '#d9a63a' };
+  const colors: Record<string, string> = { A: '#c8302a', B: '#2a54b8', C: '#d9a63a', D: '#3f8f5c' };
   return (
     <AbsoluteFill style={{ opacity: o }}>
-      <AbsoluteFill style={{ background: 'linear-gradient(180deg, rgba(10,8,8,0.55) 0%, rgba(10,8,8,0.86) 25%, rgba(10,8,8,0.9) 100%)' }} />
-      <div style={{ position: 'absolute', top: 420, left: 70, right: 150, fontFamily: 'Montserrat, sans-serif', color: '#fff' }}>
+      <AbsoluteFill style={{ background: 'rgba(10,8,8,0.95)' }} />
+      <div style={{ position: 'absolute', top: ep.decision.options.length > 3 ? 330 : 420, left: 70, right: 150, fontFamily: 'Montserrat, sans-serif', color: '#fff' }}>
         <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 48, color: '#ffd23f', letterSpacing: 4 }}>DU ENTSCHEIDEST</div>
         <div style={{ fontWeight: 900, fontSize: 70, lineHeight: 1.08, margin: '12px 0 40px' }}>{ep.decision.question}</div>
         {ep.decision.options.map((op, i) => {
           const s = interpolate(f, [6 + i * 6, 14 + i * 6], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.8)) });
           return (
-            <div key={op.key} style={{ display: 'flex', alignItems: 'center', gap: 26, marginBottom: 30, transform: `scale(${s})`, transformOrigin: 'left center' }}>
+            <div key={op.key} style={{ display: 'flex', alignItems: 'center', gap: 26, marginBottom: ep.decision.options.length > 3 ? 22 : 30, transform: `scale(${s})`, transformOrigin: 'left center' }}>
               <div style={{ width: 120, height: 120, borderRadius: 24, background: colors[op.key], border: '6px solid #f4ead2', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Anton, Impact, sans-serif', fontSize: 80 }}>{op.key}</div>
               <div style={{ fontWeight: 800, fontSize: 46, lineHeight: 1.15, flex: 1 }}>{op.label}</div>
             </div>
           );
         })}
-        <div style={{ marginTop: 30, fontWeight: 800, fontSize: 40, color: '#f4ead2' }}>Schreib {ep.decision.options.map((o) => o.key).join(' oder ')} in die Kommentare 👇</div>
+        <div style={{ marginTop: 30, fontWeight: 800, fontSize: 40, color: '#f4ead2' }}>Schreib {ep.decision.options.map((o) => o.key).join(', ').replace(/, ([^,]*)$/, ' oder $1')} in die Kommentare 👇</div>
         <div style={{ marginTop: 18, fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#ffd23f', letterSpacing: 3 }}>FORTSETZUNG FOLGT – FOLGE {ep.number + 1}</div>
       </div>
     </AbsoluteFill>
@@ -352,11 +406,11 @@ const AudioTracks: React.FC<{ props: EpisodeProps; scenes: TimedScene[]; lines: 
           if (has(babble)) out.push(<Sequence key={`b${l.line.id}`} from={l.startFrame} durationInFrames={Math.max(1, l.endFrame - l.startFrame)}><Audio src={src(babble)} volume={0.55} /></Sequence>);
         }
         if (l.line.sfx && has(`audio/sfx/${l.line.sfx}.wav`)) {
-          out.push(<Sequence key={`s${l.line.id}`} from={Math.max(0, l.startFrame - 4)} durationInFrames={FPS * 3}><Audio src={src(`audio/sfx/${l.line.sfx}.wav`)} volume={0.5} /></Sequence>);
+          out.push(<Sequence key={`s${l.line.id}`} from={Math.max(0, l.startFrame - 4)} durationInFrames={FPS * 3}><Audio src={src(`audio/sfx/${l.line.sfx}.wav`)} volume={0.18} /></Sequence>);
         }
         return out;
       })}
-      {scenes.slice(1).map((s) => has('audio/sfx/whoosh.wav') ? <Sequence key={`w${s.index}`} from={Math.max(0, s.startFrame - 3)} durationInFrames={20}><Audio src={src('audio/sfx/whoosh.wav')} volume={0.25} /></Sequence> : null)}
+      {scenes.slice(1).map((s) => has('audio/sfx/whoosh.wav') ? <Sequence key={`w${s.index}`} from={Math.max(0, s.startFrame - 3)} durationInFrames={20}><Audio src={src('audio/sfx/whoosh.wav')} volume={0.08} /></Sequence> : null)}
     </>
   );
 };

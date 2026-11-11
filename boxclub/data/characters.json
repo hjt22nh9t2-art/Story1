@@ -110,13 +110,13 @@
       "unentschieden": 0
     },
     "voice": {
-      "elevenlabsVoiceId": "le3O97c6UClnRdpxkDTb",
+      "elevenlabsVoiceId": "EXAVITQu4vr4xnSDxMaL",
       "openaiVoice": "sage",
-      "instructions": "Frau Mitte 50, tiefe ruhige Stimme, knapp und streng.",
+      "instructions": "Frau Mitte 50, laut, klar, selbstbewusst, energiegeladen.",
       "demoPitch": 1.05,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Rhea“ (deutsch, weiblich, tief). Seit Folge 1 festgelegt."
+      "note": "ElevenLabs „Sarah – Mature, Reassuring, Confident“ (weiblich, klar, ~184 Hz). Ab Folge 3 festgelegt – ersetzt „Rhea“ (Folge 1–2), die zu leise und dumpf war. Tonanweisung: [confident]/[firmly], laut und deutlich."
     },
     "look": {
       "skin": "#d7a184",

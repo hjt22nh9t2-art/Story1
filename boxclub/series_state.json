@@ -1,0 +1,216 @@
+{
+  "stand": {
+    "nachFolge": 3,
+    "naechsteFolge": 4,
+    "aktualisiert": "2026-11-11",
+    "kapitel": "Akt 1 – Der erste Kampf"
+  },
+  "finanzen": {
+    "kasse": 300,
+    "einnahmenProMonat": 30,
+    "kostenProMonat": 380,
+    "pachtProMonat": 250,
+    "sponsoren": []
+  },
+  "community": {
+    "follower": 31,
+    "likes": null,
+    "likeEuroRate": 2,
+    "likesGebucht": 0,
+    "hinweis": "Spielerische Mechaniken – keine echten TikTok-Einnahmen. Fehlende Werte = vom Produzenten noch nicht gemeldet."
+  },
+  "arena": {
+    "name": "Kampfabend Kranstadt Arena",
+    "boxer": "Emre Yıldız",
+    "tageBisKampf": 4,
+    "plaetzeBesetzt": 31,
+    "plaetzeGesamt": 100,
+    "kostenBezahlt": 200
+  },
+  "verein": {
+    "mitglieder": 2,
+    "ruf": 5,
+    "hallenzustand": 28,
+    "ausruestung": [
+      {
+        "id": "ring",
+        "name": "Boxring (rot/blau)",
+        "anzahl": 1,
+        "zustand": 45
+      },
+      {
+        "id": "sandsack",
+        "name": "Sandsack",
+        "anzahl": 1,
+        "zustand": 30
+      },
+      {
+        "id": "handschuhe",
+        "name": "Paar Boxhandschuhe",
+        "anzahl": 4,
+        "zustand": 35
+      },
+      {
+        "id": "springseil",
+        "name": "Springseil",
+        "anzahl": 3,
+        "zustand": 60
+      },
+      {
+        "id": "spiegel",
+        "name": "Wandspiegel (gesprungen)",
+        "anzahl": 1,
+        "zustand": 20
+      },
+      {
+        "id": "hantelbank",
+        "name": "Hantelbank",
+        "anzahl": 1,
+        "zustand": 40
+      },
+      {
+        "id": "glocke",
+        "name": "Ringglocke (Messing, 1961)",
+        "anzahl": 1,
+        "zustand": 95
+      }
+    ]
+  },
+  "figuren": [
+    {
+      "id": "guenther-wallach",
+      "name": "Günther Wallach",
+      "status": "aktiv",
+      "rolle": "Vereinsgründer & Präsident",
+      "stimme": "5faieqDE3osz75KiOI2M",
+      "stimmeFest": true,
+      "seitFolge": 1
+    },
+    {
+      "id": "rosa-brandt",
+      "name": "Rosa Brandt",
+      "status": "aktiv",
+      "rolle": "Cheftrainerin",
+      "stimme": "EXAVITQu4vr4xnSDxMaL",
+      "stimmeFest": true,
+      "seitFolge": 1
+    },
+    {
+      "id": "paule-kruse",
+      "name": "Paul Kruse",
+      "status": "aktiv",
+      "rolle": "Hausmeister, Kassenwart & Mitglied Nr. 1",
+      "stimme": "1YST1S3BrkT7E0wcLKQD",
+      "stimmeFest": true,
+      "seitFolge": 1
+    },
+    {
+      "id": "emre-yildiz",
+      "name": "Emre Yıldız",
+      "status": "aktiv",
+      "rolle": "Boxtalent (Anfänger)",
+      "stimme": "TX3LPaxmHKxFdv7VOQHJ",
+      "stimmeFest": true,
+      "seitFolge": 1
+    },
+    {
+      "id": "bruno-kessler",
+      "name": "Bruno Kessler",
+      "status": "kandidat",
+      "rolle": "Ex-Profi (Schwergewicht)",
+      "stimme": "nPczCjzI2devNBz1zQrb",
+      "stimmeFest": false,
+      "seitFolge": 1
+    },
+    {
+      "id": "nico-falk",
+      "name": "Nico Falk",
+      "status": "kandidat",
+      "rolle": "Problemfall mit Ausnahmetalent",
+      "stimme": "N2lVS1w4EtoT3dr4eOWO",
+      "stimmeFest": false,
+      "seitFolge": null
+    },
+    {
+      "id": "viktor-hahn",
+      "name": "Viktor Hahn",
+      "status": "gast",
+      "rolle": "Besitzer des Titan Boxing Gym",
+      "stimme": "cjVigY5qzO86Huf0OWal",
+      "stimmeFest": false,
+      "seitFolge": null
+    }
+  ],
+  "offeneEntscheidungen": [
+    {
+      "id": "d-003",
+      "ausFolge": 3,
+      "frage": "Was kaufen wir als Erstes?",
+      "optionen": [
+        "A: Neuer Boxsack",
+        "B: Neue Boxhandschuhe",
+        "C: Pratzen für das Training",
+        "D: Speedball-Equipment"
+      ],
+      "status": "offen",
+      "ergebnis": null,
+      "stimmen": {},
+      "notiz": ""
+    }
+  ],
+  "handlungsstraenge": [
+    {
+      "id": "der-traum",
+      "titel": "Der Traum vom großen Verein",
+      "status": "offen",
+      "letzterStand": "Günther eröffnet den Club neu. Ziel: wieder größter Boxverein Kranstadts."
+    },
+    {
+      "id": "die-pacht",
+      "titel": "Die Pacht für die Depothalle",
+      "status": "offen",
+      "letzterStand": "500 € in der Kasse, 250 € Pacht pro Monat – das Geld reicht höchstens zwei Monate."
+    },
+    {
+      "id": "paules-geheimnis",
+      "titel": "Paules Geheimnis um Bruno",
+      "status": "offen",
+      "letzterStand": "Bruno wurde von der Community nicht verpflichtet. Was Paule über ihn weiß, bleibt vorerst offen."
+    },
+    {
+      "id": "entwicklung-emre-yildiz",
+      "titel": "Der Weg von Emre",
+      "status": "offen",
+      "letzterStand": "Erstes Training. Der alte Sandsack reißt ab; Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa: „Wirst du nicht.“"
+    },
+    {
+      "id": "kampfabend",
+      "titel": "Der erste Kampfabend",
+      "status": "offen",
+      "letzterStand": "Noch 4 Tage. Arena: 31/100 Plätze."
+    },
+    {
+      "id": "ausruestung",
+      "titel": "Neue Ausrüstung",
+      "status": "offen",
+      "letzterStand": "Ausrüstung marode: Handschuhe mit Löchern, keine Pratzen, kein Speedball, ein Sandsack übrig. Community stimmt ab (A Boxsack, B Handschuhe, C Pratzen, D Speedball). Preise stehen noch nicht fest."
+    }
+  ],
+  "cliffhanger": "Emre trainiert am letzten Sandsack weiter – und der quietscht schon verdächtig. Was kauft der Club – und hält der Sack bis zum Kampf?",
+  "kennzahlen": [
+    {
+      "episode": 2,
+      "reportedAt": "2026-11-11T16:33:26.004Z",
+      "views": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "newFollowers": null,
+      "followersTotal": 31,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge)."
+    }
+  ]
+}

@@ -132,7 +132,7 @@ const HangingLamp: React.FC<{ x: number; y: number; frame: number; flicker?: boo
   );
 };
 
-const Sandbag: React.FC<{ x: number; frame: number; leaking?: boolean; color?: string; seed?: number; top?: number }> = ({ x, frame, leaking, color = '#7c2b26', seed = 0, top = 360 }) => {
+export const Sandbag: React.FC<{ x: number; frame: number; leaking?: boolean; color?: string; seed?: number; top?: number }> = ({ x, frame, leaking, color = '#7c2b26', seed = 0, top = 360 }) => {
   const swing = Math.sin(frame * 0.05 + seed) * 2;
   return (
     <g transform={`rotate(${swing} ${x} 0)`}>

@@ -1,0 +1,586 @@
+{
+  "id": "ep-003",
+  "number": 3,
+  "title": "Emre braucht besseres Equipment!",
+  "status": "veroeffentlicht",
+  "createdAt": "2026-11-11T16:12:41.384Z",
+  "publishedAt": "2026-11-11T16:33:25.997Z",
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Emres erstes Training, marode Ausrüstung, lustige Panne mit altem Equipment, Community-Abstimmung A–D über die erste Anschaffung.",
+  "resolvesDecisionId": "d-002",
+  "hook": "Emres erster Schlag – und der alte Sandsack reißt von der Decke.",
+  "summary": "Emres erstes Training: Schon beim ersten Jab reißt der alte Sandsack von der Decke. Rosas Bestandsaufnahme zeigt: Die Handschuhe haben Löcher, Pratzen und Speedball gibt es gar nicht. Günthers Klebeband-Idee scheitert – das Klebeband hält schon den Ring zusammen. Paule rechnet: 300 € in der Kasse, die Pacht ist bald fällig – es reicht für genau eine Anschaffung. Emre fürchtet, in vier Tagen wegen kaputter Ausrüstung zu verlieren. Die Community soll entscheiden, was zuerst gekauft wird. Zum Schluss schlägt Emre auf den letzten Sandsack – und der quietscht verdächtig.",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "emre-yildiz",
+          "text": "Äh … das war nur ein Jab!",
+          "emotion": "ueberrascht",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 1.15,
+          "audio": {
+            "file": "episodes/ep-003/voice/l1.mp3",
+            "durationSec": 1.59,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "paule-kruse",
+          "text": "Der hing da seit neunzehnhundertsiebenundachtzig. Der war einfach müde.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l2.mp3",
+            "durationSec": 2.95,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "training",
+      "direction": "Hook: Emre schlägt auf den blauen Sandsack, die Kette reißt, der Sack kracht zu Boden. Paule steht daneben.",
+      "seats": null,
+      "props": [
+        {
+          "type": "sandsack",
+          "x": 560,
+          "fallAt": 0.6,
+          "fallen": false,
+          "color": "#2f3a4f",
+          "hitAt": 0.25
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 1
+      }
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l3",
+          "speaker": "rosa-brandt",
+          "text": "Bestandsaufnahme! Handschuhe: Loch im Daumen.",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l3.mp3",
+            "durationSec": 3.29,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "rosa-brandt",
+          "text": "Pratzen: haben wir keine. Speedball: auch nicht.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l4.mp3",
+            "durationSec": 3.55,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "emre-yildiz",
+          "text": "Und womit soll ich dann trainieren?",
+          "emotion": "verlegen",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l5.mp3",
+            "durationSec": 1.96,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "AUSRÜSTUNG: MANGELHAFT",
+      "music": "training",
+      "direction": "Problem: Rosa macht Bestandsaufnahme vor dem kaputten Sandsack.",
+      "seats": null,
+      "props": [
+        {
+          "type": "sandsack",
+          "x": 560,
+          "fallAt": null,
+          "fallen": true,
+          "color": "#2f3a4f",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 1
+      }
+    },
+    {
+      "id": "s3",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l6",
+          "speaker": "guenther-wallach",
+          "text": "Kein Problem! Paule, hol das Klebeband!",
+          "emotion": "froh",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l6.mp3",
+            "durationSec": 2.77,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "paule-kruse",
+          "text": "Das Klebeband hält schon den Ring zusammen.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.25,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l7.mp3",
+            "durationSec": 1.96,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Günthers Rettungsidee – Paule zerlegt sie trocken.",
+      "seats": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s4",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "paule-kruse",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l8",
+          "speaker": "paule-kruse",
+          "text": "Dreihundert Euro in der Kasse. Und die Pacht kommt bald.",
+          "emotion": "traurig",
+          "action": "keine",
+          "sfx": "kasse",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l8.mp3",
+            "durationSec": 2.51,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "guenther-wallach",
+          "text": "Dann können wir genau eine Sache kaufen.",
+          "emotion": "traurig",
+          "action": "seufzen",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l9.mp3",
+            "durationSec": 2.56,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "KASSE: 300 €",
+      "music": "spannung",
+      "direction": "Kassensturz im Büro.",
+      "seats": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s5",
+      "beat": "handlung",
+      "location": "ring",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l10",
+          "speaker": "emre-yildiz",
+          "text": "In vier Tagen ist mein Kampf. Ich will nicht verlieren, nur weil unser Zeug kaputt ist.",
+          "emotion": "traurig",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l10.mp3",
+            "durationSec": 3.92,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l11",
+          "speaker": "rosa-brandt",
+          "text": "Wirst du nicht. Dafür sorgen wir.",
+          "emotion": "entschlossen",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l11.mp3",
+            "durationSec": 1.83,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "NOCH 4 TAGE · ARENA 31/100",
+      "music": "gefuehl",
+      "direction": "Höhepunkt, emotional: Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa stellt sich hinter ihn.",
+      "seats": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s6",
+      "beat": "entscheidung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l12",
+          "speaker": "guenther-wallach",
+          "text": "Ihr entscheidet, was wir zuerst kaufen: A: Boxsack, B: Handschuhe, C: Pratzen oder D: Speedball?",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l12.mp3",
+            "durationSec": 7.16,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l13",
+          "speaker": "guenther-wallach",
+          "text": "Schreibt euren Buchstaben in die Kommentare!",
+          "emotion": "froh",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-003/voice/l13.mp3",
+            "durationSec": 1.8,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "A BOXSACK · B HANDSCHUHE\nC PRATZEN · D SPEEDBALL",
+      "music": "spannung",
+      "direction": "Community-Aktion: Günther fragt in die Kamera.",
+      "seats": null,
+      "props": [
+        {
+          "type": "sandsack",
+          "x": 560,
+          "fallAt": null,
+          "fallen": true,
+          "color": "#2f3a4f",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 1
+      }
+    },
+    {
+      "id": "s7",
+      "beat": "entscheidung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l14",
+          "speaker": "paule-kruse",
+          "text": "Emre … nicht den letzten Sandsack!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.7,
+          "delayBefore": 0.5,
+          "audio": {
+            "file": "episodes/ep-003/voice/l14.mp3",
+            "durationSec": 2.27,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Cliffhanger & Loop: Emre trainiert am letzten Sandsack weiter. Der quietscht. Paule wird bleich.",
+      "seats": null,
+      "props": [
+        {
+          "type": "sandsack",
+          "x": 560,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": 0.9
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 0
+      }
+    }
+  ],
+  "decision": {
+    "question": "Was kaufen wir als Erstes?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Neuer Boxsack",
+        "consequenceHint": "Ersetzt den abgerissenen Sack – Emre kann wieder Schlagkraft trainieren.",
+        "plan": "kaufen:boxsack"
+      },
+      {
+        "key": "B",
+        "label": "Neue Boxhandschuhe",
+        "consequenceHint": "Kein Loch mehr im Daumen – schützt Emres Hände vor dem Kampf.",
+        "plan": "kaufen:handschuhe"
+      },
+      {
+        "key": "C",
+        "label": "Pratzen für das Training",
+        "consequenceHint": "Rosa kann endlich mit Emre an Technik und Kombinationen arbeiten.",
+        "plan": "kaufen:pratzen"
+      },
+      {
+        "key": "D",
+        "label": "Speedball-Equipment",
+        "consequenceHint": "Trainiert Timing und Reflexe – Emres größte Stärke.",
+        "plan": "kaufen:speedball"
+      }
+    ]
+  },
+  "cliffhanger": "Emre trainiert am letzten Sandsack weiter – und der quietscht schon verdächtig. Was kauft der Club – und hält der Sack bis zum Kampf?",
+  "stateChanges": [
+    {
+      "op": "ausruestung",
+      "amount": -1,
+      "target": "sandsack",
+      "value": "Sandsack",
+      "reason": "Beim ersten Training abgerissen (Folge 3)"
+    },
+    {
+      "op": "plaetze",
+      "amount": 31,
+      "target": "",
+      "value": "",
+      "reason": "Stand laut Produzent: 31 Follower = 31 von 100 Plätzen"
+    },
+    {
+      "op": "follower",
+      "amount": 31,
+      "target": "",
+      "value": "",
+      "reason": "Meldung des Produzenten vor Folge 3"
+    },
+    {
+      "op": "countdown",
+      "amount": 4,
+      "target": "",
+      "value": "",
+      "reason": "Ein Tag ist vergangen"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Erstes Training. Der alte Sandsack reißt ab; Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa: „Wirst du nicht.“",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "ausruestung",
+      "value": "Ausrüstung marode: Handschuhe mit Löchern, keine Pratzen, kein Speedball, ein Sandsack übrig. Community stimmt ab (A Boxsack, B Handschuhe, C Pratzen, D Speedball). Preise stehen noch nicht fest.",
+      "reason": "Neue Ausrüstung"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "kampfabend",
+      "value": "Noch 4 Tage. Arena: 31/100 Plätze.",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [],
+  "socialCaption": "Folge 3: Emres erster Schlag – und unser Sandsack ist Geschichte 😅🥊 Wir können uns genau EINE neue Sache leisten. Was kaufen wir? A Boxsack, B Handschuhe, C Pratzen oder D Speedball – schreib deinen Buchstaben in die Kommentare!",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#boxtraining",
+    "#animationserie",
+    "#teil3"
+  ],
+  "endCard": {
+    "type": "abstimmung",
+    "headline": "",
+    "lines": [],
+    "seatsFilled": 0,
+    "seatsTotal": 100
+  },
+  "video": {
+    "file": "episodes/ep-003/boxclub_folge_003.mp4",
+    "poster": "episodes/ep-003/poster.jpg",
+    "renderedAt": "2026-11-11T16:31:56.521Z",
+    "durationSec": 48.1
+  }
+}

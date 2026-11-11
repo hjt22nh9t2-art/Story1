@@ -116,7 +116,7 @@ export const FightSchema = z.object({
 });
 
 export const DecisionOptionSchema = z.object({
-  key: z.enum(['A', 'B', 'C']),
+  key: z.enum(['A', 'B', 'C', 'D']),
   label: z.string(),
   consequenceHint: z.string().default(''),
   /** Maschinenlesbarer Plan, den der Demo-Generator versteht, z. B. "verpflichten:emre-yildiz" */
@@ -127,9 +127,9 @@ export const DecisionSchema = z.object({
   id: z.string(),
   episode: z.number().int(),
   question: z.string(),
-  options: z.array(DecisionOptionSchema).min(2).max(3),
+  options: z.array(DecisionOptionSchema).min(2).max(4),
   status: z.enum(['offen', 'entschieden', 'umgesetzt']),
-  winner: z.enum(['A', 'B', 'C']).nullable().default(null),
+  winner: z.enum(['A', 'B', 'C', 'D']).nullable().default(null),
   votes: z.record(z.string(), z.number()).default({}),
   note: z.string().default(''),
   resolvedInEpisode: z.number().int().nullable().default(null),
@@ -166,6 +166,32 @@ export const ClubStateSchema = z.object({
   lastEpisode: z.number().int(),
   nextEpisodeNote: z.string().default(''),
   /** Anstehende Veranstaltung (z. B. Kampfabend) inkl. Community-Sitzplätzen */
+  /** Community-Mechaniken (spielerisch – keine echten TikTok-Einnahmen) */
+  community: z.object({
+    /** Follower-Gesamtstand laut Produzent (null = unbekannt) */
+    followers: z.number().int().nullable().default(null),
+    /** Likes-Gesamtstand laut Produzent (null = unbekannt) */
+    likes: z.number().int().nullable().default(null),
+    /** 1 Like = X € symbolisch für die Vereinskasse */
+    likeEuroRate: z.number().default(2),
+    /** Likes, die bereits als Geld in die Kasse gebucht wurden */
+    likesBooked: z.number().int().default(0),
+  }).default({ followers: null, likes: null, likeEuroRate: 2, likesBooked: 0 }),
+  /** Performance-Tracking pro Folge – nur echte, vom Produzenten gemeldete Zahlen */
+  metrics: z.array(z.object({
+    episode: z.number().int(),
+    reportedAt: z.string(),
+    views: z.number().nullable().default(null),
+    likes: z.number().nullable().default(null),
+    comments: z.number().nullable().default(null),
+    shares: z.number().nullable().default(null),
+    newFollowers: z.number().nullable().default(null),
+    followersTotal: z.number().nullable().default(null),
+    avgWatchSec: z.number().nullable().default(null),
+    avgWatchedPct: z.number().nullable().default(null),
+    fullViewsPct: z.number().nullable().default(null),
+    note: z.string().default(''),
+  })).default([]),
   upcomingEvent: z.object({
     name: z.string(),
     locationId: z.string(),
@@ -189,7 +215,7 @@ export type ClubState = z.infer<typeof ClubStateSchema>;
  */
 export const STATE_OPS = [
   'geld', 'mitglieder', 'ruf', 'zustand_halle', 'figur_status', 'ausruestung', 'ausruestung_zustand',
-  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown',
+  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown', 'follower', 'likes', 'kennzahlen',
 ] as const;
 export const StateChangeSchema = z.object({
   op: z.enum(STATE_OPS),
@@ -211,7 +237,7 @@ export const SHOTS = ['totale', 'halbnah', 'nah', 'schwenk', 'zoom', 'dolly'] as
 export const BEATS = ['einstieg', 'vorstellung', 'handlung', 'entwicklung', 'entscheidung'] as const;
 export const POSITIONS = ['ganz_links', 'links', 'mitte', 'rechts', 'ganz_rechts'] as const;
 export const MUSIC = ['aufbruch', 'spannung', 'gefuehl', 'training', 'komisch'] as const;
-export const SFX = ['glocke', 'schlag', 'sandsack', 'tuer', 'kasse', 'muenzen', 'whoosh', 'publikum', 'pfiff', 'telefon', 'kratzer', 'trommelwirbel', 'stempel'] as const;
+export const SFX = ['glocke', 'schlag', 'sandsack', 'tuer', 'kasse', 'muenzen', 'whoosh', 'publikum', 'pfiff', 'telefon', 'kratzer', 'trommelwirbel', 'stempel', 'krach', 'quietschen'] as const;
 
 export const LineSchema = z.object({
   id: z.string(),
@@ -223,6 +249,8 @@ export const LineSchema = z.object({
   sfx: z.enum(SFX).nullable().default(null),
   /** zusätzliche Pause nach der Zeile in Sekunden */
   pauseAfter: z.number().min(0).max(3).default(0.25),
+  /** Stille vor der Zeile (z. B. damit eine Aktion zuerst wirkt) */
+  delayBefore: z.number().min(0).max(5).default(0),
   audio: z
     .object({ file: z.string(), durationSec: z.number(), provider: z.string() })
     .nullable()
@@ -248,6 +276,20 @@ export const SceneSchema = z.object({
   direction: z.string().default(''),
   /** Arena-Sitzplätze in dieser Szene: von → bis (animiert); null = keine Anzeige */
   seats: z.object({ from: z.number(), to: z.number(), total: z.number().default(100), hud: z.boolean().default(true) }).nullable().default(null),
+  /** Szenen-Requisiten, z. B. ein Sandsack, der abreißt */
+  props: z.array(z.object({
+    type: z.enum(['sandsack']),
+    x: z.number(),
+    /** Sekunde (relativ zur Szene), in der der Sandsack abreißt; null = hängt */
+    fallAt: z.number().nullable().default(null),
+    /** liegt bereits am Boden */
+    fallen: z.boolean().default(false),
+    color: z.string().default('#7c2b26'),
+    /** schwingt (wurde getroffen) ab Sekunde */
+    hitAt: z.number().nullable().default(null),
+  })).default([]),
+  /** Abweichungen der Kulisse in dieser Szene (z. B. ein Sandsack ist abgerissen) */
+  setOverrides: z.object({ sandbags: z.number().int().optional() }).default({}),
 });
 export type Scene = z.infer<typeof SceneSchema>;
 
@@ -267,7 +309,7 @@ export const EpisodeSchema = z.object({
   hook: z.string(),
   summary: z.string(),
   scenes: z.array(SceneSchema).min(1),
-  decision: z.object({ question: z.string(), options: z.array(DecisionOptionSchema).min(2).max(3) }),
+  decision: z.object({ question: z.string(), options: z.array(DecisionOptionSchema).min(2).max(4) }),
   cliffhanger: z.string().default(''),
   stateChanges: z.array(StateChangeSchema).default([]),
   newCharacterIds: z.array(z.string()).default([]),

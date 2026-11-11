@@ -70,7 +70,7 @@ export const characters: Character[] = [
     weaknesses: ['ungeduldig mit Faulheit', 'stur', 'schlecht im Verkaufen'],
     goal: 'Einen Boxer bis zur Deutschen Meisterschaft bringen – auf ihre Art.',
     catchphrase: 'Nochmal.',
-    voice: { elevenlabsVoiceId: 'le3O97c6UClnRdpxkDTb', openaiVoice: 'sage', instructions: 'Frau Mitte 50, tiefe ruhige Stimme, knapp und streng.', demoPitch: 1.05, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Rhea“ (deutsch, weiblich, tief). Seit Folge 1 festgelegt.' },
+    voice: { elevenlabsVoiceId: 'EXAVITQu4vr4xnSDxMaL', openaiVoice: 'sage', instructions: 'Frau Mitte 50, laut, klar, selbstbewusst, energiegeladen.', demoPitch: 1.05, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Sarah – Mature, Reassuring, Confident“ (weiblich, klar, ~184 Hz). Ab Folge 3 festgelegt – ersetzt „Rhea“ (Folge 1–2), die zu leise und dumpf war. Tonanweisung: [confident]/[firmly], laut und deutlich.' },
     look: {
       skin: '#d7a184',
       hair: { style: 'stoppel', color: '#9b9b98' },
@@ -323,4 +323,6 @@ export const club: ClubState = {
   lastEpisode: 0,
   nextEpisodeNote: '',
   upcomingEvent: null,
+  community: { followers: null, likes: null, likeEuroRate: 2, likesBooked: 0 },
+  metrics: [],
 };

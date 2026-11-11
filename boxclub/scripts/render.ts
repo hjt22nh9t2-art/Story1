@@ -12,6 +12,7 @@ import { renderMedia, selectComposition } from '@remotion/renderer';
 import * as store from '../src/lib/store';
 import { compositionProps, writeRenderStatus, type RenderStatus } from '../src/lib/service';
 import { loadEnv } from '../src/lib/providers/config';
+import { exportTimeline } from './export-timeline';
 
 loadEnv();
 const id = process.argv[2];
@@ -60,16 +61,20 @@ try {
   status({ progress: 0.05, message: `Rendere ${composition.durationInFrames} Frames …` });
   await renderMedia({
     serveUrl, composition, inputProps: props, codec: 'h264', outputLocation: raw, browserExecutable: browser,
-    crf: 18, imageFormat: 'jpeg', jpegQuality: 92, audioCodec: 'aac', audioBitrate: '192k',
+    crf: 18, imageFormat: 'jpeg', jpegQuality: 92, muted: true, // Ton kommt aus dem eigenen Mischer (scripts/mix.py)
     concurrency: Math.max(1, Math.min(8, os.cpus().length)),
     chromiumOptions: { gl: 'swangle' },
     onProgress: ({ progress }) => status({ progress: 0.05 + progress * 0.85, message: 'Rendere …' }),
   });
 
-  status({ progress: 0.92, message: 'FFmpeg: Lautheit (−14 LUFS) + Faststart …' });
+  status({ progress: 0.9, message: 'Audio-Mischung (Sprache vorrangig, Ducking, Begrenzer) …' });
+  const tlFile = exportTimeline(id);
+  const master = path.join(store.DATA_DIR, 'renders', `${id}-master.wav`);
+  console.log(execFileSync('python3', [path.join(store.ROOT, 'scripts/mix.py'), tlFile, master]).toString());
+  status({ progress: 0.95, message: 'FFmpeg: Ton anlegen + Faststart …' });
   const file = `episodes/${id}/boxclub_folge_${String(ep.number).padStart(3, '0')}.mp4`;
   const poster = `episodes/${id}/poster.jpg`;
-  execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', raw, '-c:v', 'copy', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-movflags', '+faststart', path.join(store.MEDIA_DIR, file)]);
+  execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', raw, '-i', master, '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-shortest', '-movflags', '+faststart', path.join(store.MEDIA_DIR, file)]);
   execFileSync('ffmpeg', ['-y', '-v', 'error', '-ss', '3.5', '-i', path.join(store.MEDIA_DIR, file), '-frames:v', '1', '-q:v', '3', path.join(store.MEDIA_DIR, poster)]);
   const dur = parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', path.join(store.MEDIA_DIR, file)]).toString());
   fs.rmSync(raw, { force: true });
