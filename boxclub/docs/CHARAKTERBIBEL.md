@@ -1,6 +1,6 @@
 # Charakterbibel – BOXCLUB
 
-Automatisch erzeugt aus `data/characters.json` (2026-11-11).
+Automatisch erzeugt aus `data/characters.json` (2026-11-12).
 Die Bilder werden aus denselben Daten gezeichnet wie die Animation – sie sind die verbindliche Referenz.
 
 ## Günther Wallach „Günni“

@@ -108,7 +108,15 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
   // Arena-Plätze: von → bis über die Szene (ab 0,6 s, weich)
   const seats = ts.scene.seats;
   const seatsFilled = seats ? interpolate(localSec, [0.6, Math.max(1.2, (ts.end - ts.start) * 0.85)], [seats.from, seats.to], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad) }) : undefined;
-  const setClub = ts.scene.setOverrides?.sandbags !== undefined ? { ...props.club, sandbags: ts.scene.setOverrides.sandbags } : props.club;
+  const ov = ts.scene.setOverrides ?? {};
+  const setClub = {
+    ...props.club,
+    ...(ov.sandbags !== undefined ? { sandbags: ov.sandbags } : {}),
+    ...(ov.condition !== undefined ? { condition: ov.condition } : {}),
+    ...(ov.hasNewRing !== undefined ? { hasNewRing: ov.hasNewRing } : {}),
+    ...(ov.mirrorOk !== undefined ? { mirrorOk: ov.mirrorOk } : {}),
+  };
+  const dream = ts.scene.fx === 'traum';
   const set = getSet(ts.scene.location, gf, setClub, { seatsFilled });
 
   return (
@@ -170,7 +178,10 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
       {/* Weißblitz beim Schnitt */}
       <AbsoluteFill style={{ background: '#fff', opacity: interpolate(f, [0, 5], [ts.index === 0 ? 0 : 0.35, 0], { extrapolateRight: 'clamp' }) }} />
       {ts.scene.overlay && <OverlayStamp text={ts.scene.overlay} f={f - (ts.index === 0 ? 84 : 12)} />}
-      {seats && seats.hud && seatsFilled !== undefined && <SeatHud filled={seatsFilled} total={seats.total} f={f} />}
+      {seats && seats.hud && seatsFilled !== undefined && <SeatHud filled={seatsFilled} total={seats.total} goal={seats.goal ?? null} f={f} />}
+      {ts.scene.kasse && <KasseHud amount={ts.scene.kasse.amount} perLike={ts.scene.kasse.perLike} f={f} top={seats?.hud ? 760 : 470} />}
+      {ts.scene.comment && <CommentCard c={ts.scene.comment} f={f} />}
+      {dream && <DreamFx f={f} />}
     </AbsoluteFill>
   );
 };
@@ -243,7 +254,7 @@ const OverlayStamp: React.FC<{ text: string; f: number }> = ({ text, f }) => {
 };
 
 /** Sitzplatz-Zähler „ARENA 37/100“ – 1 neuer Follower = 1 Platz */
-const SeatHud: React.FC<{ filled: number; total: number; f: number }> = ({ filled, total, f }) => {
+const SeatHud: React.FC<{ filled: number; total: number; goal?: number | null; f: number }> = ({ filled, total, goal = null, f }) => {
   const o = interpolate(f, [8, 16], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   const n = Math.round(filled);
   const pct = Math.min(1, n / total);
@@ -254,14 +265,69 @@ const SeatHud: React.FC<{ filled: number; total: number; f: number }> = ({ fille
           <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 50, letterSpacing: 2 }}>ARENA</div>
           <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 64, color: n >= total ? '#7dff9b' : '#ffd23f' }}>{n} / {total}</div>
         </div>
-        <div style={{ height: 26, background: '#2a2530', borderRadius: 99, overflow: 'hidden', border: '3px solid #000', margin: '8px 0 10px' }}>
+        <div style={{ position: 'relative', height: 26, background: '#2a2530', borderRadius: 99, overflow: 'visible', border: '3px solid #000', margin: '8px 0 10px' }}>
           <div style={{ width: `${pct * 100}%`, height: '100%', background: 'linear-gradient(90deg, #c8302a, #ffd23f)' }} />
+          {goal !== null && <div style={{ position: 'absolute', left: `${(goal / total) * 100}%`, top: -6, bottom: -6, width: 6, background: '#7dff9b', transform: 'translateX(-3px)', borderRadius: 3 }} />}
         </div>
-        <div style={{ fontWeight: 900, fontSize: 34 }}>1 neuer Follower = 1 Platz 🥊</div>
+        <div style={{ fontWeight: 900, fontSize: 34 }}>{goal !== null && n < goal ? `Ziel ${goal}: noch ${goal - n} Follower! 🎯` : '1 neuer Follower = 1 Platz 🥊'}</div>
       </div>
     </div>
   );
 };
+
+/** Vereinskasse (symbolisch) – zeigt nur den gespeicherten Kassenstand + die Like-Regel */
+const KasseHud: React.FC<{ amount: number; perLike: number; f: number; top: number }> = ({ amount, perLike, f, top }) => {
+  const o = interpolate(f, [10, 18], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return (
+    <div style={{ position: 'absolute', top, left: 90, right: 170, opacity: o, fontFamily: 'Montserrat, sans-serif', color: '#1a1410' }}>
+      <div style={{ background: '#f4ead2', border: '5px solid #8c1d2c', borderRadius: 22, padding: '14px 24px', boxShadow: '0 10px 0 rgba(0,0,0,0.35)', display: 'flex', alignItems: 'center', gap: 20, position: 'relative', overflow: 'visible' }}>
+        <div style={{ fontSize: 70 }}>💰</div>
+        <div style={{ flex: 1, paddingRight: 70 }}>
+          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#8c1d2c', letterSpacing: 1 }}>VEREINSKASSE: {amount} €</div>
+          <div style={{ fontWeight: 900, fontSize: 32 }}>❤️ 1 Like = +{perLike} € (symbolisch)</div>
+        </div>
+        {/* fallende Münzen */}
+        {Array.from({ length: 6 }).map((_, i) => {
+          const t = ((f + i * 9) % 54) / 54;
+          return <div key={i} style={{ position: 'absolute', right: 18 + (i % 3) * 26, top: -50 + t * 110, opacity: t < 0.85 ? 1 : 0, fontSize: 30 }}>🪙</div>;
+        })}
+      </div>
+    </div>
+  );
+};
+
+/** Kommentar-Karte im Stil eines Social-Kommentars – anonym, klar als unbestätigt markiert */
+const CommentCard: React.FC<{ c: { author: string; text: string; tag: string }; f: number }> = ({ c, f }) => {
+  const s = interpolate(f, [4, 12], [0.6, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2)) });
+  const o = interpolate(f, [4, 10], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return (
+    <div style={{ position: 'absolute', top: 360, left: 80, right: 160, opacity: o, transform: `scale(${s})`, transformOrigin: 'left top', fontFamily: 'Montserrat, sans-serif' }}>
+      <div style={{ background: '#fff', borderRadius: 26, padding: '22px 26px', boxShadow: '0 14px 0 rgba(0,0,0,0.3)', border: '4px solid #1a1410' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 10 }}>
+          <div style={{ width: 54, height: 54, borderRadius: 99, background: '#9aa0a6', border: '3px solid #1a1410' }} />
+          <div style={{ fontWeight: 800, fontSize: 30, color: '#555' }}>{c.author}</div>
+          <div style={{ marginLeft: 'auto', fontSize: 34 }}>💬</div>
+        </div>
+        <div style={{ fontWeight: 900, fontSize: 40, color: '#1a1410', lineHeight: 1.18 }}>{c.text}</div>
+        <div style={{ marginTop: 12, display: 'inline-block', background: '#ffd23f', color: '#1a1410', fontWeight: 900, fontSize: 24, padding: '4px 12px', borderRadius: 8 }}>{c.tag}</div>
+      </div>
+    </div>
+  );
+};
+
+/** Traumsequenz: weiches Licht, Funkeln, Rahmen */
+const DreamFx: React.FC<{ f: number }> = ({ f }) => (
+  <AbsoluteFill style={{ pointerEvents: 'none' }}>
+    <AbsoluteFill style={{ background: 'radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0) 50%, rgba(255,240,200,0.75) 100%)' }} />
+    <AbsoluteFill style={{ background: 'rgba(255,220,160,0.10)', mixBlendMode: 'screen' }} />
+    {Array.from({ length: 18 }).map((_, i) => {
+      const x = (i * 137) % 1000 + 40, y = ((i * 251) % 1500) + 150 - ((f * (1 + (i % 3))) % 200);
+      const a = 0.4 + 0.6 * Math.abs(Math.sin(f * 0.15 + i));
+      return <div key={i} style={{ position: 'absolute', left: x, top: y, fontSize: 30 + (i % 3) * 12, opacity: a, color: '#fff7d0' }}>✦</div>;
+    })}
+    <div style={{ position: 'absolute', top: 210, right: 150, transform: 'rotate(4deg)', fontFamily: 'Anton, Impact, sans-serif', fontSize: 48, color: '#8c1d2c', background: '#fff7e0', padding: '4px 18px', borderRadius: 10, border: '4px solid #8c1d2c' }}>TRAUM 💭</div>
+  </AbsoluteFill>
+);
 
 const Bug: React.FC<{ ep: Episode }> = ({ ep }) => (
   <div style={{ position: 'absolute', top: 150, left: 48, display: 'flex', alignItems: 'center', gap: 14, fontFamily: 'Montserrat, sans-serif', fontWeight: 900, fontSize: 30, color: '#fff', textShadow: '0 3px 8px rgba(0,0,0,0.7)' }}>
@@ -272,6 +338,15 @@ const Bug: React.FC<{ ep: Episode }> = ({ ep }) => (
 
 const TitleCard: React.FC<{ ep: Episode }> = ({ ep }) => {
   const f = useCurrentFrame();
+  if (ep.titleCard === 'klein') {
+    const ok = interpolate(f, [0, 6, 70, 80], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+    return (
+      <div style={{ position: 'absolute', top: 214, left: 48, opacity: ok, display: 'flex', gap: 10, alignItems: 'center' }}>
+        <div style={{ background: '#f4ead2', color: '#1a1410', fontFamily: 'Anton, Impact, sans-serif', fontSize: 34, padding: '2px 14px', letterSpacing: 3 }}>FOLGE {ep.number}</div>
+        <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 44, color: '#fff', WebkitTextStroke: '6px #1a1410', paintOrder: 'stroke fill', textTransform: 'uppercase' }}>{ep.title}</div>
+      </div>
+    );
+  }
   const o = interpolate(f, [0, 6, 64, 78], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   const y = interpolate(f, [0, 10], [-40, 0], { extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2)) });
   return (
@@ -324,10 +399,12 @@ const ArenaEndCard: React.FC<{ ep: Episode }> = ({ ep }) => {
           {Array.from({ length: ec.seatsTotal }).map((_, i) => {
             const on = i < filled;
             const pop = interpolate(f, [10 + (i % 20), 16 + (i % 20)], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
-            return <div key={i} style={{ height: 22, borderRadius: 5, background: on ? '#ffd23f' : '#b3262e', border: '2px solid #000', transform: `scale(${0.6 + pop * 0.4})` }} />;
+            const inGoal = !on && ec.seatsGoal !== null && i < ec.seatsGoal;
+            return <div key={i} style={{ height: 22, borderRadius: 5, background: on ? '#ffd23f' : '#b3262e', border: inGoal ? '3px solid #7dff9b' : '2px solid #000', transform: `scale(${0.6 + pop * 0.4})` }} />;
           })}
         </div>
         <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 64, marginTop: 14 }}>{filled} / {ec.seatsTotal} PLÄTZE</div>
+        {ec.seatsGoal !== null && filled < ec.seatsGoal && <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 46, color: '#7dff9b', marginTop: 2 }}>ZIEL {ec.seatsGoal}: NOCH {ec.seatsGoal - filled} FOLLOWER</div>}
         {ec.lines.map((l, i) => (
           <div key={i} style={{ fontWeight: i === 0 ? 900 : 800, fontSize: i === 0 ? 44 : 38, color: i === 0 ? '#fff' : '#f4ead2', marginTop: 12, lineHeight: 1.15 }}>{l}</div>
         ))}

@@ -1,0 +1,693 @@
+{
+  "id": "ep-004",
+  "number": 4,
+  "title": "Unser erster Sponsor?!",
+  "status": "veroeffentlicht",
+  "createdAt": "2026-11-12T15:41:10.441Z",
+  "publishedAt": "2026-11-12T16:06:25.501Z",
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Zwei Sponsor-Kommentare unter Folge 3, Paule skeptisch, Traum vom renovierten Club, Wendung: Bedingung, Community-Aufruf Likes/Follower.",
+  "resolvesDecisionId": null,
+  "hook": "Günther liest einen Kommentar: Jemand will Sandsäcke, Pratzen, Handschuhe und die Renovierung bezahlen?!",
+  "summary": "Unter Folge 3 tauchen zwei Angebote in den Kommentaren auf: Ein Zuschauer bietet 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe und die Renovierung an, ein anderer stellt 10.000 € plus 1.000 € pro Sieg in Aussicht. Günther träumt schon vom renovierten Club, Paule bleibt skeptisch: Bestätigt ist nichts. Dann kommt (in der Geschichte) eine Nachricht: Der Sponsor hat eine Bedingung – Emre muss erst seinen ersten Kampf gewinnen. Günther ruft die Community auf: Arena 35/100, Ziel 50 Follower bis zum Kampf, jedes Like bringt symbolisch 2 € in die Kasse.",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "Warte mal … jemand will uns fünf Sandsäcke, Pratzen, Handschuhe und sogar die Renovierung bezahlen?!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l1.mp3",
+            "durationSec": 5.64,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Hook: Günther starrt auf sein Handy, eine Kommentar-Karte springt ins Bild.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Ein Zuschauer",
+        "text": "Ich spende euch 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe – und die Renovierung!",
+        "tag": "KOMMENTAR – NOCH NICHT BESTÄTIGT"
+      },
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "halle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l2",
+          "speaker": "paule-kruse",
+          "text": "Günni, erst mal abwarten. Bis jetzt ist das nur ein Kommentar.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l2.mp3",
+            "durationSec": 2.82,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "guenther-wallach",
+          "text": "Ich seh’s schon vor mir: neue Wände, neues Licht, ein Ring wie im Fernsehen!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l3.mp3",
+            "durationSec": 4.26,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "paule-kruse",
+          "text": "Ich seh nur den Haken, an dem gestern noch der Sandsack hing.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l4.mp3",
+            "durationSec": 2.8,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Paule bremst, Günther schwärmt schon.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l5",
+          "speaker": "rosa-brandt",
+          "text": "Moment, hier ist noch eine! Zehntausend Euro – und tausend für jeden Sieg!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": "muenzen",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l5.mp3",
+            "durationSec": 4.44,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "guenther-wallach",
+          "text": "Zehntausend! Paule, wie viele Sandsäcke sind das?",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l6.mp3",
+            "durationSec": 3.34,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "paule-kruse",
+          "text": "Ungefähr alle. Aber bestätigt ist davon noch gar nichts.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l7.mp3",
+            "durationSec": 3.03,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Rosa kommt mit dem Handy ins Büro: das zweite Angebot.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Ein anderer Zuschauer",
+        "text": "10.000 € für den Verein – und 1.000 € für jeden Sieg!",
+        "tag": "KOMMENTAR – NOCH NICHT BESTÄTIGT"
+      },
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s4",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "schwenk",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "pratzen"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l8",
+          "speaker": "guenther-wallach",
+          "text": "Stellt euch das vor: neue Sandsäcke, neue Pratzen, frische Farbe …",
+          "emotion": "froh",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l8.mp3",
+            "durationSec": 4.31,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "emre-yildiz",
+          "text": "Und endlich Handschuhe ohne Loch!",
+          "emotion": "froh",
+          "action": "schlagen",
+          "sfx": "schlag",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l9.mp3",
+            "durationSec": 2.27,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "rosa-brandt",
+          "text": "Schneller, Emre! Links, rechts, Haken!",
+          "emotion": "entschlossen",
+          "action": "pratzen",
+          "sfx": "pfiff",
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l10.mp3",
+            "durationSec": 2.72,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "gefuehl",
+      "direction": "TRAUM: renovierte Halle, fünf neue Sandsäcke, neuer Ring, Emre trainiert mit Rosa an den Pratzen.",
+      "seats": null,
+      "fx": "traum",
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      }
+    },
+    {
+      "id": "s5",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l11",
+          "speaker": "paule-kruse",
+          "text": "Und jetzt zurück in die Realität.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": "kratzer",
+          "pauseAfter": 0.25,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l11.mp3",
+            "durationSec": 1.75,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "ZURÜCK IN DER REALITÄT",
+      "music": "komisch",
+      "direction": "Plattenkratzer – die Halle ist wieder dieselbe alte Halle.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s6",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "paule-kruse",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l12",
+          "speaker": "paule-kruse",
+          "text": "Leute … gerade kam eine Nachricht. Der Sponsor hat eine Bedingung!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": "telefon",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l12.mp3",
+            "durationSec": 3.71,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l13",
+          "speaker": "guenther-wallach",
+          "text": "Welche Bedingung?!",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l13.mp3",
+            "durationSec": 1.46,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l14",
+          "speaker": "paule-kruse",
+          "text": "Erst wenn Emre seinen ersten Kampf gewinnt.",
+          "emotion": "neutral",
+          "action": "keine",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.25,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l14.mp3",
+            "durationSec": 1.93,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "BEDINGUNG?!",
+      "music": "spannung",
+      "direction": "Wendung (fiktiv): Paule liest eine Nachricht des Sponsors.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s7",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l15",
+          "speaker": "emre-yildiz",
+          "text": "In vier Tagen? Kein Druck, oder?",
+          "emotion": "verlegen",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l15.mp3",
+            "durationSec": 1.8,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l16",
+          "speaker": "rosa-brandt",
+          "text": "Druck macht Diamanten. Training. Jetzt!",
+          "emotion": "entschlossen",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l16.mp3",
+            "durationSec": 2.85,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "NOCH 4 TAGE",
+      "music": "gefuehl",
+      "direction": "Emre schluckt. Rosa macht klar: Jetzt wird trainiert.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s8",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l17",
+          "speaker": "guenther-wallach",
+          "text": "Und jetzt ihr! Fünfunddreißig Plätze in unserer Arena sind schon besetzt.",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": "publikum",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l17.mp3",
+            "durationSec": 3.97,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l18",
+          "speaker": "guenther-wallach",
+          "text": "Ziel bis zum Kampf: fünfzig Follower! Und jedes Like bringt zwei Euro in die Kasse.",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l18.mp3",
+            "durationSec": 5.04,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l19",
+          "speaker": "paule-kruse",
+          "text": "Symbolisch, Günni.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l19.mp3",
+            "durationSec": 1.18,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        },
+        {
+          "id": "l20",
+          "speaker": "guenther-wallach",
+          "text": "Wenn Emre endlich richtig trainieren soll: Like da lassen und folgen!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.3,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-004/voice/l20.mp3",
+            "durationSec": 3.71,
+            "provider": "elevenlabs (eleven_v3)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Community-Aufruf in der Arena: 35 von 100 Plätzen, Ziel 50, Vereinskasse mit Like-Regel.",
+      "seats": {
+        "from": 35,
+        "to": 35,
+        "total": 100,
+        "hud": true,
+        "goal": 50
+      },
+      "fx": null,
+      "kasse": {
+        "amount": 300,
+        "perLike": 2
+      },
+      "comment": null,
+      "props": [],
+      "setOverrides": {}
+    }
+  ],
+  "decision": {
+    "question": "Schaffen wir 50 Follower bis zum Kampf?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Ja – 50 Follower bis zum Kampf",
+        "consequenceHint": "Halbe Arena voll – Emre boxt vor echtem Publikum.",
+        "plan": "arena:ziel50"
+      },
+      {
+        "key": "B",
+        "label": "Noch nicht – unter 50",
+        "consequenceHint": "Emre boxt trotzdem – aber vor vielen leeren Plätzen.",
+        "plan": "arena:unter50"
+      }
+    ]
+  },
+  "cliffhanger": "Der (Story-)Sponsor will erst einen Sieg sehen – und Emre hat nur noch vier Tage. Schafft die Community 50 Follower bis zum Kampf?",
+  "stateChanges": [
+    {
+      "op": "follower",
+      "amount": 35,
+      "target": "",
+      "value": "",
+      "reason": "Meldung des Produzenten vor Folge 4"
+    },
+    {
+      "op": "plaetze",
+      "amount": 35,
+      "target": "",
+      "value": "",
+      "reason": "35 Follower = 35 von 100 Plätzen"
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-001",
+      "value": "{\"source\":\"Kommentar unter Folge 3 (Zuschauer)\",\"content\":\"5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs\",\"status\":\"offen\",\"storyCondition\":\"Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt\",\"note\":\"Nicht bestätigt. Keine Ausrüstung eingetroffen.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-002",
+      "value": "{\"source\":\"Kommentar unter Folge 3 (Zuschauer)\",\"content\":\"10.000 € plus 1.000 € pro Sieg (in Aussicht gestellt)\",\"status\":\"offen\",\"storyCondition\":\"Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt\",\"note\":\"Nicht bestätigt. Kein Geld eingegangen.\"}",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "sponsor-angebote",
+      "value": "Zwei Angebote aus den Kommentaren (Ausrüstung + Renovierung; 10.000 € + 1.000 €/Sieg). Beide unbestätigt. Story-Bedingung: erst ein Sieg von Emre.",
+      "reason": "Unser erster Sponsor?!"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Druck wächst: Der (Story-)Sponsor will erst einen Sieg sehen. Rosa: „Druck macht Diamanten.“",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "kampfabend",
+      "value": "Noch 4 Tage. Arena 35/100. Community-Ziel: 50 Follower bis zum Kampf.",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [],
+  "socialCaption": "Folge 4: Unser erster Sponsor?! 😳🥊 Zwei Angebote aus euren Kommentaren – aber es gibt einen Haken. Hilf uns: Like = 2 € für die Vereinskasse (symbolisch), Follow = ein Platz in unserer Arena. Ziel: 50 bis zum Kampf!",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#sponsor",
+    "#animationserie",
+    "#teil4"
+  ],
+  "titleCard": "klein",
+  "endCard": {
+    "type": "arena",
+    "headline": "ZIEL: 50 FOLLOWER BIS ZUM KAMPF",
+    "lines": [
+      "➕ 1 neuer Follower = 1 Platz in der Arena",
+      "❤️ 1 Like = 2 € für die Vereinskasse (symbolisch)"
+    ],
+    "seatsFilled": 35,
+    "seatsTotal": 100,
+    "seatsGoal": 50
+  },
+  "video": {
+    "file": "episodes/ep-004/boxclub_folge_004.mp4",
+    "poster": "episodes/ep-004/poster.jpg",
+    "renderedAt": "2026-11-12T16:05:30.441Z",
+    "durationSec": 70.3
+  }
+}

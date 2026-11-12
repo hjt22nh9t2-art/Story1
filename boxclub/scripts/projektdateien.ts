@@ -27,6 +27,7 @@ const state = {
   arena: c.upcomingEvent ? { name: c.upcomingEvent.name, boxer: name(c.upcomingEvent.boxerId), tageBisKampf: c.upcomingEvent.daysLeft, plaetzeBesetzt: c.upcomingEvent.seatsFilled, plaetzeGesamt: c.upcomingEvent.seats, kostenBezahlt: c.upcomingEvent.cost } : null,
   verein: { mitglieder: c.members, ruf: c.reputation, hallenzustand: c.facilityCondition, ausruestung: c.equipment.map((e) => ({ id: e.id, name: e.name, anzahl: e.count, zustand: e.condition })) },
   figuren: chars.map((x) => ({ id: x.id, name: x.name, status: x.status, rolle: x.roleTitle, stimme: x.voice.elevenlabsVoiceId, stimmeFest: x.voice.locked, seitFolge: x.firstEpisode })),
+  offeneAngebote: c.offers.map((o) => ({ id: o.id, quelle: o.source, inhalt: o.content, status: o.status, storyBedingung: o.storyCondition, notiz: o.note, seitFolge: o.episode })),
   offeneEntscheidungen: open.map((d) => ({ id: d.id, ausFolge: d.episode, frage: d.question, optionen: d.options.map((o) => `${o.key}: ${o.label}`), status: d.status, ergebnis: d.winner, stimmen: d.votes, notiz: d.note })),
   handlungsstraenge: c.storylines.map((s) => ({ id: s.id, titel: s.title, status: s.status, letzterStand: s.updates.at(-1)?.text ?? '' })),
   cliffhanger: c.nextEpisodeNote,
@@ -36,8 +37,8 @@ w('series_state.json', JSON.stringify(state, null, 2) + '\n');
 
 /* ---------------------------------------------------------- CHARACTERS_AND_VOICES.md */
 let cv = `# CHARACTERS AND VOICES – Boxclub Rostfaust\n\nStand nach Folge ${c.lastEpisode} (${today}). Quelle: \`data/characters.json\`. Referenzbilder: \`docs/charakterbibel/\`.\n\n`;
-cv += `## Stimmen-Übersicht (verbindlich)\n| Figur | Stimme (ElevenLabs) | Voice-ID | Modell | Status | Hinweis |\n|---|---|---|---|---|---|\n`;
-for (const x of chars) cv += `| ${x.name} | ${(x.voice.note.match(/„([^“]+)“/) ?? [, '–'])[1]} | \`${x.voice.elevenlabsVoiceId}\` | ${x.voice.elevenlabsModel || 'Standard'} | ${x.voice.locked ? '🔒 fest' : 'Vorschlag'} | ${x.voice.note} |\n`;
+cv += `## Stimmen-Übersicht (verbindlich)\n| Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |\n|---|---|---|---|---|---|\n`;
+for (const x of chars) { const sp = x.voice.speko; cv += `| ${x.name} | ${sp?.label || (x.voice.note.match(/„([^“]+)“/) ?? [, '–'])[1]} | ${sp ? `${sp.provider} / ${sp.model}` : `elevenlabs / ${x.voice.elevenlabsModel || 'Standard'}`} | \`${sp?.voice || x.voice.elevenlabsVoiceId}\` | ${x.voice.locked ? '🔒 fest' : 'Vorschlag'} | ${x.voice.note} |\n`; }
 cv += `\n**Regel:** Stimmen mit 🔒 werden nie ohne ausdrückliche Zustimmung des Produzenten geändert. Prüfung jeder Zeile: Grundtonhöhe (\`scripts/pitch.py\`) + Spracherkennung.\n\n`;
 for (const x of chars) {
   const l = x.look;

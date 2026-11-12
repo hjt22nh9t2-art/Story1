@@ -1,0 +1,1014 @@
+{
+  "episode": 4,
+  "savedAt": "2026-11-12T16:06:25.503Z",
+  "club": {
+    "clubName": "Boxclub Rostfaust Kranstadt",
+    "city": "Kranstadt",
+    "address": "Depotstraße 7",
+    "founded": "Neugründung 2026 – Tradition seit 1961",
+    "money": 300,
+    "monthlyCosts": 380,
+    "monthlyIncome": 30,
+    "members": 2,
+    "reputation": 5,
+    "facilityCondition": 28,
+    "equipment": [
+      {
+        "id": "ring",
+        "name": "Boxring (rot/blau)",
+        "count": 1,
+        "condition": 45
+      },
+      {
+        "id": "sandsack",
+        "name": "Sandsack",
+        "count": 1,
+        "condition": 30
+      },
+      {
+        "id": "handschuhe",
+        "name": "Paar Boxhandschuhe",
+        "count": 4,
+        "condition": 35
+      },
+      {
+        "id": "springseil",
+        "name": "Springseil",
+        "count": 3,
+        "condition": 60
+      },
+      {
+        "id": "spiegel",
+        "name": "Wandspiegel (gesprungen)",
+        "count": 1,
+        "condition": 20
+      },
+      {
+        "id": "hantelbank",
+        "name": "Hantelbank",
+        "count": 1,
+        "condition": 40
+      },
+      {
+        "id": "glocke",
+        "name": "Ringglocke (Messing, 1961)",
+        "count": 1,
+        "condition": 95
+      }
+    ],
+    "fights": [],
+    "rivalries": [],
+    "sponsors": [],
+    "storylines": [
+      {
+        "id": "der-traum",
+        "title": "Der Traum vom großen Verein",
+        "status": "offen",
+        "startedEpisode": 1,
+        "updates": [
+          {
+            "episode": 1,
+            "text": "Günther eröffnet den Club neu. Ziel: wieder größter Boxverein Kranstadts."
+          }
+        ]
+      },
+      {
+        "id": "die-pacht",
+        "title": "Die Pacht für die Depothalle",
+        "status": "offen",
+        "startedEpisode": 1,
+        "updates": [
+          {
+            "episode": 1,
+            "text": "500 € in der Kasse, 250 € Pacht pro Monat – das Geld reicht höchstens zwei Monate."
+          }
+        ]
+      },
+      {
+        "id": "paules-geheimnis",
+        "title": "Paules Geheimnis um Bruno",
+        "status": "offen",
+        "startedEpisode": 1,
+        "updates": [
+          {
+            "episode": 1,
+            "text": "Paule kennt Bruno Kessler von früher und sagt: „Das gibt Ärger.“"
+          },
+          {
+            "episode": 2,
+            "text": "Bruno wurde von der Community nicht verpflichtet. Was Paule über ihn weiß, bleibt vorerst offen."
+          }
+        ]
+      },
+      {
+        "id": "entwicklung-emre-yildiz",
+        "title": "Der Weg von Emre",
+        "status": "offen",
+        "startedEpisode": 2,
+        "updates": [
+          {
+            "episode": 2,
+            "text": "Emre ist offizielles Mitglied Nr. 2. Rosa: Talent ja, Technik noch nicht."
+          },
+          {
+            "episode": 3,
+            "text": "Erstes Training. Der alte Sandsack reißt ab; Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa: „Wirst du nicht.“"
+          },
+          {
+            "episode": 4,
+            "text": "Druck wächst: Der (Story-)Sponsor will erst einen Sieg sehen. Rosa: „Druck macht Diamanten.“"
+          }
+        ]
+      },
+      {
+        "id": "kampfabend",
+        "title": "Der erste Kampfabend",
+        "status": "offen",
+        "startedEpisode": 2,
+        "updates": [
+          {
+            "episode": 2,
+            "text": "In 5 Tagen: Emres erster Schaukampf in der Kranstadt Arena. 100 Plätze, 200 € Miete bezahlt. Jeder neue Follower füllt symbolisch einen Platz."
+          },
+          {
+            "episode": 3,
+            "text": "Noch 4 Tage. Arena: 31/100 Plätze."
+          },
+          {
+            "episode": 4,
+            "text": "Noch 4 Tage. Arena 35/100. Community-Ziel: 50 Follower bis zum Kampf."
+          }
+        ]
+      },
+      {
+        "id": "ausruestung",
+        "title": "Neue Ausrüstung",
+        "status": "offen",
+        "startedEpisode": 3,
+        "updates": [
+          {
+            "episode": 3,
+            "text": "Ausrüstung marode: Handschuhe mit Löchern, keine Pratzen, kein Speedball, ein Sandsack übrig. Community stimmt ab (A Boxsack, B Handschuhe, C Pratzen, D Speedball). Preise stehen noch nicht fest."
+          }
+        ]
+      },
+      {
+        "id": "sponsor-angebote",
+        "title": "Unser erster Sponsor?!",
+        "status": "offen",
+        "startedEpisode": 4,
+        "updates": [
+          {
+            "episode": 4,
+            "text": "Zwei Angebote aus den Kommentaren (Ausrüstung + Renovierung; 10.000 € + 1.000 €/Sieg). Beide unbestätigt. Story-Bedingung: erst ein Sieg von Emre."
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "id": "d-001",
+        "episode": 1,
+        "question": "Wen sollen wir als Erstes verpflichten?",
+        "options": [
+          {
+            "key": "A",
+            "label": "Emre (17) – den jungen Anfänger",
+            "consequenceHint": "Billig, hungrig, braucht Jahre. Rosa muss bei null anfangen.",
+            "plan": "verpflichten:emre-yildiz"
+          },
+          {
+            "key": "B",
+            "label": "Bruno „Der Bär“ (36) – den erfahrenen Ex-Profi",
+            "consequenceHint": "Sofort kampfbereit, bringt Aufmerksamkeit – aber Knie und Vergangenheit sind ein Risiko.",
+            "plan": "verpflichten:bruno-kessler"
+          }
+        ],
+        "status": "umgesetzt",
+        "winner": "A",
+        "votes": {},
+        "note": "Community-Entscheidung: Emre wird verpflichtet. Bruno wird vorerst NICHT verpflichtet – endgültig.",
+        "resolvedInEpisode": 2
+      },
+      {
+        "id": "d-002",
+        "episode": 2,
+        "question": "Schaffen wir es, die Arena zu füllen?",
+        "options": [
+          {
+            "key": "A",
+            "label": "Ja – 100 neue Follower: ausverkauft!",
+            "consequenceHint": "Volle Arena – Emre boxt vor Publikum, der Club wird in Kranstadt bekannt.",
+            "plan": "arena:voll"
+          },
+          {
+            "key": "B",
+            "label": "Noch nicht – unter 100 neuen Followern",
+            "consequenceHint": "Halbleere Halle – Emre boxt trotzdem, aber die 200 € Miete schmerzen.",
+            "plan": "arena:teil"
+          }
+        ],
+        "status": "umgesetzt",
+        "winner": "B",
+        "votes": {
+          "neueFollowerGesamt": 31
+        },
+        "note": "Zwischenstand vor Folge 3: 31 von 100 Plätzen (31 Follower laut Produzent). Kampfabend hat noch nicht stattgefunden – Aktion läuft weiter.",
+        "resolvedInEpisode": 3
+      },
+      {
+        "id": "d-003",
+        "episode": 3,
+        "question": "Was kaufen wir als Erstes?",
+        "options": [
+          {
+            "key": "A",
+            "label": "Neuer Boxsack",
+            "consequenceHint": "Ersetzt den abgerissenen Sack – Emre kann wieder Schlagkraft trainieren.",
+            "plan": "kaufen:boxsack"
+          },
+          {
+            "key": "B",
+            "label": "Neue Boxhandschuhe",
+            "consequenceHint": "Kein Loch mehr im Daumen – schützt Emres Hände vor dem Kampf.",
+            "plan": "kaufen:handschuhe"
+          },
+          {
+            "key": "C",
+            "label": "Pratzen für das Training",
+            "consequenceHint": "Rosa kann endlich mit Emre an Technik und Kombinationen arbeiten.",
+            "plan": "kaufen:pratzen"
+          },
+          {
+            "key": "D",
+            "label": "Speedball-Equipment",
+            "consequenceHint": "Trainiert Timing und Reflexe – Emres größte Stärke.",
+            "plan": "kaufen:speedball"
+          }
+        ],
+        "status": "offen",
+        "winner": null,
+        "votes": {
+          "A_Boxsack_pct": 43,
+          "C_Pratzen_pct": 37,
+          "B_Handschuhe_pct": 20,
+          "D_Speedball_pct": 0,
+          "stimmen_gesamt": 59
+        },
+        "note": "ZWISCHENSTAND vor Folge 4 (Umfrage läuft noch 7 Tage): Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % bei 59 Stimmen. Noch KEINE Entscheidung.",
+        "resolvedInEpisode": null
+      },
+      {
+        "id": "d-004",
+        "episode": 4,
+        "question": "Schaffen wir 50 Follower bis zum Kampf?",
+        "options": [
+          {
+            "key": "A",
+            "label": "Ja – 50 Follower bis zum Kampf",
+            "consequenceHint": "Halbe Arena voll – Emre boxt vor echtem Publikum.",
+            "plan": "arena:ziel50"
+          },
+          {
+            "key": "B",
+            "label": "Noch nicht – unter 50",
+            "consequenceHint": "Emre boxt trotzdem – aber vor vielen leeren Plätzen.",
+            "plan": "arena:unter50"
+          }
+        ],
+        "status": "offen",
+        "winner": null,
+        "votes": {},
+        "note": "",
+        "resolvedInEpisode": null
+      }
+    ],
+    "chapter": "Akt 1 – Der erste Kampf",
+    "timeline": [
+      {
+        "episode": 1,
+        "text": "Folge 1 „Null Boxer“: Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß."
+      },
+      {
+        "episode": 2,
+        "text": "Folge 2 „Fünf Tage“: Die Community hat entschieden: Emre (17) wird offiziell Mitglied Nr. 2, Bruno wird nicht verpflichtet. Rosa sieht Talent, aber keine Technik. Günther bekommt einen Anruf: In fünf Tagen darf Emre bei einem Kampfabend in der Kranstadt Arena (100 Plätze) einen Schaukampf boxen. Die Arena-Miete kostet 200 €, die Kasse sinkt auf 300 €. Bleibt die Halle leer, ist das Geld weg. Günther bittet die Zuschauer um Hilfe: Jeder neue Follower füllt symbolisch einen Platz."
+      },
+      {
+        "episode": 3,
+        "text": "Folge 3 „Emre braucht besseres Equipment!“: Emres erstes Training: Schon beim ersten Jab reißt der alte Sandsack von der Decke. Rosas Bestandsaufnahme zeigt: Die Handschuhe haben Löcher, Pratzen und Speedball gibt es gar nicht. Günthers Klebeband-Idee scheitert – das Klebeband hält schon den Ring zusammen. Paule rechnet: 300 € in der Kasse, die Pacht ist bald fällig – es reicht für genau eine Anschaffung. Emre fürchtet, in vier Tagen wegen kaputter Ausrüstung zu verlieren. Die Community soll entscheiden, was zuerst gekauft wird. Zum Schluss schlägt Emre auf den letzten Sandsack – und der quietscht verdächtig."
+      },
+      {
+        "episode": 4,
+        "text": "Folge 4 „Unser erster Sponsor?!“: Unter Folge 3 tauchen zwei Angebote in den Kommentaren auf: Ein Zuschauer bietet 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe und die Renovierung an, ein anderer stellt 10.000 € plus 1.000 € pro Sieg in Aussicht. Günther träumt schon vom renovierten Club, Paule bleibt skeptisch: Bestätigt ist nichts. Dann kommt (in der Geschichte) eine Nachricht: Der Sponsor hat eine Bedingung – Emre muss erst seinen ersten Kampf gewinnen. Günther ruft die Community auf: Arena 35/100, Ziel 50 Follower bis zum Kampf, jedes Like bringt symbolisch 2 € in die Kasse."
+      }
+    ],
+    "lastEpisode": 4,
+    "nextEpisodeNote": "Der (Story-)Sponsor will erst einen Sieg sehen – und Emre hat nur noch vier Tage. Schafft die Community 50 Follower bis zum Kampf?",
+    "community": {
+      "followers": 35,
+      "likes": null,
+      "likeEuroRate": 2,
+      "likesBooked": 0
+    },
+    "offers": [
+      {
+        "id": "o-001",
+        "source": "Kommentar unter Folge 3 (Zuschauer)",
+        "content": "5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs",
+        "status": "offen",
+        "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+        "episode": 4,
+        "note": "Nicht bestätigt. Keine Ausrüstung eingetroffen."
+      },
+      {
+        "id": "o-002",
+        "source": "Kommentar unter Folge 3 (Zuschauer)",
+        "content": "10.000 € plus 1.000 € pro Sieg (in Aussicht gestellt)",
+        "status": "offen",
+        "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+        "episode": 4,
+        "note": "Nicht bestätigt. Kein Geld eingegangen."
+      }
+    ],
+    "metrics": [
+      {
+        "episode": 2,
+        "reportedAt": "2026-11-11T16:33:26.004Z",
+        "views": null,
+        "likes": null,
+        "comments": null,
+        "shares": null,
+        "newFollowers": null,
+        "followersTotal": 31,
+        "avgWatchSec": null,
+        "avgWatchedPct": null,
+        "fullViewsPct": null,
+        "note": "Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge)."
+      }
+    ],
+    "upcomingEvent": {
+      "name": "Kampfabend Kranstadt Arena",
+      "locationId": "eventhalle",
+      "kind": "Schaukampf",
+      "boxerId": "emre-yildiz",
+      "seats": 100,
+      "seatsFilled": 35,
+      "daysLeft": 4,
+      "cost": 200,
+      "announcedEpisode": 2,
+      "note": "Community-Aktion: 1 neuer Follower = 1 symbolischer Platz"
+    }
+  },
+  "characters": [
+    {
+      "id": "guenther-wallach",
+      "name": "Günther Wallach",
+      "nickname": "Günni",
+      "role": "gruender",
+      "roleTitle": "Vereinsgründer & Präsident",
+      "status": "aktiv",
+      "age": 63,
+      "heightCm": 174,
+      "weightKg": 92,
+      "weightClass": "",
+      "personality": "Unverbesserlicher Optimist und Träumer. Redet groß, rechnet schlecht, gibt nie auf. Hat ein riesiges Herz und keinen Plan B.",
+      "background": "Ehemaliger Kranführer im Kranstädter Hafen. Sein Vater gründete 1961 den Boxclub Rostfaust, der 2009 schloss. Mit seiner Abfindung hat Günther die alte Depothalle zurückgepachtet, um den Club wiederzubeleben.",
+      "speechStyle": "Laut, begeistert, Ruhrpott-Einschlag („Dat wird!“), viele Ausrufezeichen, redet direkt in die Kamera.",
+      "strengths": [
+        "Begeisterung",
+        "kennt halb Kranstadt",
+        "gibt niemals auf"
+      ],
+      "weaknesses": [
+        "Finanzen",
+        "verspricht zu viel",
+        "unterschätzt Probleme"
+      ],
+      "goal": "Den Boxclub Rostfaust wieder zum größten Verein der Stadt machen – wie zu Vaters Zeiten.",
+      "catchphrase": "Dat wird ganz groß!",
+      "record": {
+        "siege": 0,
+        "niederlagen": 0,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "5faieqDE3osz75KiOI2M",
+        "openaiVoice": "ash",
+        "instructions": "Älterer Mann aus dem Ruhrgebiet, warm, begeistert, etwas rau.",
+        "demoPitch": 0.85,
+        "elevenlabsModel": "eleven_v3",
+        "locked": true,
+        "note": "ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt.",
+        "speko": {
+          "provider": "elevenlabs",
+          "model": "eleven_v3_conversational",
+          "voice": "5faieqDE3osz75KiOI2M",
+          "label": "Thomas – Authentic & Natural"
+        }
+      },
+      "look": {
+        "skin": "#e9b48e",
+        "hair": {
+          "style": "haarkranz",
+          "color": "#d9d4cc"
+        },
+        "facialHair": {
+          "style": "walross",
+          "color": "#e4dfd6"
+        },
+        "brows": "buschig",
+        "eyeColor": "#4a6b8a",
+        "nose": "rund",
+        "cauliflowerEar": false,
+        "build": "schwer",
+        "ageLook": "alt",
+        "top": {
+          "type": "trainingsjacke",
+          "color": "#8c1d2c",
+          "accent": "#f1e6cf",
+          "print": "BCR"
+        },
+        "bottom": {
+          "type": "stoffhose",
+          "color": "#55585e",
+          "accent": "#45484d"
+        },
+        "shoes": "#5b3a22",
+        "gloves": "#8c1d2c",
+        "accessories": [
+          "schluesselbund"
+        ]
+      },
+      "firstEpisode": 1,
+      "lookLocked": true,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    },
+    {
+      "id": "rosa-brandt",
+      "name": "Rosa Brandt",
+      "nickname": "Die Eiserne",
+      "role": "trainer",
+      "roleTitle": "Cheftrainerin",
+      "status": "aktiv",
+      "age": 54,
+      "heightCm": 168,
+      "weightKg": 78,
+      "weightClass": "",
+      "personality": "Streng, wortkarg, absolut fair. Lobt selten – wenn doch, bedeutet es alles. Duldet keine Ausreden, schützt ihre Boxer aber wie eine Löwin.",
+      "background": "EM-Bronze 1994 im Amateurboxen. Danach 20 Jahre Trainerin im großen Titan-Gym, bis sie gefeuert wurde, weil sie einen verletzten Boxer nicht in den Ring schicken wollte. Günther ist der Einzige, der sie danach angerufen hat.",
+      "speechStyle": "Kurze Sätze. Trocken. Oft nur ein Wort („Nochmal.“). Nie laut – muss sie auch nicht.",
+      "strengths": [
+        "Technik",
+        "Erfahrung",
+        "erkennt Talent sofort"
+      ],
+      "weaknesses": [
+        "ungeduldig mit Faulheit",
+        "stur",
+        "schlecht im Verkaufen"
+      ],
+      "goal": "Einen Boxer bis zur Deutschen Meisterschaft bringen – auf ihre Art.",
+      "catchphrase": "Nochmal.",
+      "record": {
+        "siege": 0,
+        "niederlagen": 0,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "EXAVITQu4vr4xnSDxMaL",
+        "openaiVoice": "sage",
+        "instructions": "Frau Mitte 50, laut, klar, selbstbewusst, energiegeladen.",
+        "demoPitch": 1.05,
+        "elevenlabsModel": "eleven_v3",
+        "locked": true,
+        "note": "Inworld „Annika“ (deutsche Muttersprachlerin, weiblich, ~205 Hz, 99 % weibliche Tonlage). Ab Folge 4 festgelegt. Vorher: Rhea (F1–2, zu leise/dumpf), Sarah (F3, mehrsprachige Stimme mit fremdem Akzent).",
+        "speko": {
+          "provider": "inworld",
+          "model": "inworld-tts-2",
+          "voice": "Annika",
+          "label": "Annika (Inworld, deutsch)"
+        }
+      },
+      "look": {
+        "skin": "#d7a184",
+        "hair": {
+          "style": "stoppel",
+          "color": "#9b9b98"
+        },
+        "facialHair": {
+          "style": "keiner",
+          "color": "#000000"
+        },
+        "brows": "streng",
+        "eyeColor": "#5c4a32",
+        "nose": "krumm",
+        "cauliflowerEar": true,
+        "build": "stämmig",
+        "ageLook": "erwachsen",
+        "top": {
+          "type": "trainingsjacke",
+          "color": "#1d1f24",
+          "accent": "#f08a24",
+          "print": ""
+        },
+        "bottom": {
+          "type": "trainingshose",
+          "color": "#1d1f24",
+          "accent": "#f08a24"
+        },
+        "shoes": "#e9e9e9",
+        "gloves": "#f08a24",
+        "accessories": [
+          "pfeife"
+        ]
+      },
+      "firstEpisode": 1,
+      "lookLocked": true,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    },
+    {
+      "id": "paule-kruse",
+      "name": "Paul Kruse",
+      "nickname": "Paule",
+      "role": "mitarbeiter",
+      "roleTitle": "Hausmeister, Kassenwart & Mitglied Nr. 1",
+      "status": "aktiv",
+      "age": 74,
+      "heightCm": 162,
+      "weightKg": 61,
+      "weightClass": "",
+      "personality": "Trocken, sarkastisch, unerschütterlich. Weiß alles über jeden in Kranstadt. Bremst Günthers Fantasien mit Zahlen.",
+      "background": "Seit 1979 Hausmeister der Depothalle. Hat die Schlüssel nie abgegeben – auch nicht, als der Club 2009 schloss. Führt die Kasse in einem karierten Schulheft.",
+      "speechStyle": "Lakonisch, langsam, Pointe am Satzende. Spricht Günther mit „Günni“ an.",
+      "strengths": [
+        "Gedächtnis",
+        "kann alles reparieren",
+        "Zahlen"
+      ],
+      "weaknesses": [
+        "Rücken",
+        "Pessimismus",
+        "erzählt nicht alles, was er weiß"
+      ],
+      "goal": "Dass die Halle nicht abgerissen wird, solange er lebt.",
+      "catchphrase": "Hab ich schon mal erlebt.",
+      "record": {
+        "siege": 0,
+        "niederlagen": 0,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "1YST1S3BrkT7E0wcLKQD",
+        "openaiVoice": "echo",
+        "instructions": "Sehr alter Mann, trocken, langsam, leicht brummig, sarkastisch.",
+        "demoPitch": 0.75,
+        "elevenlabsModel": "eleven_v3",
+        "locked": true,
+        "note": "ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme.",
+        "speko": {
+          "provider": "elevenlabs",
+          "model": "eleven_v3_conversational",
+          "voice": "1YST1S3BrkT7E0wcLKQD",
+          "label": "Roman – Friendly & Approachable"
+        }
+      },
+      "look": {
+        "skin": "#efc6a4",
+        "hair": {
+          "style": "kurz",
+          "color": "#ededed"
+        },
+        "facialHair": {
+          "style": "stoppeln",
+          "color": "#cfcfcf"
+        },
+        "brows": "buschig",
+        "eyeColor": "#6b6b6b",
+        "nose": "spitz",
+        "cauliflowerEar": false,
+        "build": "schmal",
+        "ageLook": "alt",
+        "top": {
+          "type": "hemd",
+          "color": "#6f7b5a",
+          "accent": "#55603f",
+          "print": ""
+        },
+        "bottom": {
+          "type": "latzhose",
+          "color": "#3c5a7a",
+          "accent": "#2e4762"
+        },
+        "shoes": "#3b2c22",
+        "gloves": "#3c5a7a",
+        "accessories": [
+          "muetze",
+          "brille",
+          "zahnstocher"
+        ]
+      },
+      "firstEpisode": 1,
+      "lookLocked": true,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    },
+    {
+      "id": "emre-yildiz",
+      "name": "Emre Yıldız",
+      "nickname": "",
+      "role": "boxer",
+      "roleTitle": "Boxtalent (Anfänger)",
+      "status": "aktiv",
+      "age": 17,
+      "heightCm": 176,
+      "weightKg": 63,
+      "weightClass": "Leichtgewicht",
+      "personality": "Frech, schnell, ungeduldig, extrem ehrgeizig. Hinter der großen Klappe steckt Angst, seine Familie zu enttäuschen.",
+      "background": "Fährt nach der Schule Essen aus, um seiner Mutter mit der Miete zu helfen. Hat nie trainiert, aber Straßenreflexe wie eine Katze. Sein Vorbild ist Muhammad Ali – er kennt jedes Video.",
+      "speechStyle": "Schnell, Jugendsprache, selbstbewusst („Safe, Bruder“), übertreibt gern.",
+      "strengths": [
+        "Hand- und Fußschnelligkeit",
+        "Reflexe",
+        "Hunger"
+      ],
+      "weaknesses": [
+        "null Technik",
+        "Kondition",
+        "Ungeduld"
+      ],
+      "goal": "Profiboxer werden und seiner Mutter eine Wohnung kaufen.",
+      "catchphrase": "Ich bin schneller als dein Gedanke.",
+      "stats": {
+        "technik": 2,
+        "kraft": 4,
+        "kondition": 3,
+        "disziplin": 4
+      },
+      "record": {
+        "siege": 0,
+        "niederlagen": 0,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "TX3LPaxmHKxFdv7VOQHJ",
+        "openaiVoice": "verse",
+        "instructions": "Junger Mann, 17, schnell, frech, energiegeladen.",
+        "demoPitch": 1.25,
+        "elevenlabsModel": "eleven_v3",
+        "locked": true,
+        "note": "ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt.",
+        "speko": {
+          "provider": "elevenlabs",
+          "model": "eleven_v3_conversational",
+          "voice": "TX3LPaxmHKxFdv7VOQHJ",
+          "label": "Liam – Energetic"
+        }
+      },
+      "look": {
+        "skin": "#c48a62",
+        "hair": {
+          "style": "locken",
+          "color": "#1b1612"
+        },
+        "facialHair": {
+          "style": "keiner",
+          "color": "#000000"
+        },
+        "brows": "dünn",
+        "eyeColor": "#3a2a1e",
+        "nose": "klein",
+        "cauliflowerEar": false,
+        "build": "schmal",
+        "ageLook": "jung",
+        "top": {
+          "type": "hoodie",
+          "color": "#11938a",
+          "accent": "#f7d038",
+          "print": ""
+        },
+        "bottom": {
+          "type": "jeans",
+          "color": "#3d5a87",
+          "accent": "#2f476c"
+        },
+        "shoes": "#f4f4f4",
+        "gloves": "#11938a",
+        "accessories": [
+          "kopfhoerer"
+        ]
+      },
+      "firstEpisode": 1,
+      "lookLocked": true,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    },
+    {
+      "id": "bruno-kessler",
+      "name": "Bruno Kessler",
+      "nickname": "Der Bär",
+      "role": "boxer",
+      "roleTitle": "Ex-Profi (Schwergewicht)",
+      "status": "kandidat",
+      "age": 36,
+      "heightCm": 189,
+      "weightKg": 106,
+      "weightClass": "Schwergewicht",
+      "personality": "Ruhig, gutmütig, schwermütig. Schämt sich für seinen Absturz. Wenn er lacht, lacht die ganze Halle mit.",
+      "background": "Profibilanz 14–3. Nach einer Knieverletzung und schlechten Managern stand er mit nichts da. Arbeitet heute als Türsteher. Paule kennt eine Geschichte über ihn, die er (noch) nicht erzählt.",
+      "speechStyle": "Tiefe Stimme, langsam, wenige Worte, leicht melancholisch.",
+      "strengths": [
+        "Schlagkraft",
+        "Erfahrung",
+        "Ringintelligenz"
+      ],
+      "weaknesses": [
+        "Knie",
+        "Selbstzweifel",
+        "alte Schulden"
+      ],
+      "goal": "Ein letzter Kampf, auf den er stolz sein kann.",
+      "catchphrase": "Einmal noch.",
+      "stats": {
+        "technik": 7,
+        "kraft": 9,
+        "kondition": 4,
+        "disziplin": 6
+      },
+      "record": {
+        "siege": 14,
+        "niederlagen": 3,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "nPczCjzI2devNBz1zQrb",
+        "openaiVoice": "onyx",
+        "instructions": "Großer Mann Mitte 30, sehr tiefe ruhige Stimme, melancholisch.",
+        "demoPitch": 0.65,
+        "elevenlabsModel": "eleven_v3",
+        "locked": false,
+        "note": "Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen.",
+        "speko": null
+      },
+      "look": {
+        "skin": "#f0c09a",
+        "hair": {
+          "style": "glatze",
+          "color": "#3a2a1e"
+        },
+        "facialHair": {
+          "style": "vollbart",
+          "color": "#4a3020"
+        },
+        "brows": "buschig",
+        "eyeColor": "#2f4a3a",
+        "nose": "breit",
+        "cauliflowerEar": true,
+        "build": "muskulös",
+        "ageLook": "erwachsen",
+        "top": {
+          "type": "tshirt",
+          "color": "#3a3d42",
+          "accent": "#2a2c30",
+          "print": ""
+        },
+        "bottom": {
+          "type": "jeans",
+          "color": "#24324a",
+          "accent": "#1b2639"
+        },
+        "shoes": "#1c1c1c",
+        "gloves": "#b3262e",
+        "accessories": [
+          "goldkette"
+        ]
+      },
+      "firstEpisode": 1,
+      "lookLocked": true,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    },
+    {
+      "id": "nico-falk",
+      "name": "Nico Falk",
+      "nickname": "Falke",
+      "role": "boxer",
+      "roleTitle": "Problemfall mit Ausnahmetalent",
+      "status": "kandidat",
+      "age": 21,
+      "heightCm": 181,
+      "weightKg": 72,
+      "weightClass": "Weltergewicht",
+      "personality": "Hochbegabt, misstrauisch, impulsiv. Testet jede Grenze. Loyal bis zur Selbstaufgabe, wenn man ihm einmal vertraut.",
+      "background": "Zwei Jahre Jugendhaft wegen einer Schlägerei, die er bis heute anders erzählt. Hat im Knast boxen gelernt. Niemand will ihm eine Chance geben.",
+      "speechStyle": "Knapp, provokant, ironisch. Antwortet gern mit Gegenfragen.",
+      "strengths": [
+        "Instinkt",
+        "Timing",
+        "Härte"
+      ],
+      "weaknesses": [
+        "Disziplin",
+        "Jähzorn",
+        "Vergangenheit"
+      ],
+      "goal": "Beweisen, dass er mehr ist als seine Akte.",
+      "catchphrase": "Und jetzt?",
+      "stats": {
+        "technik": 7,
+        "kraft": 6,
+        "kondition": 7,
+        "disziplin": 2
+      },
+      "record": {
+        "siege": 0,
+        "niederlagen": 0,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "N2lVS1w4EtoT3dr4eOWO",
+        "openaiVoice": "ballad",
+        "instructions": "Junger Mann, 21, rau, leise, provokant.",
+        "demoPitch": 1.1,
+        "elevenlabsModel": "eleven_v3",
+        "locked": false,
+        "note": "Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen.",
+        "speko": null
+      },
+      "look": {
+        "skin": "#e8b996",
+        "hair": {
+          "style": "stoppel",
+          "color": "#e6d27a"
+        },
+        "facialHair": {
+          "style": "keiner",
+          "color": "#000000"
+        },
+        "brows": "streng",
+        "eyeColor": "#7aa3b8",
+        "nose": "krumm",
+        "cauliflowerEar": false,
+        "build": "athletisch",
+        "ageLook": "jung",
+        "top": {
+          "type": "tanktop",
+          "color": "#141414",
+          "accent": "#141414",
+          "print": ""
+        },
+        "bottom": {
+          "type": "trainingshose",
+          "color": "#6b6e73",
+          "accent": "#e8e8e8"
+        },
+        "shoes": "#1c1c1c",
+        "gloves": "#141414",
+        "accessories": [
+          "narbe",
+          "pflaster"
+        ]
+      },
+      "firstEpisode": null,
+      "lookLocked": false,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    },
+    {
+      "id": "viktor-hahn",
+      "name": "Viktor Hahn",
+      "nickname": "",
+      "role": "rivale",
+      "roleTitle": "Besitzer des Titan Boxing Gym",
+      "status": "gast",
+      "age": 48,
+      "heightCm": 183,
+      "weightKg": 84,
+      "weightClass": "",
+      "personality": "Glatt, charmant, berechnend. Sieht Boxen als Geschäft. Will die Depothalle für ein neues Fitnessstudio.",
+      "background": "Besitzt das moderne Titan Boxing Gym in der Innenstadt mit 600 Mitgliedern. Hat Rosa gefeuert. Kennt Günther aus der Schulzeit – und hat ihn schon damals unterschätzt.",
+      "speechStyle": "Höflich, gönnerhaft, Business-Sprache („Synergien“, „Marke“).",
+      "strengths": [
+        "Geld",
+        "Kontakte",
+        "Marketing"
+      ],
+      "weaknesses": [
+        "Arroganz",
+        "unterschätzt Herz"
+      ],
+      "goal": "Den Rostfaust-Club schlucken oder plattmachen.",
+      "catchphrase": "Nichts Persönliches, Günther. Nur Business.",
+      "record": {
+        "siege": 0,
+        "niederlagen": 0,
+        "unentschieden": 0
+      },
+      "voice": {
+        "elevenlabsVoiceId": "cjVigY5qzO86Huf0OWal",
+        "openaiVoice": "alloy",
+        "instructions": "Mann Ende 40, glatt, freundlich-herablassend.",
+        "demoPitch": 0.95,
+        "elevenlabsModel": "eleven_v3",
+        "locked": false,
+        "note": "Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen.",
+        "speko": null
+      },
+      "look": {
+        "skin": "#e3b08c",
+        "hair": {
+          "style": "zurueckgegelt",
+          "color": "#1e1e22"
+        },
+        "facialHair": {
+          "style": "kinnbart",
+          "color": "#1e1e22"
+        },
+        "brows": "dünn",
+        "eyeColor": "#2b2b2b",
+        "nose": "spitz",
+        "cauliflowerEar": false,
+        "build": "athletisch",
+        "ageLook": "erwachsen",
+        "top": {
+          "type": "sakko",
+          "color": "#1f2c4d",
+          "accent": "#e9e9ef",
+          "print": ""
+        },
+        "bottom": {
+          "type": "stoffhose",
+          "color": "#1f2c4d",
+          "accent": "#18223d"
+        },
+        "shoes": "#111111",
+        "gloves": "#c9a227",
+        "accessories": [
+          "goldkette"
+        ]
+      },
+      "firstEpisode": null,
+      "lookLocked": false,
+      "lookHistory": [],
+      "conceptImage": "",
+      "notes": ""
+    }
+  ],
+  "locations": [
+    {
+      "id": "strasse",
+      "name": "Depotstraße 7 (außen)",
+      "description": "Backsteinhalle eines alten Straßenbahndepots, verblichenes Schild „BOXCLUB ROSTFAUST“, rostiges Rolltor, Schienen im Kopfsteinpflaster.",
+      "unlocked": true
+    },
+    {
+      "id": "halle",
+      "name": "Die Halle",
+      "description": "Hohe Backsteinwände mit Rissen, Oberlichter, ein Boxring mit roter und blauer Ecke, zwei Sandsäcke (einer leckt Sand), vergilbte Kampfplakate von 1987.",
+      "unlocked": true
+    },
+    {
+      "id": "ring",
+      "name": "Der Ring",
+      "description": "Nahansicht des alten Rings: geflickte Seile, rote und blaue Eckpolster, die alte Messingglocke am Pfosten.",
+      "unlocked": true
+    },
+    {
+      "id": "empfang",
+      "name": "Empfang",
+      "description": "Holztresen mit Geldkassette, karierte Mitgliederliste, Pokale vom Vater, Kaffeemaschine von 1990.",
+      "unlocked": true
+    },
+    {
+      "id": "buero",
+      "name": "Günthers Büro",
+      "description": "Winziger Raum mit Schreibtisch voller Rechnungen, Foto vom Vater im Ring, Wanduhr, Fenster zur Halle.",
+      "unlocked": true
+    },
+    {
+      "id": "umkleide",
+      "name": "Umkleide",
+      "description": "Grüne Blechspinde, Holzbank, kaputte Dusche, die tropft.",
+      "unlocked": true
+    },
+    {
+      "id": "eventhalle",
+      "name": "Kranstadt Arena",
+      "description": "Kleine Veranstaltungshalle am Hafen: Boxring in der Mitte, Tribüne mit genau 100 roten Klappsitzen in 5 Reihen, Scheinwerfer, Banner „KAMPFABEND“. Wiederverwendbar für alle Kampfabende.",
+      "unlocked": true
+    },
+    {
+      "id": "rivalengym",
+      "name": "Titan Boxing Gym",
+      "description": "Hochglanz-Gym in der Innenstadt: Glas, LED-Licht, zehn Sandsäcke, zwei Ringe.",
+      "unlocked": false
+    }
+  ]
+}

@@ -1,12 +1,13 @@
 # EPISODE LOG – Boxclub Rostfaust
 
-Stand 2026-11-11. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
+Stand 2026-11-12. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
 
 | Folge | Titel | Länge | Status | Hook | Community-Frage → Ergebnis |
 |---|---|---|---|---|---|
 | 1 | Null Boxer | 60.8 s | veroeffentlicht | Wir gründen einen Boxverein. Kleines Problem: Wir haben einen Ring, eine Trainerin – und genau null Boxer. | Wen sollen wir als Erstes verpflichten? → A (Emre (17) – den jungen Anfänger) – umgesetzt in F2 |
 | 2 | Fünf Tage | 57.5 s | veroeffentlicht | Wir haben unseren ersten Boxer! Aber in nur fünf Tagen wartet bereits sein erster großer Kampf! | Schaffen wir es, die Arena zu füllen? → B (Noch nicht – unter 100 neuen Followern) – umgesetzt in F3 |
 | 3 | Emre braucht besseres Equipment! | 48.1 s | veroeffentlicht | Emres erster Schlag – und der alte Sandsack reißt von der Decke. | Was kaufen wir als Erstes? → offen |
+| 4 | Unser erster Sponsor?! | 70.3 s | veroeffentlicht | Günther liest einen Kommentar: Jemand will Sandsäcke, Pratzen, Handschuhe und die Renovierung bezahlen?! | Schaffen wir 50 Follower bis zum Kampf? → offen |
 
 ## Folge 1 – Null Boxer
 Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß.
@@ -32,9 +33,18 @@ Emres erstes Training: Schon beim ersten Jab reißt der alte Sandsack von der De
 - **TikTok-Text:** Folge 3: Emres erster Schlag – und unser Sandsack ist Geschichte 😅🥊 Wir können uns genau EINE neue Sache leisten. Was kaufen wir? A Boxsack, B Handschuhe, C Pratzen oder D Speedball – schreib deinen Buchstaben in die Kommentare! #boxclubrostfaust #boxen #boxtraining #animationserie #teil3
 - **Datei:** data/media/episodes/ep-003/boxclub_folge_003.mp4
 
+## Folge 4 – Unser erster Sponsor?!
+Unter Folge 3 tauchen zwei Angebote in den Kommentaren auf: Ein Zuschauer bietet 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe und die Renovierung an, ein anderer stellt 10.000 € plus 1.000 € pro Sieg in Aussicht. Günther träumt schon vom renovierten Club, Paule bleibt skeptisch: Bestätigt ist nichts. Dann kommt (in der Geschichte) eine Nachricht: Der Sponsor hat eine Bedingung – Emre muss erst seinen ersten Kampf gewinnen. Günther ruft die Community auf: Arena 35/100, Ziel 50 Follower bis zum Kampf, jedes Like bringt symbolisch 2 € in die Kasse.
+
+- **Cliffhanger:** Der (Story-)Sponsor will erst einen Sieg sehen – und Emre hat nur noch vier Tage. Schafft die Community 50 Follower bis zum Kampf?
+- **Abstimmung:** Schaffen wir 50 Follower bis zum Kampf? A: Ja – 50 Follower bis zum Kampf · B: Noch nicht – unter 50
+- **TikTok-Text:** Folge 4: Unser erster Sponsor?! 😳🥊 Zwei Angebote aus euren Kommentaren – aber es gibt einen Haken. Hilf uns: Like = 2 € für die Vereinskasse (symbolisch), Follow = ein Platz in unserer Arena. Ziel: 50 bis zum Kampf! #boxclubrostfaust #boxen #sponsor #animationserie #teil4
+- **Datei:** data/media/episodes/ep-004/boxclub_folge_004.mp4
+
 ## Performance-Tracking
 | Folge | Aufrufe | Likes | Kommentare | Geteilt | Neue Follower | Follower gesamt | Ø Wiedergabe | Ø angesehen | Vollständig | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2 | – | – | – | – | – | 31 | – | – | – | Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge). |
+| 3 | – | – | – | – | 4 | 35 | – | – | – | Gemeldet vor Folge 4: 35 Follower gesamt (+4 seit Folge 3). Likes laut Einschätzung des Produzenten > 50 – keine genaue Zahl, daher NICHT als 2 €/Like gebucht. Umfrage Zwischenstand: Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % (59 Stimmen). |
 
 **Analyse:** Erst ab mehreren Folgen mit vollständigen Zahlen sinnvoll – keine voreiligen Schlüsse.

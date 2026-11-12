@@ -13,6 +13,9 @@
 - Requisiten pro Szene (`props`, z. B. Sandsack schwingt/reißt ab), Daueraktionen (`cast.action`).
 - Lippenbewegung während der Zeile, Blinzeln, Atmen, Emotion + Geste je Zeile.
 - Wenn der Hook visuell ist: Totale verwenden, damit der Folgentitel die Aktion nicht verdeckt.
+- Zeigt der Hook selbst Text (z. B. Kommentar-Karte): `titleCard: 'klein'` (kompakter Titel unter dem Logo).
+- Einblendungen: Kommentar-Karte (`comment`, anonym, „noch nicht bestätigt“), Arena-Zähler mit Ziel (`seats.goal`),
+  Vereinskasse (`kasse`, nur gespeicherter Stand + Like-Regel, keine erfundenen Zahlen), Traumsequenz (`fx: 'traum'`).
 
 ## Audio (seit Folge 3: eigener Mischer `scripts/mix.py`)
 | Spur | Regel |
@@ -26,7 +29,9 @@
 - **Keine Hörkontrolle** durch die KI möglich – nur Messungen. Hörkontrolle durch den Produzenten.
 
 ## Stimmen
-- Erzeugung: ElevenLabs `eleven_v3` (über Speko bzw. direkt mit `ELEVENLABS_API_KEY`), Stimmen siehe CHARACTERS_AND_VOICES.md.
+- Erzeugung über Speko: Günther/Paule/Emre ElevenLabs `eleven_v3`; **Rosa: Inworld `inworld-tts-2`, Stimme „Annika“** (ohne Regie-Tags). Siehe CHARACTERS_AND_VOICES.md.
+- Stimmauswahl neuer Figuren: nur deutsche Muttersprachler-Stimmen bzw. Akzent-Angabe prüfen; Messung mit `scripts/voice_check.py` (Tonhöhe, Anteil Tonlage, Sprünge) + Spracherkennung.
+- Ausreißer neu erzeugen: Zeilen, deren Tonhöhe deutlich vom Figuren-Median abweicht (z. B. Emre > 165 Hz), ohne Stimmungs-Tag neu generieren.
 - Prüfung je Zeile: Grundtonhöhe (`scripts/pitch.py`, männlich < 160 Hz) und Spracherkennung → Abgleich mit Untertitel.
 - Tempo darf tonhöhenneutral angepasst werden (atempo 1,0–1,15), Pausen innerhalb der Zeile ≤ 0,25 s.
 

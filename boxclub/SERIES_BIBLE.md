@@ -19,7 +19,8 @@ Rückschläge. Nicht kindlich. Nicht jede Folge braucht einen Kampf.
 1. Figuren sehen immer gleich aus (parametrisches Rig, `data/characters.json` → `look`). Aussehen ist nach
    dem ersten Auftritt gesperrt; Änderungen nur mit Story-Grund (wird protokolliert).
 2. Stimmen sind fest (siehe `CHARACTERS_AND_VOICES.md`). **Keine Stimmänderung ohne ausdrückliche
-   Zustimmung des Produzenten.** Paule ist männlich.
+   Zustimmung des Produzenten.** Paule ist männlich (ElevenLabs „Roman“). Rosa ist ab Folge 4 Inworld
+   „Annika“ (deutsch, eindeutig weiblich).
 3. Geld, Mitglieder, Ausrüstung, Kämpfe, Arena-Plätze ändern sich **nur** über Zustandsänderungen einer
    Folge. Zahlen im Dialog müssen exakt zum gespeicherten Stand passen.
 4. Keine erfundenen Einnahmen/Ausgaben, Ereignisse oder Performance-Zahlen. Fehlende Informationen
@@ -31,9 +32,19 @@ Rückschläge. Nicht kindlich. Nicht jede Folge braucht einen Kampf.
 | Mechanik | Bedeutung | seit |
 |---|---|---|
 | **Follower = Arena-Platz** | 1 neuer Follower = 1 symbolisch besetzter Platz in der Kranstadt Arena (100 Plätze) | Folge 2 |
-| **Like = 2 €** | 1 Like = 2 € symbolisch für die Vereinskasse. Wird erst gebucht, wenn der Produzent eine Like-Zahl meldet. | festgelegt vor Folge 3 |
+| **Like = 2 €** | 1 Like = 2 € symbolisch für die Vereinskasse. Wird erst gebucht, wenn der Produzent eine **genaue** Like-Zahl meldet (Schätzungen werden nicht gebucht). In der Serie eingeführt in Folge 4. | festgelegt vor Folge 3 |
 | **Kommentare = Entscheidungen** | Abstimmung A/B/(C/D) in den Kommentaren, Ergebnis meldet der Produzent | Folge 1 |
 Pro Folge **eine** Hauptaufforderung zur Interaktion.
+
+## Angebote aus Kommentaren (seit Folge 4)
+Zuschauer-Kommentare mit Sponsoring-/Spendenangeboten werden als **unbestätigte Angebote** dargestellt
+(Kommentar-Karte mit Hinweis „Noch nicht bestätigt“) und in `series_state.json → offeneAngebote` geführt.
+Erst eine echte Bestätigung durch den Produzenten ändert ihren Status. Story-Bedingungen (z. B. „erst ein Sieg“)
+sind fiktiv und werden nie einem realen Kommentator zugeschrieben.
+
+## Erzählzeit vs. echte Zeit
+Story-Tage (Countdown zum Kampf) und echte Abstimmungsfristen laufen getrennt. Der Kampfabend wird erst erzählt,
+wenn die Ausrüstungs-Abstimmung abgeschlossen und umgesetzt ist (Countdown wird bei Bedarf nicht weitergezählt).
 
 ## Episodenaufbau (flexibel)
 Hook (0–3 s, sofort Aktion/Überraschung) → Problem → Entwicklung → Überraschung → Höhepunkt →

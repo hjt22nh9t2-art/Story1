@@ -1,8 +1,8 @@
 {
   "stand": {
-    "nachFolge": 3,
-    "naechsteFolge": 4,
-    "aktualisiert": "2026-11-11",
+    "nachFolge": 4,
+    "naechsteFolge": 5,
+    "aktualisiert": "2026-11-12",
     "kapitel": "Akt 1 – Der erste Kampf"
   },
   "finanzen": {
@@ -13,7 +13,7 @@
     "sponsoren": []
   },
   "community": {
-    "follower": 31,
+    "follower": 35,
     "likes": null,
     "likeEuroRate": 2,
     "likesGebucht": 0,
@@ -23,7 +23,7 @@
     "name": "Kampfabend Kranstadt Arena",
     "boxer": "Emre Yıldız",
     "tageBisKampf": 4,
-    "plaetzeBesetzt": 31,
+    "plaetzeBesetzt": 35,
     "plaetzeGesamt": 100,
     "kostenBezahlt": 200
   },
@@ -141,6 +141,26 @@
       "seitFolge": null
     }
   ],
+  "offeneAngebote": [
+    {
+      "id": "o-001",
+      "quelle": "Kommentar unter Folge 3 (Zuschauer)",
+      "inhalt": "5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs",
+      "status": "offen",
+      "storyBedingung": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+      "notiz": "Nicht bestätigt. Keine Ausrüstung eingetroffen.",
+      "seitFolge": 4
+    },
+    {
+      "id": "o-002",
+      "quelle": "Kommentar unter Folge 3 (Zuschauer)",
+      "inhalt": "10.000 € plus 1.000 € pro Sieg (in Aussicht gestellt)",
+      "status": "offen",
+      "storyBedingung": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+      "notiz": "Nicht bestätigt. Kein Geld eingegangen.",
+      "seitFolge": 4
+    }
+  ],
   "offeneEntscheidungen": [
     {
       "id": "d-003",
@@ -151,6 +171,25 @@
         "B: Neue Boxhandschuhe",
         "C: Pratzen für das Training",
         "D: Speedball-Equipment"
+      ],
+      "status": "offen",
+      "ergebnis": null,
+      "stimmen": {
+        "A_Boxsack_pct": 43,
+        "C_Pratzen_pct": 37,
+        "B_Handschuhe_pct": 20,
+        "D_Speedball_pct": 0,
+        "stimmen_gesamt": 59
+      },
+      "notiz": "ZWISCHENSTAND vor Folge 4 (Umfrage läuft noch 7 Tage): Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % bei 59 Stimmen. Noch KEINE Entscheidung."
+    },
+    {
+      "id": "d-004",
+      "ausFolge": 4,
+      "frage": "Schaffen wir 50 Follower bis zum Kampf?",
+      "optionen": [
+        "A: Ja – 50 Follower bis zum Kampf",
+        "B: Noch nicht – unter 50"
       ],
       "status": "offen",
       "ergebnis": null,
@@ -181,22 +220,28 @@
       "id": "entwicklung-emre-yildiz",
       "titel": "Der Weg von Emre",
       "status": "offen",
-      "letzterStand": "Erstes Training. Der alte Sandsack reißt ab; Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa: „Wirst du nicht.“"
+      "letzterStand": "Druck wächst: Der (Story-)Sponsor will erst einen Sieg sehen. Rosa: „Druck macht Diamanten.“"
     },
     {
       "id": "kampfabend",
       "titel": "Der erste Kampfabend",
       "status": "offen",
-      "letzterStand": "Noch 4 Tage. Arena: 31/100 Plätze."
+      "letzterStand": "Noch 4 Tage. Arena 35/100. Community-Ziel: 50 Follower bis zum Kampf."
     },
     {
       "id": "ausruestung",
       "titel": "Neue Ausrüstung",
       "status": "offen",
       "letzterStand": "Ausrüstung marode: Handschuhe mit Löchern, keine Pratzen, kein Speedball, ein Sandsack übrig. Community stimmt ab (A Boxsack, B Handschuhe, C Pratzen, D Speedball). Preise stehen noch nicht fest."
+    },
+    {
+      "id": "sponsor-angebote",
+      "titel": "Unser erster Sponsor?!",
+      "status": "offen",
+      "letzterStand": "Zwei Angebote aus den Kommentaren (Ausrüstung + Renovierung; 10.000 € + 1.000 €/Sieg). Beide unbestätigt. Story-Bedingung: erst ein Sieg von Emre."
     }
   ],
-  "cliffhanger": "Emre trainiert am letzten Sandsack weiter – und der quietscht schon verdächtig. Was kauft der Club – und hält der Sack bis zum Kampf?",
+  "cliffhanger": "Der (Story-)Sponsor will erst einen Sieg sehen – und Emre hat nur noch vier Tage. Schafft die Community 50 Follower bis zum Kampf?",
   "kennzahlen": [
     {
       "episode": 2,
@@ -211,6 +256,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge)."
+    },
+    {
+      "episode": 3,
+      "reportedAt": "2026-11-12T16:06:25.506Z",
+      "views": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 4,
+      "followersTotal": 35,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 4: 35 Follower gesamt (+4 seit Folge 3). Likes laut Einschätzung des Produzenten > 50 – keine genaue Zahl, daher NICHT als 2 €/Like gebucht. Umfrage Zwischenstand: Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % (59 Stimmen)."
     }
   ]
 }

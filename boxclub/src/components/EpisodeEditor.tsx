@@ -166,7 +166,7 @@ export function EpisodeEditor({ initial, characters, locations, tts, isNext }: {
             <button className="btn small" style={{ marginTop: 6 }} disabled={!s.cast.length} onClick={() => updScene(si, { lines: [...s.lines, { id: newId('l'), speaker: s.cast[0]?.characterId ?? '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, delayBefore: 0, audio: null }] })}>＋ Zeile</button>
           </div>
         ))}
-        <button className="btn" onClick={() => update({ scenes: [...ep.scenes, { id: newId('s'), beat: 'handlung', location: 'halle', shot: 'halbnah', music: 'aufbruch', overlay: '', direction: '', seats: null, props: [], setOverrides: {}, cast: [], lines: [{ id: newId('l'), speaker: '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, delayBefore: 0, audio: null }] }] })}>＋ Szene hinzufügen</button>
+        <button className="btn" onClick={() => update({ scenes: [...ep.scenes, { id: newId('s'), beat: 'handlung', location: 'halle', shot: 'halbnah', music: 'aufbruch', overlay: '', direction: '', seats: null, fx: null, kasse: null, comment: null, props: [], setOverrides: {}, cast: [], lines: [{ id: newId('l'), speaker: '', text: '…', emotion: 'neutral', action: 'keine', sfx: null, pauseAfter: 0.2, delayBefore: 0, audio: null }] }] })}>＋ Szene hinzufügen</button>
 
         <div className="card">
           <h3>Community-Entscheidung am Ende</h3>

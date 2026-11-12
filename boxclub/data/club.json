@@ -110,6 +110,10 @@
         {
           "episode": 3,
           "text": "Erstes Training. Der alte Sandsack reißt ab; Emre hat Angst, wegen kaputter Ausrüstung zu verlieren. Rosa: „Wirst du nicht.“"
+        },
+        {
+          "episode": 4,
+          "text": "Druck wächst: Der (Story-)Sponsor will erst einen Sieg sehen. Rosa: „Druck macht Diamanten.“"
         }
       ]
     },
@@ -126,6 +130,10 @@
         {
           "episode": 3,
           "text": "Noch 4 Tage. Arena: 31/100 Plätze."
+        },
+        {
+          "episode": 4,
+          "text": "Noch 4 Tage. Arena 35/100. Community-Ziel: 50 Follower bis zum Kampf."
         }
       ]
     },
@@ -138,6 +146,18 @@
         {
           "episode": 3,
           "text": "Ausrüstung marode: Handschuhe mit Löchern, keine Pratzen, kein Speedball, ein Sandsack übrig. Community stimmt ab (A Boxsack, B Handschuhe, C Pratzen, D Speedball). Preise stehen noch nicht fest."
+        }
+      ]
+    },
+    {
+      "id": "sponsor-angebote",
+      "title": "Unser erster Sponsor?!",
+      "status": "offen",
+      "startedEpisode": 4,
+      "updates": [
+        {
+          "episode": 4,
+          "text": "Zwei Angebote aus den Kommentaren (Ausrüstung + Renovierung; 10.000 € + 1.000 €/Sieg). Beide unbestätigt. Story-Bedingung: erst ein Sieg von Emre."
         }
       ]
     }
@@ -225,6 +245,36 @@
       ],
       "status": "offen",
       "winner": null,
+      "votes": {
+        "A_Boxsack_pct": 43,
+        "C_Pratzen_pct": 37,
+        "B_Handschuhe_pct": 20,
+        "D_Speedball_pct": 0,
+        "stimmen_gesamt": 59
+      },
+      "note": "ZWISCHENSTAND vor Folge 4 (Umfrage läuft noch 7 Tage): Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % bei 59 Stimmen. Noch KEINE Entscheidung.",
+      "resolvedInEpisode": null
+    },
+    {
+      "id": "d-004",
+      "episode": 4,
+      "question": "Schaffen wir 50 Follower bis zum Kampf?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Ja – 50 Follower bis zum Kampf",
+          "consequenceHint": "Halbe Arena voll – Emre boxt vor echtem Publikum.",
+          "plan": "arena:ziel50"
+        },
+        {
+          "key": "B",
+          "label": "Noch nicht – unter 50",
+          "consequenceHint": "Emre boxt trotzdem – aber vor vielen leeren Plätzen.",
+          "plan": "arena:unter50"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
       "votes": {},
       "note": "",
       "resolvedInEpisode": null
@@ -243,16 +293,40 @@
     {
       "episode": 3,
       "text": "Folge 3 „Emre braucht besseres Equipment!“: Emres erstes Training: Schon beim ersten Jab reißt der alte Sandsack von der Decke. Rosas Bestandsaufnahme zeigt: Die Handschuhe haben Löcher, Pratzen und Speedball gibt es gar nicht. Günthers Klebeband-Idee scheitert – das Klebeband hält schon den Ring zusammen. Paule rechnet: 300 € in der Kasse, die Pacht ist bald fällig – es reicht für genau eine Anschaffung. Emre fürchtet, in vier Tagen wegen kaputter Ausrüstung zu verlieren. Die Community soll entscheiden, was zuerst gekauft wird. Zum Schluss schlägt Emre auf den letzten Sandsack – und der quietscht verdächtig."
+    },
+    {
+      "episode": 4,
+      "text": "Folge 4 „Unser erster Sponsor?!“: Unter Folge 3 tauchen zwei Angebote in den Kommentaren auf: Ein Zuschauer bietet 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe und die Renovierung an, ein anderer stellt 10.000 € plus 1.000 € pro Sieg in Aussicht. Günther träumt schon vom renovierten Club, Paule bleibt skeptisch: Bestätigt ist nichts. Dann kommt (in der Geschichte) eine Nachricht: Der Sponsor hat eine Bedingung – Emre muss erst seinen ersten Kampf gewinnen. Günther ruft die Community auf: Arena 35/100, Ziel 50 Follower bis zum Kampf, jedes Like bringt symbolisch 2 € in die Kasse."
     }
   ],
-  "lastEpisode": 3,
-  "nextEpisodeNote": "Emre trainiert am letzten Sandsack weiter – und der quietscht schon verdächtig. Was kauft der Club – und hält der Sack bis zum Kampf?",
+  "lastEpisode": 4,
+  "nextEpisodeNote": "Der (Story-)Sponsor will erst einen Sieg sehen – und Emre hat nur noch vier Tage. Schafft die Community 50 Follower bis zum Kampf?",
   "community": {
-    "followers": 31,
+    "followers": 35,
     "likes": null,
     "likeEuroRate": 2,
     "likesBooked": 0
   },
+  "offers": [
+    {
+      "id": "o-001",
+      "source": "Kommentar unter Folge 3 (Zuschauer)",
+      "content": "5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs",
+      "status": "offen",
+      "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+      "episode": 4,
+      "note": "Nicht bestätigt. Keine Ausrüstung eingetroffen."
+    },
+    {
+      "id": "o-002",
+      "source": "Kommentar unter Folge 3 (Zuschauer)",
+      "content": "10.000 € plus 1.000 € pro Sieg (in Aussicht gestellt)",
+      "status": "offen",
+      "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+      "episode": 4,
+      "note": "Nicht bestätigt. Kein Geld eingegangen."
+    }
+  ],
   "metrics": [
     {
       "episode": 2,
@@ -267,6 +341,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge)."
+    },
+    {
+      "episode": 3,
+      "reportedAt": "2026-11-12T16:06:25.506Z",
+      "views": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 4,
+      "followersTotal": 35,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 4: 35 Follower gesamt (+4 seit Folge 3). Likes laut Einschätzung des Produzenten > 50 – keine genaue Zahl, daher NICHT als 2 €/Like gebucht. Umfrage Zwischenstand: Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % (59 Stimmen)."
     }
   ],
   "upcomingEvent": {
@@ -275,7 +363,7 @@
     "kind": "Schaukampf",
     "boxerId": "emre-yildiz",
     "seats": 100,
-    "seatsFilled": 31,
+    "seatsFilled": 35,
     "daysLeft": 4,
     "cost": 200,
     "announcedEpisode": 2,

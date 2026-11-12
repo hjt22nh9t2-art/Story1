@@ -37,7 +37,13 @@
       "demoPitch": 0.85,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt."
+      "note": "ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt.",
+      "speko": {
+        "provider": "elevenlabs",
+        "model": "eleven_v3_conversational",
+        "voice": "5faieqDE3osz75KiOI2M",
+        "label": "Thomas – Authentic & Natural"
+      }
     },
     "look": {
       "skin": "#e9b48e",
@@ -116,7 +122,13 @@
       "demoPitch": 1.05,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Sarah – Mature, Reassuring, Confident“ (weiblich, klar, ~184 Hz). Ab Folge 3 festgelegt – ersetzt „Rhea“ (Folge 1–2), die zu leise und dumpf war. Tonanweisung: [confident]/[firmly], laut und deutlich."
+      "note": "Inworld „Annika“ (deutsche Muttersprachlerin, weiblich, ~205 Hz, 99 % weibliche Tonlage). Ab Folge 4 festgelegt. Vorher: Rhea (F1–2, zu leise/dumpf), Sarah (F3, mehrsprachige Stimme mit fremdem Akzent).",
+      "speko": {
+        "provider": "inworld",
+        "model": "inworld-tts-2",
+        "voice": "Annika",
+        "label": "Annika (Inworld, deutsch)"
+      }
     },
     "look": {
       "skin": "#d7a184",
@@ -195,7 +207,13 @@
       "demoPitch": 0.75,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme."
+      "note": "ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme.",
+      "speko": {
+        "provider": "elevenlabs",
+        "model": "eleven_v3_conversational",
+        "voice": "1YST1S3BrkT7E0wcLKQD",
+        "label": "Roman – Friendly & Approachable"
+      }
     },
     "look": {
       "skin": "#efc6a4",
@@ -282,7 +300,13 @@
       "demoPitch": 1.25,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt."
+      "note": "ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt.",
+      "speko": {
+        "provider": "elevenlabs",
+        "model": "eleven_v3_conversational",
+        "voice": "TX3LPaxmHKxFdv7VOQHJ",
+        "label": "Liam – Energetic"
+      }
     },
     "look": {
       "skin": "#c48a62",
@@ -367,7 +391,8 @@
       "demoPitch": 0.65,
       "elevenlabsModel": "eleven_v3",
       "locked": false,
-      "note": "Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen."
+      "note": "Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen.",
+      "speko": null
     },
     "look": {
       "skin": "#f0c09a",
@@ -452,7 +477,8 @@
       "demoPitch": 1.1,
       "elevenlabsModel": "eleven_v3",
       "locked": false,
-      "note": "Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen."
+      "note": "Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen.",
+      "speko": null
     },
     "look": {
       "skin": "#e8b996",
@@ -531,7 +557,8 @@
       "demoPitch": 0.95,
       "elevenlabsModel": "eleven_v3",
       "locked": false,
-      "note": "Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen."
+      "note": "Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen.",
+      "speko": null
     },
     "look": {
       "skin": "#e3b08c",

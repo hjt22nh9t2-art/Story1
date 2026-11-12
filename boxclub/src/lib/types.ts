@@ -72,6 +72,8 @@ export const CharacterSchema = z.object({
     /** Etablierte Stimme: Änderung nur mit ausdrücklicher Bestätigung */
     locked: z.boolean().default(false),
     note: z.string().default(''),
+    /** Produktionsstimme über Speko (Anbieter-unabhängig) – hat Vorrang vor elevenlabsVoiceId */
+    speko: z.object({ provider: z.string(), model: z.string(), voice: z.string(), label: z.string().default('') }).nullable().default(null),
   }),
   look: CharacterLookSchema,
   /** Folge, in der die Figur erstmals vorkam (null = noch nie gezeigt) */
@@ -178,6 +180,16 @@ export const ClubStateSchema = z.object({
     likesBooked: z.number().int().default(0),
   }).default({ followers: null, likes: null, likeEuroRate: 2, likesBooked: 0 }),
   /** Performance-Tracking pro Folge – nur echte, vom Produzenten gemeldete Zahlen */
+  /** Angebote aus Kommentaren (Sponsoring/Spenden) – bleiben offen bis zur echten Bestätigung */
+  offers: z.array(z.object({
+    id: z.string(),
+    source: z.string(),
+    content: z.string(),
+    status: z.enum(['offen', 'bestaetigt', 'abgelehnt', 'zurueckgezogen']),
+    storyCondition: z.string().default(''),
+    episode: z.number().int(),
+    note: z.string().default(''),
+  })).default([]),
   metrics: z.array(z.object({
     episode: z.number().int(),
     reportedAt: z.string(),
@@ -215,7 +227,7 @@ export type ClubState = z.infer<typeof ClubStateSchema>;
  */
 export const STATE_OPS = [
   'geld', 'mitglieder', 'ruf', 'zustand_halle', 'figur_status', 'ausruestung', 'ausruestung_zustand',
-  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown', 'follower', 'likes', 'kennzahlen',
+  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown', 'follower', 'likes', 'kennzahlen', 'angebot',
 ] as const;
 export const StateChangeSchema = z.object({
   op: z.enum(STATE_OPS),
@@ -275,7 +287,13 @@ export const SceneSchema = z.object({
   /** Regieanweisung (nur zur Info) */
   direction: z.string().default(''),
   /** Arena-Sitzplätze in dieser Szene: von → bis (animiert); null = keine Anzeige */
-  seats: z.object({ from: z.number(), to: z.number(), total: z.number().default(100), hud: z.boolean().default(true) }).nullable().default(null),
+  seats: z.object({ from: z.number(), to: z.number(), total: z.number().default(100), hud: z.boolean().default(true), goal: z.number().nullable().default(null) }).nullable().default(null),
+  /** Bildwirkung der Szene, z. B. Traumsequenz */
+  fx: z.enum(['traum']).nullable().default(null),
+  /** Vereinskassen-Anzeige (symbolisch): Betrag + Euro pro Like – keine erfundenen Like-Zahlen */
+  kasse: z.object({ amount: z.number(), perLike: z.number().default(2) }).nullable().default(null),
+  /** Kommentar-Karte (anonymisiert), z. B. Sponsorangebot aus den Kommentaren */
+  comment: z.object({ author: z.string().default('Ein Zuschauer'), text: z.string(), tag: z.string().default('KOMMENTAR – NOCH NICHT BESTÄTIGT') }).nullable().default(null),
   /** Szenen-Requisiten, z. B. ein Sandsack, der abreißt */
   props: z.array(z.object({
     type: z.enum(['sandsack']),
@@ -289,7 +307,7 @@ export const SceneSchema = z.object({
     hitAt: z.number().nullable().default(null),
   })).default([]),
   /** Abweichungen der Kulisse in dieser Szene (z. B. ein Sandsack ist abgerissen) */
-  setOverrides: z.object({ sandbags: z.number().int().optional() }).default({}),
+  setOverrides: z.object({ sandbags: z.number().int().optional(), condition: z.number().optional(), hasNewRing: z.boolean().optional(), mirrorOk: z.boolean().optional() }).default({}),
 });
 export type Scene = z.infer<typeof SceneSchema>;
 
@@ -315,6 +333,8 @@ export const EpisodeSchema = z.object({
   newCharacterIds: z.array(z.string()).default([]),
   socialCaption: z.string().default(''),
   hashtags: z.array(z.string()).default([]),
+  /** Titeleinblendung: groß (Standard) oder klein, wenn der Hook selbst Text zeigt */
+  titleCard: z.enum(['gross', 'klein']).default('gross'),
   /** Endtafel: klassische Abstimmung oder Arena-/Follower-Aufruf */
   endCard: z.object({
     type: z.enum(['abstimmung', 'arena']),
@@ -322,7 +342,8 @@ export const EpisodeSchema = z.object({
     lines: z.array(z.string()).default([]),
     seatsFilled: z.number().default(0),
     seatsTotal: z.number().default(100),
-  }).default({ type: 'abstimmung', headline: '', lines: [], seatsFilled: 0, seatsTotal: 100 }),
+    seatsGoal: z.number().nullable().default(null),
+  }).default({ type: 'abstimmung', headline: '', lines: [], seatsFilled: 0, seatsTotal: 100, seatsGoal: null }),
   video: z.object({ file: z.string(), poster: z.string(), renderedAt: z.string(), durationSec: z.number() }).nullable().default(null),
 });
 export type Episode = z.infer<typeof EpisodeSchema>;

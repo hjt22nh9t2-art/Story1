@@ -105,6 +105,14 @@ export function applyChange(w: World, ch: StateChange, ep: number): string {
       c.metrics.sort((a, b) => a.episode - b.episode);
       return `Kennzahlen für Folge ${ch.amount} gespeichert`;
     }
+    case 'angebot': {
+      // target = ID, value = JSON {source, content, status, storyCondition, note}
+      const v = JSON.parse(ch.value || '{}');
+      const i = c.offers.findIndex((o) => o.id === ch.target);
+      const next = { id: ch.target, source: '', content: '', status: 'offen' as const, storyCondition: '', note: '', ...(i >= 0 ? c.offers[i] : {}), ...v, episode: i >= 0 ? c.offers[i].episode : ep };
+      if (i >= 0) c.offers[i] = next; else c.offers.push(next);
+      return `Angebot ${ch.target}: ${next.status}${next.storyCondition ? ` (Story-Bedingung: ${next.storyCondition})` : ''}`;
+    }
     case 'ort_freischalten': {
       const l = w.locations.find((x) => x.id === ch.target);
       if (!l) throw new Error(`ort_freischalten: Ort ${ch.target} unbekannt`);

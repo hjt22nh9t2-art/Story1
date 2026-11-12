@@ -5,7 +5,7 @@ const blank: Character = {
   id: '', name: '', nickname: '', role: 'boxer', roleTitle: 'Boxer', status: 'kandidat', age: 20, heightCm: 178, weightKg: 75, weightClass: 'Weltergewicht',
   personality: '', background: '', speechStyle: '', strengths: [], weaknesses: [], goal: '', catchphrase: '',
   record: { siege: 0, niederlagen: 0, unentschieden: 0 },
-  voice: { elevenlabsVoiceId: '', openaiVoice: 'onyx', instructions: '', demoPitch: 1, elevenlabsModel: '', locked: false, note: '' },
+  voice: { elevenlabsVoiceId: '', openaiVoice: 'onyx', instructions: '', demoPitch: 1, elevenlabsModel: '', locked: false, note: '', speko: null },
   look: {
     skin: '#e3b08c', hair: { style: 'kurz', color: '#2b2118' }, facialHair: { style: 'keiner', color: '#2b2118' }, brows: 'dünn', eyeColor: '#3a2a1e',
     nose: 'klein', cauliflowerEar: false, build: 'athletisch', ageLook: 'jung',

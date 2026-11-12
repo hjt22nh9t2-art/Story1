@@ -33,7 +33,7 @@ export const characters: Character[] = [
     weaknesses: ['Finanzen', 'verspricht zu viel', 'unterschätzt Probleme'],
     goal: 'Den Boxclub Rostfaust wieder zum größten Verein der Stadt machen – wie zu Vaters Zeiten.',
     catchphrase: 'Dat wird ganz groß!',
-    voice: { elevenlabsVoiceId: '5faieqDE3osz75KiOI2M', openaiVoice: 'ash', instructions: 'Älterer Mann aus dem Ruhrgebiet, warm, begeistert, etwas rau.', demoPitch: 0.85, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt.' },
+    voice: { elevenlabsVoiceId: '5faieqDE3osz75KiOI2M', openaiVoice: 'ash', instructions: 'Älterer Mann aus dem Ruhrgebiet, warm, begeistert, etwas rau.', demoPitch: 0.85, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt.', speko: { provider: 'elevenlabs', model: 'eleven_v3_conversational', voice: '5faieqDE3osz75KiOI2M', label: 'Thomas – Authentic & Natural' } },
     look: {
       skin: '#e9b48e',
       hair: { style: 'haarkranz', color: '#d9d4cc' },
@@ -70,7 +70,7 @@ export const characters: Character[] = [
     weaknesses: ['ungeduldig mit Faulheit', 'stur', 'schlecht im Verkaufen'],
     goal: 'Einen Boxer bis zur Deutschen Meisterschaft bringen – auf ihre Art.',
     catchphrase: 'Nochmal.',
-    voice: { elevenlabsVoiceId: 'EXAVITQu4vr4xnSDxMaL', openaiVoice: 'sage', instructions: 'Frau Mitte 50, laut, klar, selbstbewusst, energiegeladen.', demoPitch: 1.05, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Sarah – Mature, Reassuring, Confident“ (weiblich, klar, ~184 Hz). Ab Folge 3 festgelegt – ersetzt „Rhea“ (Folge 1–2), die zu leise und dumpf war. Tonanweisung: [confident]/[firmly], laut und deutlich.' },
+    voice: { elevenlabsVoiceId: 'EXAVITQu4vr4xnSDxMaL', openaiVoice: 'sage', instructions: 'Frau Mitte 50, laut, klar, selbstbewusst, energiegeladen.', demoPitch: 1.05, elevenlabsModel: 'eleven_v3', locked: true, note: 'Inworld „Annika“ (deutsche Muttersprachlerin, weiblich, ~205 Hz, 99 % weibliche Tonlage). Ab Folge 4 festgelegt. Vorher: Rhea (F1–2, zu leise/dumpf), Sarah (F3, mehrsprachige Stimme mit fremdem Akzent).', speko: { provider: 'inworld', model: 'inworld-tts-2', voice: 'Annika', label: 'Annika (Inworld, deutsch)' } },
     look: {
       skin: '#d7a184',
       hair: { style: 'stoppel', color: '#9b9b98' },
@@ -107,7 +107,7 @@ export const characters: Character[] = [
     weaknesses: ['Rücken', 'Pessimismus', 'erzählt nicht alles, was er weiß'],
     goal: 'Dass die Halle nicht abgerissen wird, solange er lebt.',
     catchphrase: 'Hab ich schon mal erlebt.',
-    voice: { elevenlabsVoiceId: '1YST1S3BrkT7E0wcLKQD', openaiVoice: 'echo', instructions: 'Sehr alter Mann, trocken, langsam, leicht brummig, sarkastisch.', demoPitch: 0.75, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme.' },
+    voice: { elevenlabsVoiceId: '1YST1S3BrkT7E0wcLKQD', openaiVoice: 'echo', instructions: 'Sehr alter Mann, trocken, langsam, leicht brummig, sarkastisch.', demoPitch: 0.75, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme.', speko: { provider: 'elevenlabs', model: 'eleven_v3_conversational', voice: '1YST1S3BrkT7E0wcLKQD', label: 'Roman – Friendly & Approachable' } },
     look: {
       skin: '#efc6a4',
       hair: { style: 'kurz', color: '#ededed' },
@@ -145,7 +145,7 @@ export const characters: Character[] = [
     goal: 'Profiboxer werden und seiner Mutter eine Wohnung kaufen.',
     catchphrase: 'Ich bin schneller als dein Gedanke.',
     stats: { technik: 2, kraft: 4, kondition: 3, disziplin: 4 },
-    voice: { elevenlabsVoiceId: 'TX3LPaxmHKxFdv7VOQHJ', openaiVoice: 'verse', instructions: 'Junger Mann, 17, schnell, frech, energiegeladen.', demoPitch: 1.25, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt.' },
+    voice: { elevenlabsVoiceId: 'TX3LPaxmHKxFdv7VOQHJ', openaiVoice: 'verse', instructions: 'Junger Mann, 17, schnell, frech, energiegeladen.', demoPitch: 1.25, elevenlabsModel: 'eleven_v3', locked: true, note: 'ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt.', speko: { provider: 'elevenlabs', model: 'eleven_v3_conversational', voice: 'TX3LPaxmHKxFdv7VOQHJ', label: 'Liam – Energetic' } },
     look: {
       skin: '#c48a62',
       hair: { style: 'locken', color: '#1b1612' },
@@ -184,7 +184,7 @@ export const characters: Character[] = [
     catchphrase: 'Einmal noch.',
     stats: { technik: 7, kraft: 9, kondition: 4, disziplin: 6 },
     record: { siege: 14, niederlagen: 3, unentschieden: 0 },
-    voice: { elevenlabsVoiceId: 'nPczCjzI2devNBz1zQrb', openaiVoice: 'onyx', instructions: 'Großer Mann Mitte 30, sehr tiefe ruhige Stimme, melancholisch.', demoPitch: 0.65, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen.' },
+    voice: { elevenlabsVoiceId: 'nPczCjzI2devNBz1zQrb', openaiVoice: 'onyx', instructions: 'Großer Mann Mitte 30, sehr tiefe ruhige Stimme, melancholisch.', demoPitch: 0.65, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen.', speko: null },
     look: {
       skin: '#f0c09a',
       hair: { style: 'glatze', color: '#3a2a1e' },
@@ -222,7 +222,7 @@ export const characters: Character[] = [
     goal: 'Beweisen, dass er mehr ist als seine Akte.',
     catchphrase: 'Und jetzt?',
     stats: { technik: 7, kraft: 6, kondition: 7, disziplin: 2 },
-    voice: { elevenlabsVoiceId: 'N2lVS1w4EtoT3dr4eOWO', openaiVoice: 'ballad', instructions: 'Junger Mann, 21, rau, leise, provokant.', demoPitch: 1.1, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen.' },
+    voice: { elevenlabsVoiceId: 'N2lVS1w4EtoT3dr4eOWO', openaiVoice: 'ballad', instructions: 'Junger Mann, 21, rau, leise, provokant.', demoPitch: 1.1, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen.', speko: null },
     look: {
       skin: '#e8b996',
       hair: { style: 'stoppel', color: '#e6d27a' },
@@ -259,7 +259,7 @@ export const characters: Character[] = [
     weaknesses: ['Arroganz', 'unterschätzt Herz'],
     goal: 'Den Rostfaust-Club schlucken oder plattmachen.',
     catchphrase: 'Nichts Persönliches, Günther. Nur Business.',
-    voice: { elevenlabsVoiceId: 'cjVigY5qzO86Huf0OWal', openaiVoice: 'alloy', instructions: 'Mann Ende 40, glatt, freundlich-herablassend.', demoPitch: 0.95, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen.' },
+    voice: { elevenlabsVoiceId: 'cjVigY5qzO86Huf0OWal', openaiVoice: 'alloy', instructions: 'Mann Ende 40, glatt, freundlich-herablassend.', demoPitch: 0.95, elevenlabsModel: 'eleven_v3', locked: false, note: 'Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen.', speko: null },
     look: {
       skin: '#e3b08c',
       hair: { style: 'zurueckgegelt', color: '#1e1e22' },
@@ -325,4 +325,5 @@ export const club: ClubState = {
   upcomingEvent: null,
   community: { followers: null, likes: null, likeEuroRate: 2, likesBooked: 0 },
   metrics: [],
+  offers: [],
 };

@@ -1,17 +1,17 @@
 # CHARACTERS AND VOICES – Boxclub Rostfaust
 
-Stand nach Folge 3 (2026-11-11). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
+Stand nach Folge 4 (2026-11-12). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
 
 ## Stimmen-Übersicht (verbindlich)
-| Figur | Stimme (ElevenLabs) | Voice-ID | Modell | Status | Hinweis |
+| Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |
 |---|---|---|---|---|---|
-| Günther Wallach | Thomas – Authentic & Natural | `5faieqDE3osz75KiOI2M` | eleven_v3 | 🔒 fest | ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt. |
-| Rosa Brandt | Sarah – Mature, Reassuring, Confident | `EXAVITQu4vr4xnSDxMaL` | eleven_v3 | 🔒 fest | ElevenLabs „Sarah – Mature, Reassuring, Confident“ (weiblich, klar, ~184 Hz). Ab Folge 3 festgelegt – ersetzt „Rhea“ (Folge 1–2), die zu leise und dumpf war. Tonanweisung: [confident]/[firmly], laut und deutlich. |
-| Paul Kruse | Roman – Friendly & Approachable | `1YST1S3BrkT7E0wcLKQD` | eleven_v3 | 🔒 fest | ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme. |
-| Emre Yıldız | Liam – Energetic | `TX3LPaxmHKxFdv7VOQHJ` | eleven_v3 | 🔒 fest | ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt. |
-| Bruno Kessler | Brian – Deep | `nPczCjzI2devNBz1zQrb` | eleven_v3 | Vorschlag | Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen. |
-| Nico Falk | Callum – Husky | `N2lVS1w4EtoT3dr4eOWO` | eleven_v3 | Vorschlag | Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen. |
-| Viktor Hahn | Eric – Smooth | `cjVigY5qzO86Huf0OWal` | eleven_v3 | Vorschlag | Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen. |
+| Günther Wallach | Thomas – Authentic & Natural | elevenlabs / eleven_v3_conversational | `5faieqDE3osz75KiOI2M` | 🔒 fest | ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt. |
+| Rosa Brandt | Annika (Inworld, deutsch) | inworld / inworld-tts-2 | `Annika` | 🔒 fest | Inworld „Annika“ (deutsche Muttersprachlerin, weiblich, ~205 Hz, 99 % weibliche Tonlage). Ab Folge 4 festgelegt. Vorher: Rhea (F1–2, zu leise/dumpf), Sarah (F3, mehrsprachige Stimme mit fremdem Akzent). |
+| Paul Kruse | Roman – Friendly & Approachable | elevenlabs / eleven_v3_conversational | `1YST1S3BrkT7E0wcLKQD` | 🔒 fest | ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme. |
+| Emre Yıldız | Liam – Energetic | elevenlabs / eleven_v3_conversational | `TX3LPaxmHKxFdv7VOQHJ` | 🔒 fest | ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt. |
+| Bruno Kessler | Brian – Deep | elevenlabs / eleven_v3 | `nPczCjzI2devNBz1zQrb` | Vorschlag | Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen. |
+| Nico Falk | Callum – Husky | elevenlabs / eleven_v3 | `N2lVS1w4EtoT3dr4eOWO` | Vorschlag | Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen. |
+| Viktor Hahn | Eric – Smooth | elevenlabs / eleven_v3 | `cjVigY5qzO86Huf0OWal` | Vorschlag | Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen. |
 
 **Regel:** Stimmen mit 🔒 werden nie ohne ausdrückliche Zustimmung des Produzenten geändert. Prüfung jeder Zeile: Grundtonhöhe (`scripts/pitch.py`) + Spracherkennung.
 
