@@ -122,12 +122,12 @@
       "demoPitch": 1.05,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "Inworld „Annika“ (deutsche Muttersprachlerin, weiblich, ~205 Hz, 99 % weibliche Tonlage). Ab Folge 4 festgelegt. Vorher: Rhea (F1–2, zu leise/dumpf), Sarah (F3, mehrsprachige Stimme mit fremdem Akzent).",
+      "note": "Ab Folge 5: Katerina (Alibaba qwen3-tts-flash), gewählt vom Produzenten aus 4 Hörproben (13.11.2026). Ohne Regie-Tags. Folge 4: Inworld Annika.",
       "speko": {
-        "provider": "inworld",
-        "model": "inworld-tts-2",
-        "voice": "Annika",
-        "label": "Annika (Inworld, deutsch)"
+        "provider": "alibaba",
+        "model": "qwen3-tts-flash",
+        "voice": "Katerina",
+        "label": "Katerina (Alibaba Qwen3) – ab Folge 5, vom Produzenten per Hörprobe gewählt"
       }
     },
     "look": {
