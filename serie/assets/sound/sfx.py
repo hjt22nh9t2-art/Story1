@@ -363,3 +363,38 @@ def bulb_pop(seed=52):
     x = hp(noise(d, seed), 1500) * np.exp(-t * 30) * 1.2 + np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 25) * 0.3
     x += lp(noise(d, seed + 1), 400) * np.exp(-t * 18) * 0.6
     return reverb(stereo(x.astype(np.float32)), 0.8, 0.35, seed=seed)
+
+
+# ------------------------------------------------------------ ab Teil 5 (Watt, Wrack, Flut)
+def mud_step(seed=0, wet=1.0):
+    """Stiefel im Schlick: dumpfer Tritt + schmatzendes Herausziehen"""
+    r = np.random.default_rng(seed); d = 0.55; n = secs(d); t = np.arange(n) / SR
+    thud = lp(noise(d, seed), 260) * np.exp(-t * 28) * 1.4
+    suck_t = np.clip(t - 0.22 - r.uniform(0, 0.06), 0, None)
+    f = 180 + 900 * np.clip(suck_t * 7, 0, 1)
+    suck = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-suck_t * 30) * (suck_t > 0) * 0.5 * wet
+    squish = bp(noise(d, seed + 1), 400, 2400) * np.exp(-suck_t * 18) * (suck_t > 0) * 0.35 * wet
+    return stereo((thud + suck + squish).astype(np.float32))
+
+
+def splash_step(seed=0):
+    """Rennen durch flaches Wasser"""
+    d = 0.4; n = secs(d); t = np.arange(n) / SR
+    x = bp(noise(d, seed), 500, 7000) * np.exp(-t * 12) * (1 - np.exp(-t * 300)) + lp(noise(d, seed + 3), 200) * np.exp(-t * 25)
+    return reverb(stereo(x.astype(np.float32), 0.5, seed), 0.5, 0.15, seed=seed)
+
+
+def rush(d, seed=60, grow=None):
+    """heranrauschende Flut: breitbandiges Wasserrauschen mit Wellenschüben"""
+    n = secs(d); t = np.arange(n) / SR
+    base = noise(d, seed)
+    body = lp(base, 900) * 1.0 + bp(noise(d, seed + 1), 1500, 6500) * 0.45
+    surge = 0.6 + 0.4 * np.clip(slow_lfo(n, 0.9, seed) + 0.5 * np.sin(2 * np.pi * 0.42 * t), -1, 1)
+    out = body * surge
+    if grow is not None: out = out * grow
+    return stereo(out.astype(np.float32), 0.9, seed)
+
+
+def underwater(x, f=380):
+    """alles dumpf, wie unter Wasser"""
+    return lp(lp(x, f), f * 1.4)

@@ -18,7 +18,7 @@ export const LOG_ENTRIES = [
   ['16. Okt.', 'Wieder 03:33. Nasse Spuren.'],
 ];
 
-function paperBase(g, w, h, seed) {
+export function paperBase(g, w, h, seed) {
   const r = rng(seed);
   const gr = g.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#d9ccad'); gr.addColorStop(1, '#c4b38f');
   g.fillStyle = gr; g.fillRect(0, 0, w, h);

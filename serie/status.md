@@ -7,8 +7,9 @@
 | 2 | Die Spuren | ✅ fertig (`teil_02/teil_02.mp4`) |
 | 3 | Das Funkgerät | ✅ fertig (`teil_03/teil_03.mp4`) |
 | 4 | Das Foto | ✅ fertig (`teil_04/teil_04.mp4`) |
-| 5 | Das Wrack | ⏳ wartet auf „Weiter mit Teil 5“ |
-| 6–10 | – | offen |
+| 5 | Das Wrack | ✅ fertig (`teil_05/teil_05.mp4`) |
+| 6 | Die Laterne | ⏳ wartet auf „Weiter mit Teil 6“ |
+| 7–10 | – | offen |
 
 ## Stimme (für alle Teile beibehalten)
 - **Dienst:** Speko `audio.synthesize`, geroutet zu ElevenLabs
@@ -17,6 +18,13 @@
 - **Stil:** Audio-Tags `[whispers]` (Hook, Logbuch-Satz, Cliffhanger) und `[quietly]` (Rest). Pausen mit „…“
 - **Arbeitsweise:** Den gesamten Erzähltext in EINEM Take erzeugen (gleichbleibende Stimmfarbe). Danach mit `audio.transcribe` (`word_timestamps: true`, `language: de`) die Wortzeiten holen und an Pausen schneiden. Schnittpunkte stehen in `teil_XX/timing.json`.
 - **Pegel:** Stimme ≈ −19 dBFS RMS (gesprochen), Musik/Drone ≈ 18 dB darunter, Master −14 LUFS / −1,5 dBTP
+
+### Ausnahme Teil 5: andere Stimme
+- ElevenLabs lief über Speko nicht mehr (Fehler 402: Speko schaltet ElevenLabs erst nach der ersten Aufladung frei, ab 5 $). Auf Wunsch wurde Teil 5 deshalb mit einer Gratis-Stimme gesprochen:
+- **Speko → Soniox „Adrian“** (`tts-rt-v1`/`tts-rt-v2`, Stil „deep, authoritative“), ohne Audio-Tags, Pausen mit „…“, `intent.language = "de"`, `optimizeFor = "accuracy"`, `constraints.allowedProviders.tts = ["soniox"]`
+- Grundton ≈ 113 Hz („Thomas“ ≈ 100 Hz), im Mix leicht abgedunkelt (−25 % über 6,5 kHz)
+- Ab Teil 6 wieder „Thomas“, sobald der Speko-Workspace einmal aufgeladen ist. Alternativ bleibt „Adrian“ bis Teil 10, damit es einheitlich klingt
+- Schnitt: `teil_05/timing_bau.py` setzt die Pausen neu (Segmente → `timing.json`)
 
 ## Look (fix)
 - Nebel `FogExp2` Farbe `#163a42`, Dichte 0.016–0.026; Hintergrund `#10303a`
@@ -70,7 +78,16 @@
 - Nahaufnahmen von kleinen Objekten: `camera.near` auf 0.005 setzen, sonst wird das Objekt abgeschnitten
 - `sfx.py`: `bulb_hum`, `glass_tone`, `bulb_pop`
 
-## Für Teil 5 verbessern
-- Watt bei Ebbe: Wasser weit zurückgezogen (Meeresspiegel senken), nasser Schlick mit Spiegelungen, Priele
-- Wrack begehbar (größer, mit Innenraum), Logbuch darin mit Jonas’ Handschrift
-- Flut als animierte, schnell steigende Wasserfläche
+## Neu in Teil 5 (wiederverwendbar)
+- `assets/watt.js`: `addWatt(world)` ersetzt das Meer durch Schlick (Rippelmarken-Normal-Map, Priele, `mudHeight`, `groundHeight`) und Flutwasser (`watt.state.level` −2,75 = Ebbe … −1,2 = Flut, `rush` für Flutwellen und Schaumstreifen). Schaumkante über die Schlick-Höhenkarte im Shader
+- `createBootprints(path)`: Stiefelabdrücke im Schlick (`reveal(k)`)
+- `assets/wreck.js`: `createWreckHull()` (parametrischer Holzrumpf 15 × 5,2 m, Löcher per Alpha-Map, Spanten, Muscheln als Instanzen, Bruch an Steuerbord `BREACH`), `createWreckInterior()` (eigene Szene: Schlickboden, Kiste, Logbuch mit Deckel `lidOpen(k)`, Lichtschächte, Tropfen, Wasserstrahlen `jet`, steigendes Wasser `flood`, Taschenlampe `torch`)
+- `makeJonasPage()`: Logbuchseiten in Jonas’ Handschrift (Einträge Tag 1–5, letzter Eintrag „Heute. 03:33 – Die Flut kommt.“)
+- Im Außen-Wrack liegt die Wrack-Mitte bei `SPOTS.wreck`, `rotation.y = −0.85` (der Bruch zeigt zur Insel)
+- Tag-Look (Morgen): Nebel `#2b5459`, Hintergrund `#335c62`, Hemisphäre 2.9, Leuchtfeuer gedimmt 0.3–0.5, Belichtung außen × 1.25
+- Unterwasser: Kamera unter `watt.state.level`, Nebel `#06171a`, Dichte 0.35
+- `sfx.py`: `mud_step`, `splash_step`, `rush`, `underwater`
+- `dbg.mjs`: freie Testkamera (`node dbg.mjs teil_05 out '[["ext",[x,y,z],[x,y,z],fov,t,{}]]'`)
+
+## Für Teil 6 vorbereitet
+- Die Laterne mit der Gestalt steht am Ende von Teil 5 im Nebel über dem Wasser (`lanternPos()` in `teil_05/episode.js`)
