@@ -37,12 +37,12 @@
       "demoPitch": 0.85,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt.",
+      "note": "Ab Folge 5: Reinhard (Inworld, deutsch) – Wechsel mit Zustimmung des Produzenten (13.11.2026), weil ElevenLabs über Speko erst nach einer Aufladung nutzbar ist. Bis Folge 4: Thomas – Authentic & Natural. Ohne Regie-Tags.",
       "speko": {
-        "provider": "elevenlabs",
-        "model": "eleven_v3_conversational",
-        "voice": "5faieqDE3osz75KiOI2M",
-        "label": "Thomas – Authentic & Natural"
+        "provider": "inworld",
+        "model": "inworld-tts-2",
+        "voice": "Reinhard",
+        "label": "Reinhard (Inworld, deutsch)"
       }
     },
     "look": {
@@ -207,12 +207,12 @@
       "demoPitch": 0.75,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme.",
+      "note": "Ab Folge 5: Henrik (Speechify, deutsch) – Wechsel mit Zustimmung des Produzenten (13.11.2026), weil ElevenLabs über Speko erst nach einer Aufladung nutzbar ist. Bis Folge 4: Roman – Friendly & Approachable. Ohne Regie-Tags.",
       "speko": {
-        "provider": "elevenlabs",
-        "model": "eleven_v3_conversational",
-        "voice": "1YST1S3BrkT7E0wcLKQD",
-        "label": "Roman – Friendly & Approachable"
+        "provider": "speechify",
+        "model": "simba-3.5",
+        "voice": "henrik-agent",
+        "label": "Henrik (Speechify, deutsch)"
       }
     },
     "look": {
@@ -300,12 +300,12 @@
       "demoPitch": 1.25,
       "elevenlabsModel": "eleven_v3",
       "locked": true,
-      "note": "ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt.",
+      "note": "Ab Folge 5: Klaus (Microsoft MAI-Voice, deutsch) – Wechsel mit Zustimmung des Produzenten (13.11.2026), weil ElevenLabs über Speko erst nach einer Aufladung nutzbar ist. Bis Folge 4: Liam – Energetic. Ohne Regie-Tags.",
       "speko": {
-        "provider": "elevenlabs",
-        "model": "eleven_v3_conversational",
-        "voice": "TX3LPaxmHKxFdv7VOQHJ",
-        "label": "Liam – Energetic"
+        "provider": "azure",
+        "model": "MAI-Voice-2.1",
+        "voice": "de-DE-Klaus:MAI-Voice-2.1",
+        "label": "Klaus (Microsoft MAI-Voice, deutsch)"
       }
     },
     "look": {

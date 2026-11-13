@@ -2,7 +2,7 @@
   "id": "ep-005",
   "number": 5,
   "title": "Wir bekommen einen neuen Trainer?!",
-  "status": "entwurf",
+  "status": "vertont",
   "createdAt": "2026-11-13T13:43:15.679Z",
   "publishedAt": null,
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
@@ -40,7 +40,11 @@
           "sfx": "tuer",
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l1.mp3",
+            "durationSec": 2.69,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l2",
@@ -51,7 +55,11 @@
           "sfx": null,
           "pauseAfter": 0.15,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l2.mp3",
+            "durationSec": 1.57,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
         }
       ],
       "overlay": "",
@@ -95,7 +103,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l3.mp3",
+            "durationSec": 2.8,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l4",
@@ -106,7 +118,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l4.mp3",
+            "durationSec": 3.47,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
         }
       ],
       "overlay": "",
@@ -160,7 +176,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l6.mp3",
+            "durationSec": 5.38,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
         },
         {
           "id": "l7",
@@ -171,7 +191,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l7.mp3",
+            "durationSec": 3.47,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l8",
@@ -182,7 +206,11 @@
           "sfx": null,
           "pauseAfter": 0.15,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l8.mp3",
+            "durationSec": 2.53,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
         }
       ],
       "overlay": "",
@@ -222,7 +250,11 @@
           "sfx": null,
           "pauseAfter": 0.15,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l9.mp3",
+            "durationSec": 2.66,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         }
       ],
       "overlay": "",
@@ -275,7 +307,11 @@
           "sfx": "whoosh",
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l10.mp3",
+            "durationSec": 5.33,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
         },
         {
           "id": "l11",
@@ -286,7 +322,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l11.mp3",
+            "durationSec": 3.74,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l12",
@@ -297,7 +337,11 @@
           "sfx": "stempel",
           "pauseAfter": 0.2,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l12.mp3",
+            "durationSec": 2.51,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
         }
       ],
       "overlay": "",
@@ -343,18 +387,26 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l13.mp3",
+            "durationSec": 2.64,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l14",
           "speaker": "emre-yildiz",
-          "text": "Echt? Ich box seit dem Sandsack-Unfall gegen die Luft!",
+          "text": "Echt jetzt? Ich box seit dem Sandsack-Unfall gegen die Luft.",
           "emotion": "ueberrascht",
           "action": "schlagen",
           "sfx": "whoosh",
           "pauseAfter": 0.15,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l14.mp3",
+            "durationSec": 3.81,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
         }
       ],
       "overlay": "DIE REALITÄT",
@@ -398,7 +450,11 @@
           "sfx": "schlag",
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l15.mp3",
+            "durationSec": 3.58,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
         }
       ],
       "overlay": "",
@@ -450,7 +506,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l17.mp3",
+            "durationSec": 3.97,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l18",
@@ -461,7 +521,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l18.mp3",
+            "durationSec": 3.71,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
         },
         {
           "id": "l19",
@@ -472,7 +536,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0.1,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l19.mp3",
+            "durationSec": 2.43,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
         },
         {
           "id": "l20",
@@ -483,7 +551,11 @@
           "sfx": "trommelwirbel",
           "pauseAfter": 0.25,
           "delayBefore": 0.5,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l20.mp3",
+            "durationSec": 0.5,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         }
       ],
       "overlay": "",
@@ -527,7 +599,11 @@
           "sfx": "publikum",
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l21.mp3",
+            "durationSec": 3.47,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l22",
@@ -538,7 +614,11 @@
           "sfx": "kasse",
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l22.mp3",
+            "durationSec": 5.28,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
         }
       ],
       "overlay": "",
@@ -591,7 +671,11 @@
           "sfx": null,
           "pauseAfter": 0.1,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l24.mp3",
+            "durationSec": 4.49,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
         },
         {
           "id": "l25",
@@ -602,7 +686,11 @@
           "sfx": null,
           "pauseAfter": 0.3,
           "delayBefore": 0,
-          "audio": null
+          "audio": {
+            "file": "episodes/ep-005/voice/l25.mp3",
+            "durationSec": 2.53,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
         }
       ],
       "overlay": "",

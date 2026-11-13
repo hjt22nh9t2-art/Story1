@@ -19,8 +19,9 @@ Rückschläge. Nicht kindlich. Nicht jede Folge braucht einen Kampf.
 1. Figuren sehen immer gleich aus (parametrisches Rig, `data/characters.json` → `look`). Aussehen ist nach
    dem ersten Auftritt gesperrt; Änderungen nur mit Story-Grund (wird protokolliert).
 2. Stimmen sind fest (siehe `CHARACTERS_AND_VOICES.md`). **Keine Stimmänderung ohne ausdrückliche
-   Zustimmung des Produzenten.** Paule ist männlich (ElevenLabs „Roman“). Rosa ist ab Folge 4 Inworld
-   „Annika“ (deutsch, eindeutig weiblich).
+   Zustimmung des Produzenten.** **Ab Folge 5 (mit Zustimmung
+   des Produzenten neu besetzt):** Günther = Inworld „Reinhard“, Paule = Speechify „Henrik“ (männlich, tief),
+   Emre = Microsoft „Klaus“ (männlich), Rosa = Alibaba „Katerina“ (eindeutig weiblich, per Hörprobe gewählt).
 3. Geld, Mitglieder, Ausrüstung, Kämpfe, Arena-Plätze ändern sich **nur** über Zustandsänderungen einer
    Folge. Zahlen im Dialog müssen exakt zum gespeicherten Stand passen.
 4. Keine erfundenen Einnahmen/Ausgaben, Ereignisse oder Performance-Zahlen. Fehlende Informationen
@@ -41,6 +42,14 @@ Zuschauer-Kommentare mit Sponsoring-/Spendenangeboten werden als **unbestätigte
 (Kommentar-Karte mit Hinweis „Noch nicht bestätigt“) und in `series_state.json → offeneAngebote` geführt.
 Erst eine echte Bestätigung durch den Produzenten ändert ihren Status. Story-Bedingungen (z. B. „erst ein Sieg“)
 sind fiktiv und werden nie einem realen Kommentator zugeschrieben.
+
+## Wiederkehrende Community-Mitglieder (echte TikTok-Nutzer, Namen exakt so schreiben)
+| Nutzername | Rolle in der Serie | Stand | seit |
+|---|---|---|---|
+| **Örlando** | möchte Trainer werden („seit sieben Jahren Kampferfahrung“) | NICHT eingestellt – Abstimmung „Probetraining JA/NEIN“ läuft (d-005) | Folge 5 |
+| **Vexo_on_MTB 🌲🚲** | möglicher Ausrüstungssponsor: Sandsäcke, guter Boxring, Pratzen, 10 Paar Handschuhe, Logo-Design; schrieb „Bestätigt“ | Angebot o-003 offen, nichts geliefert | Folge 5 |
+| **Faro_wpt** | Unterstützer: 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe, Renovierung; später angepasst (weitere Unterstützung, Zahlungen pro Kampf) | Angebot o-001 offen, Details ungeklärt | Folge 4 (anonym), Folge 5 (mit Namen) |
+Keine erfundenen Profilbilder/Identitäten: In der Serie erscheinen sie nur als Kommentar-Karten (grauer Platzhalter-Avatar).
 
 ## Erzählzeit vs. echte Zeit
 Story-Tage (Countdown zum Kampf) und echte Abstimmungsfristen laufen getrennt. Der Kampfabend wird erst erzählt,

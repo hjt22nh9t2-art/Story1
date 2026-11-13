@@ -120,7 +120,7 @@ export const episode = {
       ],
       lines: [
         line(L('l13', G, 'Emre! Vielleicht kriegst du einen echten Trainer!', { emotion: 'froh', action: 'zeigen', tts: '[excited] Emre! Vielleicht kriegst du einen echten Trainer!' })),
-        line(L('l14', E, 'Echt? Ich box seit dem Sandsack-Unfall gegen die Luft!', { emotion: 'ueberrascht', action: 'schlagen', sfx: 'whoosh', pauseAfter: 0.15, tts: 'Echt? Ich box seit dem Sandsack-Unfall gegen die Luft!' })),
+        line(L('l14', E, 'Echt jetzt? Ich box seit dem Sandsack-Unfall gegen die Luft.', { emotion: 'ueberrascht', action: 'schlagen', sfx: 'whoosh', pauseAfter: 0.15, tts: 'Echt jetzt? Ich box seit dem Sandsack-Unfall gegen die Luft.' })),
       ],
     },
     {
