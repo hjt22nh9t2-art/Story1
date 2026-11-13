@@ -2,7 +2,7 @@
   "id": "ep-005",
   "number": 5,
   "title": "Wir bekommen einen neuen Trainer?!",
-  "status": "vertont",
+  "status": "gerendert",
   "createdAt": "2026-11-13T13:43:15.679Z",
   "publishedAt": null,
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
@@ -828,5 +828,10 @@
     "seatsTotal": 100,
     "seatsGoal": 50
   },
-  "video": null
+  "video": {
+    "file": "episodes/ep-005/boxclub_folge_005.mp4",
+    "poster": "episodes/ep-005/poster.jpg",
+    "renderedAt": "2026-11-13T18:17:44.939Z",
+    "durationSec": 80.2
+  }
 }

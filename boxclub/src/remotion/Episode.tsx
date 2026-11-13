@@ -107,7 +107,7 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
 
   // Arena-Plätze: von → bis über die Szene (ab 0,6 s, weich)
   const seats = ts.scene.seats;
-  const seatsFilled = seats ? interpolate(localSec, [0.6, Math.max(1.2, (ts.end - ts.start) * 0.85)], [seats.from, seats.to], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad) }) : undefined;
+  const seatsFilled = seats ? interpolate(localSec, [0.4, Math.min(2.2, Math.max(1.2, (ts.end - ts.start) * 0.85))], [seats.from, seats.to], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad) }) : undefined;
   const ov = ts.scene.setOverrides ?? {};
   const setClub = {
     ...props.club,
