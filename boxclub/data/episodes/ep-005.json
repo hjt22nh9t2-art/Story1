@@ -2,9 +2,9 @@
   "id": "ep-005",
   "number": 5,
   "title": "Wir bekommen einen neuen Trainer?!",
-  "status": "gerendert",
+  "status": "veroeffentlicht",
   "createdAt": "2026-11-13T13:43:15.679Z",
-  "publishedAt": null,
+  "publishedAt": "2026-11-13T18:38:06.744Z",
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
   "userIdeas": "Örlando will Trainer werden, Vexo_on_MTB bietet Ausrüstung + Logo, Faro_wpt hat sein Angebot angepasst. Emre vorher/nachher. Cliffhanger „Bald!“. Abstimmung: Örlando zum Probetraining?",
   "resolvesDecisionId": null,
@@ -831,7 +831,7 @@
   "video": {
     "file": "episodes/ep-005/boxclub_folge_005.mp4",
     "poster": "episodes/ep-005/poster.jpg",
-    "renderedAt": "2026-11-13T18:17:44.939Z",
+    "renderedAt": "2026-11-13T18:37:40.511Z",
     "durationSec": 80.2
   }
 }

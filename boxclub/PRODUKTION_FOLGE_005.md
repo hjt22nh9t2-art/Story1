@@ -1,6 +1,9 @@
 # Folge 5 – „Wir bekommen einen neuen Trainer?!“ · Produktionsstatus
 
-**Status: Drehbuch + Bild fertig, VERTONUNG FEHLT – noch kein fertiges Video.**
+**Status: FERTIG produziert und veröffentlicht (13.11.2026)** – Video: `data/media/episodes/ep-005/boxclub_folge_005.mp4` (80,2 s).
+Stimmen neu besetzt mit Zustimmung des Produzenten (ElevenLabs über Speko erst nach eigener Aufladung): Günther Reinhard, Paule Henrik, Emre Klaus, Rosa Katerina.
+
+_Historie:_
 Grund: Die Sprachausgabe (Speko-Connector) war in der Sitzung vom 13.11.2026 nicht erreichbar (Verbindungsfehler 503).
 Ohne sie können die festen Stimmen (Günther/Paule/Emre ElevenLabs, Rosa Inworld „Annika“) nicht erzeugt werden.
 Ersatzstimmen werden bewusst NICHT verwendet (Regel: keine Stimmänderung ohne Zustimmung).

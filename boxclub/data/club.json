@@ -3,7 +3,7 @@
   "city": "Kranstadt",
   "address": "Depotstraße 7",
   "founded": "Neugründung 2026 – Tradition seit 1961",
-  "money": 300,
+  "money": 392,
   "monthlyCosts": 380,
   "monthlyIncome": 30,
   "members": 2,
@@ -114,6 +114,10 @@
         {
           "episode": 4,
           "text": "Druck wächst: Der (Story-)Sponsor will erst einen Sieg sehen. Rosa: „Druck macht Diamanten.“"
+        },
+        {
+          "episode": 5,
+          "text": "Boxt seit dem Sandsack-Unfall gegen die Luft. Träumt von richtigem Training. Fragt: „Wann soll ich das alles lernen?“ – Günther: „Bald!“"
         }
       ]
     },
@@ -134,6 +138,10 @@
         {
           "episode": 4,
           "text": "Noch 4 Tage. Arena 35/100. Community-Ziel: 50 Follower bis zum Kampf."
+        },
+        {
+          "episode": 5,
+          "text": "Kein neues Datum. Story-Countdown bleibt bei 4 Tagen, bis die Ausrüstungs-Abstimmung abgeschlossen ist. Arena 43/100, Ziel 50."
         }
       ]
     },
@@ -158,6 +166,22 @@
         {
           "episode": 4,
           "text": "Zwei Angebote aus den Kommentaren (Ausrüstung + Renovierung; 10.000 € + 1.000 €/Sieg). Beide unbestätigt. Story-Bedingung: erst ein Sieg von Emre."
+        },
+        {
+          "episode": 5,
+          "text": "Drei offene Angebote: Faro_wpt (o-001, angepasst), unbekannter Zuschauer 10.000 € + 1.000 €/Sieg (o-002), Vexo_on_MTB 🌲🚲 (o-003, „Bestätigt“ geschrieben, nicht geliefert). Paule führt die Liste „noch nicht da“."
+        }
+      ]
+    },
+    {
+      "id": "trainer-oerlando",
+      "title": "Wir bekommen einen neuen Trainer?!",
+      "status": "offen",
+      "startedEpisode": 5,
+      "updates": [
+        {
+          "episode": 5,
+          "text": "Örlando (TikTok-Kommentar unter Folge 4) möchte Trainer werden, 7 Jahre Kampferfahrung. NICHT eingestellt. Community-Abstimmung: Probetraining JA/NEIN."
         }
       ]
     }
@@ -278,6 +302,30 @@
       "votes": {},
       "note": "",
       "resolvedInEpisode": null
+    },
+    {
+      "id": "d-005",
+      "episode": 5,
+      "question": "Sollen wir Örlando zum Probetraining einladen?",
+      "options": [
+        {
+          "key": "A",
+          "label": "JA – Probetraining!",
+          "consequenceHint": "Örlando kommt zum Probetraining in die Halle.",
+          "plan": "trainer:probetraining"
+        },
+        {
+          "key": "B",
+          "label": "NEIN – noch nicht",
+          "consequenceHint": "Rosa bleibt erst mal allein an den Pratzen.",
+          "plan": "trainer:kein_probetraining"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
+      "votes": {},
+      "note": "",
+      "resolvedInEpisode": null
     }
   ],
   "chapter": "Akt 1 – Der erste Kampf",
@@ -297,25 +345,29 @@
     {
       "episode": 4,
       "text": "Folge 4 „Unser erster Sponsor?!“: Unter Folge 3 tauchen zwei Angebote in den Kommentaren auf: Ein Zuschauer bietet 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe und die Renovierung an, ein anderer stellt 10.000 € plus 1.000 € pro Sieg in Aussicht. Günther träumt schon vom renovierten Club, Paule bleibt skeptisch: Bestätigt ist nichts. Dann kommt (in der Geschichte) eine Nachricht: Der Sponsor hat eine Bedingung – Emre muss erst seinen ersten Kampf gewinnen. Günther ruft die Community auf: Arena 35/100, Ziel 50 Follower bis zum Kampf, jedes Like bringt symbolisch 2 € in die Kasse."
+    },
+    {
+      "episode": 5,
+      "text": "Folge 5 „Wir bekommen einen neuen Trainer?!“: Unter Folge 4 meldet sich Örlando: Er hat sieben Jahre Kampferfahrung und würde gern Trainer werden. Günther ist sofort Feuer und Flamme, Paule will erst sehen, was er draufhat. Dann bietet Vexo_on_MTB Sandsäcke, einen Boxring, Pratzen, zehn Paar Handschuhe und ein eigenes Logo an – und Faro_wpt hat sein Angebot sogar noch erweitert. Paule notiert alles unter „noch nicht da“. Emre boxt seit dem Sandsack-Unfall gegen die Luft und träumt vom richtigen Training. Günther: „Wenn das klappt, wird aus Rostfaust ein richtiger Boxclub!“ – Emre: „Und wann soll ich das alles lernen?“ – „Bald!“ In der Arena sind jetzt 43 von 100 Plätzen besetzt, die Kasse steht symbolisch bei 392 €. Die Community entscheidet: Soll Örlando zum Probetraining kommen?"
     }
   ],
-  "lastEpisode": 4,
-  "nextEpisodeNote": "Der (Story-)Sponsor will erst einen Sieg sehen – und Emre hat nur noch vier Tage. Schafft die Community 50 Follower bis zum Kampf?",
+  "lastEpisode": 5,
+  "nextEpisodeNote": "Wann soll Emre das alles lernen? „Bald!“ – Der erste Kampf rückt näher, und die Community entscheidet, ob Örlando zum Probetraining kommt.",
   "community": {
-    "followers": 35,
-    "likes": null,
+    "followers": 43,
+    "likes": 46,
     "likeEuroRate": 2,
     "likesBooked": 0
   },
   "offers": [
     {
       "id": "o-001",
-      "source": "Kommentar unter Folge 3 (Zuschauer)",
+      "source": "Kommentar von Faro_wpt (unter Folge 3)",
       "content": "5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs",
       "status": "offen",
       "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
       "episode": 4,
-      "note": "Nicht bestätigt. Keine Ausrüstung eingetroffen."
+      "note": "Nicht bestätigt. Faro_wpt hat die Bedingungen in den Kommentaren angepasst (weitere Unterstützung, Zahlungen pro Kampf erwähnt) – Details offen, keine Vereinbarung, nichts eingegangen."
     },
     {
       "id": "o-002",
@@ -325,6 +377,15 @@
       "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
       "episode": 4,
       "note": "Nicht bestätigt. Kein Geld eingegangen."
+    },
+    {
+      "id": "o-003",
+      "source": "Kommentar von Vexo_on_MTB 🌲🚲 (unter Folge 4)",
+      "content": "Sandsäcke, ein guter Boxring, Pratzen, 10 Paar Boxhandschuhe, eigenes Logo-Design für den Boxclub",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 5,
+      "note": "Vexo_on_MTB schrieb „Bestätigt“. Übergabe/Lieferung NICHT bestätigt – nichts davon ist in der Halle."
     }
   ],
   "metrics": [
@@ -355,6 +416,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 4: 35 Follower gesamt (+4 seit Folge 3). Likes laut Einschätzung des Produzenten > 50 – keine genaue Zahl, daher NICHT als 2 €/Like gebucht. Umfrage Zwischenstand: Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % (59 Stimmen)."
+    },
+    {
+      "episode": 4,
+      "reportedAt": "2026-11-13T18:38:06.740Z",
+      "views": 842,
+      "likes": 46,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 8,
+      "followersTotal": 43,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ],
   "upcomingEvent": {
@@ -363,7 +438,7 @@
     "kind": "Schaukampf",
     "boxerId": "emre-yildiz",
     "seats": 100,
-    "seatsFilled": 35,
+    "seatsFilled": 43,
     "daysLeft": 4,
     "cost": 200,
     "announcedEpisode": 2,

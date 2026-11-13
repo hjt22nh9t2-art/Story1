@@ -1,14 +1,14 @@
 # CHARACTERS AND VOICES – Boxclub Rostfaust
 
-Stand nach Folge 4 (2026-11-12). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
+Stand nach Folge 5 (2026-11-13). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
 
 ## Stimmen-Übersicht (verbindlich)
 | Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |
 |---|---|---|---|---|---|
-| Günther Wallach | Thomas – Authentic & Natural | elevenlabs / eleven_v3_conversational | `5faieqDE3osz75KiOI2M` | 🔒 fest | ElevenLabs „Thomas – Authentic & Natural“ (deutsch, männlich). Seit Folge 1 festgelegt. |
-| Rosa Brandt | Annika (Inworld, deutsch) | inworld / inworld-tts-2 | `Annika` | 🔒 fest | Inworld „Annika“ (deutsche Muttersprachlerin, weiblich, ~205 Hz, 99 % weibliche Tonlage). Ab Folge 4 festgelegt. Vorher: Rhea (F1–2, zu leise/dumpf), Sarah (F3, mehrsprachige Stimme mit fremdem Akzent). |
-| Paul Kruse | Roman – Friendly & Approachable | elevenlabs / eleven_v3_conversational | `1YST1S3BrkT7E0wcLKQD` | 🔒 fest | ElevenLabs „Roman – Friendly & Approachable“ (deutsch, männlich, ~114 Hz). Ab Folge 2 festgelegt – ersetzt die in Folge 1 fälschlich weibliche Stimme. |
-| Emre Yıldız | Liam – Energetic | elevenlabs / eleven_v3_conversational | `TX3LPaxmHKxFdv7VOQHJ` | 🔒 fest | ElevenLabs „Liam – Energetic“ (männlich, jung, ~120 Hz). Ab Folge 2 festgelegt. |
+| Günther Wallach | Reinhard (Inworld, deutsch) | inworld / inworld-tts-2 | `Reinhard` | 🔒 fest | Ab Folge 5: Reinhard (Inworld, deutsch) – Wechsel mit Zustimmung des Produzenten (13.11.2026), weil ElevenLabs über Speko erst nach einer Aufladung nutzbar ist. Bis Folge 4: Thomas – Authentic & Natural. Ohne Regie-Tags. |
+| Rosa Brandt | Katerina (Alibaba Qwen3) – ab Folge 5, vom Produzenten per Hörprobe gewählt | alibaba / qwen3-tts-flash | `Katerina` | 🔒 fest | Ab Folge 5: Katerina (Alibaba qwen3-tts-flash), gewählt vom Produzenten aus 4 Hörproben (13.11.2026). Ohne Regie-Tags. Folge 4: Inworld Annika. |
+| Paul Kruse | Henrik (Speechify, deutsch) | speechify / simba-3.5 | `henrik-agent` | 🔒 fest | Ab Folge 5: Henrik (Speechify, deutsch) – Wechsel mit Zustimmung des Produzenten (13.11.2026), weil ElevenLabs über Speko erst nach einer Aufladung nutzbar ist. Bis Folge 4: Roman – Friendly & Approachable. Ohne Regie-Tags. |
+| Emre Yıldız | Klaus (Microsoft MAI-Voice, deutsch) | azure / MAI-Voice-2.1 | `de-DE-Klaus:MAI-Voice-2.1` | 🔒 fest | Ab Folge 5: Klaus (Microsoft MAI-Voice, deutsch) – Wechsel mit Zustimmung des Produzenten (13.11.2026), weil ElevenLabs über Speko erst nach einer Aufladung nutzbar ist. Bis Folge 4: Liam – Energetic. Ohne Regie-Tags. |
 | Bruno Kessler | Brian – Deep | elevenlabs / eleven_v3 | `nPczCjzI2devNBz1zQrb` | Vorschlag | Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen. |
 | Nico Falk | Callum – Husky | elevenlabs / eleven_v3 | `N2lVS1w4EtoT3dr4eOWO` | Vorschlag | Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen. |
 | Viktor Hahn | Eric – Smooth | elevenlabs / eleven_v3 | `cjVigY5qzO86Huf0OWal` | Vorschlag | Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen. |
