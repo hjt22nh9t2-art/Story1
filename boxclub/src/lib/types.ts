@@ -291,7 +291,7 @@ export const SceneSchema = z.object({
   /** Bildwirkung der Szene, z. B. Traumsequenz */
   fx: z.enum(['traum']).nullable().default(null),
   /** Vereinskassen-Anzeige (symbolisch): Betrag + Euro pro Like – keine erfundenen Like-Zahlen */
-  kasse: z.object({ amount: z.number(), perLike: z.number().default(2) }).nullable().default(null),
+  kasse: z.object({ amount: z.number(), perLike: z.number().default(2), from: z.number().nullable().default(null), likeGoal: z.number().nullable().default(null) }).nullable().default(null),
   /** Kommentar-Karte (anonymisiert), z. B. Sponsorangebot aus den Kommentaren */
   comment: z.object({ author: z.string().default('Ein Zuschauer'), text: z.string(), tag: z.string().default('KOMMENTAR – NOCH NICHT BESTÄTIGT') }).nullable().default(null),
   /** Szenen-Requisiten, z. B. ein Sandsack, der abreißt */

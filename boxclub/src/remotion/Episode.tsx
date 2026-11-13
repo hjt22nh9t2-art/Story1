@@ -179,7 +179,7 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
       <AbsoluteFill style={{ background: '#fff', opacity: interpolate(f, [0, 5], [ts.index === 0 ? 0 : 0.35, 0], { extrapolateRight: 'clamp' }) }} />
       {ts.scene.overlay && <OverlayStamp text={ts.scene.overlay} f={f - (ts.index === 0 ? 84 : 12)} />}
       {seats && seats.hud && seatsFilled !== undefined && <SeatHud filled={seatsFilled} total={seats.total} goal={seats.goal ?? null} f={f} />}
-      {ts.scene.kasse && <KasseHud amount={ts.scene.kasse.amount} perLike={ts.scene.kasse.perLike} f={f} top={seats?.hud ? 760 : 470} />}
+      {ts.scene.kasse && <KasseHud amount={ts.scene.kasse.amount} from={ts.scene.kasse.from ?? null} likeGoal={ts.scene.kasse.likeGoal ?? null} perLike={ts.scene.kasse.perLike} f={f} top={seats?.hud ? 760 : 470} />}
       {ts.scene.comment && <CommentCard c={ts.scene.comment} f={f} />}
       {dream && <DreamFx f={f} />}
     </AbsoluteFill>
@@ -276,15 +276,19 @@ const SeatHud: React.FC<{ filled: number; total: number; goal?: number | null; f
 };
 
 /** Vereinskasse (symbolisch) – zeigt nur den gespeicherten Kassenstand + die Like-Regel */
-const KasseHud: React.FC<{ amount: number; perLike: number; f: number; top: number }> = ({ amount, perLike, f, top }) => {
+const KasseHud: React.FC<{ amount: number; from?: number | null; likeGoal?: number | null; perLike: number; f: number; top: number }> = ({ amount, from = null, likeGoal = null, perLike, f, top }) => {
   const o = interpolate(f, [10, 18], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  // Hochzählen nur zwischen zwei gespeicherten (echten) Ständen
+  const shown = from === null ? amount : Math.round(interpolate(f, [24, 66], [from, amount], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.quad) }));
+  const plus = from !== null && f > 66 ? amount - from : 0;
   return (
     <div style={{ position: 'absolute', top, left: 90, right: 170, opacity: o, fontFamily: 'Montserrat, sans-serif', color: '#1a1410' }}>
       <div style={{ background: '#f4ead2', border: '5px solid #8c1d2c', borderRadius: 22, padding: '14px 24px', boxShadow: '0 10px 0 rgba(0,0,0,0.35)', display: 'flex', alignItems: 'center', gap: 20, position: 'relative', overflow: 'visible' }}>
         <div style={{ fontSize: 70 }}>💰</div>
         <div style={{ flex: 1, paddingRight: 70 }}>
-          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#8c1d2c', letterSpacing: 1 }}>VEREINSKASSE: {amount} €</div>
+          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#8c1d2c', letterSpacing: 1 }}>VEREINSKASSE: {shown} €{plus > 0 && <span style={{ color: '#2f7a46', fontSize: 34 }}> (+{plus} €)</span>}</div>
           <div style={{ fontWeight: 900, fontSize: 32 }}>❤️ 1 Like = +{perLike} € (symbolisch)</div>
+          {likeGoal !== null && <div style={{ fontWeight: 900, fontSize: 30, color: '#2f7a46' }}>🎯 Ziel: {likeGoal} Likes = +{likeGoal * perLike} €</div>}
         </div>
         {/* fallende Münzen */}
         {Array.from({ length: 6 }).map((_, i) => {
@@ -434,7 +438,9 @@ const EndCard: React.FC<{ ep: Episode }> = ({ ep }) => {
             </div>
           );
         })}
-        <div style={{ marginTop: 30, fontWeight: 800, fontSize: 40, color: '#f4ead2' }}>Schreib {ep.decision.options.map((o) => o.key).join(', ').replace(/, ([^,]*)$/, ' oder $1')} in die Kommentare 👇</div>
+        {(ep.endCard?.lines?.length ?? 0) > 0
+          ? ep.endCard!.lines.map((t, i) => <div key={i} style={{ marginTop: i === 0 ? 30 : 10, fontWeight: 800, fontSize: i === 0 ? 40 : 34, color: '#f4ead2' }}>{t}{i === 0 ? ' 👇' : ''}</div>)
+          : <div style={{ marginTop: 30, fontWeight: 800, fontSize: 40, color: '#f4ead2' }}>Schreib {ep.decision.options.map((o) => o.key).join(', ').replace(/, ([^,]*)$/, ' oder $1')} in die Kommentare 👇</div>}
         <div style={{ marginTop: 18, fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#ffd23f', letterSpacing: 3 }}>FORTSETZUNG FOLGT – FOLGE {ep.number + 1}</div>
       </div>
     </AbsoluteFill>

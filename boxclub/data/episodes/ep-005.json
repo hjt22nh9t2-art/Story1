@@ -1,0 +1,744 @@
+{
+  "id": "ep-005",
+  "number": 5,
+  "title": "Wir bekommen einen neuen Trainer?!",
+  "status": "entwurf",
+  "createdAt": "2026-11-13T13:43:15.679Z",
+  "publishedAt": null,
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Örlando will Trainer werden, Vexo_on_MTB bietet Ausrüstung + Logo, Faro_wpt hat sein Angebot angepasst. Emre vorher/nachher. Cliffhanger „Bald!“. Abstimmung: Örlando zum Probetraining?",
+  "resolvesDecisionId": null,
+  "hook": "Günther stürmt in die Halle: „LEUTE! Wir bekommen vielleicht einen neuen Trainer!“ – Paule: „Was hast du jetzt schon wieder angestellt?“",
+  "summary": "Unter Folge 4 meldet sich Örlando: Er hat sieben Jahre Kampferfahrung und würde gern Trainer werden. Günther ist sofort Feuer und Flamme, Paule will erst sehen, was er draufhat. Dann bietet Vexo_on_MTB Sandsäcke, einen Boxring, Pratzen, zehn Paar Handschuhe und ein eigenes Logo an – und Faro_wpt hat sein Angebot sogar noch erweitert. Paule notiert alles unter „noch nicht da“. Emre boxt seit dem Sandsack-Unfall gegen die Luft und träumt vom richtigen Training. Günther: „Wenn das klappt, wird aus Rostfaust ein richtiger Boxclub!“ – Emre: „Und wann soll ich das alles lernen?“ – „Bald!“ In der Arena sind jetzt 43 von 100 Plätzen besetzt, die Kasse steht symbolisch bei 392 €. Die Community entscheidet: Soll Örlando zum Probetraining kommen?",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "auftritt"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "LEUTE! Wir bekommen vielleicht einen neuen Trainer!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": "tuer",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l2",
+          "speaker": "paule-kruse",
+          "text": "Was hast du jetzt schon wieder angestellt?",
+          "emotion": "neutral",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Hook: Günther stürmt mit dem Handy herein, Paule mit Besen.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 0
+      }
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "halle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l3",
+          "speaker": "guenther-wallach",
+          "text": "Leute! Örlando will unser neuer Trainer werden!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l4",
+          "speaker": "paule-kruse",
+          "text": "Sieben Jahre Kampferfahrung? Na, dann wollen wir mal sehen, was er draufhat.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Örlandos Kommentar springt ins Bild. Günther übertreibt sofort.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Örlando",
+        "text": "Bitte, ich würde gerne euer Trainer werden. Ich habe seit sieben Jahren Kampferfahrung.",
+        "tag": "KOMMENTAR – NOCH NICHT EINGESTELLT"
+      },
+      "props": [],
+      "setOverrides": {
+        "sandbags": 0
+      }
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l6",
+          "speaker": "rosa-brandt",
+          "text": "Moment. Vexo on MTB: Sandsäcke, ein Boxring, Pratzen, zehn Paar Handschuhe – und ein Logo!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l7",
+          "speaker": "guenther-wallach",
+          "text": "Warte mal! Vexo will uns einen ganzen Boxring spendieren?!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l8",
+          "speaker": "paule-kruse",
+          "text": "Erst mal abwarten, bis das Zeug wirklich hier steht.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Rosa hält das Handy hoch: Vexo_on_MTB. Paule bleibt realistisch.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Vexo_on_MTB 🌲🚲",
+        "text": "Sandsäcke, ein guter Boxring, Pratzen, 10 Paar Boxhandschuhe + ein eigenes Logo für euch. „Bestätigt“",
+        "tag": "ANGEBOT – NOCH NICHT GELIEFERT"
+      },
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s4",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "schwenk",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l9",
+          "speaker": "guenther-wallach",
+          "text": "Ein richtiger Ring … unser eigenes Logo …",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "gefuehl",
+      "direction": "TRAUM (Günthers Vorstellung): neuer Ring, neue Sandsäcke, frische Halle. Nichts davon ist geliefert.",
+      "seats": null,
+      "fx": "traum",
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 4,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      }
+    },
+    {
+      "id": "s5",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l10",
+          "speaker": "rosa-brandt",
+          "text": "Leute, Faro_wpt hat auch noch ein Angebot – jetzt mit Zahlungen pro Kampf!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": "whoosh",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l11",
+          "speaker": "guenther-wallach",
+          "text": "Was ist denn hier los? Erst ein Trainer, jetzt die ganze Ausrüstung!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l12",
+          "speaker": "paule-kruse",
+          "text": "Ich schreib’s auf. Unter: noch nicht da.",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": "stempel",
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Zurück im Büro: Rosa entdeckt das angepasste Angebot von Faro_wpt. Karte = Zusammenfassung, kein Wortlaut.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Faro_wpt",
+        "text": "5 Sandsäcke · 3 Pratzen · 4 Paar Handschuhe · Renovierung – jetzt angepasst: + Zahlungen pro Kampf",
+        "tag": "ZUSAMMENFASSUNG – NOCH NICHT GEKLÄRT"
+      },
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s6",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l13",
+          "speaker": "guenther-wallach",
+          "text": "Emre! Vielleicht kriegst du einen echten Trainer!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l14",
+          "speaker": "emre-yildiz",
+          "text": "Echt? Ich box seit dem Sandsack-Unfall gegen die Luft!",
+          "emotion": "ueberrascht",
+          "action": "schlagen",
+          "sfx": "whoosh",
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "DIE REALITÄT",
+      "music": "training",
+      "direction": "Emre boxt gegen die Luft – am leeren Haken, seit der Sandsack in Folge 3 abgerissen ist.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 0
+      }
+    },
+    {
+      "id": "s7",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "dolly",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "pratzen"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l15",
+          "speaker": "rosa-brandt",
+          "text": "Kinn runter, Hände hoch! Eins, zwei, Haken!",
+          "emotion": "entschlossen",
+          "action": "pratzen",
+          "sfx": "schlag",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "training",
+      "direction": "Vorstellung (Traum): Emre im neuen Ring an Rosas Pratzen, echte Kombinationen.",
+      "seats": null,
+      "fx": "traum",
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      }
+    },
+    {
+      "id": "s8",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l17",
+          "speaker": "guenther-wallach",
+          "text": "Wenn das alles klappt, wird aus Rostfaust endlich ein richtiger Boxclub!",
+          "emotion": "stolz",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l18",
+          "speaker": "paule-kruse",
+          "text": "Dann brauchen wir nur noch einen Trainer, der Emre fit für seinen ersten Kampf macht.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l19",
+          "speaker": "emre-yildiz",
+          "text": "Moment mal … und wann soll ich das alles lernen?",
+          "emotion": "verlegen",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0.1,
+          "audio": null
+        },
+        {
+          "id": "l20",
+          "speaker": "guenther-wallach",
+          "text": "Bald!",
+          "emotion": "froh",
+          "action": "nicken",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.25,
+          "delayBefore": 0.5,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Zurück in der echten Halle. Günthers großer Satz – Emres Frage – Günthers Grinsen.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 0
+      }
+    },
+    {
+      "id": "s9",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l21",
+          "speaker": "guenther-wallach",
+          "text": "Dreiundvierzig von hundert Plätzen – nur noch sieben bis fünfzig!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": "publikum",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l22",
+          "speaker": "paule-kruse",
+          "text": "Und eure sechsundvierzig Likes: zweiundneunzig Euro. Symbolisch, Günni. Nächstes Ziel: hundert!",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": "kasse",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Arena: 35 → 43 von 100 Plätzen (Ziel 50). Kasse zählt von 300 auf 392 € (46 echte Likes × 2 €, symbolisch). Like-Ziel 100.",
+      "seats": {
+        "from": 35,
+        "to": 43,
+        "total": 100,
+        "hud": true,
+        "goal": 50
+      },
+      "fx": null,
+      "kasse": {
+        "amount": 392,
+        "perLike": 2,
+        "from": 300,
+        "likeGoal": 100
+      },
+      "comment": null,
+      "props": [],
+      "setOverrides": {}
+    },
+    {
+      "id": "s10",
+      "beat": "entscheidung",
+      "location": "halle",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l24",
+          "speaker": "guenther-wallach",
+          "text": "Sollen wir Örlando zum Probetraining einladen? Schreibt JA oder NEIN!",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": null
+        },
+        {
+          "id": "l25",
+          "speaker": "rosa-brandt",
+          "text": "Und falls ja, Örlando: Bring Handschuhe mit.",
+          "emotion": "entschlossen",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.3,
+          "delayBefore": 0,
+          "audio": null
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Die eigentliche Frage an die Community. Örlando erneut als Karte, damit klar ist, um wen es geht.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Örlando",
+        "text": "Bitte, ich würde gerne euer Trainer werden. Ich habe seit sieben Jahren Kampferfahrung.",
+        "tag": "IHR ENTSCHEIDET: PROBETRAINING?"
+      },
+      "props": [],
+      "setOverrides": {
+        "sandbags": 0
+      }
+    }
+  ],
+  "decision": {
+    "question": "Sollen wir Örlando zum Probetraining einladen?",
+    "options": [
+      {
+        "key": "A",
+        "label": "JA – Probetraining!",
+        "consequenceHint": "Örlando kommt zum Probetraining in die Halle.",
+        "plan": "trainer:probetraining"
+      },
+      {
+        "key": "B",
+        "label": "NEIN – noch nicht",
+        "consequenceHint": "Rosa bleibt erst mal allein an den Pratzen.",
+        "plan": "trainer:kein_probetraining"
+      }
+    ]
+  },
+  "cliffhanger": "Wann soll Emre das alles lernen? „Bald!“ – Der erste Kampf rückt näher, und die Community entscheidet, ob Örlando zum Probetraining kommt.",
+  "stateChanges": [
+    {
+      "op": "follower",
+      "amount": 43,
+      "target": "",
+      "value": "",
+      "reason": "Meldung des Produzenten vor Folge 5"
+    },
+    {
+      "op": "plaetze",
+      "amount": 43,
+      "target": "",
+      "value": "",
+      "reason": "43 Follower = 43 von 100 Plätzen"
+    },
+    {
+      "op": "likes",
+      "amount": 46,
+      "target": "",
+      "value": "",
+      "reason": "Genaue Like-Zahl Folge 4 (Meldung des Produzenten)"
+    },
+    {
+      "op": "geld",
+      "amount": 92,
+      "target": "",
+      "value": "",
+      "reason": "Symbolisch: 46 Likes (Folge 4) × 2 € – keine echte Einnahme"
+    },
+    {
+      "op": "kennzahlen",
+      "amount": 4,
+      "target": "",
+      "value": "{\"views\":842,\"likes\":46,\"newFollowers\":8,\"followersTotal\":43,\"note\":\"Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-001",
+      "value": "{\"source\":\"Kommentar von Faro_wpt (unter Folge 3)\",\"note\":\"Nicht bestätigt. Faro_wpt hat die Bedingungen in den Kommentaren angepasst (weitere Unterstützung, Zahlungen pro Kampf erwähnt) – Details offen, keine Vereinbarung, nichts eingegangen.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-003",
+      "value": "{\"source\":\"Kommentar von Vexo_on_MTB 🌲🚲 (unter Folge 4)\",\"content\":\"Sandsäcke, ein guter Boxring, Pratzen, 10 Paar Boxhandschuhe, eigenes Logo-Design für den Boxclub\",\"status\":\"offen\",\"storyCondition\":\"\",\"note\":\"Vexo_on_MTB schrieb „Bestätigt“. Übergabe/Lieferung NICHT bestätigt – nichts davon ist in der Halle.\"}",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "trainer-oerlando",
+      "value": "Örlando (TikTok-Kommentar unter Folge 4) möchte Trainer werden, 7 Jahre Kampferfahrung. NICHT eingestellt. Community-Abstimmung: Probetraining JA/NEIN.",
+      "reason": "Wir bekommen einen neuen Trainer?!"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "sponsor-angebote",
+      "value": "Drei offene Angebote: Faro_wpt (o-001, angepasst), unbekannter Zuschauer 10.000 € + 1.000 €/Sieg (o-002), Vexo_on_MTB 🌲🚲 (o-003, „Bestätigt“ geschrieben, nicht geliefert). Paule führt die Liste „noch nicht da“.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Boxt seit dem Sandsack-Unfall gegen die Luft. Träumt von richtigem Training. Fragt: „Wann soll ich das alles lernen?“ – Günther: „Bald!“",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "kampfabend",
+      "value": "Kein neues Datum. Story-Countdown bleibt bei 4 Tagen, bis die Ausrüstungs-Abstimmung abgeschlossen ist. Arena 43/100, Ziel 50.",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [],
+  "socialCaption": "Folge 5: Wir bekommen einen neuen Trainer?! 🥊😳 Örlando will Trainer werden, Vexo_on_MTB und Faro_wpt wollen helfen – und Emre boxt immer noch gegen die Luft. Ihr entscheidet: Soll Örlando zum Probetraining kommen? JA oder NEIN in die Kommentare! ❤️ Ziel: 100 Likes (1 Like = 2 € symbolisch für die Vereinskasse)",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#animationserie",
+    "#community",
+    "#teil5"
+  ],
+  "titleCard": "klein",
+  "endCard": {
+    "type": "abstimmung",
+    "headline": "Örlando zum Probetraining?",
+    "lines": [
+      "Schreib JA oder NEIN in die Kommentare!",
+      "🏟️ 43/100 Plätze · ❤️ Ziel: 100 Likes"
+    ],
+    "seatsFilled": 43,
+    "seatsTotal": 100,
+    "seatsGoal": 50
+  },
+  "video": null
+}
