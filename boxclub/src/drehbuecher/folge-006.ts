@@ -78,7 +78,7 @@ export const episode = {
       id: 's3', beat: 'handlung', location: 'halle', shot: 'totale', music: 'spannung', overlay: '20.000 € – IN DER STORY',
       direction: 'Der Koffer klappt auf: Geldbündel, goldenes Leuchten. Paule muss sich setzen.',
       setOverrides: ALT,
-      props: [{ type: 'koffer', x: 540, y: 1560, openAt: 0.35, scale: 1.25 }],
+      props: [{ type: 'koffer', x: 540, y: 1740, openAt: 0.35, scale: 1.3 }],
       cast: [
         { characterId: G, position: 'ganz_links', facing: 'rechts' },
         { characterId: P, position: 'ganz_rechts', facing: 'links' },

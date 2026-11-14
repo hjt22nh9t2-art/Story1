@@ -2,7 +2,7 @@
   "id": "ep-006",
   "number": 6,
   "title": "Wir werden endlich renoviert!",
-  "status": "vertont",
+  "status": "gerendert",
   "createdAt": "2026-11-14T15:45:45.415Z",
   "publishedAt": null,
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
@@ -298,8 +298,8 @@
         {
           "type": "koffer",
           "x": 540,
-          "y": 1560,
-          "scale": 1.25,
+          "y": 1740,
+          "scale": 1.3,
           "label": "",
           "openAt": 0.35,
           "fallAt": null,
@@ -1173,5 +1173,10 @@
     "seatsTotal": 100,
     "seatsGoal": 50
   },
-  "video": null
+  "video": {
+    "file": "episodes/ep-006/boxclub_folge_006.mp4",
+    "poster": "episodes/ep-006/poster.jpg",
+    "renderedAt": "2026-11-14T16:14:48.576Z",
+    "durationSec": 81.6
+  }
 }
