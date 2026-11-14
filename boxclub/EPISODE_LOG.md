@@ -1,6 +1,6 @@
 # EPISODE LOG – Boxclub Rostfaust
 
-Stand 2026-11-13. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
+Stand 2026-11-14. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
 
 | Folge | Titel | Länge | Status | Hook | Community-Frage → Ergebnis |
 |---|---|---|---|---|---|
@@ -9,6 +9,7 @@ Stand 2026-11-13. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzent
 | 3 | Emre braucht besseres Equipment! | 48.1 s | veroeffentlicht | Emres erster Schlag – und der alte Sandsack reißt von der Decke. | Was kaufen wir als Erstes? → offen |
 | 4 | Unser erster Sponsor?! | 70.3 s | veroeffentlicht | Günther liest einen Kommentar: Jemand will Sandsäcke, Pratzen, Handschuhe und die Renovierung bezahlen?! | Schaffen wir 50 Follower bis zum Kampf? → offen |
 | 5 | Wir bekommen einen neuen Trainer?! | 80.2 s | veroeffentlicht | Günther stürmt in die Halle: „LEUTE! Wir bekommen vielleicht einen neuen Trainer!“ – Paule: „Was hast du jetzt schon wieder angestellt?“ | Sollen wir Örlando zum Probetraining einladen? → offen |
+| 6 | Wir werden endlich renoviert! | 81.6 s | veroeffentlicht | Günther stürmt vor die Halle, überall Pakete und ein Koffer: „Leute! Die Lieferung ist da!“ | Wen wollt ihr als Nächstes im Ring sehen? → offen |
 
 ## Folge 1 – Null Boxer
 Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß.
@@ -50,11 +51,20 @@ Unter Folge 4 meldet sich Örlando: Er hat sieben Jahre Kampferfahrung und würd
 - **TikTok-Text:** Folge 5: Wir bekommen einen neuen Trainer?! 🥊😳 Örlando will Trainer werden, Vexo_on_MTB und Faro_wpt wollen helfen – und Emre boxt immer noch gegen die Luft. Ihr entscheidet: Soll Örlando zum Probetraining kommen? JA oder NEIN in die Kommentare! ❤️ Ziel: 100 Likes (1 Like = 2 € symbolisch für die Vereinskasse) #boxclubrostfaust #boxen #animationserie #community #teil5
 - **Datei:** data/media/episodes/ep-005/boxclub_folge_005.mp4
 
+## Folge 6 – Wir werden endlich renoviert!
+Vor dem Boxclub stapeln sich Pakete von Vexo_on_MTB – Handschuhe, Pratzen, Sandsäcke – und ein Koffer. Darin: 20.000 Euro (in der Geschichte). Günther plant schon einen Whirlpool, Paule muss sich erst mal setzen. Dann übernimmt Faro_wpt die Renovierung: Die alte Halle verwandelt sich in einen hellen Boxclub mit neuem Ring, Sandsäcken, Pratzen, Handschuhen und Tennisbällen. Rosa entdeckt den nächsten Kommentar: hakir_373 2 verspricht eine große Halle und einen Wing-Tsun-Trainer. Emre trainiert zum ersten Mal richtig. Günther: „Dann wird es Zeit für den ersten großen Kampf!“ Die Community entscheidet: Emres erster Kampf – oder erst ein Probetraining mit Örlando?
+
+- **Cliffhanger:** Der Boxclub ist renoviert – jetzt muss Rostfaust zeigen, dass er kämpfen kann. Emres erster Kampf oder erst Örlandos Probetraining? Gegner und Termin sind noch offen.
+- **Abstimmung:** Wen wollt ihr als Nächstes im Ring sehen? A: Emre beim ersten Kampf · B: Erst Örlando beim Probetraining
+- **TikTok-Text:** Folge 6: Wir werden endlich renoviert! 🥊🎨 Danke Vexo_on_MTB 🌲🚲, Faro_wpt und hakir_373 2 – eure Kommentare haben den Boxclub verändert (in unserer Geschichte). Jetzt ihr: Wen wollt ihr als Nächstes im Ring sehen? A = Emres erster Kampf, B = erst Örlando beim Probetraining. ❤️ Ziel: 100 Likes (1 Like = 2 € symbolisch) #boxclubrostfaust #boxen #renovierung #animationserie #teil6
+- **Datei:** data/media/episodes/ep-006/boxclub_folge_006.mp4
+
 ## Performance-Tracking
 | Folge | Aufrufe | Likes | Kommentare | Geteilt | Neue Follower | Follower gesamt | Ø Wiedergabe | Ø angesehen | Vollständig | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2 | – | – | – | – | – | 31 | – | – | – | Gemeldet vor Folge 3: 31 Follower gesamt. Aufrufe laut Produzent bisher häufig unter 1.000 (keine genauen Zahlen je Folge). |
 | 3 | – | – | – | – | 4 | 35 | – | – | – | Gemeldet vor Folge 4: 35 Follower gesamt (+4 seit Folge 3). Likes laut Einschätzung des Produzenten > 50 – keine genaue Zahl, daher NICHT als 2 €/Like gebucht. Umfrage Zwischenstand: Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % (59 Stimmen). |
 | 4 | 842 | 46 | – | – | 8 | 43 | – | – | – | Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
+| 5 | 729 | 25 | – | – | 0 | 43 | – | – | – | Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 
 **Analyse:** Erst ab mehreren Folgen mit vollständigen Zahlen sinnvoll – keine voreiligen Schlüsse.

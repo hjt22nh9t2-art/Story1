@@ -3,30 +3,30 @@
   "city": "Kranstadt",
   "address": "Depotstraße 7",
   "founded": "Neugründung 2026 – Tradition seit 1961",
-  "money": 392,
+  "money": 442,
   "monthlyCosts": 380,
   "monthlyIncome": 30,
   "members": 2,
   "reputation": 5,
-  "facilityCondition": 28,
+  "facilityCondition": 100,
   "equipment": [
     {
       "id": "ring",
       "name": "Boxring (rot/blau)",
       "count": 1,
-      "condition": 45
+      "condition": 100
     },
     {
       "id": "sandsack",
       "name": "Sandsack",
-      "count": 1,
-      "condition": 30
+      "count": 5,
+      "condition": 100
     },
     {
       "id": "handschuhe",
       "name": "Paar Boxhandschuhe",
-      "count": 4,
-      "condition": 35
+      "count": 17,
+      "condition": 95
     },
     {
       "id": "springseil",
@@ -36,9 +36,9 @@
     },
     {
       "id": "spiegel",
-      "name": "Wandspiegel (gesprungen)",
+      "name": "Wandspiegel (neu, seit Renovierung F6)",
       "count": 1,
-      "condition": 20
+      "condition": 100
     },
     {
       "id": "hantelbank",
@@ -51,6 +51,18 @@
       "name": "Ringglocke (Messing, 1961)",
       "count": 1,
       "condition": 95
+    },
+    {
+      "id": "pratzen",
+      "name": "Pratzen",
+      "count": 3,
+      "condition": 100
+    },
+    {
+      "id": "tennisbaelle",
+      "name": "Tennisbälle (Reaktionstraining)",
+      "count": 6,
+      "condition": 100
     }
   ],
   "fights": [],
@@ -118,6 +130,10 @@
         {
           "episode": 5,
           "text": "Boxt seit dem Sandsack-Unfall gegen die Luft. Träumt von richtigem Training. Fragt: „Wann soll ich das alles lernen?“ – Günther: „Bald!“"
+        },
+        {
+          "episode": 6,
+          "text": "Folge 6: Erstes richtiges Training in der renovierten Halle – Sandsack, Pratzen mit Rosa, Beinarbeit. „Ist das wirklich unsere Halle?“"
         }
       ]
     },
@@ -142,6 +158,10 @@
         {
           "episode": 5,
           "text": "Kein neues Datum. Story-Countdown bleibt bei 4 Tagen, bis die Ausrüstungs-Abstimmung abgeschlossen ist. Arena 43/100, Ziel 50."
+        },
+        {
+          "episode": 6,
+          "text": "Folge 6: Günther: „Zeit für den ersten großen Kampf!“ Gegner und Termin weiterhin offen. Arena 43/100, Ziel 50."
         }
       ]
     },
@@ -182,6 +202,46 @@
         {
           "episode": 5,
           "text": "Örlando (TikTok-Kommentar unter Folge 4) möchte Trainer werden, 7 Jahre Kampferfahrung. NICHT eingestellt. Community-Abstimmung: Probetraining JA/NEIN."
+        },
+        {
+          "episode": 6,
+          "text": "Folge 6: Örlando bleibt möglicher BOXtrainer (nicht eingestellt). Neue Abstimmung: Emres erster Kampf oder erst Örlandos Probetraining."
+        }
+      ]
+    },
+    {
+      "id": "renovierung",
+      "title": "Die Renovierung",
+      "status": "offen",
+      "startedEpisode": 6,
+      "updates": [
+        {
+          "episode": 6,
+          "text": "Folge 6: Faro_wpt renoviert den Boxclub (Serienhandlung). Neue Wände, neuer Ring, 5 Sandsäcke (4 neue + alter), Pratzen, Handschuhe, Tennisbälle, neuer Spiegel."
+        }
+      ]
+    },
+    {
+      "id": "koffer-20k",
+      "title": "Der Koffer",
+      "status": "offen",
+      "startedEpisode": 6,
+      "updates": [
+        {
+          "episode": 6,
+          "text": "Folge 6: Im Paket von Vexo_on_MTB liegt ein Koffer mit 20.000 € (fiktiv). Getrennt von der Like-Kasse geführt („Story-Fonds“). Paule: erst Miete, Strom und Emres Training; Günther träumt vom Whirlpool. Verwendung noch offen."
+        }
+      ]
+    },
+    {
+      "id": "grosse-halle",
+      "title": "Die große Halle",
+      "status": "offen",
+      "startedEpisode": 6,
+      "updates": [
+        {
+          "episode": 6,
+          "text": "Folge 6: hakir_373 2 verspricht eine neue große Halle + Wing-Tsun-Trainer („Sifu“). Nur Vorstellung, noch nicht da."
         }
       ]
     }
@@ -326,9 +386,33 @@
       "votes": {},
       "note": "",
       "resolvedInEpisode": null
+    },
+    {
+      "id": "d-006",
+      "episode": 6,
+      "question": "Wen wollt ihr als Nächstes im Ring sehen?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Emre beim ersten Kampf",
+          "consequenceHint": "Der erste Kampf wird vorbereitet – Gegner und Termin folgen.",
+          "plan": "kampf:emre-erster-kampf"
+        },
+        {
+          "key": "B",
+          "label": "Erst Örlando beim Probetraining",
+          "consequenceHint": "Örlando kommt zum Probetraining in die neue Halle.",
+          "plan": "trainer:oerlando-probetraining"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
+      "votes": {},
+      "note": "",
+      "resolvedInEpisode": null
     }
   ],
-  "chapter": "Akt 1 – Der erste Kampf",
+  "chapter": "Akt 2 – Der neue Boxclub",
   "timeline": [
     {
       "episode": 1,
@@ -349,25 +433,29 @@
     {
       "episode": 5,
       "text": "Folge 5 „Wir bekommen einen neuen Trainer?!“: Unter Folge 4 meldet sich Örlando: Er hat sieben Jahre Kampferfahrung und würde gern Trainer werden. Günther ist sofort Feuer und Flamme, Paule will erst sehen, was er draufhat. Dann bietet Vexo_on_MTB Sandsäcke, einen Boxring, Pratzen, zehn Paar Handschuhe und ein eigenes Logo an – und Faro_wpt hat sein Angebot sogar noch erweitert. Paule notiert alles unter „noch nicht da“. Emre boxt seit dem Sandsack-Unfall gegen die Luft und träumt vom richtigen Training. Günther: „Wenn das klappt, wird aus Rostfaust ein richtiger Boxclub!“ – Emre: „Und wann soll ich das alles lernen?“ – „Bald!“ In der Arena sind jetzt 43 von 100 Plätzen besetzt, die Kasse steht symbolisch bei 392 €. Die Community entscheidet: Soll Örlando zum Probetraining kommen?"
+    },
+    {
+      "episode": 6,
+      "text": "Folge 6 „Wir werden endlich renoviert!“: Vor dem Boxclub stapeln sich Pakete von Vexo_on_MTB – Handschuhe, Pratzen, Sandsäcke – und ein Koffer. Darin: 20.000 Euro (in der Geschichte). Günther plant schon einen Whirlpool, Paule muss sich erst mal setzen. Dann übernimmt Faro_wpt die Renovierung: Die alte Halle verwandelt sich in einen hellen Boxclub mit neuem Ring, Sandsäcken, Pratzen, Handschuhen und Tennisbällen. Rosa entdeckt den nächsten Kommentar: hakir_373 2 verspricht eine große Halle und einen Wing-Tsun-Trainer. Emre trainiert zum ersten Mal richtig. Günther: „Dann wird es Zeit für den ersten großen Kampf!“ Die Community entscheidet: Emres erster Kampf – oder erst ein Probetraining mit Örlando?"
     }
   ],
-  "lastEpisode": 5,
-  "nextEpisodeNote": "Wann soll Emre das alles lernen? „Bald!“ – Der erste Kampf rückt näher, und die Community entscheidet, ob Örlando zum Probetraining kommt.",
+  "lastEpisode": 6,
+  "nextEpisodeNote": "Der Boxclub ist renoviert – jetzt muss Rostfaust zeigen, dass er kämpfen kann. Emres erster Kampf oder erst Örlandos Probetraining? Gegner und Termin sind noch offen.",
   "community": {
     "followers": 43,
-    "likes": 46,
+    "likes": 25,
     "likeEuroRate": 2,
     "likesBooked": 0
   },
   "offers": [
     {
       "id": "o-001",
-      "source": "Kommentar von Faro_wpt (unter Folge 3)",
-      "content": "5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs",
+      "source": "Kommentare von Faro_wpt (unter Folge 3 und später)",
+      "content": "Neuester Stand: 4 Boxsäcke, 3 Paar Tennisbälle, Boxring, 3 Paar Boxhandschuhe, Renovierung (früher: 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe, Renovierung, Zahlungen pro Kampf). Antwort auf „Wow danke dir ❤️“: „kein problem ❤️“",
       "status": "offen",
-      "storyCondition": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
+      "storyCondition": "",
       "episode": 4,
-      "note": "Nicht bestätigt. Faro_wpt hat die Bedingungen in den Kommentaren angepasst (weitere Unterstützung, Zahlungen pro Kampf erwähnt) – Details offen, keine Vereinbarung, nichts eingegangen."
+      "note": "In der SERIE (fiktiv) in Folge 6 umgesetzt: Renovierung + Ausstattung. Zahlungen pro Kampf: offen, kein Betrag. REAL nicht bestätigt."
     },
     {
       "id": "o-002",
@@ -380,12 +468,21 @@
     },
     {
       "id": "o-003",
-      "source": "Kommentar von Vexo_on_MTB 🌲🚲 (unter Folge 4)",
-      "content": "Sandsäcke, ein guter Boxring, Pratzen, 10 Paar Boxhandschuhe, eigenes Logo-Design für den Boxclub",
+      "source": "Kommentare von Vexo_on_MTB 🌲🚲",
+      "content": "Sandsäcke, Boxring, Pratzen, 10 Paar Boxhandschuhe, Logo-Design; laut Kommentar „verschickt“ + „Koffer mit 20k“",
       "status": "offen",
       "storyCondition": "",
       "episode": 5,
-      "note": "Vexo_on_MTB schrieb „Bestätigt“. Übergabe/Lieferung NICHT bestätigt – nichts davon ist in der Halle."
+      "note": "In der SERIE (fiktiv) in Folge 6 geliefert, inkl. Koffer mit 20.000 €. REAL weder Lieferung noch Geld bestätigt."
+    },
+    {
+      "id": "o-004",
+      "source": "Kommentar von hakir_373 2",
+      "content": "Neue große Halle + Wing-Tsun-Trainer",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 6,
+      "note": "In der Serie nur als Versprechen/Vorstellung gezeigt (Folge 6). Nicht eingetroffen."
     }
   ],
   "metrics": [
@@ -430,6 +527,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
+    },
+    {
+      "episode": 5,
+      "reportedAt": "2026-11-14T16:40:14.651Z",
+      "views": 729,
+      "likes": 25,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 0,
+      "followersTotal": 43,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ],
   "upcomingEvent": {

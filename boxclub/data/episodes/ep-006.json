@@ -2,9 +2,9 @@
   "id": "ep-006",
   "number": 6,
   "title": "Wir werden endlich renoviert!",
-  "status": "gerendert",
+  "status": "veroeffentlicht",
   "createdAt": "2026-11-14T15:45:45.415Z",
-  "publishedAt": null,
+  "publishedAt": "2026-11-14T16:40:14.655Z",
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
   "userIdeas": "Lieferung von Vexo_on_MTB inkl. 20.000-€-Koffer, Renovierung durch Faro_wpt (Vorher/Nachher), große Halle + Wing-Tsun-Trainer von hakir_373 2, Emre trainiert, Cliffhanger erster Kampf.",
   "resolvesDecisionId": null,
@@ -1176,7 +1176,7 @@
   "video": {
     "file": "episodes/ep-006/boxclub_folge_006.mp4",
     "poster": "episodes/ep-006/poster.jpg",
-    "renderedAt": "2026-11-14T16:14:48.576Z",
+    "renderedAt": "2026-11-14T16:40:00.222Z",
     "durationSec": 81.6
   }
 }

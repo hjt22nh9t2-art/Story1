@@ -675,8 +675,8 @@
       "gloves": "#1a1a1a",
       "accessories": []
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 6,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Erster Auftritt geplant: Folge 6 (Vorstellung der großen Halle)."

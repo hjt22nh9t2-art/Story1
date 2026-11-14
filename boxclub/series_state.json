@@ -1,12 +1,12 @@
 {
   "stand": {
-    "nachFolge": 5,
-    "naechsteFolge": 6,
-    "aktualisiert": "2026-11-13",
-    "kapitel": "Akt 1 – Der erste Kampf"
+    "nachFolge": 6,
+    "naechsteFolge": 7,
+    "aktualisiert": "2026-11-14",
+    "kapitel": "Akt 2 – Der neue Boxclub"
   },
   "finanzen": {
-    "kasse": 392,
+    "kasse": 442,
     "einnahmenProMonat": 30,
     "kostenProMonat": 380,
     "pachtProMonat": 250,
@@ -14,7 +14,7 @@
   },
   "community": {
     "follower": 43,
-    "likes": 46,
+    "likes": 25,
     "likeEuroRate": 2,
     "likesGebucht": 0,
     "hinweis": "Spielerische Mechaniken – keine echten TikTok-Einnahmen. Fehlende Werte = vom Produzenten noch nicht gemeldet."
@@ -30,25 +30,25 @@
   "verein": {
     "mitglieder": 2,
     "ruf": 5,
-    "hallenzustand": 28,
+    "hallenzustand": 100,
     "ausruestung": [
       {
         "id": "ring",
         "name": "Boxring (rot/blau)",
         "anzahl": 1,
-        "zustand": 45
+        "zustand": 100
       },
       {
         "id": "sandsack",
         "name": "Sandsack",
-        "anzahl": 1,
-        "zustand": 30
+        "anzahl": 5,
+        "zustand": 100
       },
       {
         "id": "handschuhe",
         "name": "Paar Boxhandschuhe",
-        "anzahl": 4,
-        "zustand": 35
+        "anzahl": 17,
+        "zustand": 95
       },
       {
         "id": "springseil",
@@ -58,9 +58,9 @@
       },
       {
         "id": "spiegel",
-        "name": "Wandspiegel (gesprungen)",
+        "name": "Wandspiegel (neu, seit Renovierung F6)",
         "anzahl": 1,
-        "zustand": 20
+        "zustand": 100
       },
       {
         "id": "hantelbank",
@@ -73,6 +73,18 @@
         "name": "Ringglocke (Messing, 1961)",
         "anzahl": 1,
         "zustand": 95
+      },
+      {
+        "id": "pratzen",
+        "name": "Pratzen",
+        "anzahl": 3,
+        "zustand": 100
+      },
+      {
+        "id": "tennisbaelle",
+        "name": "Tennisbälle (Reaktionstraining)",
+        "anzahl": 6,
+        "zustand": 100
       }
     ]
   },
@@ -139,16 +151,25 @@
       "stimme": "cjVigY5qzO86Huf0OWal",
       "stimmeFest": false,
       "seitFolge": null
+    },
+    {
+      "id": "wingtsun-sifu",
+      "name": "Sifu",
+      "status": "kandidat",
+      "rolle": "Wing-Tsun-Trainer (Angebot von hakir_373 2)",
+      "stimme": "",
+      "stimmeFest": false,
+      "seitFolge": 6
     }
   ],
   "offeneAngebote": [
     {
       "id": "o-001",
-      "quelle": "Kommentar von Faro_wpt (unter Folge 3)",
-      "inhalt": "5 Sandsäcke, 3 Pratzen, 4 Paar Boxhandschuhe und Renovierung des Boxclubs",
+      "quelle": "Kommentare von Faro_wpt (unter Folge 3 und später)",
+      "inhalt": "Neuester Stand: 4 Boxsäcke, 3 Paar Tennisbälle, Boxring, 3 Paar Boxhandschuhe, Renovierung (früher: 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe, Renovierung, Zahlungen pro Kampf). Antwort auf „Wow danke dir ❤️“: „kein problem ❤️“",
       "status": "offen",
-      "storyBedingung": "Story-Wendung (fiktiv): erst wenn Emre seinen ersten Kampf gewinnt",
-      "notiz": "Nicht bestätigt. Faro_wpt hat die Bedingungen in den Kommentaren angepasst (weitere Unterstützung, Zahlungen pro Kampf erwähnt) – Details offen, keine Vereinbarung, nichts eingegangen.",
+      "storyBedingung": "",
+      "notiz": "In der SERIE (fiktiv) in Folge 6 umgesetzt: Renovierung + Ausstattung. Zahlungen pro Kampf: offen, kein Betrag. REAL nicht bestätigt.",
       "seitFolge": 4
     },
     {
@@ -162,12 +183,21 @@
     },
     {
       "id": "o-003",
-      "quelle": "Kommentar von Vexo_on_MTB 🌲🚲 (unter Folge 4)",
-      "inhalt": "Sandsäcke, ein guter Boxring, Pratzen, 10 Paar Boxhandschuhe, eigenes Logo-Design für den Boxclub",
+      "quelle": "Kommentare von Vexo_on_MTB 🌲🚲",
+      "inhalt": "Sandsäcke, Boxring, Pratzen, 10 Paar Boxhandschuhe, Logo-Design; laut Kommentar „verschickt“ + „Koffer mit 20k“",
       "status": "offen",
       "storyBedingung": "",
-      "notiz": "Vexo_on_MTB schrieb „Bestätigt“. Übergabe/Lieferung NICHT bestätigt – nichts davon ist in der Halle.",
+      "notiz": "In der SERIE (fiktiv) in Folge 6 geliefert, inkl. Koffer mit 20.000 €. REAL weder Lieferung noch Geld bestätigt.",
       "seitFolge": 5
+    },
+    {
+      "id": "o-004",
+      "quelle": "Kommentar von hakir_373 2",
+      "inhalt": "Neue große Halle + Wing-Tsun-Trainer",
+      "status": "offen",
+      "storyBedingung": "",
+      "notiz": "In der Serie nur als Versprechen/Vorstellung gezeigt (Folge 6). Nicht eingetroffen.",
+      "seitFolge": 6
     }
   ],
   "offeneEntscheidungen": [
@@ -217,6 +247,19 @@
       "ergebnis": null,
       "stimmen": {},
       "notiz": ""
+    },
+    {
+      "id": "d-006",
+      "ausFolge": 6,
+      "frage": "Wen wollt ihr als Nächstes im Ring sehen?",
+      "optionen": [
+        "A: Emre beim ersten Kampf",
+        "B: Erst Örlando beim Probetraining"
+      ],
+      "status": "offen",
+      "ergebnis": null,
+      "stimmen": {},
+      "notiz": ""
     }
   ],
   "handlungsstraenge": [
@@ -242,13 +285,13 @@
       "id": "entwicklung-emre-yildiz",
       "titel": "Der Weg von Emre",
       "status": "offen",
-      "letzterStand": "Boxt seit dem Sandsack-Unfall gegen die Luft. Träumt von richtigem Training. Fragt: „Wann soll ich das alles lernen?“ – Günther: „Bald!“"
+      "letzterStand": "Folge 6: Erstes richtiges Training in der renovierten Halle – Sandsack, Pratzen mit Rosa, Beinarbeit. „Ist das wirklich unsere Halle?“"
     },
     {
       "id": "kampfabend",
       "titel": "Der erste Kampfabend",
       "status": "offen",
-      "letzterStand": "Kein neues Datum. Story-Countdown bleibt bei 4 Tagen, bis die Ausrüstungs-Abstimmung abgeschlossen ist. Arena 43/100, Ziel 50."
+      "letzterStand": "Folge 6: Günther: „Zeit für den ersten großen Kampf!“ Gegner und Termin weiterhin offen. Arena 43/100, Ziel 50."
     },
     {
       "id": "ausruestung",
@@ -266,10 +309,28 @@
       "id": "trainer-oerlando",
       "titel": "Wir bekommen einen neuen Trainer?!",
       "status": "offen",
-      "letzterStand": "Örlando (TikTok-Kommentar unter Folge 4) möchte Trainer werden, 7 Jahre Kampferfahrung. NICHT eingestellt. Community-Abstimmung: Probetraining JA/NEIN."
+      "letzterStand": "Folge 6: Örlando bleibt möglicher BOXtrainer (nicht eingestellt). Neue Abstimmung: Emres erster Kampf oder erst Örlandos Probetraining."
+    },
+    {
+      "id": "renovierung",
+      "titel": "Die Renovierung",
+      "status": "offen",
+      "letzterStand": "Folge 6: Faro_wpt renoviert den Boxclub (Serienhandlung). Neue Wände, neuer Ring, 5 Sandsäcke (4 neue + alter), Pratzen, Handschuhe, Tennisbälle, neuer Spiegel."
+    },
+    {
+      "id": "koffer-20k",
+      "titel": "Der Koffer",
+      "status": "offen",
+      "letzterStand": "Folge 6: Im Paket von Vexo_on_MTB liegt ein Koffer mit 20.000 € (fiktiv). Getrennt von der Like-Kasse geführt („Story-Fonds“). Paule: erst Miete, Strom und Emres Training; Günther träumt vom Whirlpool. Verwendung noch offen."
+    },
+    {
+      "id": "grosse-halle",
+      "titel": "Die große Halle",
+      "status": "offen",
+      "letzterStand": "Folge 6: hakir_373 2 verspricht eine neue große Halle + Wing-Tsun-Trainer („Sifu“). Nur Vorstellung, noch nicht da."
     }
   ],
-  "cliffhanger": "Wann soll Emre das alles lernen? „Bald!“ – Der erste Kampf rückt näher, und die Community entscheidet, ob Örlando zum Probetraining kommt.",
+  "cliffhanger": "Der Boxclub ist renoviert – jetzt muss Rostfaust zeigen, dass er kämpfen kann. Emres erster Kampf oder erst Örlandos Probetraining? Gegner und Termin sind noch offen.",
   "kennzahlen": [
     {
       "episode": 2,
@@ -312,6 +373,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
+    },
+    {
+      "episode": 5,
+      "reportedAt": "2026-11-14T16:40:14.651Z",
+      "views": 729,
+      "likes": 25,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 0,
+      "followersTotal": 43,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ]
 }

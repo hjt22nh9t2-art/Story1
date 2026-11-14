@@ -1,6 +1,6 @@
 # CHARACTERS AND VOICES – Boxclub Rostfaust
 
-Stand nach Folge 5 (2026-11-13). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
+Stand nach Folge 6 (2026-11-14). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
 
 ## Stimmen-Übersicht (verbindlich)
 | Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |
@@ -12,6 +12,7 @@ Stand nach Folge 5 (2026-11-13). Quelle: `data/characters.json`. Referenzbilder:
 | Bruno Kessler | Brian – Deep | elevenlabs / eleven_v3 | `nPczCjzI2devNBz1zQrb` | Vorschlag | Vorschlag: ElevenLabs „Brian – Deep“. Noch nicht gesprochen. |
 | Nico Falk | Callum – Husky | elevenlabs / eleven_v3 | `N2lVS1w4EtoT3dr4eOWO` | Vorschlag | Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen. |
 | Viktor Hahn | Eric – Smooth | elevenlabs / eleven_v3 | `cjVigY5qzO86Huf0OWal` | Vorschlag | Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen. |
+| Sifu | – | elevenlabs / Standard | `` | Vorschlag | Noch keine Stimme – spricht noch nicht. |
 
 **Regel:** Stimmen mit 🔒 werden nie ohne ausdrückliche Zustimmung des Produzenten geändert. Prüfung jeder Zeile: Grundtonhöhe (`scripts/pitch.py`) + Spracherkennung.
 
@@ -98,4 +99,16 @@ Stand nach Folge 5 (2026-11-13). Quelle: `data/characters.json`. Referenzbilder:
 - **Stärken/Schwächen:** Geld, Kontakte, Marketing / Arroganz, unterschätzt Herz
 - **Ziel:** Den Rostfaust-Club schlucken oder plattmachen. · **Spruch:** „Nichts Persönliches, Günther. Nur Business.“
 - **Hintergrund:** Besitzt das moderne Titan Boxing Gym in der Innenstadt mit 600 Mitgliedern. Hat Rosa gefeuert. Kennt Günther aus der Schulzeit – und hat ihn schon damals unterschätzt.
+
+## Sifu „Der Wing-Tsun-Trainer“
+![Sifu](docs/charakterbibel/wingtsun-sifu.png)
+
+- **Rolle:** Wing-Tsun-Trainer (Angebot von hakir_373 2) · **Status:** kandidat (seit Folge 6)
+- **Daten:** 45 J., 172 cm, 70 kg 
+- **Aussehen (fest):** Haut #d9a77c, Haare dutt #1b1612, Bart kinnbart, Nase klein, Statur athletisch; hemd #1a1a1a/#d9b13b, trainingshose #1a1a1a, Schuhe #1a1a1a; Accessoires: –
+- **Persönlichkeit:** Ruhig, präzise, wenige Worte. Gegenpol zum lauten Boxclub.
+- **Sprechstil:** Spricht (noch) nicht.
+- **Stärken/Schwächen:** Technik, Reflexe, Gleichgewicht / kennt das Boxen nicht
+- **Ziel:** offen · **Spruch:** „“
+- **Hintergrund:** Wurde von hakir_373 2 zusammen mit einer neuen großen Halle in Aussicht gestellt. KEIN Boxtrainer und NICHT identisch mit Örlando. Name/Herkunft noch offen.
 
