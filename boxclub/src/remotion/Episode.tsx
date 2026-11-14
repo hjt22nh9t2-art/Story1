@@ -118,15 +118,34 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
   };
   const dream = ts.scene.fx === 'traum';
   const set = getSet(ts.scene.location, gf, setClub, { seatsFilled });
+  // Renovierung: alte Kulisse → neue Kulisse per Farbrollen-Wisch (Bildschirmkoordinaten)
+  const reno = ts.scene.renovate;
+  const oldSet = reno ? getSet(ts.scene.location, gf, { ...props.club, ...reno.from }, { seatsFilled }) : null;
+  const renoP = reno ? interpolate(localSec, [reno.at, reno.at + reno.dur], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) }) : 1;
+  const wipeX = -40 + renoP * 1160;
+  const cid = `reno-${ts.index}`;
 
   return (
     <AbsoluteFill>
       <svg viewBox="0 0 1080 1920" width="100%" height="100%" style={{ position: 'absolute', inset: 0 }}>
         <SetDefs />
-        <g transform={layer(0.72)}>{set.back}</g>
+        {reno && oldSet && (
+          <defs>
+            <clipPath id={`${cid}-alt`}><rect x={wipeX} y={-100} width={2400} height={2200} /></clipPath>
+            <clipPath id={`${cid}-neu`}><rect x={-1400} y={-100} width={1400 + wipeX} height={2200} /></clipPath>
+          </defs>
+        )}
+        {reno && oldSet ? (
+          <>
+            <g clipPath={`url(#${cid}-alt)`}><g transform={layer(0.72)}>{oldSet.back}</g><g transform={layer(1)}>{oldSet.mid}</g></g>
+            <g clipPath={`url(#${cid}-neu)`}><g transform={layer(0.72)}>{set.back}</g><g transform={layer(1)}>{set.mid}</g></g>
+          </>
+        ) : <g transform={layer(0.72)}>{set.back}</g>}
         <g transform={layer(1)}>
-          {set.mid}
-          {(ts.scene.props ?? []).map((pr, k) => <PropSandbag key={k} p={pr} localSec={localSec} gf={gf} />)}
+          {!reno && set.mid}
+          {(ts.scene.props ?? []).map((pr, k) => pr.type === 'sandsack'
+            ? <PropSandbag key={k} p={pr} localSec={localSec} gf={gf} />
+            : <PropItem key={k} p={pr} localSec={localSec} gf={gf} />)}
           {ts.scene.cast.map((c, i) => {
             const ch = chars.get(c.characterId);
             if (!ch) return null;
@@ -171,6 +190,7 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
           })}
         </g>
         <g transform={layer(1.3)}>{set.front}</g>
+        {reno && renoP > 0 && renoP < 1 && <PaintRoller x={wipeX} gf={gf} />}
       </svg>
       {/* Farbstimmung + Vignette */}
       <AbsoluteFill style={{ background: set.tint, mixBlendMode: 'soft-light' }} />
@@ -187,6 +207,127 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
 };
 
 /* ---------------------------------------------------------- Requisiten */
+
+/** Farbrolle an der Wischkante der Renovierung */
+const PaintRoller: React.FC<{ x: number; gf: number }> = ({ x, gf }) => (
+  <g>
+    <rect x={x - 14} y={-20} width={28} height={1960} fill="#f4ead2" opacity={0.85} />
+    <rect x={x - 4} y={-20} width={8} height={1960} fill="#8c1d2c" opacity={0.6} />
+    <g transform={`translate(${x} ${700 + Math.sin(gf * 0.3) * 220})`}>
+      <rect x={-70} y={-34} width={140} height={68} rx={30} fill="#f4ead2" stroke="#1a1410" strokeWidth={6} />
+      <path d="M0,34 L0,120 L-40,170 L-40,420" stroke="#1a1410" strokeWidth={14} fill="none" strokeLinecap="round" />
+      <rect x={-58} y={330} width={36} height={130} rx={12} fill="#c8302a" stroke="#1a1410" strokeWidth={5} />
+    </g>
+    {Array.from({ length: 10 }).map((_, i) => {
+      const yy = ((i * 211 + gf * 9) % 1800) + 60;
+      return <circle key={i} cx={x - 30 - (i % 4) * 22} cy={yy} r={6 + (i % 3) * 3} fill="#fff7d0" opacity={0.75} />;
+    })}
+  </g>
+);
+
+type PropP = { type: string; x: number; y: number | null; scale: number; label: string; openAt: number | null; color: string };
+/** Requisiten im Serienstil: Lieferkiste, Geldkoffer, Ausrüstungsständer, Wing-Tsun-Holzpuppe */
+const PropItem: React.FC<{ p: PropP; localSec: number; gf: number }> = ({ p, localSec, gf }) => {
+  const by = p.y ?? FLOOR;
+  const open = p.openAt === null ? 0 : interpolate(localSec, [p.openAt, p.openAt + 0.45], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.6)) });
+  const ink = '#1a1410';
+  if (p.type === 'kiste') return (
+    <g transform={`translate(${p.x} ${by}) scale(${p.scale})`}>
+      <ellipse cx={0} cy={0} rx={150} ry={18} fill="#000" opacity={0.25} />
+      <rect x={-130} y={-200} width={260} height={200} fill="#c9935a" stroke={ink} strokeWidth={6} />
+      <rect x={-130} y={-200} width={260} height={30} fill="#b07d48" stroke={ink} strokeWidth={5} />
+      {open > 0 && <>
+        <g transform={`rotate(${-110 * open} -130 -200)`}><rect x={-130} y={-212} width={130} height={14} fill="#b07d48" stroke={ink} strokeWidth={5} /></g>
+        <g transform={`rotate(${110 * open} 130 -200)`}><rect x={0} y={-212} width={130} height={14} fill="#b07d48" stroke={ink} strokeWidth={5} /></g>
+        <g transform={`translate(0 ${-200 - 60 * open})`}>
+          <ellipse cx={-40} cy={0} rx={42} ry={50} fill="#c8302a" stroke={ink} strokeWidth={5} />
+          <ellipse cx={40} cy={4} rx={42} ry={50} fill="#c8302a" stroke={ink} strokeWidth={5} />
+          <rect x={-70} y={34} width={60} height={26} fill="#f4ead2" stroke={ink} strokeWidth={4} />
+          <rect x={10} y={38} width={60} height={26} fill="#f4ead2" stroke={ink} strokeWidth={4} />
+        </g>
+      </>}
+      {open === 0 && <rect x={-22} y={-200} width={44} height={200} fill="#e6c27a" opacity={0.8} />}
+      <rect x={-100} y={-120} width={200} height={58} fill="#f4ead2" stroke={ink} strokeWidth={4} />
+      <text x={0} y={-80} fontFamily="Anton, Impact, sans-serif" fontSize={30} textAnchor="middle" fill={ink}>{p.label}</text>
+      <text x={95} y={-20} fontFamily="Anton, Impact, sans-serif" fontSize={26} textAnchor="end" fill={ink} opacity={0.6}>↑ OBEN</text>
+    </g>
+  );
+  if (p.type === 'koffer') {
+    const glow = open * (0.6 + 0.4 * Math.sin(gf * 0.25));
+    return (
+      <g transform={`translate(${p.x} ${by}) scale(${p.scale})`}>
+        <ellipse cx={0} cy={0} rx={190} ry={20} fill="#000" opacity={0.3} />
+        {open > 0 && <ellipse cx={0} cy={-150} rx={260} ry={170} fill="#ffe27a" opacity={0.35 * glow} />}
+        {/* Unterteil */}
+        <rect x={-170} y={-120} width={340} height={120} rx={14} fill="#2f3542" stroke={ink} strokeWidth={6} />
+        <rect x={-170} y={-70} width={340} height={10} fill="#9aa3b5" />
+        {open > 0 && Array.from({ length: 8 }).map((_, i) => (
+          <g key={i} transform={`translate(${-130 + (i % 4) * 66} ${-118 - Math.floor(i / 4) * 22 - open * 6})`}>
+            <rect x={0} y={0} width={60} height={30} rx={4} fill="#7fb26a" stroke={ink} strokeWidth={3} />
+            <rect x={24} y={0} width={12} height={30} fill="#f4ead2" />
+            <text x={14} y={22} fontFamily="Anton, Impact, sans-serif" fontSize={18} fill={ink}>€</text>
+          </g>
+        ))}
+        {/* Deckel */}
+        <g transform={`rotate(${-100 * open} -170 -120)`}>
+          <rect x={-170} y={-150} width={340} height={34} rx={12} fill="#3a4152" stroke={ink} strokeWidth={6} />
+        </g>
+        <rect x={-40} y={-176 + (open > 0 ? 200 : 0)} width={80} height={26} rx={10} fill="none" stroke={ink} strokeWidth={8} opacity={open > 0 ? 0 : 1} />
+        <rect x={-18} y={-128} width={36} height={18} rx={4} fill="#d9b13b" stroke={ink} strokeWidth={3} />
+        {open > 0.5 && Array.from({ length: 7 }).map((_, i) => {
+          const a = (i / 7) * Math.PI * 2 + gf * 0.04;
+          return <text key={i} x={Math.cos(a) * 230} y={-170 + Math.sin(a) * 120} fontSize={34} fill="#fff7d0" opacity={0.6 + 0.4 * Math.sin(gf * 0.3 + i)}>✦</text>;
+        })}
+      </g>
+    );
+  }
+  if (p.type === 'ausruestung') return (
+    <g transform={`translate(${p.x} ${by}) scale(${p.scale})`}>
+      <ellipse cx={0} cy={0} rx={220} ry={20} fill="#000" opacity={0.25} />
+      {/* Regal */}
+      <rect x={-200} y={-330} width={400} height={18} fill="#8a5a33" stroke={ink} strokeWidth={5} />
+      <rect x={-200} y={-170} width={400} height={18} fill="#8a5a33" stroke={ink} strokeWidth={5} />
+      <rect x={-200} y={-330} width={18} height={330} fill="#6e4526" stroke={ink} strokeWidth={4} />
+      <rect x={182} y={-330} width={18} height={330} fill="#6e4526" stroke={ink} strokeWidth={4} />
+      {/* Handschuhe oben */}
+      {[-140, -60, 20, 100].map((x, i) => (
+        <g key={i} transform={`translate(${x} -372)`}>
+          <ellipse cx={20} cy={0} rx={30} ry={38} fill={i % 2 ? '#2a54b8' : '#c8302a'} stroke={ink} strokeWidth={4} />
+          <rect x={2} y={26} width={36} height={18} fill="#f4ead2" stroke={ink} strokeWidth={3} />
+        </g>
+      ))}
+      {/* Pratzen Mitte */}
+      {[-120, 0, 120].map((x, i) => (
+        <g key={i} transform={`translate(${x} -215)`}>
+          <ellipse cx={0} cy={0} rx={44} ry={40} fill="#1a1410" stroke={ink} strokeWidth={4} />
+          <circle cx={0} cy={0} r={22} fill="#f2b632" stroke={ink} strokeWidth={3} />
+        </g>
+      ))}
+      {/* Tennisbälle im Korb unten */}
+      <path d="M-120,-10 L-140,-110 L140,-110 L120,-10 Z" fill="#d9d2c0" stroke={ink} strokeWidth={5} />
+      {Array.from({ length: 6 }).map((_, i) => (
+        <g key={i}>
+          <circle cx={-90 + i * 36} cy={-120 - (i % 2) * 16} r={20} fill="#d7f04a" stroke={ink} strokeWidth={3} />
+          <path d={`M${-104 + i * 36},${-128 - (i % 2) * 16} q14,10 28,0`} stroke="#fff" strokeWidth={3} fill="none" />
+        </g>
+      ))}
+    </g>
+  );
+  if (p.type === 'holzpuppe') return (
+    <g transform={`translate(${p.x} ${by}) scale(${p.scale})`}>
+      <ellipse cx={0} cy={0} rx={140} ry={18} fill="#000" opacity={0.25} />
+      <rect x={-120} y={-420} width={240} height={20} fill="#6e4526" stroke={ink} strokeWidth={4} />
+      <rect x={-110} y={-400} width={16} height={400} fill="#6e4526" stroke={ink} strokeWidth={4} />
+      <rect x={94} y={-400} width={16} height={400} fill="#6e4526" stroke={ink} strokeWidth={4} />
+      <rect x={-45} y={-470} width={90} height={400} rx={40} fill="#b9773d" stroke={ink} strokeWidth={6} />
+      <path d="M-20,-360 l-110,-40 M20,-360 l110,-40 M0,-290 l-120,10" stroke="#9a5f2c" strokeWidth={22} strokeLinecap="round" />
+      <path d="M-20,-360 l-110,-40 M20,-360 l110,-40 M0,-290 l-120,10" stroke={ink} strokeWidth={4} strokeLinecap="round" fill="none" opacity={0.5} />
+      <path d="M0,-150 q-60,40 -40,130" stroke="#9a5f2c" strokeWidth={24} fill="none" strokeLinecap="round" />
+      <text x={0} y={-500} fontFamily="Anton, Impact, sans-serif" fontSize={30} textAnchor="middle" fill="#f4ead2">木人樁</text>
+    </g>
+  );
+  return null;
+};
 
 const BAG_TOP = 600; // Kettenende; Sack reicht von y≈685 bis y≈1105
 const PropSandbag: React.FC<{ p: { x: number; fallAt: number | null; fallen: boolean; color: string; hitAt: number | null }; localSec: number; gf: number }> = ({ p, localSec, gf }) => {

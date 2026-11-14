@@ -287,6 +287,7 @@ export const locations: Location[] = [
   { id: 'buero', name: 'Günthers Büro', description: 'Winziger Raum mit Schreibtisch voller Rechnungen, Foto vom Vater im Ring, Wanduhr, Fenster zur Halle.', unlocked: true },
   { id: 'umkleide', name: 'Umkleide', description: 'Grüne Blechspinde, Holzbank, kaputte Dusche, die tropft.', unlocked: true },
   { id: 'eventhalle', name: 'Kranstadt Arena', description: 'Kleine Veranstaltungshalle am Hafen: Boxring in der Mitte, Tribüne mit genau 100 roten Klappsitzen in 5 Reihen, Scheinwerfer, Banner „KAMPFABEND“. Wiederverwendbar für alle Kampfabende.', unlocked: false },
+  { id: 'grosshalle', name: 'Die große Halle (Angebot)', description: 'Große, helle Trainingshalle mit zwei Ringen, vielen Sandsäcken und einem Wing-Tsun-Bereich mit Holzpuppe – von hakir_373 2 in Aussicht gestellt.', unlocked: false },
   { id: 'rivalengym', name: 'Titan Boxing Gym', description: 'Hochglanz-Gym in der Innenstadt: Glas, LED-Licht, zehn Sandsäcke, zwei Ringe.', unlocked: false },
 ];
 

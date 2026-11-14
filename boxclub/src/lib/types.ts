@@ -88,7 +88,7 @@ export type Character = z.infer<typeof CharacterSchema>;
 
 /* --------------------------------------------------------------------- Orte */
 
-export const LOCATION_KEYS = ['halle', 'ring', 'empfang', 'buero', 'umkleide', 'strasse', 'eventhalle', 'rivalengym'] as const;
+export const LOCATION_KEYS = ['halle', 'ring', 'empfang', 'buero', 'umkleide', 'strasse', 'eventhalle', 'rivalengym', 'grosshalle'] as const;
 export const LocationSchema = z.object({
   id: z.enum(LOCATION_KEYS),
   name: z.string(),
@@ -296,8 +296,16 @@ export const SceneSchema = z.object({
   comment: z.object({ author: z.string().default('Ein Zuschauer'), text: z.string(), tag: z.string().default('KOMMENTAR – NOCH NICHT BESTÄTIGT') }).nullable().default(null),
   /** Szenen-Requisiten, z. B. ein Sandsack, der abreißt */
   props: z.array(z.object({
-    type: z.enum(['sandsack']),
+    type: z.enum(['sandsack', 'kiste', 'koffer', 'ausruestung', 'holzpuppe']),
     x: z.number(),
+    /** Höhe des Bodenpunkts (nur kiste/koffer/ausruestung/holzpuppe), Standard = Boden */
+    y: z.number().nullable().default(null),
+    /** Größe (Skalierung) */
+    scale: z.number().default(1),
+    /** Aufschrift (Kiste) */
+    label: z.string().default(''),
+    /** Sekunde, ab der Kiste/Koffer geöffnet wird; null = zu */
+    openAt: z.number().nullable().default(null),
     /** Sekunde (relativ zur Szene), in der der Sandsack abreißt; null = hängt */
     fallAt: z.number().nullable().default(null),
     /** liegt bereits am Boden */
@@ -308,6 +316,8 @@ export const SceneSchema = z.object({
   })).default([]),
   /** Abweichungen der Kulisse in dieser Szene (z. B. ein Sandsack ist abgerissen) */
   setOverrides: z.object({ sandbags: z.number().int().optional(), condition: z.number().optional(), hasNewRing: z.boolean().optional(), mirrorOk: z.boolean().optional() }).default({}),
+  /** Renovierungs-Überblendung: Kulisse wechselt von „from“ zu setOverrides (Wischeffekt mit Farbrolle) */
+  renovate: z.object({ from: z.object({ sandbags: z.number().int().optional(), condition: z.number().optional(), hasNewRing: z.boolean().optional(), mirrorOk: z.boolean().optional() }), at: z.number().default(1), dur: z.number().default(2.2) }).nullable().default(null),
 });
 export type Scene = z.infer<typeof SceneSchema>;
 

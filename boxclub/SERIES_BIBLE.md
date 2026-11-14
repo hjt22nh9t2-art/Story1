@@ -44,12 +44,19 @@ Erst eine echte Bestätigung durch den Produzenten ändert ihren Status. Story-B
 sind fiktiv und werden nie einem realen Kommentator zugeschrieben.
 
 ## Wiederkehrende Community-Mitglieder (echte TikTok-Nutzer, Namen exakt so schreiben)
-| Nutzername | Rolle in der Serie | Stand | seit |
-|---|---|---|---|
-| **Örlando** | möchte Trainer werden („seit sieben Jahren Kampferfahrung“) | NICHT eingestellt – Abstimmung „Probetraining JA/NEIN“ läuft (d-005) | Folge 5 |
-| **Vexo_on_MTB 🌲🚲** | möglicher Ausrüstungssponsor: Sandsäcke, guter Boxring, Pratzen, 10 Paar Handschuhe, Logo-Design; schrieb „Bestätigt“ | Angebot o-003 offen, nichts geliefert | Folge 5 |
-| **Faro_wpt** | Unterstützer: 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe, Renovierung; später angepasst (weitere Unterstützung, Zahlungen pro Kampf) | Angebot o-001 offen, Details ungeklärt | Folge 4 (anonym), Folge 5 (mit Namen) |
-Keine erfundenen Profilbilder/Identitäten: In der Serie erscheinen sie nur als Kommentar-Karten (grauer Platzhalter-Avatar).
+| Nutzername | Rolle in der Serie | Serienhandlung | Real (außerhalb der Serie) | seit |
+|---|---|---|---|---|
+| **Örlando** | möchte BOXtrainer werden („seit sieben Jahren Kampferfahrung“) | nicht eingestellt; Abstimmung d-005 (Probetraining) ohne Ergebnis; F6-Frage: Emres Kampf oder erst Örlandos Probetraining (d-006) | – | Folge 5 |
+| **Vexo_on_MTB 🌲🚲** | Ausrüstungssponsor | F6: Lieferung eingetroffen (Handschuhe, Pratzen, Sandsäcke) + **Koffer mit 20.000 € (fiktiv)** | Angebot o-003 offen, nichts bestätigt | Folge 5 |
+| **Faro_wpt** | Renovierung + Ausstattung | F6: Renovierung durchgeführt, Ring, Sandsäcke, Pratzen, Handschuhe, Tennisbälle; „kein problem ❤️“. Zahlungen pro Kampf offen (kein Betrag) | Angebot o-001 offen, nichts bestätigt | Folge 4 (anonym), ab F5 mit Namen |
+| **hakir_373 2** | verspricht neue große Halle + Wing-Tsun-Trainer | F6: nur Versprechen/Vorstellung (Traum), noch nicht da | Angebot o-004 offen | Folge 6 |
+Keine erfundenen Profilbilder/Identitäten: Kommentatoren erscheinen nur als Kommentar-Karten (grauer Platzhalter-Avatar).
+In der Serie umgesetzte Angebote sind **fiktive Handlung**; reale Zahlungen/Lieferungen gelten erst nach Bestätigung durch den Produzenten.
+
+## Story-Fonds vs. Like-Kasse
+- **Vereinskasse (Like-Kasse):** gespeicherter Stand + echte Likes × 2 € (symbolisch). Stand nach F6: 442 €.
+- **Koffer-Fonds (fiktiv):** 20.000 € aus dem Paket von Vexo_on_MTB (Folge 6). Wird getrennt geführt, Verwendung offen
+  (Paule: Miete, Strom, Emres Training – Günther: Whirlpool).
 
 ## Erzählzeit vs. echte Zeit
 Story-Tage (Countdown zum Kampf) und echte Abstimmungsfristen laufen getrennt. Der Kampfabend wird erst erzählt,
@@ -62,9 +69,11 @@ Community-Aktion → Cliffhanger (möglichst Loop zum Anfang). 30–60 s, nie k�
 ## Schauplätze
 Depotstraße (außen) · Die Halle (Ring rot/blau, Sandsäcke, Risse, Plakate von 1987) · Der Ring ·
 Empfang · Günthers Büro · Umkleide · **Kranstadt Arena** (100 rote Klappsitze, 5×20, wiederverwendbar) ·
-Titan Boxing Gym (Rivale, noch gesperrt).
+Titan Boxing Gym (Rivale, noch gesperrt) · **Die große Halle** (Angebot von hakir_373 2, bisher nur als Vorstellung).
+**Ab Folge 6 ist die Halle renoviert:** helle Wände, roter ROSTFAUST-Schriftzug, neuer Ring, 5 Sandsäcke, neuer Spiegel, Ausrüstungsregal (Handschuhe, Pratzen, Tennisbälle).
 
 ## Figuren (Kurzfassung – Details in CHARACTERS_AND_VOICES.md)
 Günther (Gründer, Optimist) · Rosa (Cheftrainerin, streng & fair) · Paule (Hausmeister/Kassenwart, trocken) ·
 Emre (17, erster Boxer) · Bruno (Ex-Profi, **nicht verpflichtet**, Kandidat; Paule kennt ein Geheimnis) ·
-Nico (Problemfall, Kandidat, noch nicht aufgetreten) · Viktor Hahn (Rivale, noch nicht aufgetreten).
+Nico (Problemfall, Kandidat, noch nicht aufgetreten) · Viktor Hahn (Rivale, noch nicht aufgetreten) ·
+**Sifu** (Wing-Tsun-Trainer, Kandidat, ab F6 – KEIN Boxtrainer, NICHT Örlando; spricht noch nicht).

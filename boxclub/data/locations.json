@@ -46,5 +46,11 @@
     "name": "Titan Boxing Gym",
     "description": "Hochglanz-Gym in der Innenstadt: Glas, LED-Licht, zehn Sandsäcke, zwei Ringe.",
     "unlocked": false
+  },
+  {
+    "id": "grosshalle",
+    "name": "Die große Halle (Angebot)",
+    "description": "Große, helle Trainingshalle mit zwei Ringen, vielen Sandsäcken und einem Wing-Tsun-Bereich mit Holzpuppe – von hakir_373 2 in Aussicht gestellt.",
+    "unlocked": false
   }
 ]

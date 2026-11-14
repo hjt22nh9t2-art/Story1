@@ -652,6 +652,45 @@ function rivalengym(frame: number): SetLayers {
   };
 }
 
+function grosshalle(frame: number): SetLayers {
+  return {
+    tint: 'rgba(255,240,210,0.05)',
+    back: (
+      <g>
+        <rect x={-500} y={0} width={2100} height={1300} fill="url(#brickNew)" />
+        <rect x={-500} y={0} width={2100} height={1300} fill="#fff" opacity={0.18} />
+        {/* große Fensterfront */}
+        {[-380, -60, 260, 580, 900, 1220].map((x, i) => (
+          <g key={i}>
+            <rect x={x} y={120} width={250} height={420} fill="#cfe3f3" stroke={INK} strokeWidth={6} />
+            <path d={`M${x + 125},120 V540 M${x},330 H${x + 250}`} stroke={INK} strokeWidth={5} />
+            <path d={`M${x},540 L${x + 250},540 L${x + 420},1300 L${x + 160},1300 Z`} fill="url(#shaft)" opacity={0.5 + Math.sin(frame * 0.02 + i) * 0.06} />
+          </g>
+        ))}
+        <text x={540} y={660} fontFamily="Anton, Impact, sans-serif" fontSize={120} textAnchor="middle" fill="#8c1d2c" letterSpacing={10}>ROSTFAUST</text>
+        <text x={540} y={720} fontFamily="Anton, Impact, sans-serif" fontSize={40} textAnchor="middle" fill="#1f3f8a" letterSpacing={8}>BOXEN · WING TSUN</text>
+        {/* zwei kleine Ringe im Hintergrund */}
+        {[-200, 760].map((x, i) => (
+          <g key={i} transform={`translate(${x} 0)`}>
+            <path d="M0,1180 L520,1180 L545,1240 L-25,1240 Z" fill="#dfe5ee" stroke={INK} strokeWidth={5} />
+            <rect x={-25} y={1240} width={570} height={40} fill={i ? '#c8302a' : '#1f3f8a'} stroke={INK} strokeWidth={5} />
+            <CornerPost x={0} y={1010} h={170} color="#c8302a" />
+            <CornerPost x={520} y={1010} h={170} color="#2a54b8" />
+            <RingRopes x0={0} x1={520} y={1030} gap={44} />
+          </g>
+        ))}
+        {/* Sandsack-Reihe */}
+        {Array.from({ length: 6 }).map((_, i) => <Sandbag key={i} x={-120 + i * 260} frame={frame} color={i % 2 ? '#2f3a4f' : '#7c2b26'} seed={i + 3} top={760} />)}
+        {/* heller Boden mit Matten */}
+        <path d="M-500,1300 L1600,1300 L1600,1920 L-500,1920 Z" fill="url(#planks)" />
+        <path d="M-200,1360 L700,1360 L760,1520 L-260,1520 Z" fill="#1f3f8a" opacity={0.55} />
+      </g>
+    ),
+    mid: <g />,
+    front: <Dust frame={frame} n={12} color="#fff7d0" />,
+  };
+}
+
 export interface SetOpts { seatsFilled?: number }
 
 export function getSet(location: string, frame: number, club: SetClub, opts: SetOpts = {}): SetLayers {
@@ -664,6 +703,7 @@ export function getSet(location: string, frame: number, club: SetClub, opts: Set
     case 'umkleide': return umkleide(frame, club);
     case 'eventhalle': return eventhalle(frame, opts);
     case 'rivalengym': return rivalengym(frame);
+    case 'grosshalle': return grosshalle(frame);
     default: return halle(frame, club);
   }
 }

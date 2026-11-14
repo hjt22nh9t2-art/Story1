@@ -1,0 +1,1177 @@
+{
+  "id": "ep-006",
+  "number": 6,
+  "title": "Wir werden endlich renoviert!",
+  "status": "vertont",
+  "createdAt": "2026-11-14T15:45:45.415Z",
+  "publishedAt": null,
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Lieferung von Vexo_on_MTB inkl. 20.000-€-Koffer, Renovierung durch Faro_wpt (Vorher/Nachher), große Halle + Wing-Tsun-Trainer von hakir_373 2, Emre trainiert, Cliffhanger erster Kampf.",
+  "resolvesDecisionId": null,
+  "hook": "Günther stürmt vor die Halle, überall Pakete und ein Koffer: „Leute! Die Lieferung ist da!“",
+  "summary": "Vor dem Boxclub stapeln sich Pakete von Vexo_on_MTB – Handschuhe, Pratzen, Sandsäcke – und ein Koffer. Darin: 20.000 Euro (in der Geschichte). Günther plant schon einen Whirlpool, Paule muss sich erst mal setzen. Dann übernimmt Faro_wpt die Renovierung: Die alte Halle verwandelt sich in einen hellen Boxclub mit neuem Ring, Sandsäcken, Pratzen, Handschuhen und Tennisbällen. Rosa entdeckt den nächsten Kommentar: hakir_373 2 verspricht eine große Halle und einen Wing-Tsun-Trainer. Emre trainiert zum ersten Mal richtig. Günther: „Dann wird es Zeit für den ersten großen Kampf!“ Die Community entscheidet: Emres erster Kampf – oder erst ein Probetraining mit Örlando?",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "strasse",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "auftritt"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "Leute! Die Lieferung ist da!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": "tuer",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l1.mp3",
+            "durationSec": 1.96,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "paule-kruse",
+          "text": "Welche Lieferung denn jetzt schon wieder?",
+          "emotion": "neutral",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l2.mp3",
+            "durationSec": 1.7,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Hook: Pakete und ein Koffer vor der Depotstraße 7. Günther stürmt rein, Paule schaut raus.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [
+        {
+          "type": "kiste",
+          "x": 470,
+          "y": null,
+          "scale": 1.05,
+          "label": "VEXO_ON_MTB",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        },
+        {
+          "type": "kiste",
+          "x": 700,
+          "y": null,
+          "scale": 0.9,
+          "label": "BOXEN",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        },
+        {
+          "type": "kiste",
+          "x": 585,
+          "y": 1395,
+          "scale": 0.75,
+          "label": "PRATZEN",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        },
+        {
+          "type": "koffer",
+          "x": 580,
+          "y": 1640,
+          "scale": 0.85,
+          "label": "",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "halle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l3",
+          "speaker": "guenther-wallach",
+          "text": "Das kommt von Vexo on MTB! Handschuhe, Pratzen, Sandsäcke – alles da!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": "whoosh",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l3.mp3",
+            "durationSec": 5.07,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "rosa-brandt",
+          "text": "Und was ist in dem Koffer?",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l4.mp3",
+            "durationSec": 1.33,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "In der (noch alten) Halle: Kiste von Vexo_on_MTB wird geöffnet – Handschuhe springen raus.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Vexo_on_MTB 🌲🚲",
+        "text": "„Bei mir ist verschickt und einen Koffer mit 20k und das ist alles schon versucht und sollte da sein.“",
+        "tag": "IN DER SERIE: DIE LIEFERUNG IST DA"
+      },
+      "props": [
+        {
+          "type": "kiste",
+          "x": 560,
+          "y": null,
+          "scale": 1.1,
+          "label": "VEXO_ON_MTB",
+          "openAt": 0.6,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 0,
+        "condition": 28,
+        "hasNewRing": false,
+        "mirrorOk": false
+      },
+      "renovate": null
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l5",
+          "speaker": "guenther-wallach",
+          "text": "Was?! Ein Koffer mit zwanzigtausend Euro?!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": "kasse",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l5.mp3",
+            "durationSec": 2.72,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "paule-kruse",
+          "text": "Ich setz mich mal kurz hin.",
+          "emotion": "ueberrascht",
+          "action": "seufzen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l6.mp3",
+            "durationSec": 1.15,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "guenther-wallach",
+          "text": "Neuer Ring! Neue Duschen! Ein Whirlpool!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l7.mp3",
+            "durationSec": 2.85,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "paule-kruse",
+          "text": "Günni. Erst Miete, Strom und Emres Training.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l8.mp3",
+            "durationSec": 2.69,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "20.000 € – IN DER STORY",
+      "music": "spannung",
+      "direction": "Der Koffer klappt auf: Geldbündel, goldenes Leuchten. Paule muss sich setzen.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [
+        {
+          "type": "koffer",
+          "x": 540,
+          "y": 1560,
+          "scale": 1.25,
+          "label": "",
+          "openAt": 0.35,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 0,
+        "condition": 28,
+        "hasNewRing": false,
+        "mirrorOk": false
+      },
+      "renovate": null
+    },
+    {
+      "id": "s4",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l9",
+          "speaker": "guenther-wallach",
+          "text": "Und Faro_wpt übernimmt sogar unsere Renovierung!",
+          "emotion": "froh",
+          "action": "faust_heben",
+          "sfx": "whoosh",
+          "pauseAfter": 0.1,
+          "delayBefore": 0.1,
+          "audio": {
+            "file": "episodes/ep-006/voice/l9.mp3",
+            "durationSec": 3.55,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "rosa-brandt",
+          "text": "Neue Wände, ein richtiger Ring, Sandsäcke … und Tennisbälle?",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l10.mp3",
+            "durationSec": 3.58,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Faro_wpt übernimmt die Renovierung: Farbrollen-Wisch verwandelt die alte Halle in die neue (Wände, Ring, Sandsäcke, Spiegel).",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Faro_wpt",
+        "text": "4 Boxsäcke · Boxring · Pratzen · Handschuhe · Tennisbälle · Renovierung – „kein problem ❤️“",
+        "tag": "IN DER SERIE: RENOVIERUNG"
+      },
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": {
+        "from": {
+          "sandbags": 0,
+          "condition": 28,
+          "hasNewRing": false,
+          "mirrorOk": false
+        },
+        "at": 2.6,
+        "dur": 2.6
+      }
+    },
+    {
+      "id": "s5",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l11",
+          "speaker": "paule-kruse",
+          "text": "Für die Reflexe, Rosa. Hab ich nachgelesen.",
+          "emotion": "stolz",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l11.mp3",
+            "durationSec": 2.17,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Die neue Halle: Ausrüstungsregal mit Handschuhen, Pratzen, Tennisbällen. Paules trockener Kommentar.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [
+        {
+          "type": "ausruestung",
+          "x": 560,
+          "y": null,
+          "scale": 1,
+          "label": "",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s6",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l12",
+          "speaker": "rosa-brandt",
+          "text": "Wartet mal! hakir_373 2 verspricht uns eine neue große Halle und einen Wing-Tsun-Trainer!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l12.mp3",
+            "durationSec": 5.51,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        },
+        {
+          "id": "l13",
+          "speaker": "guenther-wallach",
+          "text": "Wing Tsun?! Paule, kannst du das buchstabieren?",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l13.mp3",
+            "durationSec": 2.74,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l14",
+          "speaker": "paule-kruse",
+          "text": "Nein.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.2,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l14.mp3",
+            "durationSec": 0.37,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Rosa entdeckt den Kommentar von hakir_373 2.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "hakir_373 2",
+        "text": "„Ihr bekommt eine neue große Halle + Wing-Tsun-Trainer.“",
+        "tag": "ANGEBOT – NOCH NICHT DA"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s7",
+      "beat": "entwicklung",
+      "location": "grosshalle",
+      "shot": "schwenk",
+      "cast": [
+        {
+          "characterId": "wingtsun-sifu",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l15",
+          "speaker": "guenther-wallach",
+          "text": "Stellt euch vor: eine große Halle … und ein Meister, der ganz anders kämpft …",
+          "emotion": "froh",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l15.mp3",
+            "durationSec": 4.28,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "gefuehl",
+      "direction": "Vorstellung (Traum): große Halle mit zwei Ringen; der Wing-Tsun-Trainer an der Holzpuppe – ruhig, präzise, KEIN Boxtrainer.",
+      "seats": null,
+      "fx": "traum",
+      "kasse": null,
+      "comment": null,
+      "props": [
+        {
+          "type": "holzpuppe",
+          "x": 520,
+          "y": null,
+          "scale": 1.05,
+          "label": "",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s8",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "dolly",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l16",
+          "speaker": "emre-yildiz",
+          "text": "Wow … ist das wirklich unsere Halle?",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": "sandsack",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l16.mp3",
+            "durationSec": 2.32,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l17",
+          "speaker": "guenther-wallach",
+          "text": "Emre, ab jetzt wird richtig trainiert!",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l17.mp3",
+            "durationSec": 2.43,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "ERSTES TRAINING",
+      "music": "training",
+      "direction": "Zurück in der renovierten Halle: Emre mit neuen Handschuhen am neuen Sandsack.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [
+        {
+          "type": "sandsack",
+          "x": 420,
+          "y": null,
+          "scale": 1,
+          "label": "",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": 0.5
+        }
+      ],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s9",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "pratzen"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l18",
+          "speaker": "rosa-brandt",
+          "text": "Links, rechts, Haken! Und jetzt Beinarbeit!",
+          "emotion": "entschlossen",
+          "action": "pratzen",
+          "sfx": "schlag",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l18.mp3",
+            "durationSec": 3.03,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "training",
+      "direction": "Im neuen Ring: Pratzentraining mit Rosa, Beinarbeit.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s10",
+      "beat": "entwicklung",
+      "location": "halle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l19",
+          "speaker": "guenther-wallach",
+          "text": "Aus Rostfaust wird endlich ein richtiger Boxclub!",
+          "emotion": "stolz",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l19.mp3",
+            "durationSec": 2.82,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l20",
+          "speaker": "paule-kruse",
+          "text": "Sieht gut aus. Aber jetzt müssen wir auch zeigen, dass wir kämpfen können.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l20.mp3",
+            "durationSec": 3.4,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l21",
+          "speaker": "guenther-wallach",
+          "text": "Dann wird es Zeit für den ersten großen Kampf!",
+          "emotion": "entschlossen",
+          "action": "nicken",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.2,
+          "delayBefore": 0.3,
+          "audio": {
+            "file": "episodes/ep-006/voice/l21.mp3",
+            "durationSec": 2.72,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Günther stolz in der neuen Halle. Paule erdet ihn. Emre schaut zum Ring – Cliffhanger.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s11",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l22",
+          "speaker": "guenther-wallach",
+          "text": "Nur noch sieben Follower bis zu den ersten Fünfzig! Und jedes Like bringt zwei Euro in die Kasse.",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": "publikum",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l22.mp3",
+            "durationSec": 5.69,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l23",
+          "speaker": "paule-kruse",
+          "text": "Fünfundzwanzig Likes: fünfzig Euro. Symbolisch.",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l23.mp3",
+            "durationSec": 3.24,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Arena 43/100 (Ziel 50), Kasse 392 → 442 € (25 echte Likes × 2 €, symbolisch), Like-Ziel 100.",
+      "seats": {
+        "from": 43,
+        "to": 43,
+        "total": 100,
+        "hud": true,
+        "goal": 50
+      },
+      "fx": null,
+      "kasse": {
+        "amount": 442,
+        "perLike": 2,
+        "from": 392,
+        "likeGoal": 100
+      },
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s12",
+      "beat": "entscheidung",
+      "location": "halle",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l24",
+          "speaker": "guenther-wallach",
+          "text": "Und jetzt ihr: Wen wollt ihr als Nächstes im Ring sehen?",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l24.mp3",
+            "durationSec": 2.9,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l25",
+          "speaker": "rosa-brandt",
+          "text": "A: Emre beim ersten Kampf. B: erst Örlando beim Probetraining.",
+          "emotion": "entschlossen",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.3,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-006/voice/l25.mp3",
+            "durationSec": 3.5,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Die eine Hauptfrage an die Community.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    }
+  ],
+  "decision": {
+    "question": "Wen wollt ihr als Nächstes im Ring sehen?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Emre beim ersten Kampf",
+        "consequenceHint": "Der erste Kampf wird vorbereitet – Gegner und Termin folgen.",
+        "plan": "kampf:emre-erster-kampf"
+      },
+      {
+        "key": "B",
+        "label": "Erst Örlando beim Probetraining",
+        "consequenceHint": "Örlando kommt zum Probetraining in die neue Halle.",
+        "plan": "trainer:oerlando-probetraining"
+      }
+    ]
+  },
+  "cliffhanger": "Der Boxclub ist renoviert – jetzt muss Rostfaust zeigen, dass er kämpfen kann. Emres erster Kampf oder erst Örlandos Probetraining? Gegner und Termin sind noch offen.",
+  "stateChanges": [
+    {
+      "op": "likes",
+      "amount": 25,
+      "target": "",
+      "value": "",
+      "reason": "Likes Folge 5 laut Screenshot des Produzenten"
+    },
+    {
+      "op": "geld",
+      "amount": 50,
+      "target": "",
+      "value": "",
+      "reason": "Symbolisch: 25 Likes (Folge 5) × 2 € – keine echte Einnahme"
+    },
+    {
+      "op": "kennzahlen",
+      "amount": 5,
+      "target": "",
+      "value": "{\"views\":729,\"likes\":25,\"followersTotal\":43,\"newFollowers\":0,\"note\":\"Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet.\"}",
+      "reason": ""
+    },
+    {
+      "op": "zustand_halle",
+      "amount": 72,
+      "target": "",
+      "value": "",
+      "reason": "Renovierung durch Faro_wpt (Serienhandlung)"
+    },
+    {
+      "op": "ausruestung_zustand",
+      "amount": 55,
+      "target": "ring",
+      "value": "",
+      "reason": "neuer Boxring (Serienhandlung)"
+    },
+    {
+      "op": "ausruestung",
+      "amount": 4,
+      "target": "sandsack",
+      "value": "Sandsack",
+      "reason": "4 Boxsäcke von Faro_wpt"
+    },
+    {
+      "op": "ausruestung_zustand",
+      "amount": 70,
+      "target": "sandsack",
+      "value": "",
+      "reason": ""
+    },
+    {
+      "op": "ausruestung",
+      "amount": 13,
+      "target": "handschuhe",
+      "value": "Paar Boxhandschuhe",
+      "reason": "10 Paar (Vexo_on_MTB) + 3 Paar (Faro_wpt)"
+    },
+    {
+      "op": "ausruestung_zustand",
+      "amount": 60,
+      "target": "handschuhe",
+      "value": "",
+      "reason": ""
+    },
+    {
+      "op": "ausruestung",
+      "amount": 3,
+      "target": "pratzen",
+      "value": "Pratzen",
+      "reason": "Pratzen (Vexo_on_MTB / Faro_wpt, nicht doppelt gezählt)"
+    },
+    {
+      "op": "ausruestung",
+      "amount": 6,
+      "target": "tennisbaelle",
+      "value": "Tennisbälle (Reaktionstraining)",
+      "reason": "3 Paar Tennisbälle von Faro_wpt"
+    },
+    {
+      "op": "ausruestung_zustand",
+      "amount": 80,
+      "target": "spiegel",
+      "value": "",
+      "reason": "Spiegel bei der Renovierung ersetzt"
+    },
+    {
+      "op": "ort_freischalten",
+      "amount": 0,
+      "target": "grosshalle",
+      "value": "",
+      "reason": "Als Vorstellung gezeigt – Angebot von hakir_373 2, noch nicht da"
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-001",
+      "value": "{\"source\":\"Kommentare von Faro_wpt (unter Folge 3 und später)\",\"content\":\"Neuester Stand: 4 Boxsäcke, 3 Paar Tennisbälle, Boxring, 3 Paar Boxhandschuhe, Renovierung (früher: 5 Sandsäcke, 3 Pratzen, 4 Paar Handschuhe, Renovierung, Zahlungen pro Kampf). Antwort auf „Wow danke dir ❤️“: „kein problem ❤️“\",\"status\":\"offen\",\"storyCondition\":\"\",\"note\":\"In der SERIE (fiktiv) in Folge 6 umgesetzt: Renovierung + Ausstattung. Zahlungen pro Kampf: offen, kein Betrag. REAL nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-003",
+      "value": "{\"source\":\"Kommentare von Vexo_on_MTB 🌲🚲\",\"content\":\"Sandsäcke, Boxring, Pratzen, 10 Paar Boxhandschuhe, Logo-Design; laut Kommentar „verschickt“ + „Koffer mit 20k“\",\"status\":\"offen\",\"note\":\"In der SERIE (fiktiv) in Folge 6 geliefert, inkl. Koffer mit 20.000 €. REAL weder Lieferung noch Geld bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-004",
+      "value": "{\"source\":\"Kommentar von hakir_373 2\",\"content\":\"Neue große Halle + Wing-Tsun-Trainer\",\"status\":\"offen\",\"storyCondition\":\"\",\"note\":\"In der Serie nur als Versprechen/Vorstellung gezeigt (Folge 6). Nicht eingetroffen.\"}",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "renovierung",
+      "value": "Folge 6: Faro_wpt renoviert den Boxclub (Serienhandlung). Neue Wände, neuer Ring, 5 Sandsäcke (4 neue + alter), Pratzen, Handschuhe, Tennisbälle, neuer Spiegel.",
+      "reason": "Die Renovierung"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "koffer-20k",
+      "value": "Folge 6: Im Paket von Vexo_on_MTB liegt ein Koffer mit 20.000 € (fiktiv). Getrennt von der Like-Kasse geführt („Story-Fonds“). Paule: erst Miete, Strom und Emres Training; Günther träumt vom Whirlpool. Verwendung noch offen.",
+      "reason": "Der Koffer"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "grosse-halle",
+      "value": "Folge 6: hakir_373 2 verspricht eine neue große Halle + Wing-Tsun-Trainer („Sifu“). Nur Vorstellung, noch nicht da.",
+      "reason": "Die große Halle"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "trainer-oerlando",
+      "value": "Folge 6: Örlando bleibt möglicher BOXtrainer (nicht eingestellt). Neue Abstimmung: Emres erster Kampf oder erst Örlandos Probetraining.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Folge 6: Erstes richtiges Training in der renovierten Halle – Sandsack, Pratzen mit Rosa, Beinarbeit. „Ist das wirklich unsere Halle?“",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "kampfabend",
+      "value": "Folge 6: Günther: „Zeit für den ersten großen Kampf!“ Gegner und Termin weiterhin offen. Arena 43/100, Ziel 50.",
+      "reason": ""
+    },
+    {
+      "op": "kapitel",
+      "amount": 0,
+      "target": "",
+      "value": "Akt 2 – Der neue Boxclub",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [
+    "wingtsun-sifu"
+  ],
+  "socialCaption": "Folge 6: Wir werden endlich renoviert! 🥊🎨 Danke Vexo_on_MTB 🌲🚲, Faro_wpt und hakir_373 2 – eure Kommentare haben den Boxclub verändert (in unserer Geschichte). Jetzt ihr: Wen wollt ihr als Nächstes im Ring sehen? A = Emres erster Kampf, B = erst Örlando beim Probetraining. ❤️ Ziel: 100 Likes (1 Like = 2 € symbolisch)",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#renovierung",
+    "#animationserie",
+    "#teil6"
+  ],
+  "titleCard": "klein",
+  "endCard": {
+    "type": "abstimmung",
+    "headline": "Wen wollt ihr als Nächstes im Ring sehen?",
+    "lines": [
+      "Schreib A oder B in die Kommentare!",
+      "🏟️ 43/100 Plätze · ❤️ Ziel: 100 Likes"
+    ],
+    "seatsFilled": 43,
+    "seatsTotal": 100,
+    "seatsGoal": 50
+  },
+  "video": null
+}

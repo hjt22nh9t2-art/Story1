@@ -10,7 +10,9 @@
 - Figuren ausschließlich aus dem parametrischen Rig (`src/remotion/Character.tsx`) – identische Optik.
 - Kulissen aus `src/remotion/Sets.tsx`, abhängig vom gespeicherten Vereinszustand.
 - Kamera: Totale/Halbnah/Nah/Schwenk/Zoom/Dolly mit Parallaxe, Handkamera-Wackler, Wischschnitt.
-- Requisiten pro Szene (`props`, z. B. Sandsack schwingt/reißt ab), Daueraktionen (`cast.action`).
+- Requisiten pro Szene (`props`): Sandsack (schwingt/reißt ab), Lieferkiste (`kiste`, öffnet sich), Geldkoffer (`koffer`, klappt auf), Ausrüstungsregal (`ausruestung`: Handschuhe, Pratzen, Tennisbälle), Wing-Tsun-Holzpuppe (`holzpuppe`). Daueraktionen (`cast.action`).
+- Renovierungs-Überblendung (`renovate`): alte → neue Kulisse per Farbrollen-Wisch (seit Folge 6).
+- Requisiten nicht unter den Untertitel-Bereich (y ≈ 1255–1400) legen, wenn sie für die Handlung wichtig sind.
 - Lippenbewegung während der Zeile, Blinzeln, Atmen, Emotion + Geste je Zeile.
 - Wenn der Hook visuell ist: Totale verwenden, damit der Folgentitel die Aktion nicht verdeckt.
 - Zeigt der Hook selbst Text (z. B. Kommentar-Karte): `titleCard: 'klein'` (kompakter Titel unter dem Logo).

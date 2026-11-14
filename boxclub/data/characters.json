@@ -598,5 +598,87 @@
     "lookHistory": [],
     "conceptImage": "",
     "notes": ""
+  },
+  {
+    "id": "wingtsun-sifu",
+    "name": "Sifu",
+    "nickname": "Der Wing-Tsun-Trainer",
+    "role": "trainer",
+    "roleTitle": "Wing-Tsun-Trainer (Angebot von hakir_373 2)",
+    "status": "kandidat",
+    "age": 45,
+    "heightCm": 172,
+    "weightKg": 70,
+    "weightClass": "",
+    "personality": "Ruhig, präzise, wenige Worte. Gegenpol zum lauten Boxclub.",
+    "background": "Wurde von hakir_373 2 zusammen mit einer neuen großen Halle in Aussicht gestellt. KEIN Boxtrainer und NICHT identisch mit Örlando. Name/Herkunft noch offen.",
+    "speechStyle": "Spricht (noch) nicht.",
+    "strengths": [
+      "Technik",
+      "Reflexe",
+      "Gleichgewicht"
+    ],
+    "weaknesses": [
+      "kennt das Boxen nicht"
+    ],
+    "goal": "offen",
+    "catchphrase": "",
+    "stats": {
+      "technik": 9,
+      "kraft": 5,
+      "kondition": 8,
+      "disziplin": 10
+    },
+    "record": {
+      "siege": 0,
+      "niederlagen": 0,
+      "unentschieden": 0
+    },
+    "voice": {
+      "elevenlabsVoiceId": "",
+      "openaiVoice": "onyx",
+      "instructions": "",
+      "demoPitch": 0.9,
+      "elevenlabsModel": "",
+      "locked": false,
+      "note": "Noch keine Stimme – spricht noch nicht.",
+      "speko": null
+    },
+    "look": {
+      "skin": "#d9a77c",
+      "hair": {
+        "style": "dutt",
+        "color": "#1b1612"
+      },
+      "facialHair": {
+        "style": "kinnbart",
+        "color": "#1b1612"
+      },
+      "brows": "streng",
+      "eyeColor": "#2a1e14",
+      "nose": "klein",
+      "cauliflowerEar": false,
+      "build": "athletisch",
+      "ageLook": "erwachsen",
+      "top": {
+        "type": "hemd",
+        "color": "#1a1a1a",
+        "accent": "#d9b13b",
+        "print": ""
+      },
+      "bottom": {
+        "type": "trainingshose",
+        "color": "#1a1a1a",
+        "accent": "#d9b13b"
+      },
+      "shoes": "#1a1a1a",
+      "gloves": "#1a1a1a",
+      "accessories": []
+    },
+    "firstEpisode": null,
+    "lookLocked": false,
+    "lookHistory": [],
+    "conceptImage": "",
+    "notes": "Erster Auftritt geplant: Folge 6 (Vorstellung der großen Halle)."
   }
 ]
