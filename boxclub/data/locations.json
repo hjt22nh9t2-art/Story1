@@ -57,6 +57,6 @@
     "id": "neuehalle",
     "name": "Die neue Halle (dreimal so groß)",
     "description": "Dreimal so große, fertig eingerichtete Halle mit Gym-Bereich (Laufbänder, Hantelbank, Hantelregal), großem Ring und Sandsack-Reihe. In der Serie von Vexo_on_MTB bereitgestellt, Miete bezahlt.",
-    "unlocked": false
+    "unlocked": true
   }
 ]

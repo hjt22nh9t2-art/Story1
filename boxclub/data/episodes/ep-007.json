@@ -2,9 +2,9 @@
   "id": "ep-007",
   "number": 7,
   "title": "Eine Halle für 50.000 Euro?!",
-  "status": "vertont",
+  "status": "veroeffentlicht",
   "createdAt": "2026-11-15T21:31:41.406Z",
-  "publishedAt": null,
+  "publishedAt": "2026-11-15T21:59:56.137Z",
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
   "userIdeas": "Umzug in dreimal so große Halle mit Gym (Vexo_on_MTB: Miete + Ring bezahlt, goldener Koffer 50k), Faro_wpt kündigt 40k für morgen an (+ Kommentar „b“), Emres Kampfvorbereitung beginnt, CTA „KAMPF“.",
   "resolvesDecisionId": null,
@@ -988,5 +988,10 @@
     "seatsTotal": 100,
     "seatsGoal": 75
   },
-  "video": null
+  "video": {
+    "file": "episodes/ep-007/boxclub_folge_007.mp4",
+    "poster": "episodes/ep-007/poster.jpg",
+    "renderedAt": "2026-11-15T21:59:28.383Z",
+    "durationSec": 82.8
+  }
 }

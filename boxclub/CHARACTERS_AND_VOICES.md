@@ -1,6 +1,6 @@
 # CHARACTERS AND VOICES – Boxclub Rostfaust
 
-Stand nach Folge 6 (2026-11-14). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
+Stand nach Folge 7 (2026-11-15). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
 
 ## Stimmen-Übersicht (verbindlich)
 | Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |
@@ -13,6 +13,7 @@ Stand nach Folge 6 (2026-11-14). Quelle: `data/characters.json`. Referenzbilder:
 | Nico Falk | Callum – Husky | elevenlabs / eleven_v3 | `N2lVS1w4EtoT3dr4eOWO` | Vorschlag | Vorschlag: ElevenLabs „Callum – Husky“. Noch nicht gesprochen. |
 | Viktor Hahn | Eric – Smooth | elevenlabs / eleven_v3 | `cjVigY5qzO86Huf0OWal` | Vorschlag | Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen. |
 | Sifu | – | elevenlabs / Standard | `` | Vorschlag | Noch keine Stimme – spricht noch nicht. |
+| Der Kurier | – | elevenlabs / Standard | `` | Vorschlag | Stumm. |
 
 **Regel:** Stimmen mit 🔒 werden nie ohne ausdrückliche Zustimmung des Produzenten geändert. Prüfung jeder Zeile: Grundtonhöhe (`scripts/pitch.py`) + Spracherkennung.
 
@@ -111,4 +112,16 @@ Stand nach Folge 6 (2026-11-14). Quelle: `data/characters.json`. Referenzbilder:
 - **Stärken/Schwächen:** Technik, Reflexe, Gleichgewicht / kennt das Boxen nicht
 - **Ziel:** offen · **Spruch:** „“
 - **Hintergrund:** Wurde von hakir_373 2 zusammen mit einer neuen großen Halle in Aussicht gestellt. KEIN Boxtrainer und NICHT identisch mit Örlando. Name/Herkunft noch offen.
+
+## Der Kurier „Mann mit dem goldenen Koffer“
+![Der Kurier](docs/charakterbibel/kurier.png)
+
+- **Rolle:** Kurier mit dem goldenen Koffer (Folge 7) · **Status:** gast (seit Folge 7)
+- **Daten:** 40 J., 185 cm, 88 kg 
+- **Aussehen (fest):** Haut #c99a74, Haare zurueckgegelt #1b1612, Bart keiner, Nase spitz, Statur athletisch; sakko #1c1f26/#d9b13b, stoffhose #1c1f26, Schuhe #111111; Accessoires: brille, goldkette
+- **Persönlichkeit:** Wortlos, Sonnenbrille, steht einfach da.
+- **Sprechstil:** Spricht nicht.
+- **Stärken/Schwächen:**  / 
+- **Ziel:** Koffer übergeben · **Spruch:** „“
+- **Hintergrund:** Wartet laut Kommentar von Vexo_on_MTB in der neuen Halle mit einem goldenen Koffer. Keine reale Person, keine Identität.
 

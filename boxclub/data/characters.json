@@ -754,8 +754,8 @@
         "goldkette"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 7,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Nur Folge 7 geplant."

@@ -3,8 +3,8 @@
   "city": "Kranstadt",
   "address": "Depotstraße 7",
   "founded": "Neugründung 2026 – Tradition seit 1961",
-  "money": 442,
-  "monthlyCosts": 380,
+  "money": 300,
+  "monthlyCosts": 130,
   "monthlyIncome": 30,
   "members": 2,
   "reputation": 5,
@@ -62,6 +62,12 @@
       "id": "tennisbaelle",
       "name": "Tennisbälle (Reaktionstraining)",
       "count": 6,
+      "condition": 100
+    },
+    {
+      "id": "gym",
+      "name": "Gym-Bereich (Laufbänder, Hantelbank, Hantelregal)",
+      "count": 1,
       "condition": 100
     }
   ],
@@ -134,6 +140,10 @@
         {
           "episode": 6,
           "text": "Folge 6: Erstes richtiges Training in der renovierten Halle – Sandsack, Pratzen mit Rosa, Beinarbeit. „Ist das wirklich unsere Halle?“"
+        },
+        {
+          "episode": 7,
+          "text": "Folge 7: „Dann kann ich endlich richtig trainieren!“ – erfährt von seinem ersten Kampf."
         }
       ]
     },
@@ -230,6 +240,10 @@
         {
           "episode": 6,
           "text": "Folge 6: Im Paket von Vexo_on_MTB liegt ein Koffer mit 20.000 € (fiktiv). Getrennt von der Like-Kasse geführt („Story-Fonds“). Paule: erst Miete, Strom und Emres Training; Günther träumt vom Whirlpool. Verwendung noch offen."
+        },
+        {
+          "episode": 7,
+          "text": "Folge 7: Story-Fonds jetzt 70.000 € eingegangen (20k + 50k), 40.000 € von Faro_wpt angekündigt. Paule: „Was machen wir mit dem ganzen Geld?“ – Verwendung offen."
         }
       ]
     },
@@ -242,6 +256,30 @@
         {
           "episode": 6,
           "text": "Folge 6: hakir_373 2 verspricht eine neue große Halle + Wing-Tsun-Trainer („Sifu“). Nur Vorstellung, noch nicht da."
+        }
+      ]
+    },
+    {
+      "id": "umzug",
+      "title": "Der Umzug",
+      "status": "offen",
+      "startedEpisode": 7,
+      "updates": [
+        {
+          "episode": 7,
+          "text": "Folge 7: Umzug in eine dreimal so große, fertig eingerichtete Halle mit Gym (von Vexo_on_MTB, Miete + Ring bezahlt). Ein wortloser Kurier übergibt einen goldenen Koffer mit 50.000 € (fiktiv)."
+        }
+      ]
+    },
+    {
+      "id": "erster-kampf",
+      "title": "Emres erster Kampf",
+      "status": "offen",
+      "startedEpisode": 7,
+      "updates": [
+        {
+          "episode": 7,
+          "text": "Folge 7: Start des Kampf-Strangs. Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Geplanter Aufbau: Training, Trainerfrage (Örlando offen), Technik, Kondition, Sparring, Gegnersuche, Ankündigung, Kampftag. KEIN Gegner, KEIN Termin."
         }
       ]
     }
@@ -410,9 +448,33 @@
       "votes": {},
       "note": "",
       "resolvedInEpisode": null
+    },
+    {
+      "id": "d-007",
+      "episode": 7,
+      "question": "Seid ihr bereit für Emres ersten Kampf? Schreibt KAMPF!",
+      "options": [
+        {
+          "key": "A",
+          "label": "KAMPF – Emre soll in den Ring",
+          "consequenceHint": "Die Kampfvorbereitung startet: Training, Trainerfrage, Gegnersuche.",
+          "plan": "kampf:vorbereitung"
+        },
+        {
+          "key": "B",
+          "label": "Noch nicht – erst mehr Training",
+          "consequenceHint": "Emre trainiert länger, bevor ein Kampf gesucht wird.",
+          "plan": "kampf:spaeter"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
+      "votes": {},
+      "note": "",
+      "resolvedInEpisode": null
     }
   ],
-  "chapter": "Akt 2 – Der neue Boxclub",
+  "chapter": "Akt 3 – Emres erster Kampf",
   "timeline": [
     {
       "episode": 1,
@@ -437,15 +499,48 @@
     {
       "episode": 6,
       "text": "Folge 6 „Wir werden endlich renoviert!“: Vor dem Boxclub stapeln sich Pakete von Vexo_on_MTB – Handschuhe, Pratzen, Sandsäcke – und ein Koffer. Darin: 20.000 Euro (in der Geschichte). Günther plant schon einen Whirlpool, Paule muss sich erst mal setzen. Dann übernimmt Faro_wpt die Renovierung: Die alte Halle verwandelt sich in einen hellen Boxclub mit neuem Ring, Sandsäcken, Pratzen, Handschuhen und Tennisbällen. Rosa entdeckt den nächsten Kommentar: hakir_373 2 verspricht eine große Halle und einen Wing-Tsun-Trainer. Emre trainiert zum ersten Mal richtig. Günther: „Dann wird es Zeit für den ersten großen Kampf!“ Die Community entscheidet: Emres erster Kampf – oder erst ein Probetraining mit Örlando?"
+    },
+    {
+      "episode": 7,
+      "text": "Folge 7 „Eine Halle für 50.000 Euro?!“: Günther platzt herein: Rostfaust zieht um! Vexo_on_MTB hat geschrieben, dass Miete und Ring bezahlt sind und eine dreimal so große, fertig eingerichtete Halle mit Gym wartet. Paule will das mit eigenen Augen sehen. Die Türen gehen auf: riesige Halle, Ring, Sandsack-Reihe, Laufbänder, Hantelbank. Dort wartet ein wortloser Kurier mit einem goldenen Koffer – 50.000 Euro (in der Geschichte). Dann schreibt Faro_wpt, dass morgen noch 40.000 Euro kommen sollen – und danach nur „b“. Emre steht zum ersten Mal in der neuen Halle. Paule: „Jetzt müssen wir zeigen, was wir können.“ Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Die Arena hat 50 von 100 Plätzen, nächstes Ziel 75. Wer bereit ist, schreibt KAMPF."
     }
   ],
-  "lastEpisode": 6,
-  "nextEpisodeNote": "Der Boxclub ist renoviert – jetzt muss Rostfaust zeigen, dass er kämpfen kann. Emres erster Kampf oder erst Örlandos Probetraining? Gegner und Termin sind noch offen.",
+  "lastEpisode": 7,
+  "nextEpisodeNote": "Emre soll seinen ersten Kampf bekommen – aber wer trainiert ihn, und gegen wen? Gegner und Termin sind noch offen.",
   "community": {
-    "followers": 43,
-    "likes": 25,
+    "followers": 50,
+    "likes": 36,
     "likeEuroRate": 2,
     "likesBooked": 0
+  },
+  "accounts": {
+    "likeKasse": 214,
+    "storyFonds": [
+      {
+        "id": "k-001",
+        "source": "Vexo_on_MTB 🌲🚲 – Koffer im Paket (Folge 6)",
+        "amount": 20000,
+        "status": "eingegangen",
+        "episode": 7,
+        "note": "Nur Serienhandlung. Real nicht bestätigt."
+      },
+      {
+        "id": "k-002",
+        "source": "Vexo_on_MTB 🌲🚲 – goldener Koffer in der neuen Halle (Folge 7)",
+        "amount": 50000,
+        "status": "eingegangen",
+        "episode": 7,
+        "note": "Nur Serienhandlung. Real nicht bestätigt."
+      },
+      {
+        "id": "k-003",
+        "source": "Faro_wpt – „und morgen sollten die 40 k ankommen“ (Folge 7)",
+        "amount": 40000,
+        "status": "angekuendigt",
+        "episode": 7,
+        "note": "Nur ANGEKÜNDIGT, noch nicht eingegangen (auch nicht in der Serie)."
+      }
+    ]
   },
   "offers": [
     {
@@ -483,6 +578,24 @@
       "storyCondition": "",
       "episode": 6,
       "note": "In der Serie nur als Versprechen/Vorstellung gezeigt (Folge 6). Nicht eingetroffen."
+    },
+    {
+      "id": "o-005",
+      "source": "Kommentar von Vexo_on_MTB 🌲🚲 (unter Folge 6)",
+      "content": "Miete + Ring bezahlt, dreifach so große Halle mit Gym (eingerichtet), Person mit goldenem Koffer mit 50k",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 7,
+      "note": "In der SERIE (fiktiv) in Folge 7 umgesetzt. REAL nicht bestätigt."
+    },
+    {
+      "id": "o-006",
+      "source": "Kommentar von Faro_wpt (unter Folge 6)",
+      "content": "„und morgen sollten die 40 k ankommen“ (+ Kommentar „b“ ohne Zusage)",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 7,
+      "note": "In der Serie nur angekündigt. REAL nicht bestätigt."
     }
   ],
   "metrics": [
@@ -541,6 +654,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
+    },
+    {
+      "episode": 6,
+      "reportedAt": "2026-11-15T21:59:56.132Z",
+      "views": 1858,
+      "likes": 36,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 7,
+      "followersTotal": 50,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 7: 1.858 Aufrufe (Rekord, erstmals deutlich > 1.000), 36 Likes, 50 Follower. Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ],
   "upcomingEvent": {
@@ -549,7 +676,7 @@
     "kind": "Schaukampf",
     "boxerId": "emre-yildiz",
     "seats": 100,
-    "seatsFilled": 43,
+    "seatsFilled": 50,
     "daysLeft": 4,
     "cost": 200,
     "announcedEpisode": 2,

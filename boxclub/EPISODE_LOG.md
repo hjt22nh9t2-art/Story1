@@ -1,6 +1,6 @@
 # EPISODE LOG – Boxclub Rostfaust
 
-Stand 2026-11-14. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
+Stand 2026-11-15. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
 
 | Folge | Titel | Länge | Status | Hook | Community-Frage → Ergebnis |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Stand 2026-11-14. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzent
 | 4 | Unser erster Sponsor?! | 70.3 s | veroeffentlicht | Günther liest einen Kommentar: Jemand will Sandsäcke, Pratzen, Handschuhe und die Renovierung bezahlen?! | Schaffen wir 50 Follower bis zum Kampf? → offen |
 | 5 | Wir bekommen einen neuen Trainer?! | 80.2 s | veroeffentlicht | Günther stürmt in die Halle: „LEUTE! Wir bekommen vielleicht einen neuen Trainer!“ – Paule: „Was hast du jetzt schon wieder angestellt?“ | Sollen wir Örlando zum Probetraining einladen? → offen |
 | 6 | Wir werden endlich renoviert! | 81.6 s | veroeffentlicht | Günther stürmt vor die Halle, überall Pakete und ein Koffer: „Leute! Die Lieferung ist da!“ | Wen wollt ihr als Nächstes im Ring sehen? → offen |
+| 7 | Eine Halle für 50.000 Euro?! | 82.8 s | veroeffentlicht | Günther platzt in die renovierte Halle: „Leute! Wir ziehen um!“ – Paule: „Was?! Schon wieder?“ | Seid ihr bereit für Emres ersten Kampf? Schreibt KAMPF! → offen |
 
 ## Folge 1 – Null Boxer
 Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß.
@@ -59,6 +60,14 @@ Vor dem Boxclub stapeln sich Pakete von Vexo_on_MTB – Handschuhe, Pratzen, San
 - **TikTok-Text:** Folge 6: Wir werden endlich renoviert! 🥊🎨 Danke Vexo_on_MTB 🌲🚲, Faro_wpt und hakir_373 2 – eure Kommentare haben den Boxclub verändert (in unserer Geschichte). Jetzt ihr: Wen wollt ihr als Nächstes im Ring sehen? A = Emres erster Kampf, B = erst Örlando beim Probetraining. ❤️ Ziel: 100 Likes (1 Like = 2 € symbolisch) #boxclubrostfaust #boxen #renovierung #animationserie #teil6
 - **Datei:** data/media/episodes/ep-006/boxclub_folge_006.mp4
 
+## Folge 7 – Eine Halle für 50.000 Euro?!
+Günther platzt herein: Rostfaust zieht um! Vexo_on_MTB hat geschrieben, dass Miete und Ring bezahlt sind und eine dreimal so große, fertig eingerichtete Halle mit Gym wartet. Paule will das mit eigenen Augen sehen. Die Türen gehen auf: riesige Halle, Ring, Sandsack-Reihe, Laufbänder, Hantelbank. Dort wartet ein wortloser Kurier mit einem goldenen Koffer – 50.000 Euro (in der Geschichte). Dann schreibt Faro_wpt, dass morgen noch 40.000 Euro kommen sollen – und danach nur „b“. Emre steht zum ersten Mal in der neuen Halle. Paule: „Jetzt müssen wir zeigen, was wir können.“ Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Die Arena hat 50 von 100 Plätzen, nächstes Ziel 75. Wer bereit ist, schreibt KAMPF.
+
+- **Cliffhanger:** Emre soll seinen ersten Kampf bekommen – aber wer trainiert ihn, und gegen wen? Gegner und Termin sind noch offen.
+- **Abstimmung:** Seid ihr bereit für Emres ersten Kampf? Schreibt KAMPF! A: KAMPF – Emre soll in den Ring · B: Noch nicht – erst mehr Training
+- **TikTok-Text:** Folge 7: Eine Halle für 50.000 Euro?! 🥊😱 Vexo_on_MTB 🌲🚲 schenkt uns (in der Story) eine dreimal so große Halle mit Gym – und Faro_wpt kündigt noch 40k an. Aber jetzt geht’s um Emre: Seid ihr bereit für seinen ersten Kampf? Schreibt KAMPF! 🔥 #boxclubrostfaust #boxen #animationserie #boxtraining #teil7
+- **Datei:** data/media/episodes/ep-007/boxclub_folge_007.mp4
+
 ## Performance-Tracking
 | Folge | Aufrufe | Likes | Kommentare | Geteilt | Neue Follower | Follower gesamt | Ø Wiedergabe | Ø angesehen | Vollständig | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -66,5 +75,6 @@ Vor dem Boxclub stapeln sich Pakete von Vexo_on_MTB – Handschuhe, Pratzen, San
 | 3 | – | – | – | – | 4 | 35 | – | – | – | Gemeldet vor Folge 4: 35 Follower gesamt (+4 seit Folge 3). Likes laut Einschätzung des Produzenten > 50 – keine genaue Zahl, daher NICHT als 2 €/Like gebucht. Umfrage Zwischenstand: Boxsack 43 %, Pratzen 37 %, Handschuhe 20 %, Speedball 0 % (59 Stimmen). |
 | 4 | 842 | 46 | – | – | 8 | 43 | – | – | – | Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 | 5 | 729 | 25 | – | – | 0 | 43 | – | – | – | Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
+| 6 | 1858 | 36 | – | – | 7 | 50 | – | – | – | Gemeldet vor Folge 7: 1.858 Aufrufe (Rekord, erstmals deutlich > 1.000), 36 Likes, 50 Follower. Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 
 **Analyse:** Erst ab mehreren Folgen mit vollständigen Zahlen sinnvoll – keine voreiligen Schlüsse.
