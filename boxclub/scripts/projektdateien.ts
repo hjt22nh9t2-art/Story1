@@ -19,7 +19,18 @@ const today = new Date().toISOString().slice(0, 10);
 const open = c.decisions.filter((d) => d.status !== 'umgesetzt');
 const state = {
   stand: { nachFolge: c.lastEpisode, naechsteFolge: c.lastEpisode + 1, aktualisiert: today, kapitel: c.chapter },
-  finanzen: { kasse: c.money, einnahmenProMonat: c.monthlyIncome, kostenProMonat: c.monthlyCosts, pachtProMonat: 250, sponsoren: c.sponsors },
+  finanzen: {
+    hinweis: 'Drei getrennte Konten. Alles ist Teil der Serie – es gibt KEINE echten Einnahmen oder Zahlungen.',
+    vereinskonto: { betrag: c.money, erklaerung: 'Grundbestand der Serie (seit Folge 1), ohne Like-Einnahmen und ohne Story-Fonds' },
+    likeKasse: { betrag: c.accounts.likeKasse, erklaerung: 'Symbolisch: echte Likes × 2 € (nur mit genauer Like-Zahl gebucht)' },
+    storyFonds: {
+      eingegangen: c.accounts.storyFonds.filter((x) => x.status === 'eingegangen').reduce((a, x) => a + x.amount, 0),
+      angekuendigt: c.accounts.storyFonds.filter((x) => x.status === 'angekuendigt').reduce((a, x) => a + x.amount, 0),
+      posten: c.accounts.storyFonds.map((x) => ({ id: x.id, quelle: x.source, betrag: x.amount, status: x.status, seitFolge: x.episode, notiz: x.note })),
+      erklaerung: 'Fiktive Unterstützung innerhalb der Geschichte (Koffer usw.). Real NICHT bestätigt.',
+    },
+    einnahmenProMonat: c.monthlyIncome, kostenProMonat: c.monthlyCosts, sponsoren: c.sponsors,
+  },
   community: {
     follower: c.community.followers, likes: c.community.likes, likeEuroRate: c.community.likeEuroRate, likesGebucht: c.community.likesBooked,
     hinweis: 'Spielerische Mechaniken – keine echten TikTok-Einnahmen. Fehlende Werte = vom Produzenten noch nicht gemeldet.',

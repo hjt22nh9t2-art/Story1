@@ -691,6 +691,95 @@ function grosshalle(frame: number): SetLayers {
   };
 }
 
+/** Die neue, dreimal so große Halle mit Gym (ab Folge 7) – Perspektive betont Größe */
+function neuehalle(frame: number): SetLayers {
+  const steel = '#5b6475';
+  return {
+    tint: 'rgba(255,250,240,0.04)',
+    back: (
+      <g>
+        {/* Decke + Stahlträger */}
+        <rect x={-600} y={0} width={2300} height={1300} fill="#e9ecf1" />
+        {Array.from({ length: 9 }).map((_, i) => (
+          <g key={i}>
+            <path d={`M${-500 + i * 260},0 L${300 + i * 60},420`} stroke={steel} strokeWidth={10} />
+            <path d={`M${-500 + i * 260},0 L${-300 + i * 260},0`} stroke={steel} strokeWidth={8} />
+          </g>
+        ))}
+        <path d="M-600,90 L1700,90" stroke={steel} strokeWidth={14} />
+        {/* Rückwand weit hinten (klein = groß) */}
+        <rect x={60} y={420} width={960} height={520} fill="#f7f4ec" stroke={INK} strokeWidth={5} />
+        {[90, 330, 570, 810].map((x, i) => (
+          <g key={i}>
+            <rect x={x} y={440} width={180} height={150} fill="#cfe3f3" stroke={INK} strokeWidth={4} />
+            <path d={`M${x + 90},440 V590`} stroke={INK} strokeWidth={3} />
+          </g>
+        ))}
+        <rect x={250} y={620} width={580} height={80} rx={10} fill="#8c1d2c" stroke={INK} strokeWidth={5} />
+        <text x={540} y={680} fontFamily="Anton, Impact, sans-serif" fontSize={54} textAnchor="middle" fill="#f4ead2" letterSpacing={6}>BOXCLUB ROSTFAUST</text>
+        {/* Seitenwände in Perspektive */}
+        <path d="M-600,0 L60,420 L60,940 L-600,1500 Z" fill="#dfe3ea" stroke={INK} strokeWidth={5} />
+        <path d="M1680,0 L1020,420 L1020,940 L1680,1500 Z" fill="#dfe3ea" stroke={INK} strokeWidth={5} />
+        {/* GYM-Schild links */}
+        <g transform="translate(-170 520) skewY(30)">
+          <rect x={0} y={0} width={190} height={90} rx={8} fill="#1f3f8a" stroke={INK} strokeWidth={5} />
+          <text x={95} y={64} fontFamily="Anton, Impact, sans-serif" fontSize={56} textAnchor="middle" fill="#f4ead2">GYM</text>
+        </g>
+        {/* Lampenreihe */}
+        {Array.from({ length: 6 }).map((_, i) => (
+          <g key={i}>
+            <rect x={120 + i * 160} y={360} width={90} height={14} rx={6} fill="#fffbe6" stroke={INK} strokeWidth={3} />
+            <path d={`M${120 + i * 160},374 L${210 + i * 160},374 L${260 + i * 160},1200 L${70 + i * 160},1200 Z`} fill="#fff8d6" opacity={0.09 + Math.sin(frame * 0.03 + i) * 0.02} />
+          </g>
+        ))}
+        {/* Boden */}
+        <path d="M60,940 L1020,940 L1700,1920 L-620,1920 Z" fill="#3a3f4a" />
+        <path d="M60,940 L1020,940 L1700,1920 L-620,1920 Z" fill="url(#floorFade)" opacity={0.5} />
+        {[0.25, 0.5, 0.75].map((t, i) => <path key={i} d={`M${60 - 680 * t * 0},${940 + 980 * t} L${1020 + 680 * t},${940 + 980 * t}`} stroke="#f2b632" strokeWidth={4} opacity={0.35} transform={`translate(${-680 * t} 0)`} />)}
+        {/* Ring hinten in der Mitte */}
+        <g transform="translate(330 0)">
+          <path d="M0,1010 L420,1010 L450,1070 L-30,1070 Z" fill="#e3e7ef" stroke={INK} strokeWidth={5} />
+          <rect x={-30} y={1070} width={480} height={40} fill="#8c1d2c" stroke={INK} strokeWidth={5} />
+          <CornerPost x={0} y={860} h={150} color="#c8302a" />
+          <CornerPost x={420} y={860} h={150} color="#2a54b8" />
+          <RingRopes x0={0} x1={420} y={880} gap={40} />
+        </g>
+        {/* Sandsack-Reihe rechts (klein, weit hinten) */}
+        {Array.from({ length: 5 }).map((_, i) => (
+          <g key={i} transform={`translate(${830 + i * 40} ${560 + i * 30}) scale(${0.42 + i * 0.05})`}>
+            <path d="M0,0 V150" stroke="#444" strokeWidth={6} />
+            <rect x={-45} y={150} width={90} height={300} rx={36} fill={i % 2 ? '#2f3a4f' : '#7c2b26'} stroke={INK} strokeWidth={8} />
+          </g>
+        ))}
+        {/* Gym-Bereich links: Laufbänder, Hantelbank, Hantelregal */}
+        {[0, 1].map((i) => (
+          <g key={i} transform={`translate(${-60 + i * 120} ${1010 + i * 40}) scale(${0.7 + i * 0.12})`}>
+            <path d="M0,0 L160,0 L180,40 L-10,40 Z" fill="#1a1a1a" stroke={INK} strokeWidth={4} />
+            <path d="M150,0 L170,-110 L130,-120" stroke="#9aa3b5" strokeWidth={10} fill="none" strokeLinecap="round" />
+            <rect x={110} y={-150} width={80} height={40} rx={6} fill="#2f3542" stroke={INK} strokeWidth={4} />
+            <rect x={122} y={-142} width={56} height={24} fill="#38c6ff" opacity={0.7} />
+          </g>
+        ))}
+        <g transform="translate(120 1180) scale(0.95)">
+          <rect x={0} y={0} width={200} height={26} rx={8} fill="#8c1d2c" stroke={INK} strokeWidth={4} />
+          <rect x={20} y={26} width={14} height={50} fill="#555" />
+          <rect x={166} y={26} width={14} height={50} fill="#555" />
+          <path d="M-20,-60 L230,-60" stroke="#9aa3b5" strokeWidth={10} />
+          <rect x={-40} y={-90} width={22} height={60} rx={4} fill="#1a1a1a" />
+          <rect x={228} y={-90} width={22} height={60} rx={4} fill="#1a1a1a" />
+        </g>
+        <g transform="translate(-140 1250)">
+          <rect x={0} y={0} width={210} height={14} fill="#5b6475" stroke={INK} strokeWidth={3} />
+          <rect x={0} y={70} width={210} height={14} fill="#5b6475" stroke={INK} strokeWidth={3} />
+          {Array.from({ length: 5 }).map((_, i) => <g key={i}><rect x={10 + i * 40} y={-22} width={30} height={22} rx={6} fill="#1a1a1a" /><rect x={10 + i * 40} y={48} width={30} height={22} rx={6} fill="#1a1a1a" /></g>)}
+        </g>
+      </g>
+    ),
+    mid: <g />,
+    front: <Dust frame={frame} n={12} color="#fffbe6" />,
+  };
+}
+
 export interface SetOpts { seatsFilled?: number }
 
 export function getSet(location: string, frame: number, club: SetClub, opts: SetOpts = {}): SetLayers {
@@ -704,6 +793,7 @@ export function getSet(location: string, frame: number, club: SetClub, opts: Set
     case 'eventhalle': return eventhalle(frame, opts);
     case 'rivalengym': return rivalengym(frame);
     case 'grosshalle': return grosshalle(frame);
+    case 'neuehalle': return neuehalle(frame);
     default: return halle(frame, club);
   }
 }

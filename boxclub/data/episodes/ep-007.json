@@ -1,0 +1,992 @@
+{
+  "id": "ep-007",
+  "number": 7,
+  "title": "Eine Halle für 50.000 Euro?!",
+  "status": "vertont",
+  "createdAt": "2026-11-15T21:31:41.406Z",
+  "publishedAt": null,
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Umzug in dreimal so große Halle mit Gym (Vexo_on_MTB: Miete + Ring bezahlt, goldener Koffer 50k), Faro_wpt kündigt 40k für morgen an (+ Kommentar „b“), Emres Kampfvorbereitung beginnt, CTA „KAMPF“.",
+  "resolvesDecisionId": null,
+  "hook": "Günther platzt in die renovierte Halle: „Leute! Wir ziehen um!“ – Paule: „Was?! Schon wieder?“",
+  "summary": "Günther platzt herein: Rostfaust zieht um! Vexo_on_MTB hat geschrieben, dass Miete und Ring bezahlt sind und eine dreimal so große, fertig eingerichtete Halle mit Gym wartet. Paule will das mit eigenen Augen sehen. Die Türen gehen auf: riesige Halle, Ring, Sandsack-Reihe, Laufbänder, Hantelbank. Dort wartet ein wortloser Kurier mit einem goldenen Koffer – 50.000 Euro (in der Geschichte). Dann schreibt Faro_wpt, dass morgen noch 40.000 Euro kommen sollen – und danach nur „b“. Emre steht zum ersten Mal in der neuen Halle. Paule: „Jetzt müssen wir zeigen, was wir können.“ Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Die Arena hat 50 von 100 Plätzen, nächstes Ziel 75. Wer bereit ist, schreibt KAMPF.",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "halle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "auftritt"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "Leute! Wir ziehen um!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": "tuer",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l1.mp3",
+            "durationSec": 1.72,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "paule-kruse",
+          "text": "Was?! Schon wieder?",
+          "emotion": "ueberrascht",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l2.mp3",
+            "durationSec": 1.54,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "guenther-wallach",
+          "text": "Eine dreimal so große Halle! Und die Miete ist schon bezahlt!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l3.mp3",
+            "durationSec": 3.37,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Hook: Günther platzt in die (renovierte) alte Halle.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "buero",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l4",
+          "speaker": "guenther-wallach",
+          "text": "Vexo on MTB bezahlt Miete und Ring – und gibt uns eine dreimal so große Halle mit Gym?!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l4.mp3",
+            "durationSec": 5.46,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "paule-kruse",
+          "text": "Ich glaube, wir sollten uns das lieber selbst anschauen.",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l5.mp3",
+            "durationSec": 2.32,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "rosa-brandt",
+          "text": "Dann sollten wir uns diese Halle sofort ansehen!",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l6.mp3",
+            "durationSec": 2.87,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Vexo_on_MTB-Kommentar wörtlich auf der Karte. Günther liest, Paule zweifelt, Rosa will los.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Vexo_on_MTB 🌲🚲",
+        "text": "„Die Miete und den Ring bezahle ich Miete ist gezahlt eine dreifache so große Halle mit gym ist alles eingerichtet Miete zahle ich geht rüber ist schon alles fertig da wartet jemand auf mit einem goldenen Koffer mit 50k“",
+        "tag": "IN DER SERIE: MIETE + RING BEZAHLT"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s3",
+      "beat": "entwicklung",
+      "location": "neuehalle",
+      "shot": "dolly",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "auftritt"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "auftritt"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l7",
+          "speaker": "guenther-wallach",
+          "text": "Das ist jetzt wirklich unser neuer Boxclub!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 1,
+          "audio": {
+            "file": "episodes/ep-007/voice/l7.mp3",
+            "durationSec": 2.56,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "paule-kruse",
+          "text": "Ich glaube, wir sind gerade eine Nummer größer geworden.",
+          "emotion": "ueberrascht",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l8.mp3",
+            "durationSec": 2.32,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "DREIMAL SO GROSS!",
+      "music": "gefuehl",
+      "direction": "Die Türen öffnen sich – Kamerafahrt in die riesige, fertig eingerichtete Halle.",
+      "seats": null,
+      "fx": "tueren",
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s4",
+      "beat": "entwicklung",
+      "location": "neuehalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l9",
+          "speaker": "rosa-brandt",
+          "text": "Laufbänder, Hanteln, ein richtiger Ring – Platz für eine ganze Mannschaft!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l9.mp3",
+            "durationSec": 3.68,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Schwenk durch Gym-Bereich, Ring, Sandsack-Reihe.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s5",
+      "beat": "handlung",
+      "location": "neuehalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "kurier",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l10",
+          "speaker": "guenther-wallach",
+          "text": "Moment … ist das etwa der Koffer?",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l10.mp3",
+            "durationSec": 2.19,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l11",
+          "speaker": "guenther-wallach",
+          "text": "Fünfzig … tausend …",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": "kasse",
+          "pauseAfter": 0.1,
+          "delayBefore": 0.7,
+          "audio": {
+            "file": "episodes/ep-007/voice/l11.mp3",
+            "durationSec": 1.83,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l12",
+          "speaker": "rosa-brandt",
+          "text": "Das ist das größte Upgrade unserer Vereinsgeschichte!",
+          "emotion": "froh",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l12.mp3",
+            "durationSec": 2.9,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Ein wortloser Kurier mit goldenem Koffer. Günther fragt, der Koffer klappt auf. Günther ist sprachlos.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Vexo_on_MTB 🌲🚲",
+        "text": "„… da wartet jemand auf mit einem goldenen Koffer mit 50k“",
+        "tag": "IN DER SERIE: 50.000 € IM GOLDENEN KOFFER"
+      },
+      "props": [
+        {
+          "type": "goldkoffer",
+          "x": 560,
+          "y": 1740,
+          "scale": 1.3,
+          "label": "",
+          "openAt": 2.4,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s6",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l13",
+          "speaker": "rosa-brandt",
+          "text": "Wartet mal! Faro_wpt schreibt: Morgen kommen noch mal vierzigtausend!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l13.mp3",
+            "durationSec": 4.18,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        },
+        {
+          "id": "l14",
+          "speaker": "guenther-wallach",
+          "text": "Noch einmal vierzigtausend?!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l14.mp3",
+            "durationSec": 1.59,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l15",
+          "speaker": "paule-kruse",
+          "text": "Was machen wir denn mit dem ganzen Geld?",
+          "emotion": "neutral",
+          "action": "kopfschuetteln",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l15.mp3",
+            "durationSec": 1.62,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Faro_wpt kündigt 40k für morgen an – klar als ANGEKÜNDIGT markiert.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Faro_wpt",
+        "text": "„und morgen sollten die 40 k ankommen“",
+        "tag": "ANGEKÜNDIGT – NOCH NICHT DA"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s7",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "paule-kruse",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l16",
+          "speaker": "paule-kruse",
+          "text": "Und dann schreibt er einfach nur … b.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l16.mp3",
+            "durationSec": 1.7,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l17",
+          "speaker": "guenther-wallach",
+          "text": "Hauptsache, die vierzigtausend kommen!",
+          "emotion": "froh",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l17.mp3",
+            "durationSec": 2.25,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "komisch",
+      "direction": "Gag: Faro_wpts Kommentar „b“.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Faro_wpt",
+        "text": "b",
+        "tag": "KOMMENTAR"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s8",
+      "beat": "entwicklung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "auftritt"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l18",
+          "speaker": "guenther-wallach",
+          "text": "Emre, ab jetzt hast du alles, was du brauchst.",
+          "emotion": "stolz",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0.6,
+          "audio": {
+            "file": "episodes/ep-007/voice/l18.mp3",
+            "durationSec": 2.64,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l19",
+          "speaker": "emre-yildiz",
+          "text": "Dann kann ich endlich richtig trainieren!",
+          "emotion": "froh",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l19.mp3",
+            "durationSec": 1.59,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "gefuehl",
+      "direction": "Emre betritt die neue Halle, schaut zum Ring.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s9",
+      "beat": "entwicklung",
+      "location": "neuehalle",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l20",
+          "speaker": "paule-kruse",
+          "text": "Eine Halle ist schön und gut. Aber jetzt müssen wir zeigen, was wir können.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l20.mp3",
+            "durationSec": 3.21,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l21",
+          "speaker": "guenther-wallach",
+          "text": "Recht hast du. Zeit, Emre auf seinen ersten Kampf vorzubereiten.",
+          "emotion": "entschlossen",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l21.mp3",
+            "durationSec": 3.63,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l22",
+          "speaker": "emre-yildiz",
+          "text": "Meinen … ersten Kampf?",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.2,
+          "delayBefore": 0.7,
+          "audio": {
+            "file": "episodes/ep-007/voice/l22.mp3",
+            "durationSec": 1.91,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Paule erdet alle. Günther: Kampfvorbereitung. Emre überrascht – Pause.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s10",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l23",
+          "speaker": "guenther-wallach",
+          "text": "Wir haben die ersten fünfzig geschafft! Jetzt knacken wir die fünfundsiebzig!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": "publikum",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l23.mp3",
+            "durationSec": 3.81,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l24",
+          "speaker": "paule-kruse",
+          "text": "Sechsunddreißig Likes: zweiundsiebzig Euro. Symbolisch.",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l24.mp3",
+            "durationSec": 3.24,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Arena 43 → 50 von 100 (Ziel 75). Like-Kasse 142 → 214 € (36 echte Likes × 2 €, symbolisch).",
+      "seats": {
+        "from": 43,
+        "to": 50,
+        "total": 100,
+        "hud": true,
+        "goal": 75
+      },
+      "fx": null,
+      "kasse": {
+        "amount": 214,
+        "perLike": 2,
+        "from": 142,
+        "likeGoal": 100,
+        "label": "LIKE-KASSE"
+      },
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s11",
+      "beat": "entscheidung",
+      "location": "neuehalle",
+      "shot": "zoom",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l25",
+          "speaker": "guenther-wallach",
+          "text": "Boxclub Rostfaust ist bereit. Und Emre wird bald im Ring stehen!",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0.4,
+          "audio": {
+            "file": "episodes/ep-007/voice/l25.mp3",
+            "durationSec": 3.58,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l26",
+          "speaker": "guenther-wallach",
+          "text": "Seid ihr bereit für den ersten Kampf von Emre? Schreibt KAMPF in die Kommentare!",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.3,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-007/voice/l26.mp3",
+            "durationSec": 4.21,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "EMRES ERSTER KAMPF – DIE VORBEREITUNG BEGINNT!",
+      "music": "spannung",
+      "direction": "Dramatischer Blick auf den Ring. Günther in die Kamera. Die eine Aufforderung: KAMPF.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    }
+  ],
+  "decision": {
+    "question": "Seid ihr bereit für Emres ersten Kampf? Schreibt KAMPF!",
+    "options": [
+      {
+        "key": "A",
+        "label": "KAMPF – Emre soll in den Ring",
+        "consequenceHint": "Die Kampfvorbereitung startet: Training, Trainerfrage, Gegnersuche.",
+        "plan": "kampf:vorbereitung"
+      },
+      {
+        "key": "B",
+        "label": "Noch nicht – erst mehr Training",
+        "consequenceHint": "Emre trainiert länger, bevor ein Kampf gesucht wird.",
+        "plan": "kampf:spaeter"
+      }
+    ]
+  },
+  "cliffhanger": "Emre soll seinen ersten Kampf bekommen – aber wer trainiert ihn, und gegen wen? Gegner und Termin sind noch offen.",
+  "stateChanges": [
+    {
+      "op": "follower",
+      "amount": 50,
+      "target": "",
+      "value": "",
+      "reason": "Meldung des Produzenten vor Folge 7"
+    },
+    {
+      "op": "plaetze",
+      "amount": 50,
+      "target": "",
+      "value": "",
+      "reason": "50 Follower = 50 von 100 Plätzen"
+    },
+    {
+      "op": "likes",
+      "amount": 36,
+      "target": "",
+      "value": "",
+      "reason": "Likes Folge 6 (Meldung des Produzenten)"
+    },
+    {
+      "op": "kennzahlen",
+      "amount": 6,
+      "target": "",
+      "value": "{\"views\":1858,\"likes\":36,\"followersTotal\":50,\"newFollowers\":7,\"note\":\"Gemeldet vor Folge 7: 1.858 Aufrufe (Rekord, erstmals deutlich > 1.000), 36 Likes, 50 Follower. Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet.\"}",
+      "reason": ""
+    },
+    {
+      "op": "geld",
+      "amount": -142,
+      "target": "",
+      "value": "",
+      "reason": "Umbuchung: symbolische Like-Einnahmen F4–F5 (142 €) ins getrennte Like-Konto"
+    },
+    {
+      "op": "konto",
+      "amount": 214,
+      "target": "likes",
+      "value": "",
+      "reason": "Like-Kasse: 46 + 25 + 36 Likes × 2 € (symbolisch)"
+    },
+    {
+      "op": "konto",
+      "amount": 0,
+      "target": "story",
+      "value": "{\"id\":\"k-001\",\"source\":\"Vexo_on_MTB 🌲🚲 – Koffer im Paket (Folge 6)\",\"amount\":20000,\"status\":\"eingegangen\",\"note\":\"Nur Serienhandlung. Real nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "konto",
+      "amount": 0,
+      "target": "story",
+      "value": "{\"id\":\"k-002\",\"source\":\"Vexo_on_MTB 🌲🚲 – goldener Koffer in der neuen Halle (Folge 7)\",\"amount\":50000,\"status\":\"eingegangen\",\"note\":\"Nur Serienhandlung. Real nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "konto",
+      "amount": 0,
+      "target": "story",
+      "value": "{\"id\":\"k-003\",\"source\":\"Faro_wpt – „und morgen sollten die 40 k ankommen“ (Folge 7)\",\"amount\":40000,\"status\":\"angekuendigt\",\"note\":\"Nur ANGEKÜNDIGT, noch nicht eingegangen (auch nicht in der Serie).\"}",
+      "reason": ""
+    },
+    {
+      "op": "ort_freischalten",
+      "amount": 0,
+      "target": "neuehalle",
+      "value": "",
+      "reason": "Umzug in die dreimal so große Halle (Serienhandlung)"
+    },
+    {
+      "op": "laufende_kosten",
+      "amount": -250,
+      "target": "",
+      "value": "",
+      "reason": "Miete (Pacht 250 €/Monat) übernimmt Vexo_on_MTB – Serienhandlung"
+    },
+    {
+      "op": "ausruestung",
+      "amount": 1,
+      "target": "gym",
+      "value": "Gym-Bereich (Laufbänder, Hantelbank, Hantelregal)",
+      "reason": "neue Halle, fertig eingerichtet"
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-005",
+      "value": "{\"source\":\"Kommentar von Vexo_on_MTB 🌲🚲 (unter Folge 6)\",\"content\":\"Miete + Ring bezahlt, dreifach so große Halle mit Gym (eingerichtet), Person mit goldenem Koffer mit 50k\",\"status\":\"offen\",\"note\":\"In der SERIE (fiktiv) in Folge 7 umgesetzt. REAL nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-006",
+      "value": "{\"source\":\"Kommentar von Faro_wpt (unter Folge 6)\",\"content\":\"„und morgen sollten die 40 k ankommen“ (+ Kommentar „b“ ohne Zusage)\",\"status\":\"offen\",\"note\":\"In der Serie nur angekündigt. REAL nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "umzug",
+      "value": "Folge 7: Umzug in eine dreimal so große, fertig eingerichtete Halle mit Gym (von Vexo_on_MTB, Miete + Ring bezahlt). Ein wortloser Kurier übergibt einen goldenen Koffer mit 50.000 € (fiktiv).",
+      "reason": "Der Umzug"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "koffer-20k",
+      "value": "Folge 7: Story-Fonds jetzt 70.000 € eingegangen (20k + 50k), 40.000 € von Faro_wpt angekündigt. Paule: „Was machen wir mit dem ganzen Geld?“ – Verwendung offen.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "erster-kampf",
+      "value": "Folge 7: Start des Kampf-Strangs. Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Geplanter Aufbau: Training, Trainerfrage (Örlando offen), Technik, Kondition, Sparring, Gegnersuche, Ankündigung, Kampftag. KEIN Gegner, KEIN Termin.",
+      "reason": "Emres erster Kampf"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Folge 7: „Dann kann ich endlich richtig trainieren!“ – erfährt von seinem ersten Kampf.",
+      "reason": ""
+    },
+    {
+      "op": "kapitel",
+      "amount": 0,
+      "target": "",
+      "value": "Akt 3 – Emres erster Kampf",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [
+    "kurier"
+  ],
+  "socialCaption": "Folge 7: Eine Halle für 50.000 Euro?! 🥊😱 Vexo_on_MTB 🌲🚲 schenkt uns (in der Story) eine dreimal so große Halle mit Gym – und Faro_wpt kündigt noch 40k an. Aber jetzt geht’s um Emre: Seid ihr bereit für seinen ersten Kampf? Schreibt KAMPF! 🔥",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#animationserie",
+    "#boxtraining",
+    "#teil7"
+  ],
+  "titleCard": "klein",
+  "endCard": {
+    "type": "arena",
+    "headline": "SEID IHR BEREIT? SCHREIBT „KAMPF“!",
+    "lines": [
+      "🥊 Emres erster Kampf – die Vorbereitung beginnt",
+      "➕ 1 Follower = 1 Platz · ❤️ Ziel: 100 Likes"
+    ],
+    "seatsFilled": 50,
+    "seatsTotal": 100,
+    "seatsGoal": 75
+  },
+  "video": null
+}

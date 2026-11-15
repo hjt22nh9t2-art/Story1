@@ -113,6 +113,15 @@ export function applyChange(w: World, ch: StateChange, ep: number): string {
       if (i >= 0) c.offers[i] = next; else c.offers.push(next);
       return `Angebot ${ch.target}: ${next.status}${next.storyCondition ? ` (Story-Bedingung: ${next.storyCondition})` : ''}`;
     }
+    case 'konto': {
+      // target = 'likes' (amount = Euro für die Like-Kasse) | 'story' (value = JSON {id, source, amount, status, note})
+      if (ch.target === 'likes') { c.accounts.likeKasse = Math.round((c.accounts.likeKasse + ch.amount) * 100) / 100; return `Like-Kasse ${ch.amount >= 0 ? '+' : ''}${ch.amount} € → ${c.accounts.likeKasse} € (symbolisch)`; }
+      const v = JSON.parse(ch.value || '{}');
+      const i = c.accounts.storyFonds.findIndex((x) => x.id === v.id);
+      const next = { id: v.id, source: '', amount: 0, status: 'angekuendigt' as const, note: '', ...(i >= 0 ? c.accounts.storyFonds[i] : {}), ...v, episode: i >= 0 ? c.accounts.storyFonds[i].episode : ep };
+      if (i >= 0) c.accounts.storyFonds[i] = next; else c.accounts.storyFonds.push(next);
+      return `Story-Fonds ${next.id}: ${next.amount} € (${next.status}, fiktiv) – ${next.source}`;
+    }
     case 'ort_freischalten': {
       const l = w.locations.find((x) => x.id === ch.target);
       if (!l) throw new Error(`ort_freischalten: Ort ${ch.target} unbekannt`);

@@ -199,9 +199,10 @@ const SceneView: React.FC<{ ts: TimedScene; props: EpisodeProps; chars: Map<stri
       <AbsoluteFill style={{ background: '#fff', opacity: interpolate(f, [0, 5], [ts.index === 0 ? 0 : 0.35, 0], { extrapolateRight: 'clamp' }) }} />
       {ts.scene.overlay && <OverlayStamp text={ts.scene.overlay} f={f - (ts.index === 0 ? 84 : 12)} />}
       {seats && seats.hud && seatsFilled !== undefined && <SeatHud filled={seatsFilled} total={seats.total} goal={seats.goal ?? null} f={f} />}
-      {ts.scene.kasse && <KasseHud amount={ts.scene.kasse.amount} from={ts.scene.kasse.from ?? null} likeGoal={ts.scene.kasse.likeGoal ?? null} perLike={ts.scene.kasse.perLike} f={f} top={seats?.hud ? 760 : 470} />}
+      {ts.scene.kasse && <KasseHud label={ts.scene.kasse.label ?? 'VEREINSKASSE'} amount={ts.scene.kasse.amount} from={ts.scene.kasse.from ?? null} likeGoal={ts.scene.kasse.likeGoal ?? null} perLike={ts.scene.kasse.perLike} f={f} top={seats?.hud ? 760 : 470} />}
       {ts.scene.comment && <CommentCard c={ts.scene.comment} f={f} />}
       {dream && <DreamFx f={f} />}
+      {ts.scene.fx === 'tueren' && <DoorsFx f={f} />}
     </AbsoluteFill>
   );
 };
@@ -252,17 +253,18 @@ const PropItem: React.FC<{ p: PropP; localSec: number; gf: number }> = ({ p, loc
       <text x={95} y={-20} fontFamily="Anton, Impact, sans-serif" fontSize={26} textAnchor="end" fill={ink} opacity={0.6}>↑ OBEN</text>
     </g>
   );
-  if (p.type === 'koffer') {
+  if (p.type === 'koffer' || p.type === 'goldkoffer') {
+    const gold = p.type === 'goldkoffer';
     const glow = open * (0.6 + 0.4 * Math.sin(gf * 0.25));
     return (
       <g transform={`translate(${p.x} ${by}) scale(${p.scale})`}>
         <ellipse cx={0} cy={0} rx={190} ry={20} fill="#000" opacity={0.3} />
         {open > 0 && <ellipse cx={0} cy={-150} rx={260} ry={170} fill="#ffe27a" opacity={0.35 * glow} />}
         {/* Unterteil */}
-        <rect x={-170} y={-120} width={340} height={120} rx={14} fill="#2f3542" stroke={ink} strokeWidth={6} />
+        <rect x={-170} y={-120} width={340} height={120} rx={14} fill={gold ? '#d9a92b' : '#2f3542'} stroke={ink} strokeWidth={6} />
         <rect x={-170} y={-70} width={340} height={10} fill="#9aa3b5" />
-        {open > 0 && Array.from({ length: 8 }).map((_, i) => (
-          <g key={i} transform={`translate(${-130 + (i % 4) * 66} ${-118 - Math.floor(i / 4) * 22 - open * 6})`}>
+        {open > 0 && Array.from({ length: gold ? 12 : 8 }).map((_, i) => (
+          <g key={i} transform={`translate(${-130 + (i % 4) * 66} ${-118 - Math.floor(i / 4) * 20 - open * 6})`}>
             <rect x={0} y={0} width={60} height={30} rx={4} fill="#7fb26a" stroke={ink} strokeWidth={3} />
             <rect x={24} y={0} width={12} height={30} fill="#f4ead2" />
             <text x={14} y={22} fontFamily="Anton, Impact, sans-serif" fontSize={18} fill={ink}>€</text>
@@ -270,7 +272,7 @@ const PropItem: React.FC<{ p: PropP; localSec: number; gf: number }> = ({ p, loc
         ))}
         {/* Deckel */}
         <g transform={`rotate(${-100 * open} -170 -120)`}>
-          <rect x={-170} y={-150} width={340} height={34} rx={12} fill="#3a4152" stroke={ink} strokeWidth={6} />
+          <rect x={-170} y={-150} width={340} height={34} rx={12} fill={gold ? '#f2c94c' : '#3a4152'} stroke={ink} strokeWidth={6} />
         </g>
         <rect x={-40} y={-176 + (open > 0 ? 200 : 0)} width={80} height={26} rx={10} fill="none" stroke={ink} strokeWidth={8} opacity={open > 0 ? 0 : 1} />
         <rect x={-18} y={-128} width={36} height={18} rx={4} fill="#d9b13b" stroke={ink} strokeWidth={3} />
@@ -417,7 +419,7 @@ const SeatHud: React.FC<{ filled: number; total: number; goal?: number | null; f
 };
 
 /** Vereinskasse (symbolisch) – zeigt nur den gespeicherten Kassenstand + die Like-Regel */
-const KasseHud: React.FC<{ amount: number; from?: number | null; likeGoal?: number | null; perLike: number; f: number; top: number }> = ({ amount, from = null, likeGoal = null, perLike, f, top }) => {
+const KasseHud: React.FC<{ label?: string; amount: number; from?: number | null; likeGoal?: number | null; perLike: number; f: number; top: number }> = ({ label = 'VEREINSKASSE', amount, from = null, likeGoal = null, perLike, f, top }) => {
   const o = interpolate(f, [10, 18], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   // Hochzählen nur zwischen zwei gespeicherten (echten) Ständen
   const shown = from === null ? amount : Math.round(interpolate(f, [24, 66], [from, amount], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.quad) }));
@@ -427,7 +429,7 @@ const KasseHud: React.FC<{ amount: number; from?: number | null; likeGoal?: numb
       <div style={{ background: '#f4ead2', border: '5px solid #8c1d2c', borderRadius: 22, padding: '14px 24px', boxShadow: '0 10px 0 rgba(0,0,0,0.35)', display: 'flex', alignItems: 'center', gap: 20, position: 'relative', overflow: 'visible' }}>
         <div style={{ fontSize: 70 }}>💰</div>
         <div style={{ flex: 1, paddingRight: 70 }}>
-          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#8c1d2c', letterSpacing: 1 }}>VEREINSKASSE: {shown} €{plus > 0 && <span style={{ color: '#2f7a46', fontSize: 34 }}> (+{plus} €)</span>}</div>
+          <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 40, color: '#8c1d2c', letterSpacing: 1 }}>{label}: {shown} €{plus > 0 && <span style={{ color: '#2f7a46', fontSize: 34 }}> (+{plus} €)</span>}</div>
           <div style={{ fontWeight: 900, fontSize: 32 }}>❤️ 1 Like = +{perLike} € (symbolisch)</div>
           {likeGoal !== null && <div style={{ fontWeight: 900, fontSize: 30, color: '#2f7a46' }}>🎯 Ziel: {likeGoal} Likes = +{likeGoal * perLike} €</div>}
         </div>
@@ -453,10 +455,29 @@ const CommentCard: React.FC<{ c: { author: string; text: string; tag: string }; 
           <div style={{ fontWeight: 800, fontSize: 30, color: '#555' }}>{c.author}</div>
           <div style={{ marginLeft: 'auto', fontSize: 34 }}>💬</div>
         </div>
-        <div style={{ fontWeight: 900, fontSize: 40, color: '#1a1410', lineHeight: 1.18 }}>{c.text}</div>
+        <div style={{ fontWeight: 900, fontSize: c.text.length > 150 ? 31 : c.text.length > 100 ? 36 : 40, color: '#1a1410', lineHeight: 1.18 }}>{c.text}</div>
         <div style={{ marginTop: 12, display: 'inline-block', background: '#ffd23f', color: '#1a1410', fontWeight: 900, fontSize: 24, padding: '4px 12px', borderRadius: 8 }}>{c.tag}</div>
       </div>
     </div>
+  );
+};
+
+/** Türen öffnen sich zur neuen Halle (Einzug) */
+const DoorsFx: React.FC<{ f: number }> = ({ f }) => {
+  const o = interpolate(f, [8, 40], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) });
+  if (o >= 1) return null;
+  const door = (left: boolean) => (
+    <div style={{ position: 'absolute', top: 0, bottom: 0, width: '50%', [left ? 'left' : 'right']: 0, transform: `translateX(${(left ? -1 : 1) * o * 100}%)`, background: 'linear-gradient(90deg,#3b4252,#4c5466)', borderLeft: left ? 'none' : '10px solid #1a1410', borderRight: left ? '10px solid #1a1410' : 'none', boxShadow: 'inset 0 0 0 18px #2b303b' }}>
+      <div style={{ position: 'absolute', top: '46%', [left ? 'right' : 'left']: 50, width: 30, height: 180, borderRadius: 14, background: '#d9b13b', border: '5px solid #1a1410' }} />
+      {[0.12, 0.62].map((y) => <div key={y} style={{ position: 'absolute', top: `${y * 100}%`, left: 70, right: 70, height: '24%', border: '6px solid #1a1410', borderRadius: 10, background: 'rgba(255,255,255,0.06)' }} />)}
+    </div>
+  );
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ background: '#fff7d0', opacity: 0.5 * Math.sin(o * Math.PI) }} />
+      {door(true)}{door(false)}
+      {o < 0.3 && <div style={{ position: 'absolute', top: 420, width: '100%', textAlign: 'center', fontFamily: 'Anton, Impact, sans-serif', fontSize: 70, color: '#f4ead2', textShadow: '0 4px 0 #1a1410', opacity: 1 - o / 0.3 }}>DIE NEUE HALLE</div>}
+    </AbsoluteFill>
   );
 };
 

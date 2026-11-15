@@ -12,6 +12,9 @@
 - Kamera: Totale/Halbnah/Nah/Schwenk/Zoom/Dolly mit Parallaxe, Handkamera-Wackler, Wischschnitt.
 - Requisiten pro Szene (`props`): Sandsack (schwingt/reißt ab), Lieferkiste (`kiste`, öffnet sich), Geldkoffer (`koffer`, klappt auf), Ausrüstungsregal (`ausruestung`: Handschuhe, Pratzen, Tennisbälle), Wing-Tsun-Holzpuppe (`holzpuppe`). Daueraktionen (`cast.action`).
 - Renovierungs-Überblendung (`renovate`): alte → neue Kulisse per Farbrollen-Wisch (seit Folge 6).
+- Türen-Übergang (`fx: 'tueren'`): Doppeltür öffnet sich zur neuen Halle (seit Folge 7). Goldener Koffer (`goldkoffer`).
+- Vereinskasse-Anzeige mit Beschriftung (`kasse.label`, z. B. „LIKE-KASSE“). Lange Kommentare werden automatisch kleiner gesetzt.
+- Ausrufe bei Günther (Reinhard) eher mit Punkt schreiben – sonst Tonhöhe > 180 Hz.
 - Requisiten nicht unter den Untertitel-Bereich (y ≈ 1255–1400) legen, wenn sie für die Handlung wichtig sind.
 - Lippenbewegung während der Zeile, Blinzeln, Atmen, Emotion + Geste je Zeile.
 - Wenn der Hook visuell ist: Totale verwenden, damit der Folgentitel die Aktion nicht verdeckt.

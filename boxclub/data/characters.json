@@ -680,5 +680,84 @@
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Erster Auftritt geplant: Folge 6 (Vorstellung der großen Halle)."
+  },
+  {
+    "id": "kurier",
+    "name": "Der Kurier",
+    "nickname": "Mann mit dem goldenen Koffer",
+    "role": "nebenfigur",
+    "roleTitle": "Kurier mit dem goldenen Koffer (Folge 7)",
+    "status": "gast",
+    "age": 40,
+    "heightCm": 185,
+    "weightKg": 88,
+    "weightClass": "",
+    "personality": "Wortlos, Sonnenbrille, steht einfach da.",
+    "background": "Wartet laut Kommentar von Vexo_on_MTB in der neuen Halle mit einem goldenen Koffer. Keine reale Person, keine Identität.",
+    "speechStyle": "Spricht nicht.",
+    "strengths": [],
+    "weaknesses": [],
+    "goal": "Koffer übergeben",
+    "catchphrase": "",
+    "stats": {
+      "technik": 1,
+      "kraft": 5,
+      "kondition": 5,
+      "disziplin": 10
+    },
+    "record": {
+      "siege": 0,
+      "niederlagen": 0,
+      "unentschieden": 0
+    },
+    "voice": {
+      "elevenlabsVoiceId": "",
+      "openaiVoice": "onyx",
+      "instructions": "",
+      "demoPitch": 0.9,
+      "elevenlabsModel": "",
+      "locked": false,
+      "note": "Stumm.",
+      "speko": null
+    },
+    "look": {
+      "skin": "#c99a74",
+      "hair": {
+        "style": "zurueckgegelt",
+        "color": "#1b1612"
+      },
+      "facialHair": {
+        "style": "keiner",
+        "color": "#1b1612"
+      },
+      "brows": "streng",
+      "eyeColor": "#2a1e14",
+      "nose": "spitz",
+      "cauliflowerEar": false,
+      "build": "athletisch",
+      "ageLook": "erwachsen",
+      "top": {
+        "type": "sakko",
+        "color": "#1c1f26",
+        "accent": "#d9b13b",
+        "print": ""
+      },
+      "bottom": {
+        "type": "stoffhose",
+        "color": "#1c1f26",
+        "accent": "#1c1f26"
+      },
+      "shoes": "#111111",
+      "gloves": "#1c1f26",
+      "accessories": [
+        "brille",
+        "goldkette"
+      ]
+    },
+    "firstEpisode": null,
+    "lookLocked": false,
+    "lookHistory": [],
+    "conceptImage": "",
+    "notes": "Nur Folge 7 geplant."
   }
 ]

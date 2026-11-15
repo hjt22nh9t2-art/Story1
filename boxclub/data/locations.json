@@ -52,5 +52,11 @@
     "name": "Die große Halle (Angebot)",
     "description": "Große, helle Trainingshalle mit zwei Ringen, vielen Sandsäcken und einem Wing-Tsun-Bereich mit Holzpuppe – von hakir_373 2 in Aussicht gestellt.",
     "unlocked": true
+  },
+  {
+    "id": "neuehalle",
+    "name": "Die neue Halle (dreimal so groß)",
+    "description": "Dreimal so große, fertig eingerichtete Halle mit Gym-Bereich (Laufbänder, Hantelbank, Hantelregal), großem Ring und Sandsack-Reihe. In der Serie von Vexo_on_MTB bereitgestellt, Miete bezahlt.",
+    "unlocked": false
   }
 ]

@@ -88,7 +88,7 @@ export type Character = z.infer<typeof CharacterSchema>;
 
 /* --------------------------------------------------------------------- Orte */
 
-export const LOCATION_KEYS = ['halle', 'ring', 'empfang', 'buero', 'umkleide', 'strasse', 'eventhalle', 'rivalengym', 'grosshalle'] as const;
+export const LOCATION_KEYS = ['halle', 'ring', 'empfang', 'buero', 'umkleide', 'strasse', 'eventhalle', 'rivalengym', 'grosshalle', 'neuehalle'] as const;
 export const LocationSchema = z.object({
   id: z.enum(LOCATION_KEYS),
   name: z.string(),
@@ -179,6 +179,13 @@ export const ClubStateSchema = z.object({
     /** Likes, die bereits als Geld in die Kasse gebucht wurden */
     likesBooked: z.number().int().default(0),
   }).default({ followers: null, likes: null, likeEuroRate: 2, likesBooked: 0 }),
+  /** Getrennte Konten (ab Folge 7): symbolische Like-Kasse und fiktiver Story-Fonds (Unterstützung innerhalb der Geschichte) */
+  accounts: z.object({
+    /** Summe der symbolisch gebuchten Likes (1 Like = likeEuroRate €) – keine echten Einnahmen */
+    likeKasse: z.number().default(0),
+    /** Fiktive Gelder aus der Serienhandlung (Koffer usw.) – nie als echte Zahlung werten */
+    storyFonds: z.array(z.object({ id: z.string(), source: z.string(), amount: z.number(), status: z.enum(['eingegangen', 'angekuendigt']), episode: z.number().int(), note: z.string().default('') })).default([]),
+  }).default({ likeKasse: 0, storyFonds: [] }),
   /** Performance-Tracking pro Folge – nur echte, vom Produzenten gemeldete Zahlen */
   /** Angebote aus Kommentaren (Sponsoring/Spenden) – bleiben offen bis zur echten Bestätigung */
   offers: z.array(z.object({
@@ -227,7 +234,7 @@ export type ClubState = z.infer<typeof ClubStateSchema>;
  */
 export const STATE_OPS = [
   'geld', 'mitglieder', 'ruf', 'zustand_halle', 'figur_status', 'ausruestung', 'ausruestung_zustand',
-  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown', 'follower', 'likes', 'kennzahlen', 'angebot',
+  'kampf', 'rivalitaet', 'handlung', 'sponsor', 'ort_freischalten', 'kapitel', 'laufende_kosten', 'einnahmen', 'veranstaltung', 'plaetze', 'countdown', 'follower', 'likes', 'kennzahlen', 'angebot', 'konto',
 ] as const;
 export const StateChangeSchema = z.object({
   op: z.enum(STATE_OPS),
@@ -289,14 +296,14 @@ export const SceneSchema = z.object({
   /** Arena-Sitzplätze in dieser Szene: von → bis (animiert); null = keine Anzeige */
   seats: z.object({ from: z.number(), to: z.number(), total: z.number().default(100), hud: z.boolean().default(true), goal: z.number().nullable().default(null) }).nullable().default(null),
   /** Bildwirkung der Szene, z. B. Traumsequenz */
-  fx: z.enum(['traum']).nullable().default(null),
+  fx: z.enum(['traum', 'tueren']).nullable().default(null),
   /** Vereinskassen-Anzeige (symbolisch): Betrag + Euro pro Like – keine erfundenen Like-Zahlen */
-  kasse: z.object({ amount: z.number(), perLike: z.number().default(2), from: z.number().nullable().default(null), likeGoal: z.number().nullable().default(null) }).nullable().default(null),
+  kasse: z.object({ amount: z.number(), perLike: z.number().default(2), from: z.number().nullable().default(null), likeGoal: z.number().nullable().default(null), label: z.string().default('VEREINSKASSE') }).nullable().default(null),
   /** Kommentar-Karte (anonymisiert), z. B. Sponsorangebot aus den Kommentaren */
   comment: z.object({ author: z.string().default('Ein Zuschauer'), text: z.string(), tag: z.string().default('KOMMENTAR – NOCH NICHT BESTÄTIGT') }).nullable().default(null),
   /** Szenen-Requisiten, z. B. ein Sandsack, der abreißt */
   props: z.array(z.object({
-    type: z.enum(['sandsack', 'kiste', 'koffer', 'ausruestung', 'holzpuppe']),
+    type: z.enum(['sandsack', 'kiste', 'koffer', 'goldkoffer', 'ausruestung', 'holzpuppe']),
     x: z.number(),
     /** Höhe des Bodenpunkts (nur kiste/koffer/ausruestung/holzpuppe), Standard = Boden */
     y: z.number().nullable().default(null),
