@@ -1,6 +1,6 @@
 # EPISODE LOG – Boxclub Rostfaust
 
-Stand 2026-11-15. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
+Stand 2026-11-16. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
 
 | Folge | Titel | Länge | Status | Hook | Community-Frage → Ergebnis |
 |---|---|---|---|---|---|
@@ -11,6 +11,7 @@ Stand 2026-11-15. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzent
 | 5 | Wir bekommen einen neuen Trainer?! | 80.2 s | veroeffentlicht | Günther stürmt in die Halle: „LEUTE! Wir bekommen vielleicht einen neuen Trainer!“ – Paule: „Was hast du jetzt schon wieder angestellt?“ | Sollen wir Örlando zum Probetraining einladen? → offen |
 | 6 | Wir werden endlich renoviert! | 81.6 s | veroeffentlicht | Günther stürmt vor die Halle, überall Pakete und ein Koffer: „Leute! Die Lieferung ist da!“ | Wen wollt ihr als Nächstes im Ring sehen? → offen |
 | 7 | Eine Halle für 50.000 Euro?! | 82.8 s | veroeffentlicht | Günther platzt in die renovierte Halle: „Leute! Wir ziehen um!“ – Paule: „Was?! Schon wieder?“ | Seid ihr bereit für Emres ersten Kampf? Schreibt KAMPF! → offen |
+| 8 | Emre bekommt seinen ersten Sparringspartner! | 81.7 s | veroeffentlicht | Emre schlägt im Ring ins Leere. Günther: „Emre, so wird das nichts! Du brauchst endlich einen richtigen Sparringspartner!“ – die Hallentür geht auf. | Was soll Emre zuerst trainieren? → offen |
 
 ## Folge 1 – Null Boxer
 Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß.
@@ -68,6 +69,14 @@ Günther platzt herein: Rostfaust zieht um! Vexo_on_MTB hat geschrieben, dass Mi
 - **TikTok-Text:** Folge 7: Eine Halle für 50.000 Euro?! 🥊😱 Vexo_on_MTB 🌲🚲 schenkt uns (in der Story) eine dreimal so große Halle mit Gym – und Faro_wpt kündigt noch 40k an. Aber jetzt geht’s um Emre: Seid ihr bereit für seinen ersten Kampf? Schreibt KAMPF! 🔥 #boxclubrostfaust #boxen #animationserie #boxtraining #teil7
 - **Datei:** data/media/episodes/ep-007/boxclub_folge_007.mp4
 
+## Folge 8 – Emre bekommt seinen ersten Sparringspartner!
+Emre schlägt im Ring unbeholfen ins Leere – Günther: „So wird das nichts!“ Da kommt J’ in die Halle, der in den Kommentaren geschrieben hat: „ich bin emres sparing partner“. Erstes kontrolliertes Sparring: J’ ist schneller, Emre muss zurück, Paule ruft „Hände hoch!“. Dann stellt Günther den neuen Profi-Trainer Marek Wolski vor – Grundlagen statt Träume: Stellung, Deckung, Beinarbeit, Jab, Cross. Rosa liest eine Nachricht: Die Marke IRON will mit kompletter Boxausrüstung kooperieren (in der Serie, noch nicht geliefert). Wolski: „Ab heute musst du richtig arbeiten.“ Emre: „Ich bin bereit!“ J’: „Dann sehen wir uns morgen im Ring.“ Arena 52/100, Like-Kasse 306 €. Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“
+
+- **Cliffhanger:** Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“ – Gegner und Termin offen; IRON-Ausrüstung angekündigt.
+- **Abstimmung:** Was soll Emre zuerst trainieren? A: Schlagkraft 💥 · B: Schnelligkeit ⚡ · C: Ausdauer 🫁
+- **TikTok-Text:** Folge 8: Emre bekommt seinen ersten Sparringspartner! 🥊 Danke J’ – aus deinem Kommentar wird jetzt Training. Dazu ein Profi-Trainer und eine Nachricht von IRON (fiktive Marke in unserer Story). Ihr entscheidet: Was soll Emre zuerst trainieren? A = Schlagkraft, B = Schnelligkeit, C = Ausdauer 👇 #boxclubrostfaust #boxen #sparring #animationserie #teil8
+- **Datei:** data/media/episodes/ep-008/boxclub_folge_008.mp4
+
 ## Performance-Tracking
 | Folge | Aufrufe | Likes | Kommentare | Geteilt | Neue Follower | Follower gesamt | Ø Wiedergabe | Ø angesehen | Vollständig | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -76,5 +85,6 @@ Günther platzt herein: Rostfaust zieht um! Vexo_on_MTB hat geschrieben, dass Mi
 | 4 | 842 | 46 | – | – | 8 | 43 | – | – | – | Gemeldet vor Folge 5. Höchste bisherige Aufrufzahl einer Folge: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 | 5 | 729 | 25 | – | – | 0 | 43 | – | – | – | Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 | 6 | 1858 | 36 | – | – | 7 | 50 | – | – | – | Gemeldet vor Folge 7: 1.858 Aufrufe (Rekord, erstmals deutlich > 1.000), 36 Likes, 50 Follower. Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
+| 7 | 889 | 46 | – | – | 2 | 52 | – | – | – | Gemeldet vor Folge 8 (Screenshot): 889 Aufrufe, 46 Likes, 52 Follower. Rekord bleibt Folge 6 (1.858). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 
 **Analyse:** Erst ab mehreren Folgen mit vollständigen Zahlen sinnvoll – keine voreiligen Schlüsse.

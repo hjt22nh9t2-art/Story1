@@ -1,6 +1,6 @@
 # CHARACTERS AND VOICES – Boxclub Rostfaust
 
-Stand nach Folge 7 (2026-11-15). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
+Stand nach Folge 8 (2026-11-16). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
 
 ## Stimmen-Übersicht (verbindlich)
 | Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |
@@ -14,6 +14,8 @@ Stand nach Folge 7 (2026-11-15). Quelle: `data/characters.json`. Referenzbilder:
 | Viktor Hahn | Eric – Smooth | elevenlabs / eleven_v3 | `cjVigY5qzO86Huf0OWal` | Vorschlag | Vorschlag: ElevenLabs „Eric – Smooth“. Noch nicht gesprochen. |
 | Sifu | – | elevenlabs / Standard | `` | Vorschlag | Noch keine Stimme – spricht noch nicht. |
 | Der Kurier | – | elevenlabs / Standard | `` | Vorschlag | Stumm. |
+| J’ | Sebastian (Cartesia, deutsch) | cartesia / sonic-3.5 | `b7187e84-fe22-4344-ba4a-bc013fcb533e` | 🔒 fest | Ab Folge 8: Cartesia „Sebastian“ (deutsch, männlich). |
+| Marek Wolski | Adrian (Soniox) | soniox / tts-rt-v1 | `Adrian` | 🔒 fest | Ab Folge 8: Soniox „Adrian“ (tief, autoritär, männlich). |
 
 **Regel:** Stimmen mit 🔒 werden nie ohne ausdrückliche Zustimmung des Produzenten geändert. Prüfung jeder Zeile: Grundtonhöhe (`scripts/pitch.py`) + Spracherkennung.
 
@@ -124,4 +126,28 @@ Stand nach Folge 7 (2026-11-15). Quelle: `data/characters.json`. Referenzbilder:
 - **Stärken/Schwächen:**  / 
 - **Ziel:** Koffer übergeben · **Spruch:** „“
 - **Hintergrund:** Wartet laut Kommentar von Vexo_on_MTB in der neuen Halle mit einem goldenen Koffer. Keine reale Person, keine Identität.
+
+## J’ „Der Sparringspartner“
+![J’](docs/charakterbibel/j-sparring.png)
+
+- **Rolle:** Emres Sparringspartner (aus dem Kommentar von J’) · **Status:** aktiv (seit Folge 8)
+- **Daten:** 22 J., 178 cm, 72 kg Weltergewicht · Bilanz 0–0–0
+- **Aussehen (fest):** Haut #a8724f, Haare stoppel #1b1612, Bart stoppeln, Nase breit, Statur athletisch; tanktop #1f3f8a/#f4ead2 „J’“, trainingshose #1a1a1a, Schuhe #f4f4f4; Accessoires: stirnband
+- **Persönlichkeit:** Locker, selbstbewusst, fair. Fordert Emre, ohne ihn vorzuführen.
+- **Sprechstil:** Kurz, cool, motivierend.
+- **Stärken/Schwächen:** Erfahrung, Schnelligkeit, Deckung / unterschätzt manchmal Gegner
+- **Ziel:** Emre fit für den ersten Kampf machen · **Spruch:** „Ich werde dich fordern.“
+- **Hintergrund:** Entstanden aus dem TikTok-Kommentar von J’: „ich bin emres sparing partner“ (unter Folge 7). In der Serie erfahrener als Emre. KEIN Wettkampfgegner, sondern Trainingspartner.
+
+## Marek Wolski „Coach Wolski“
+![Marek Wolski](docs/charakterbibel/marek-wolski.png)
+
+- **Rolle:** Boxtrainer von Emre (Profi) · **Status:** aktiv (seit Folge 8)
+- **Daten:** 48 J., 183 cm, 86 kg 
+- **Aussehen (fest):** Haut #e0b38f, Haare kurz #8a8a8a, Bart vollbart, Nase krumm, Statur muskulös, Blumenkohlohr; trainingsjacke #141414/#f2b632 „COACH“, trainingshose #141414, Schuhe #141414; Accessoires: klemmbrett
+- **Persönlichkeit:** Professionell, streng, aber fair. Ruhig, präzise, nimmt Emres Entwicklung ernst. Kein Spaßvogel – Gegenpol zu Günther und Paule.
+- **Sprechstil:** Klar, knapp, fachlich. Gibt Kommandos.
+- **Stärken/Schwächen:** Technik, Trainingsplanung, Ruhe / wenig Geduld mit Ausreden
+- **Ziel:** Emre zu einem richtigen Boxer machen · **Spruch:** „Erst die Grundlagen.“
+- **Hintergrund:** Fiktiver Ex-Profi und Trainer. Eingeführt nach dem Community-Kommentar „Jetzt kommt ein Profi und bringt Emre das Boxen bei“ (ohne sichtbaren Nutzernamen). KEIN Wing-Tsun-Trainer, NICHT Örlando.
 

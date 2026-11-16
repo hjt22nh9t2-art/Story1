@@ -2,9 +2,9 @@
   "id": "ep-008",
   "number": 8,
   "title": "Emre bekommt seinen ersten Sparringspartner!",
-  "status": "vertont",
+  "status": "veroeffentlicht",
   "createdAt": "2026-11-16T16:36:40.726Z",
-  "publishedAt": null,
+  "publishedAt": "2026-11-16T17:03:54.830Z",
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
   "userIdeas": "J’ wird Sparringspartner, ein Profi-Trainer kommt (Community-Kommentar), Marke IRON kündigt Kooperation an (fiktiv). Erstes Sparring, Grundlagen, Cliffhanger erster Kampf. Frage: Schlagkraft, Schnelligkeit oder Ausdauer?",
   "resolvesDecisionId": null,
@@ -953,5 +953,10 @@
     "seatsTotal": 100,
     "seatsGoal": 75
   },
-  "video": null
+  "video": {
+    "file": "episodes/ep-008/boxclub_folge_008.mp4",
+    "poster": "episodes/ep-008/poster.jpg",
+    "renderedAt": "2026-11-16T17:03:25.387Z",
+    "durationSec": 81.7
+  }
 }

@@ -799,7 +799,7 @@
       "elevenlabsVoiceId": "",
       "openaiVoice": "ash",
       "instructions": "",
-      "demoPitch": 1.0,
+      "demoPitch": 1,
       "elevenlabsModel": "",
       "locked": true,
       "note": "Ab Folge 8: Cartesia „Sebastian“ (deutsch, männlich).",
@@ -843,8 +843,8 @@
         "stirnband"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 8,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Wiederkehrend ab Folge 8."
@@ -932,8 +932,8 @@
         "klemmbrett"
       ]
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 8,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Fester Trainer ab Folge 8."

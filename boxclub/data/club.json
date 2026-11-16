@@ -6,7 +6,7 @@
   "money": 300,
   "monthlyCosts": 130,
   "monthlyIncome": 30,
-  "members": 2,
+  "members": 3,
   "reputation": 5,
   "facilityCondition": 100,
   "equipment": [
@@ -144,6 +144,10 @@
         {
           "episode": 7,
           "text": "Folge 7: „Dann kann ich endlich richtig trainieren!“ – erfährt von seinem ersten Kampf."
+        },
+        {
+          "episode": 8,
+          "text": "Folge 8: Erstes Sparring – Deckung zu tief, „ich hab noch viel zu lernen“. Beginnt Grundlagentraining bei Wolski. „Ich bin bereit!“"
         }
       ]
     },
@@ -280,6 +284,34 @@
         {
           "episode": 7,
           "text": "Folge 7: Start des Kampf-Strangs. Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Geplanter Aufbau: Training, Trainerfrage (Örlando offen), Technik, Kondition, Sparring, Gegnersuche, Ankündigung, Kampftag. KEIN Gegner, KEIN Termin."
+        },
+        {
+          "episode": 8,
+          "text": "Folge 8: Ernsthafte Vorbereitung beginnt. Neuer Trainer Marek Wolski (Grundlagen: Stellung, Deckung, Beinarbeit, Jab, Cross). Sparringspartner J’. Wolski: „Bald können wir über den ersten Kampf sprechen.“ Gegner/Termin offen."
+        }
+      ]
+    },
+    {
+      "id": "sparring",
+      "title": "Sparring mit J’",
+      "status": "offen",
+      "startedEpisode": 8,
+      "updates": [
+        {
+          "episode": 8,
+          "text": "Folge 8: Erstes kontrolliertes Sparring Emre vs. J’. J’ deutlich erfahrener, Emre muss zurück, Deckung zu tief („Hände hoch!“). J’: „Morgen wieder im Ring.“"
+        }
+      ]
+    },
+    {
+      "id": "iron-kooperation",
+      "title": "Kooperation mit IRON",
+      "status": "offen",
+      "startedEpisode": 8,
+      "updates": [
+        {
+          "episode": 8,
+          "text": "Folge 8: Nachricht von IRON (fiktive Marke): Kooperation + komplette Boxausrüstung angekündigt. NICHT geliefert. Übergabe als möglicher Höhepunkt in Folge 9."
         }
       ]
     }
@@ -472,6 +504,36 @@
       "votes": {},
       "note": "",
       "resolvedInEpisode": null
+    },
+    {
+      "id": "d-008",
+      "episode": 8,
+      "question": "Was soll Emre zuerst trainieren?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Schlagkraft 💥",
+          "consequenceHint": "Sandsack- und Krafttraining stehen in Folge 9 im Mittelpunkt.",
+          "plan": "training:schlagkraft"
+        },
+        {
+          "key": "B",
+          "label": "Schnelligkeit ⚡",
+          "consequenceHint": "Speed, Reflexe (Tennisbälle!) und Beinarbeit in Folge 9.",
+          "plan": "training:schnelligkeit"
+        },
+        {
+          "key": "C",
+          "label": "Ausdauer 🫁",
+          "consequenceHint": "Laufen, Seilspringen, Runden durchhalten in Folge 9.",
+          "plan": "training:ausdauer"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
+      "votes": {},
+      "note": "",
+      "resolvedInEpisode": null
     }
   ],
   "chapter": "Akt 3 – Emres erster Kampf",
@@ -503,18 +565,22 @@
     {
       "episode": 7,
       "text": "Folge 7 „Eine Halle für 50.000 Euro?!“: Günther platzt herein: Rostfaust zieht um! Vexo_on_MTB hat geschrieben, dass Miete und Ring bezahlt sind und eine dreimal so große, fertig eingerichtete Halle mit Gym wartet. Paule will das mit eigenen Augen sehen. Die Türen gehen auf: riesige Halle, Ring, Sandsack-Reihe, Laufbänder, Hantelbank. Dort wartet ein wortloser Kurier mit einem goldenen Koffer – 50.000 Euro (in der Geschichte). Dann schreibt Faro_wpt, dass morgen noch 40.000 Euro kommen sollen – und danach nur „b“. Emre steht zum ersten Mal in der neuen Halle. Paule: „Jetzt müssen wir zeigen, was wir können.“ Günther: „Es wird Zeit, Emre auf seinen ersten Kampf vorzubereiten.“ Emre: „Meinen ersten Kampf?“ Die Arena hat 50 von 100 Plätzen, nächstes Ziel 75. Wer bereit ist, schreibt KAMPF."
+    },
+    {
+      "episode": 8,
+      "text": "Folge 8 „Emre bekommt seinen ersten Sparringspartner!“: Emre schlägt im Ring unbeholfen ins Leere – Günther: „So wird das nichts!“ Da kommt J’ in die Halle, der in den Kommentaren geschrieben hat: „ich bin emres sparing partner“. Erstes kontrolliertes Sparring: J’ ist schneller, Emre muss zurück, Paule ruft „Hände hoch!“. Dann stellt Günther den neuen Profi-Trainer Marek Wolski vor – Grundlagen statt Träume: Stellung, Deckung, Beinarbeit, Jab, Cross. Rosa liest eine Nachricht: Die Marke IRON will mit kompletter Boxausrüstung kooperieren (in der Serie, noch nicht geliefert). Wolski: „Ab heute musst du richtig arbeiten.“ Emre: „Ich bin bereit!“ J’: „Dann sehen wir uns morgen im Ring.“ Arena 52/100, Like-Kasse 306 €. Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“"
     }
   ],
-  "lastEpisode": 7,
-  "nextEpisodeNote": "Emre soll seinen ersten Kampf bekommen – aber wer trainiert ihn, und gegen wen? Gegner und Termin sind noch offen.",
+  "lastEpisode": 8,
+  "nextEpisodeNote": "Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“ – Gegner und Termin offen; IRON-Ausrüstung angekündigt.",
   "community": {
-    "followers": 50,
-    "likes": 36,
+    "followers": 52,
+    "likes": 46,
     "likeEuroRate": 2,
     "likesBooked": 0
   },
   "accounts": {
-    "likeKasse": 214,
+    "likeKasse": 306,
     "storyFonds": [
       {
         "id": "k-001",
@@ -596,6 +662,33 @@
       "storyCondition": "",
       "episode": 7,
       "note": "In der Serie nur angekündigt. REAL nicht bestätigt."
+    },
+    {
+      "id": "o-007",
+      "source": "Kommentar von J’ (unter Folge 7)",
+      "content": "„ich bin emres sparing partner“",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 8,
+      "note": "In der Serie umgesetzt: J’ ist Emres Sparringspartner (Figur, fiktive Darstellung). Kein Wettkampfgegner."
+    },
+    {
+      "id": "o-008",
+      "source": "Community-Kommentar (kein Nutzername sichtbar, unter Folge 7)",
+      "content": "„Jetzt kommt ein Profi und bringt Emre das Boxen bei“",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 8,
+      "note": "In der Serie umgesetzt: fiktiver Boxtrainer Marek Wolski."
+    },
+    {
+      "id": "o-009",
+      "source": "Community-Kommentar (kein Nutzername sichtbar, unter Folge 7)",
+      "content": "Kooperation mit der Marke „IRON“: komplette Boxausrüstung (Handschuhe, Trainingshandschuhe, Pratzen, Sandsäcke, Bandagen, Trainingskleidung)",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 8,
+      "note": "IRON ist ein FIKTIVER Kooperationspartner in der Serie. Nur angekündigt (F8), Übergabe ggf. Folge 9. Keine echte Partnerschaft, keine echte Lieferung."
     }
   ],
   "metrics": [
@@ -668,6 +761,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 7: 1.858 Aufrufe (Rekord, erstmals deutlich > 1.000), 36 Likes, 50 Follower. Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
+    },
+    {
+      "episode": 7,
+      "reportedAt": "2026-11-16T17:03:54.824Z",
+      "views": 889,
+      "likes": 46,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 2,
+      "followersTotal": 52,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 8 (Screenshot): 889 Aufrufe, 46 Likes, 52 Follower. Rekord bleibt Folge 6 (1.858). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ],
   "upcomingEvent": {
@@ -676,7 +783,7 @@
     "kind": "Schaukampf",
     "boxerId": "emre-yildiz",
     "seats": 100,
-    "seatsFilled": 50,
+    "seatsFilled": 52,
     "daysLeft": 4,
     "cost": 200,
     "announcedEpisode": 2,
