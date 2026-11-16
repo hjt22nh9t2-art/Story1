@@ -759,5 +759,183 @@
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Nur Folge 7 geplant."
+  },
+  {
+    "id": "j-sparring",
+    "name": "J’",
+    "nickname": "Der Sparringspartner",
+    "role": "boxer",
+    "roleTitle": "Emres Sparringspartner (aus dem Kommentar von J’)",
+    "status": "aktiv",
+    "age": 22,
+    "heightCm": 178,
+    "weightKg": 72,
+    "weightClass": "Weltergewicht",
+    "personality": "Locker, selbstbewusst, fair. Fordert Emre, ohne ihn vorzuführen.",
+    "background": "Entstanden aus dem TikTok-Kommentar von J’: „ich bin emres sparing partner“ (unter Folge 7). In der Serie erfahrener als Emre. KEIN Wettkampfgegner, sondern Trainingspartner.",
+    "speechStyle": "Kurz, cool, motivierend.",
+    "strengths": [
+      "Erfahrung",
+      "Schnelligkeit",
+      "Deckung"
+    ],
+    "weaknesses": [
+      "unterschätzt manchmal Gegner"
+    ],
+    "goal": "Emre fit für den ersten Kampf machen",
+    "catchphrase": "Ich werde dich fordern.",
+    "stats": {
+      "technik": 7,
+      "kraft": 6,
+      "kondition": 7,
+      "disziplin": 7
+    },
+    "record": {
+      "siege": 0,
+      "niederlagen": 0,
+      "unentschieden": 0
+    },
+    "voice": {
+      "elevenlabsVoiceId": "",
+      "openaiVoice": "ash",
+      "instructions": "",
+      "demoPitch": 1.0,
+      "elevenlabsModel": "",
+      "locked": true,
+      "note": "Ab Folge 8: Cartesia „Sebastian“ (deutsch, männlich).",
+      "speko": {
+        "provider": "cartesia",
+        "model": "sonic-3.5",
+        "voice": "b7187e84-fe22-4344-ba4a-bc013fcb533e",
+        "label": "Sebastian (Cartesia, deutsch)"
+      }
+    },
+    "look": {
+      "skin": "#a8724f",
+      "hair": {
+        "style": "stoppel",
+        "color": "#1b1612"
+      },
+      "facialHair": {
+        "style": "stoppeln",
+        "color": "#1b1612"
+      },
+      "brows": "streng",
+      "eyeColor": "#2a1e14",
+      "nose": "breit",
+      "cauliflowerEar": false,
+      "build": "athletisch",
+      "ageLook": "jung",
+      "top": {
+        "type": "tanktop",
+        "color": "#1f3f8a",
+        "accent": "#f4ead2",
+        "print": "J’"
+      },
+      "bottom": {
+        "type": "trainingshose",
+        "color": "#1a1a1a",
+        "accent": "#1f3f8a"
+      },
+      "shoes": "#f4f4f4",
+      "gloves": "#1f3f8a",
+      "accessories": [
+        "stirnband"
+      ]
+    },
+    "firstEpisode": null,
+    "lookLocked": false,
+    "lookHistory": [],
+    "conceptImage": "",
+    "notes": "Wiederkehrend ab Folge 8."
+  },
+  {
+    "id": "marek-wolski",
+    "name": "Marek Wolski",
+    "nickname": "Coach Wolski",
+    "role": "trainer",
+    "roleTitle": "Boxtrainer von Emre (Profi)",
+    "status": "aktiv",
+    "age": 48,
+    "heightCm": 183,
+    "weightKg": 86,
+    "weightClass": "",
+    "personality": "Professionell, streng, aber fair. Ruhig, präzise, nimmt Emres Entwicklung ernst. Kein Spaßvogel – Gegenpol zu Günther und Paule.",
+    "background": "Fiktiver Ex-Profi und Trainer. Eingeführt nach dem Community-Kommentar „Jetzt kommt ein Profi und bringt Emre das Boxen bei“ (ohne sichtbaren Nutzernamen). KEIN Wing-Tsun-Trainer, NICHT Örlando.",
+    "speechStyle": "Klar, knapp, fachlich. Gibt Kommandos.",
+    "strengths": [
+      "Technik",
+      "Trainingsplanung",
+      "Ruhe"
+    ],
+    "weaknesses": [
+      "wenig Geduld mit Ausreden"
+    ],
+    "goal": "Emre zu einem richtigen Boxer machen",
+    "catchphrase": "Erst die Grundlagen.",
+    "stats": {
+      "technik": 9,
+      "kraft": 7,
+      "kondition": 7,
+      "disziplin": 10
+    },
+    "record": {
+      "siege": 0,
+      "niederlagen": 0,
+      "unentschieden": 0
+    },
+    "voice": {
+      "elevenlabsVoiceId": "",
+      "openaiVoice": "onyx",
+      "instructions": "",
+      "demoPitch": 0.85,
+      "elevenlabsModel": "",
+      "locked": true,
+      "note": "Ab Folge 8: Soniox „Adrian“ (tief, autoritär, männlich).",
+      "speko": {
+        "provider": "soniox",
+        "model": "tts-rt-v1",
+        "voice": "Adrian",
+        "label": "Adrian (Soniox)"
+      }
+    },
+    "look": {
+      "skin": "#e0b38f",
+      "hair": {
+        "style": "kurz",
+        "color": "#8a8a8a"
+      },
+      "facialHair": {
+        "style": "vollbart",
+        "color": "#5a5a5a"
+      },
+      "brows": "streng",
+      "eyeColor": "#2f4a5e",
+      "nose": "krumm",
+      "cauliflowerEar": true,
+      "build": "muskulös",
+      "ageLook": "erwachsen",
+      "top": {
+        "type": "trainingsjacke",
+        "color": "#141414",
+        "accent": "#f2b632",
+        "print": "COACH"
+      },
+      "bottom": {
+        "type": "trainingshose",
+        "color": "#141414",
+        "accent": "#f2b632"
+      },
+      "shoes": "#141414",
+      "gloves": "#f2b632",
+      "accessories": [
+        "klemmbrett"
+      ]
+    },
+    "firstEpisode": null,
+    "lookLocked": false,
+    "lookHistory": [],
+    "conceptImage": "",
+    "notes": "Fester Trainer ab Folge 8."
   }
 ]

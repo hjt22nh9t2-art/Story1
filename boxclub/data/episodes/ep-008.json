@@ -1,0 +1,957 @@
+{
+  "id": "ep-008",
+  "number": 8,
+  "title": "Emre bekommt seinen ersten Sparringspartner!",
+  "status": "vertont",
+  "createdAt": "2026-11-16T16:36:40.726Z",
+  "publishedAt": null,
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "J’ wird Sparringspartner, ein Profi-Trainer kommt (Community-Kommentar), Marke IRON kündigt Kooperation an (fiktiv). Erstes Sparring, Grundlagen, Cliffhanger erster Kampf. Frage: Schlagkraft, Schnelligkeit oder Ausdauer?",
+  "resolvesDecisionId": null,
+  "hook": "Emre schlägt im Ring ins Leere. Günther: „Emre, so wird das nichts! Du brauchst endlich einen richtigen Sparringspartner!“ – die Hallentür geht auf.",
+  "summary": "Emre schlägt im Ring unbeholfen ins Leere – Günther: „So wird das nichts!“ Da kommt J’ in die Halle, der in den Kommentaren geschrieben hat: „ich bin emres sparing partner“. Erstes kontrolliertes Sparring: J’ ist schneller, Emre muss zurück, Paule ruft „Hände hoch!“. Dann stellt Günther den neuen Profi-Trainer Marek Wolski vor – Grundlagen statt Träume: Stellung, Deckung, Beinarbeit, Jab, Cross. Rosa liest eine Nachricht: Die Marke IRON will mit kompletter Boxausrüstung kooperieren (in der Serie, noch nicht geliefert). Wolski: „Ab heute musst du richtig arbeiten.“ Emre: „Ich bin bereit!“ J’: „Dann sehen wir uns morgen im Ring.“ Arena 52/100, Like-Kasse 306 €. Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "ring",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "guenther-wallach",
+          "text": "Emre, so wird das nichts! Du brauchst endlich einen richtigen Sparringspartner!",
+          "emotion": "ueberrascht",
+          "action": "kopfschuetteln",
+          "sfx": "whoosh",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l1.mp3",
+            "durationSec": 4.23,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "emre-yildiz",
+          "text": "Und wo soll ich den herkriegen?",
+          "emotion": "verlegen",
+          "action": "achselzucken",
+          "sfx": "tuer",
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l2.mp3",
+            "durationSec": 1.38,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "EMRE BEKOMMT EINEN SPARRINGSPARTNER?!",
+      "music": "training",
+      "direction": "Hook: Emre schlägt unbeholfen ins Leere. Günther am Ringrand. Am Ende: Tür geht auf.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "j-sparring",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "auftritt"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l3",
+          "speaker": "guenther-wallach",
+          "text": "Du bist also J’? Du hast geschrieben, dass du Emres Sparringspartner werden willst!",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0.5,
+          "audio": {
+            "file": "episodes/ep-008/voice/l3.mp3",
+            "durationSec": 4.1,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "j-sparring",
+          "text": "Genau. Keine Sorge, Emre – wir trainieren zusammen. Aber ich werde dich fordern.",
+          "emotion": "entschlossen",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l4.mp3",
+            "durationSec": 3.84,
+            "provider": "cartesia (sonic-3.5, b7187e84-fe22-4344-ba4a-bc013fcb533e)"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "emre-yildiz",
+          "text": "Dann kann das Training ja endlich losgehen!",
+          "emotion": "verlegen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l5.mp3",
+            "durationSec": 2.01,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "J’ kommt herein. Kommentar-Karte mit seinem Nutzernamen.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "J’",
+        "text": "„ich bin emres sparing partner“",
+        "tag": "AUS EUREM KOMMENTAR – JETZT IN DER SERIE"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "ring",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "j-sparring",
+          "position": "mitte",
+          "facing": "links",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l6",
+          "speaker": "j-sparring",
+          "text": "Deckung, Emre!",
+          "emotion": "entschlossen",
+          "action": "schlagen",
+          "sfx": "schlag",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l6.mp3",
+            "durationSec": 1.18,
+            "provider": "cartesia (sonic-3.5, b7187e84-fe22-4344-ba4a-bc013fcb533e)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "emre-yildiz",
+          "text": "Uff! Der war schnell.",
+          "emotion": "ueberrascht",
+          "action": "seufzen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l7.mp3",
+            "durationSec": 0.81,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "paule-kruse",
+          "text": "Emre! Hände hoch! Du musst deine Deckung halten!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l8.mp3",
+            "durationSec": 2.64,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "emre-yildiz",
+          "text": "Okay … ich hab noch viel zu lernen.",
+          "emotion": "verlegen",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l9.mp3",
+            "durationSec": 1.93,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "ERSTES SPARRING",
+      "music": "spannung",
+      "direction": "Kontrolliertes Sparring: J’ schneller, Emre muss zurück. Paule am Ringrand.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s4",
+      "beat": "handlung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "auftritt"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l10",
+          "speaker": "guenther-wallach",
+          "text": "Emre, noch eine Überraschung: Das ist Marek Wolski – dein neuer Boxtrainer!",
+          "emotion": "stolz",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0.5,
+          "audio": {
+            "file": "episodes/ep-008/voice/l10.mp3",
+            "durationSec": 4.75,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l11",
+          "speaker": "marek-wolski",
+          "text": "Du hast Potenzial. Aber wenn du wirklich kämpfen willst, fangen wir bei den Grundlagen an.",
+          "emotion": "neutral",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l11.mp3",
+            "durationSec": 4.75,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Der Profi-Trainer kommt. Community-Kommentar ohne Nutzernamen.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Community-Kommentar",
+        "text": "„Jetzt kommt ein Profi und bringt Emre das Boxen bei“",
+        "tag": "AUS EUREM KOMMENTAR – JETZT IN DER SERIE"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s5",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "dolly",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "rechts",
+          "facing": "links",
+          "action": "pratzen"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l12",
+          "speaker": "marek-wolski",
+          "text": "Stellung. Kinn runter. Jab – Cross. Und raus!",
+          "emotion": "entschlossen",
+          "action": "pratzen",
+          "sfx": "schlag",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l12.mp3",
+            "durationSec": 3.37,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l13",
+          "speaker": "marek-wolski",
+          "text": "Gut. Noch mal. Hände bleiben oben.",
+          "emotion": "neutral",
+          "action": "pratzen",
+          "sfx": "schlag",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l13.mp3",
+            "durationSec": 2.17,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        }
+      ],
+      "overlay": "STELLUNG · DECKUNG · BEINARBEIT",
+      "music": "training",
+      "direction": "Grundlagen: Wolski hält die Pratzen, Emre schlägt Jab–Cross, weicht aus.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s6",
+      "beat": "handlung",
+      "location": "buero",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l14",
+          "speaker": "rosa-brandt",
+          "text": "Leute! Wir haben eine Nachricht von IRON bekommen!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l14.mp3",
+            "durationSec": 2.69,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        },
+        {
+          "id": "l15",
+          "speaker": "guenther-wallach",
+          "text": "IRON? Was wollen die denn von uns?",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l15.mp3",
+            "durationSec": 2.27,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l16",
+          "speaker": "rosa-brandt",
+          "text": "Die wollen mit uns zusammenarbeiten – mit kompletter Boxausrüstung!",
+          "emotion": "froh",
+          "action": "jubeln",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l16.mp3",
+            "durationSec": 3.29,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        },
+        {
+          "id": "l17",
+          "speaker": "paule-kruse",
+          "text": "Jetzt müssen wir nur noch lernen, damit richtig umzugehen.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l17.mp3",
+            "durationSec": 2.87,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Rosa liest die Nachricht von IRON (fiktive Marke) – Community-Kommentar als Karte.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": {
+        "author": "Community-Kommentar",
+        "text": "„Später kommt eine berühmte Firma und will eine Kooperation mit euch die IRON heißen und sie geben euch ganze Box Materialien“",
+        "tag": "IN DER SERIE: ANGEBOT VON IRON – NOCH NICHT GELIEFERT"
+      },
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s7",
+      "beat": "entwicklung",
+      "location": "neuehalle",
+      "shot": "schwenk",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l18",
+          "speaker": "guenther-wallach",
+          "text": "Handschuhe, Bandagen, Pratzen, Sandsäcke, Trainingsklamotten …",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l18.mp3",
+            "durationSec": 4.75,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "VORSCHAU: IRON-AUSRÜSTUNG",
+      "music": "gefuehl",
+      "direction": "Vorstellung (Traum): IRON-Kisten und Regal mit Handschuhen, Pratzen, Bandagen – noch nicht geliefert.",
+      "seats": null,
+      "fx": "traum",
+      "kasse": null,
+      "comment": null,
+      "props": [
+        {
+          "type": "kiste",
+          "x": 300,
+          "y": null,
+          "scale": 1,
+          "label": "IRON",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        },
+        {
+          "type": "kiste",
+          "x": 300,
+          "y": 1385,
+          "scale": 0.75,
+          "label": "IRON",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        },
+        {
+          "type": "ausruestung",
+          "x": 700,
+          "y": null,
+          "scale": 1,
+          "label": "",
+          "openAt": null,
+          "fallAt": null,
+          "fallen": false,
+          "color": "#7c2b26",
+          "hitAt": null
+        }
+      ],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s8",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "j-sparring",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l19",
+          "speaker": "marek-wolski",
+          "text": "Wenn du deinen ersten Kampf gewinnen willst, musst du ab heute richtig arbeiten.",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l19.mp3",
+            "durationSec": 3.94,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l20",
+          "speaker": "emre-yildiz",
+          "text": "Ich bin bereit!",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l20.mp3",
+            "durationSec": 0.73,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l21",
+          "speaker": "j-sparring",
+          "text": "Dann sehen wir uns morgen wieder im Ring.",
+          "emotion": "froh",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l21.mp3",
+            "durationSec": 1.59,
+            "provider": "cartesia (sonic-3.5, b7187e84-fe22-4344-ba4a-bc013fcb533e)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "gefuehl",
+      "direction": "Zurück im Ring: Wolski, Emre, J’ – das Ziel wird ernst.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s9",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l22",
+          "speaker": "guenther-wallach",
+          "text": "Zweiundfünfzig Follower! Schaffen wir als Nächstes die fünfundsiebzig?",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": "publikum",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l22.mp3",
+            "durationSec": 3.79,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l23",
+          "speaker": "paule-kruse",
+          "text": "Sechsundvierzig Likes: zweiundneunzig Euro. Symbolisch.",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-008/voice/l23.mp3",
+            "durationSec": 3.16,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Arena 50 → 52 von 100 (Ziel 75). Like-Kasse 214 → 306 € (46 echte Likes × 2 €, symbolisch).",
+      "seats": {
+        "from": 50,
+        "to": 52,
+        "total": 100,
+        "hud": true,
+        "goal": 75
+      },
+      "fx": null,
+      "kasse": {
+        "amount": 306,
+        "perLike": 2,
+        "from": 214,
+        "likeGoal": 100,
+        "label": "LIKE-KASSE"
+      },
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s10",
+      "beat": "entscheidung",
+      "location": "neuehalle",
+      "shot": "zoom",
+      "cast": [
+        {
+          "characterId": "marek-wolski",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "emre-yildiz",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l24",
+          "speaker": "marek-wolski",
+          "text": "Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.1,
+          "delayBefore": 0.3,
+          "audio": {
+            "file": "episodes/ep-008/voice/l24.mp3",
+            "durationSec": 3.58,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l25",
+          "speaker": "emre-yildiz",
+          "text": "Und ihr entscheidet: Was soll ich zuerst trainieren?",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.3,
+          "delayBefore": 0.4,
+          "audio": {
+            "file": "episodes/ep-008/voice/l25.mp3",
+            "durationSec": 3.03,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "EMRES ERSTER KAMPF RÜCKT NÄHER!",
+      "music": "spannung",
+      "direction": "Wolski mit Trainingsplan (Klemmbrett). Cliffhanger + die eine Frage.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    }
+  ],
+  "decision": {
+    "question": "Was soll Emre zuerst trainieren?",
+    "options": [
+      {
+        "key": "A",
+        "label": "Schlagkraft 💥",
+        "consequenceHint": "Sandsack- und Krafttraining stehen in Folge 9 im Mittelpunkt.",
+        "plan": "training:schlagkraft"
+      },
+      {
+        "key": "B",
+        "label": "Schnelligkeit ⚡",
+        "consequenceHint": "Speed, Reflexe (Tennisbälle!) und Beinarbeit in Folge 9.",
+        "plan": "training:schnelligkeit"
+      },
+      {
+        "key": "C",
+        "label": "Ausdauer 🫁",
+        "consequenceHint": "Laufen, Seilspringen, Runden durchhalten in Folge 9.",
+        "plan": "training:ausdauer"
+      }
+    ]
+  },
+  "cliffhanger": "Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“ – Gegner und Termin offen; IRON-Ausrüstung angekündigt.",
+  "stateChanges": [
+    {
+      "op": "follower",
+      "amount": 52,
+      "target": "",
+      "value": "",
+      "reason": "Meldung des Produzenten vor Folge 8"
+    },
+    {
+      "op": "plaetze",
+      "amount": 52,
+      "target": "",
+      "value": "",
+      "reason": "52 Follower = 52 von 100 Plätzen"
+    },
+    {
+      "op": "likes",
+      "amount": 46,
+      "target": "",
+      "value": "",
+      "reason": "Likes Folge 7 (Screenshot des Produzenten)"
+    },
+    {
+      "op": "konto",
+      "amount": 92,
+      "target": "likes",
+      "value": "",
+      "reason": "Like-Kasse: 46 Likes (F7) × 2 € (symbolisch)"
+    },
+    {
+      "op": "kennzahlen",
+      "amount": 7,
+      "target": "",
+      "value": "{\"views\":889,\"likes\":46,\"followersTotal\":52,\"newFollowers\":2,\"note\":\"Gemeldet vor Folge 8 (Screenshot): 889 Aufrufe, 46 Likes, 52 Follower. Rekord bleibt Folge 6 (1.858). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet.\"}",
+      "reason": ""
+    },
+    {
+      "op": "mitglieder",
+      "amount": 1,
+      "target": "",
+      "value": "",
+      "reason": "J’ trainiert ab jetzt regelmäßig im Club (Serienhandlung)"
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-007",
+      "value": "{\"source\":\"Kommentar von J’ (unter Folge 7)\",\"content\":\"„ich bin emres sparing partner“\",\"status\":\"offen\",\"note\":\"In der Serie umgesetzt: J’ ist Emres Sparringspartner (Figur, fiktive Darstellung). Kein Wettkampfgegner.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-008",
+      "value": "{\"source\":\"Community-Kommentar (kein Nutzername sichtbar, unter Folge 7)\",\"content\":\"„Jetzt kommt ein Profi und bringt Emre das Boxen bei“\",\"status\":\"offen\",\"note\":\"In der Serie umgesetzt: fiktiver Boxtrainer Marek Wolski.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-009",
+      "value": "{\"source\":\"Community-Kommentar (kein Nutzername sichtbar, unter Folge 7)\",\"content\":\"Kooperation mit der Marke „IRON“: komplette Boxausrüstung (Handschuhe, Trainingshandschuhe, Pratzen, Sandsäcke, Bandagen, Trainingskleidung)\",\"status\":\"offen\",\"note\":\"IRON ist ein FIKTIVER Kooperationspartner in der Serie. Nur angekündigt (F8), Übergabe ggf. Folge 9. Keine echte Partnerschaft, keine echte Lieferung.\"}",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "erster-kampf",
+      "value": "Folge 8: Ernsthafte Vorbereitung beginnt. Neuer Trainer Marek Wolski (Grundlagen: Stellung, Deckung, Beinarbeit, Jab, Cross). Sparringspartner J’. Wolski: „Bald können wir über den ersten Kampf sprechen.“ Gegner/Termin offen.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "sparring",
+      "value": "Folge 8: Erstes kontrolliertes Sparring Emre vs. J’. J’ deutlich erfahrener, Emre muss zurück, Deckung zu tief („Hände hoch!“). J’: „Morgen wieder im Ring.“",
+      "reason": "Sparring mit J’"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "iron-kooperation",
+      "value": "Folge 8: Nachricht von IRON (fiktive Marke): Kooperation + komplette Boxausrüstung angekündigt. NICHT geliefert. Übergabe als möglicher Höhepunkt in Folge 9.",
+      "reason": "Kooperation mit IRON"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Folge 8: Erstes Sparring – Deckung zu tief, „ich hab noch viel zu lernen“. Beginnt Grundlagentraining bei Wolski. „Ich bin bereit!“",
+      "reason": ""
+    }
+  ],
+  "newCharacterIds": [
+    "j-sparring",
+    "marek-wolski"
+  ],
+  "socialCaption": "Folge 8: Emre bekommt seinen ersten Sparringspartner! 🥊 Danke J’ – aus deinem Kommentar wird jetzt Training. Dazu ein Profi-Trainer und eine Nachricht von IRON (fiktive Marke in unserer Story). Ihr entscheidet: Was soll Emre zuerst trainieren? A = Schlagkraft, B = Schnelligkeit, C = Ausdauer 👇",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#sparring",
+    "#animationserie",
+    "#teil8"
+  ],
+  "titleCard": "klein",
+  "endCard": {
+    "type": "abstimmung",
+    "headline": "Was soll Emre zuerst trainieren?",
+    "lines": [
+      "Schreib A, B oder C in die Kommentare!",
+      "🏟️ 52/100 Plätze · ❤️ Ziel: 100 Likes"
+    ],
+    "seatsFilled": 52,
+    "seatsTotal": 100,
+    "seatsGoal": 75
+  },
+  "video": null
+}

@@ -51,6 +51,9 @@ sind fiktiv und werden nie einem realen Kommentator zugeschrieben.
 | **Faro_wpt** | Renovierung + Ausstattung | F6: Renovierung durchgeführt, Ring, Sandsäcke, Pratzen, Handschuhe, Tennisbälle; „kein problem ❤️“. Zahlungen pro Kampf offen (kein Betrag) | Angebot o-001 offen, nichts bestätigt | Folge 4 (anonym), ab F5 mit Namen |
 | **Vexo_on_MTB 🌲🚲 (F7)** | Miete + Ring bezahlt, dreimal so große Halle mit Gym, Kurier mit goldenem Koffer (50k) | F7: Umzug in die neue Halle, 50.000 € im goldenen Koffer (fiktiv) | Angebot o-005 offen | Folge 7 |
 | **Faro_wpt (F7)** | „und morgen sollten die 40 k ankommen“ + Kommentar „b“ | F7: 40.000 € nur angekündigt | Angebot o-006 offen | Folge 7 |
+| **J’** | „ich bin emres sparing partner“ | ab F8 als Figur: Emres Sparringspartner (kein Wettkampfgegner), wiederkehrend | – | Folge 8 |
+| **Community-Kommentar** (kein Name sichtbar) | „Jetzt kommt ein Profi und bringt Emre das Boxen bei“ | ab F8: fiktiver Boxtrainer Marek Wolski | – | Folge 8 |
+| **Community-Kommentar** (kein Name sichtbar) | Kooperation mit der Marke „IRON“, komplette Boxausrüstung | F8: nur angekündigt (fiktive Marke) | Angebot o-009 offen | Folge 8 |
 | **hakir_373 2** | verspricht neue große Halle + Wing-Tsun-Trainer | F6: nur Versprechen/Vorstellung (Traum), noch nicht da | Angebot o-004 offen | Folge 6 |
 Keine erfundenen Profilbilder/Identitäten: Kommentatoren erscheinen nur als Kommentar-Karten (grauer Platzhalter-Avatar).
 In der Serie umgesetzte Angebote sind **fiktive Handlung**; reale Zahlungen/Lieferungen gelten erst nach Bestätigung durch den Produzenten.
@@ -65,9 +68,19 @@ In der Serie umgesetzte Angebote sind **fiktive Handlung**; reale Zahlungen/Lief
 Laufende Kosten: Miete der Halle übernimmt in der Serie Vexo_on_MTB (ab F7). Reale Zahlungen gelten nie als bestätigt, solange der Produzent sie nicht bestätigt.
 
 ## Kampf-Strang (ab Folge 7) – über mehrere Folgen aufbauen
-1. Trainingsvorbereitung · 2. Trainerfrage (Örlando = möglicher BOXtrainer, Abstimmungen d-005/d-006 offen; Sifu = Wing Tsun, getrennt) ·
-3. Technik · 4. Kondition/Kraft · 5. erstes Sparring · 6. Gegnersuche · 7. Ankündigung · 8. Kampftag-Vorbereitung · 9. der Kampf als eigener Höhepunkt.
-Kein Gegner und kein Termin, bis sie in einer Folge eingeführt werden.
+| Schritt | Stand |
+|---|---|
+| 1. Grundlagen | **läuft (F8):** Stellung, Deckung, Beinarbeit, Jab, Cross bei Coach Wolski |
+| 2. Trainingsplanung | **Wolski übernimmt (F8)** |
+| 3. Sparringspartner | **J’ (F8)** – erstes kontrolliertes Sparring, Emres Deckung zu tief |
+| 4. Technik & Kondition | offen – Community-Abstimmung F8: A Schlagkraft / B Schnelligkeit / C Ausdauer (d-008) |
+| 5. Ausrüstungspartner | **IRON** (fiktiv) angekündigt F8, Übergabe ggf. F9 |
+| 6.–9. Fortschritt, Gegnersuche, Ankündigung, Kampftag | offen – kein Gegner, kein Termin |
+Örlando bleibt möglicher BOXtrainer-Kandidat (Abstimmungen d-005/d-006 offen), Sifu bleibt Wing Tsun, Wolski ist Emres Boxtrainer.
+
+## IRON (fiktive Marke in der Serie)
+Kooperationsangebot über komplette Boxausrüstung (Box- und Trainingshandschuhe, Pratzen, Sandsäcke, Bandagen, Trainingskleidung).
+Stand F8: nur angekündigt. Keine echte Partnerschaft mit einem realen Unternehmen behaupten; eigenes, neutrales Schriftbild (kein echtes Logo).
 
 ## Erzählzeit vs. echte Zeit
 Story-Tage (Countdown zum Kampf) und echte Abstimmungsfristen laufen getrennt. Der Kampfabend wird erst erzählt,
@@ -88,4 +101,6 @@ Titan Boxing Gym (Rivale, noch gesperrt) · **Die große Halle** (Angebot von ha
 Günther (Gründer, Optimist) · Rosa (Cheftrainerin, streng & fair) · Paule (Hausmeister/Kassenwart, trocken) ·
 Emre (17, erster Boxer) · Bruno (Ex-Profi, **nicht verpflichtet**, Kandidat; Paule kennt ein Geheimnis) ·
 Nico (Problemfall, Kandidat, noch nicht aufgetreten) · Viktor Hahn (Rivale, noch nicht aufgetreten) ·
-**Sifu** (Wing-Tsun-Trainer, Kandidat, ab F6 – KEIN Boxtrainer, NICHT Örlando; spricht noch nicht).
+**Sifu** (Wing-Tsun-Trainer, Kandidat, ab F6 – KEIN Boxtrainer, NICHT Örlando; spricht noch nicht) ·
+**Marek Wolski „Coach Wolski“** (fiktiver Profi-Boxtrainer, ab F8 fest: streng, fair, Grundlagen zuerst; Klemmbrett mit Trainingsplan) ·
+**J’** (Emres Sparringspartner, ab F8, aus dem Kommentar von J’) · **Der Kurier** (F7, stumm).
