@@ -937,5 +937,93 @@
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Fester Trainer ab Folge 8."
+  },
+  {
+    "id": "rico-stahl",
+    "name": "Rico Stahl",
+    "nickname": "Stahl",
+    "role": "rivale",
+    "roleTitle": "Unbekannter Herausforderer (nennt sich nur „Stahl“)",
+    "status": "gast",
+    "age": 20,
+    "heightCm": 181,
+    "weightKg": 73,
+    "weightClass": "Weltergewicht",
+    "personality": "Selbstbewusst, athletisch, provokant, etwas arrogant – aber kein Clown und kein Bösewicht. Technisch stark, respektiert Leistung.",
+    "background": "Taucht in Folge 9 unangekündigt in der neuen Halle auf, hat von Emre gehört und hält ihn für nicht bereit. Herkunft und Verein noch unbekannt (bewusst offen). Fordert Emre zur „Rostfaust Fight Night“ heraus. Erfundene Serienfigur, kein Kommentator.",
+    "speechStyle": "Ruhig, kühl, kurze Sätze mit Spitze.",
+    "strengths": [
+      "Technik",
+      "Schnelligkeit",
+      "Selbstvertrauen"
+    ],
+    "weaknesses": [
+      "unterschätzt Gegner",
+      "Arroganz"
+    ],
+    "goal": "Beweisen, dass Rostfaust überschätzt wird",
+    "catchphrase": "Merk dir einfach: Stahl.",
+    "stats": {
+      "technik": 8,
+      "kraft": 7,
+      "kondition": 8,
+      "disziplin": 6
+    },
+    "record": {
+      "siege": 0,
+      "niederlagen": 0,
+      "unentschieden": 0
+    },
+    "voice": {
+      "elevenlabsVoiceId": "",
+      "openaiVoice": "onyx",
+      "instructions": "",
+      "demoPitch": 0.95,
+      "elevenlabsModel": "",
+      "locked": true,
+      "note": "Ab Folge 9: xAI „Leo“ (dunkel, markant, männlich).",
+      "speko": {
+        "provider": "xai",
+        "model": "tts",
+        "voice": "leo",
+        "label": "Leo (xAI)"
+      }
+    },
+    "look": {
+      "skin": "#e6bc98",
+      "hair": {
+        "style": "seitenscheitel",
+        "color": "#e2c780"
+      },
+      "facialHair": {
+        "style": "keiner",
+        "color": "#e2c780"
+      },
+      "brows": "streng",
+      "eyeColor": "#3d6e8a",
+      "nose": "spitz",
+      "cauliflowerEar": false,
+      "build": "muskulös",
+      "ageLook": "jung",
+      "top": {
+        "type": "tshirt",
+        "color": "#f2f2f2",
+        "accent": "#4a5568",
+        "print": "STAHL"
+      },
+      "bottom": {
+        "type": "trainingshose",
+        "color": "#3a3f4a",
+        "accent": "#38c6ff"
+      },
+      "shoes": "#1a1a1a",
+      "gloves": "#a9b3c1",
+      "accessories": []
+    },
+    "firstEpisode": null,
+    "lookLocked": false,
+    "lookHistory": [],
+    "conceptImage": "",
+    "notes": "Wiederkehrender Gegner ab Folge 9. Sieger des möglichen Kampfes NICHT festgelegt."
   }
 ]

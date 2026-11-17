@@ -1,0 +1,960 @@
+{
+  "id": "ep-009",
+  "number": 9,
+  "title": "Emre wird herausgefordert!",
+  "status": "vertont",
+  "createdAt": "2026-11-17T16:02:29.108Z",
+  "publishedAt": null,
+  "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
+  "userIdeas": "Ein unbekannter, selbstbewusster Boxer provoziert Emre, Trainer greift ein, kontrollierter Techniktest, Herausforderung zur Rostfaust Fight Night. Frage: Kann Emre ihn besiegen? JA/NEIN.",
+  "resolvesDecisionId": null,
+  "hook": "Sekunde 1: Ein Fremder steht in der neuen Halle: „Also DAS ist der berühmte Boxclub Rostfaust? Ich hab mir mehr erwartet.“",
+  "summary": "Mitten in Emres Training steht ein Fremder in der neuen Halle: „Also das ist der berühmte Boxclub Rostfaust? Ich hab mir mehr erwartet.“ Seinen Namen verrät er nicht – „Merk dir einfach: Stahl.“ Er will sehen, ob Emre überhaupt boxen kann. Coach Wolski stellt sich dazwischen, Emre will aufbrausen – und bleibt ruhig. Beim kontrollierten Techniktest ist Stahl schneller, Emre muss zurück; Wolski bricht ab: „Du hast noch einiges zu lernen.“ Stahl zieht die Handschuhe aus: „Bei der Rostfaust Fight Night will ich dich im Ring sehen.“ Emre nimmt an. Günther: „Dann haben wir wohl unseren ersten großen Kampf!“ – Termin und Details offen. Wolski: „Ab morgen beginnt dein härtestes Training.“",
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "einstieg",
+      "location": "neuehalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rico-stahl",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "auftritt"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l1",
+          "speaker": "rico-stahl",
+          "text": "Also DAS ist der berühmte Boxclub Rostfaust? Ich hab mir mehr erwartet.",
+          "emotion": "neutral",
+          "action": "arme_verschraenkt",
+          "sfx": "tuer",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l1.mp3",
+            "durationSec": 4.15,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "guenther-wallach",
+          "text": "Äh … und wer bist du?",
+          "emotion": "ueberrascht",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l2.mp3",
+            "durationSec": 1.59,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "rico-stahl",
+          "text": "Merk dir einfach: Stahl.",
+          "emotion": "stolz",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l3.mp3",
+            "durationSec": 1.83,
+            "provider": "xai (tts, leo)"
+          }
+        }
+      ],
+      "overlay": "EIN UNBEKANNTER FORDERT EMRE HERAUS!",
+      "music": "spannung",
+      "direction": "Hook ab Sekunde 1: Der Fremde steht schon in der Halle. Emre trainiert, Günther dreht sich um.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s2",
+      "beat": "vorstellung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rico-stahl",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l4",
+          "speaker": "rico-stahl",
+          "text": "Du bist also Emre? Du sollst bald deinen ersten Kampf haben.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l4.mp3",
+            "durationSec": 3.11,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "emre-yildiz",
+          "text": "Ja. Und was willst du von mir?",
+          "emotion": "wuetend",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l5.mp3",
+            "durationSec": 1.62,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "rico-stahl",
+          "text": "Ich will sehen, ob du überhaupt boxen kannst.",
+          "emotion": "stolz",
+          "action": "keine",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l6.mp3",
+            "durationSec": 2.19,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "paule-kruse",
+          "text": "Oh, das könnte interessant werden.",
+          "emotion": "neutral",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l7.mp3",
+            "durationSec": 1.65,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Stahl geht direkt auf Emre zu. Paule und Rosa beobachten.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s3",
+      "beat": "handlung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rico-stahl",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l8",
+          "speaker": "marek-wolski",
+          "text": "Langsam. Hier wird nicht einfach jeder in den Ring geschickt.",
+          "emotion": "entschlossen",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l8.mp3",
+            "durationSec": 2.74,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "rico-stahl",
+          "text": "Dann solltet ihr ihn vielleicht besser trainieren.",
+          "emotion": "stolz",
+          "action": "achselzucken",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l9.mp3",
+            "durationSec": 2.01,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "emre-yildiz",
+          "text": "Pass bloß auf, was du …",
+          "emotion": "wuetend",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l10.mp3",
+            "durationSec": 1.41,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l11",
+          "speaker": "marek-wolski",
+          "text": "Emre. Ruhig. Wer sich provozieren lässt, hat schon verloren.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l11.mp3",
+            "durationSec": 4.05,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l12",
+          "speaker": "emre-yildiz",
+          "text": "… Okay. Ich bleib ruhig.",
+          "emotion": "entschlossen",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0.3,
+          "audio": {
+            "file": "episodes/ep-009/voice/l12.mp3",
+            "durationSec": 2.93,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Coach Wolski stellt sich dazwischen. Emre will aufbrausen – und bleibt ruhig (Charakterentwicklung).",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s4",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "rico-stahl",
+          "position": "links",
+          "facing": "links",
+          "action": "schlagen"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "rosa-brandt",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l13",
+          "speaker": "marek-wolski",
+          "text": "Kurzer Techniktest. Kontrolliert. Kein Kampf.",
+          "emotion": "neutral",
+          "action": "keine",
+          "sfx": "glocke",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l13.mp3",
+            "durationSec": 2.87,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l13b",
+          "speaker": "rico-stahl",
+          "text": "Zu langsam.",
+          "emotion": "stolz",
+          "action": "schlagen",
+          "sfx": "whoosh",
+          "pauseAfter": 0.1,
+          "delayBefore": 1,
+          "audio": {
+            "file": "episodes/ep-009/voice/l13b.mp3",
+            "durationSec": 0.84,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l14",
+          "speaker": "rosa-brandt",
+          "text": "Der ist schnell …",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": "schlag",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l14.mp3",
+            "durationSec": 0.91,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        },
+        {
+          "id": "l13c",
+          "speaker": "emre-yildiz",
+          "text": "Noch mal.",
+          "emotion": "entschlossen",
+          "action": "schlagen",
+          "sfx": "schlag",
+          "pauseAfter": 0.1,
+          "delayBefore": 0.6,
+          "audio": {
+            "file": "episodes/ep-009/voice/l13c.mp3",
+            "durationSec": 0.78,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l15",
+          "speaker": "emre-yildiz",
+          "text": "Wow … der ist gut.",
+          "emotion": "ueberrascht",
+          "action": "seufzen",
+          "sfx": "schlag",
+          "pauseAfter": 0.1,
+          "delayBefore": 0.8,
+          "audio": {
+            "file": "episodes/ep-009/voice/l15.mp3",
+            "durationSec": 1.62,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "TECHNIKTEST – KEIN KAMPF",
+      "music": "training",
+      "direction": "Kontrollierter Techniktest: Beinarbeit, Deckung, kontrollierte Treffer. Stahl wirkt überlegen. Rosa und J’ am Ringrand.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s5",
+      "beat": "entwicklung",
+      "location": "ring",
+      "shot": "nah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "j-sparring",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l16",
+          "speaker": "j-sparring",
+          "text": "Deckung hoch, Emre!",
+          "emotion": "ueberrascht",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l16.mp3",
+            "durationSec": 1.31,
+            "provider": "cartesia (sonic-3.5, b7187e84-fe22-4344-ba4a-bc013fcb533e)"
+          }
+        },
+        {
+          "id": "l17",
+          "speaker": "marek-wolski",
+          "text": "Stopp! Emre, du hast noch einiges zu lernen.",
+          "emotion": "neutral",
+          "action": "zeigen",
+          "sfx": "glocke",
+          "pauseAfter": 0.6,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l17.mp3",
+            "durationSec": 2.51,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Emre muss zurückweichen – J’ ruft vom Ringrand, Wolski bricht ab. Danach Stille.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    },
+    {
+      "id": "s6",
+      "beat": "handlung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rico-stahl",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l18",
+          "speaker": "rico-stahl",
+          "text": "Ich geb dir noch etwas Zeit. Aber bei der Rostfaust Fight Night will ich dich im Ring sehen.",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l18.mp3",
+            "durationSec": 4.44,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l19",
+          "speaker": "emre-yildiz",
+          "text": "Ich nehme die Herausforderung an.",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0.6,
+          "audio": {
+            "file": "episodes/ep-009/voice/l19.mp3",
+            "durationSec": 1.62,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        },
+        {
+          "id": "l20",
+          "speaker": "guenther-wallach",
+          "text": "Dann haben wir wohl unseren ersten großen Kampf!",
+          "emotion": "ueberrascht",
+          "action": "jubeln",
+          "sfx": "trommelwirbel",
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l20.mp3",
+            "durationSec": 2.64,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "gefuehl",
+      "direction": "Stahl zieht die Handschuhe aus und stellt die Herausforderung. Emre nimmt an – keine Vertragsdetails.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s6b",
+      "beat": "handlung",
+      "location": "neuehalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "rosa-brandt",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "rico-stahl",
+          "position": "ganz_rechts",
+          "facing": "rechts",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l20b",
+          "speaker": "rico-stahl",
+          "text": "Viel Glück beim Training, Rostfaust.",
+          "emotion": "stolz",
+          "action": "keine",
+          "sfx": "tuer",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l20b.mp3",
+            "durationSec": 1.91,
+            "provider": "xai (tts, leo)"
+          }
+        },
+        {
+          "id": "l20c",
+          "speaker": "rosa-brandt",
+          "text": "Der meint das wirklich ernst.",
+          "emotion": "neutral",
+          "action": "arme_verschraenkt",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0.4,
+          "audio": {
+            "file": "episodes/ep-009/voice/l20c.mp3",
+            "durationSec": 1.46,
+            "provider": "alibaba (qwen3-tts-flash, Katerina)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Stahl verlässt die Halle, ohne sich umzudrehen. Rosa schaut ihm nach.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s7",
+      "beat": "entscheidung",
+      "location": "eventhalle",
+      "shot": "totale",
+      "cast": [
+        {
+          "characterId": "guenther-wallach",
+          "position": "links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "paule-kruse",
+          "position": "rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l21",
+          "speaker": "guenther-wallach",
+          "text": "Wenn ihr Emre unterstützen wollt: Lasst ein Like da! Jedes Like bringt symbolisch zwei Euro in die Kasse.",
+          "emotion": "froh",
+          "action": "zeigen",
+          "sfx": "publikum",
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l21.mp3",
+            "durationSec": 5.69,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        },
+        {
+          "id": "l22",
+          "speaker": "paule-kruse",
+          "text": "Neunundzwanzig Likes: achtundfünfzig Euro. Symbolisch.",
+          "emotion": "neutral",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.12,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l22.mp3",
+            "durationSec": 3.21,
+            "provider": "speechify (simba-3.5, henrik-agent)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "aufbruch",
+      "direction": "Kurzer Community-Aufruf: Arena 52/100 (Ziel 75), Like-Kasse 306 → 364 € (29 echte Likes × 2 €, symbolisch).",
+      "seats": {
+        "from": 52,
+        "to": 52,
+        "total": 100,
+        "hud": true,
+        "goal": 75
+      },
+      "fx": null,
+      "kasse": {
+        "amount": 364,
+        "perLike": 2,
+        "from": 306,
+        "likeGoal": 100,
+        "label": "LIKE-KASSE"
+      },
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s8",
+      "beat": "entscheidung",
+      "location": "neuehalle",
+      "shot": "halbnah",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "ganz_links",
+          "facing": "rechts",
+          "action": "keine"
+        },
+        {
+          "characterId": "marek-wolski",
+          "position": "mitte",
+          "facing": "links",
+          "action": "keine"
+        },
+        {
+          "characterId": "guenther-wallach",
+          "position": "ganz_rechts",
+          "facing": "links",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l23",
+          "speaker": "marek-wolski",
+          "text": "Dann beginnt ab morgen dein härtestes Training.",
+          "emotion": "entschlossen",
+          "action": "nicken",
+          "sfx": null,
+          "pauseAfter": 0.1,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l23.mp3",
+            "durationSec": 2.56,
+            "provider": "soniox (tts-rt-v1, Adrian)"
+          }
+        },
+        {
+          "id": "l24",
+          "speaker": "guenther-wallach",
+          "text": "Was meint ihr: Kann Emre ihn besiegen? Schreibt JA oder NEIN!",
+          "emotion": "entschlossen",
+          "action": "zeigen",
+          "sfx": null,
+          "pauseAfter": 0.15,
+          "delayBefore": 0,
+          "audio": {
+            "file": "episodes/ep-009/voice/l24.mp3",
+            "durationSec": 4,
+            "provider": "inworld (inworld-tts-2, Reinhard)"
+          }
+        }
+      ],
+      "overlay": "EMRE VS. DER UNBEKANNTE – KOMMT DER KAMPF WIRKLICH?",
+      "music": "spannung",
+      "direction": "Stahl ist weg. Wolski und Günther mit Emre. Die eine Frage.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {},
+      "renovate": null
+    },
+    {
+      "id": "s9",
+      "beat": "entscheidung",
+      "location": "ring",
+      "shot": "zoom",
+      "cast": [
+        {
+          "characterId": "emre-yildiz",
+          "position": "mitte",
+          "facing": "rechts",
+          "action": "keine"
+        }
+      ],
+      "lines": [
+        {
+          "id": "l25",
+          "speaker": "emre-yildiz",
+          "text": "Wir sehen uns im Ring, Stahl.",
+          "emotion": "entschlossen",
+          "action": "faust_heben",
+          "sfx": null,
+          "pauseAfter": 0.4,
+          "delayBefore": 0.3,
+          "audio": {
+            "file": "episodes/ep-009/voice/l25.mp3",
+            "durationSec": 1.91,
+            "provider": "azure (MAI-Voice-2.1, de-DE-Klaus:MAI-Voice-2.1)"
+          }
+        }
+      ],
+      "overlay": "",
+      "music": "spannung",
+      "direction": "Dramatische Nahaufnahme: Emre allein im Ring, entschlossen.",
+      "seats": null,
+      "fx": null,
+      "kasse": null,
+      "comment": null,
+      "props": [],
+      "setOverrides": {
+        "sandbags": 5,
+        "condition": 100,
+        "hasNewRing": true,
+        "mirrorOk": true
+      },
+      "renovate": null
+    }
+  ],
+  "decision": {
+    "question": "Kann Emre den Herausforderer „Stahl“ besiegen?",
+    "options": [
+      {
+        "key": "A",
+        "label": "JA – Emre schafft das!",
+        "consequenceHint": "Die Community glaubt an Emre – Folge 10: Vorbereitung mit Rückenwind.",
+        "plan": "kampf:stimmung-ja"
+      },
+      {
+        "key": "B",
+        "label": "NEIN – Stahl ist zu stark",
+        "consequenceHint": "Emre muss die Zweifler überzeugen – Folge 10: härtestes Training.",
+        "plan": "kampf:stimmung-nein"
+      }
+    ]
+  },
+  "cliffhanger": "Emre hat die Herausforderung von „Stahl“ angenommen – kommt es bei der Rostfaust Fight Night wirklich zum Kampf? Termin, Vertrag und Ausgang offen.",
+  "stateChanges": [
+    {
+      "op": "likes",
+      "amount": 29,
+      "target": "",
+      "value": "",
+      "reason": "Likes Folge 8 (Meldung des Produzenten)"
+    },
+    {
+      "op": "konto",
+      "amount": 58,
+      "target": "likes",
+      "value": "",
+      "reason": "Like-Kasse: 29 Likes (F8) × 2 € (symbolisch)"
+    },
+    {
+      "op": "kennzahlen",
+      "amount": 8,
+      "target": "",
+      "value": "{\"views\":756,\"likes\":29,\"followersTotal\":52,\"newFollowers\":0,\"note\":\"Gemeldet vor Folge 9: 756 Aufrufe, 29 Likes, weiterhin 52 Follower (letzter bestätigter Stand). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-010",
+      "value": "{\"source\":\"Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)\",\"content\":\"Drei neue Profi-Trainer, einer davon (in der Geschichte) mit UFC-Gürtel\",\"status\":\"offen\",\"note\":\"In F1–F8 NICHT erzählt, in F9 nicht gezeigt. Kann später eingeführt werden. Real nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-011",
+      "value": "{\"source\":\"Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)\",\"content\":\"Plakate aufgehängt, große Menschenmenge vor dem Club angekündigt\",\"status\":\"offen\",\"note\":\"In F1–F8 NICHT erzählt, in F9 nicht gezeigt. Passt zur möglichen „Rostfaust Fight Night“.\"}",
+      "reason": ""
+    },
+    {
+      "op": "angebot",
+      "amount": 0,
+      "target": "o-012",
+      "value": "{\"source\":\"Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)\",\"content\":\"Weitere 100.000 € Sponsoring angeboten\",\"status\":\"offen\",\"note\":\"Nur Angebot. NICHT im Story-Fonds verbucht. Real nicht bestätigt.\"}",
+      "reason": ""
+    },
+    {
+      "op": "konto",
+      "amount": 0,
+      "target": "story",
+      "value": "{\"id\":\"k-004\",\"source\":\"Vexo_on_MTB 🌲🚲 – Angebot über weitere 100.000 € (laut Produzent vor Folge 9)\",\"amount\":100000,\"status\":\"angekuendigt\",\"note\":\"Nur angekündigt/angeboten – nicht eingegangen, auch nicht in der Serie.\"}",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "herausforderer-stahl",
+      "value": "Folge 9: Ein Unbekannter („Merk dir einfach: Stahl.“ – Rico Stahl) provoziert Emre in der neuen Halle. Kontrollierter Techniktest: Stahl überlegen, Emre muss zurück, Wolski bricht ab. Stahl fordert Emre zur „Rostfaust Fight Night“ heraus, Emre nimmt an. Kein Termin, kein Vertrag, kein Sieger.",
+      "reason": "Der Herausforderer"
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "erster-kampf",
+      "value": "Folge 9: Möglicher erster Gegner: „Stahl“. Event-Name „Rostfaust Fight Night“ (Datum offen). Wolski: „Ab morgen beginnt dein härtestes Training.“ Folge 10 = direkte Vorbereitung.",
+      "reason": ""
+    },
+    {
+      "op": "handlung",
+      "amount": 0,
+      "target": "entwicklung-emre-yildiz",
+      "value": "Folge 9: Lässt sich nicht provozieren („Ich bleib ruhig.“) – charakterliche Entwicklung. Im Techniktest noch unterlegen. Nimmt die Herausforderung an: „Wir sehen uns im Ring, Stahl.“",
+      "reason": ""
+    },
+    {
+      "op": "rivalitaet",
+      "amount": 3,
+      "target": "Rico „Stahl“",
+      "value": "Folge 9: Provokation und Herausforderung zur Rostfaust Fight Night.",
+      "reason": "Rico Stahl"
+    }
+  ],
+  "newCharacterIds": [
+    "rico-stahl"
+  ],
+  "socialCaption": "Folge 9: Emre wird herausgefordert! 🥊😤 Ein Unbekannter steht plötzlich in unserer Halle – „Merk dir einfach: Stahl.“ Hat Emre gegen ihn überhaupt eine Chance? Schreibt JA oder NEIN! ❤️ Jedes Like = 2 € symbolisch für die Vereinskasse",
+  "hashtags": [
+    "#boxclubrostfaust",
+    "#boxen",
+    "#herausforderung",
+    "#animationserie",
+    "#teil9"
+  ],
+  "titleCard": "klein",
+  "endCard": {
+    "type": "abstimmung",
+    "headline": "Kann Emre ihn besiegen?",
+    "lines": [
+      "Schreib JA oder NEIN in die Kommentare!",
+      "🏟️ 52/100 Plätze · ❤️ Ziel: 100 Likes"
+    ],
+    "seatsFilled": 52,
+    "seatsTotal": 100,
+    "seatsGoal": 75
+  },
+  "video": null
+}

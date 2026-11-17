@@ -75,8 +75,16 @@ Laufende Kosten: Miete der Halle übernimmt in der Serie Vexo_on_MTB (ab F7). Re
 | 3. Sparringspartner | **J’ (F8)** – erstes kontrolliertes Sparring, Emres Deckung zu tief |
 | 4. Technik & Kondition | offen – Community-Abstimmung F8: A Schlagkraft / B Schnelligkeit / C Ausdauer (d-008) |
 | 5. Ausrüstungspartner | **IRON** (fiktiv) angekündigt F8, Übergabe ggf. F9 |
-| 6.–9. Fortschritt, Gegnersuche, Ankündigung, Kampftag | offen – kein Gegner, kein Termin |
+| 6. Fortschritt | F9: lässt sich nicht provozieren (charakterlich gewachsen), im Techniktest noch unterlegen |
+| 7. Gegner | **F9: „Stahl“ fordert Emre heraus – Emre nimmt an** (keine Vertragsdetails) |
+| 8. Ankündigung | offen – Event-Name „Rostfaust Fight Night“, Datum offen |
+| 9. Kampftag | offen – Sieger NICHT festgelegt. F10 = direkte Vorbereitung |
 Örlando bleibt möglicher BOXtrainer-Kandidat (Abstimmungen d-005/d-006 offen), Sifu bleibt Wing Tsun, Wolski ist Emres Boxtrainer.
+
+## Vom Produzenten genannt, in der Serie noch NICHT erzählt (Stand F9)
+Drei neue Profi-Trainer (einer mit UFC-Gürtel), Plakate + Menschenmenge vor dem Club, weitere 100.000 € (alles laut Produzent von Vexo_on_MTB 🌲🚲).
+Als offene Angebote o-010 – o-012 gespeichert, 100.000 € nur als „angekündigt“ im Story-Fonds. Können in späteren Folgen eingeführt werden
+(Plakate + Menschenmenge passen zur Rostfaust Fight Night).
 
 ## IRON (fiktive Marke in der Serie)
 Kooperationsangebot über komplette Boxausrüstung (Box- und Trainingshandschuhe, Pratzen, Sandsäcke, Bandagen, Trainingskleidung).
@@ -103,4 +111,5 @@ Emre (17, erster Boxer) · Bruno (Ex-Profi, **nicht verpflichtet**, Kandidat; Pa
 Nico (Problemfall, Kandidat, noch nicht aufgetreten) · Viktor Hahn (Rivale, noch nicht aufgetreten) ·
 **Sifu** (Wing-Tsun-Trainer, Kandidat, ab F6 – KEIN Boxtrainer, NICHT Örlando; spricht noch nicht) ·
 **Marek Wolski „Coach Wolski“** (fiktiver Profi-Boxtrainer, ab F8 fest: streng, fair, Grundlagen zuerst; Klemmbrett mit Trainingsplan) ·
-**J’** (Emres Sparringspartner, ab F8, aus dem Kommentar von J’) · **Der Kurier** (F7, stumm).
+**J’** (Emres Sparringspartner, ab F8, aus dem Kommentar von J’) · **Der Kurier** (F7, stumm) ·
+**Rico Stahl „Stahl“** (ab F9, unbekannter Herausforderer: selbstbewusst, technisch stark, etwas arrogant, kein Bösewicht; blond, weißes STAHL-Shirt, Stimme xAI „Leo“. In der Serie kennt man bisher nur „Stahl“. Herkunft offen. Wiederkehrend.)
