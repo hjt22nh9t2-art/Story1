@@ -1,6 +1,6 @@
 # EPISODE LOG – Boxclub Rostfaust
 
-Stand 2026-11-16. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
+Stand 2026-11-17. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzenten gemeldet.
 
 | Folge | Titel | Länge | Status | Hook | Community-Frage → Ergebnis |
 |---|---|---|---|---|---|
@@ -12,6 +12,7 @@ Stand 2026-11-16. Alle Folgen in Reihenfolge. Kennzahlen nur, wenn vom Produzent
 | 6 | Wir werden endlich renoviert! | 81.6 s | veroeffentlicht | Günther stürmt vor die Halle, überall Pakete und ein Koffer: „Leute! Die Lieferung ist da!“ | Wen wollt ihr als Nächstes im Ring sehen? → offen |
 | 7 | Eine Halle für 50.000 Euro?! | 82.8 s | veroeffentlicht | Günther platzt in die renovierte Halle: „Leute! Wir ziehen um!“ – Paule: „Was?! Schon wieder?“ | Seid ihr bereit für Emres ersten Kampf? Schreibt KAMPF! → offen |
 | 8 | Emre bekommt seinen ersten Sparringspartner! | 81.7 s | veroeffentlicht | Emre schlägt im Ring ins Leere. Günther: „Emre, so wird das nichts! Du brauchst endlich einen richtigen Sparringspartner!“ – die Hallentür geht auf. | Was soll Emre zuerst trainieren? → offen |
+| 9 | Emre wird herausgefordert! | 81.6 s | veroeffentlicht | Sekunde 1: Ein Fremder steht in der neuen Halle: „Also DAS ist der berühmte Boxclub Rostfaust? Ich hab mir mehr erwartet.“ | Kann Emre den Herausforderer „Stahl“ besiegen? → offen |
 
 ## Folge 1 – Null Boxer
 Günther Wallach eröffnet den Boxclub Rostfaust in der alten Depothalle seines Vaters neu. Hausmeister Paule ist das einzige Mitglied, Trainerin Rosa Brandt will nur echte Kämpfer trainieren, und in der Kasse liegen 500 Euro bei 250 Euro Pacht im Monat. Zwei Kandidaten melden sich: der 17-jährige Anfänger Emre und Ex-Profi Bruno „Der Bär“ Kessler – über den Paule offenbar mehr weiß.
@@ -77,6 +78,14 @@ Emre schlägt im Ring unbeholfen ins Leere – Günther: „So wird das nichts!�
 - **TikTok-Text:** Folge 8: Emre bekommt seinen ersten Sparringspartner! 🥊 Danke J’ – aus deinem Kommentar wird jetzt Training. Dazu ein Profi-Trainer und eine Nachricht von IRON (fiktive Marke in unserer Story). Ihr entscheidet: Was soll Emre zuerst trainieren? A = Schlagkraft, B = Schnelligkeit, C = Ausdauer 👇 #boxclubrostfaust #boxen #sparring #animationserie #teil8
 - **Datei:** data/media/episodes/ep-008/boxclub_folge_008.mp4
 
+## Folge 9 – Emre wird herausgefordert!
+Mitten in Emres Training steht ein Fremder in der neuen Halle: „Also das ist der berühmte Boxclub Rostfaust? Ich hab mir mehr erwartet.“ Seinen Namen verrät er nicht – „Merk dir einfach: Stahl.“ Er will sehen, ob Emre überhaupt boxen kann. Coach Wolski stellt sich dazwischen, Emre will aufbrausen – und bleibt ruhig. Beim kontrollierten Techniktest ist Stahl schneller, Emre muss zurück; Wolski bricht ab: „Du hast noch einiges zu lernen.“ Stahl zieht die Handschuhe aus: „Bei der Rostfaust Fight Night will ich dich im Ring sehen.“ Emre nimmt an. Günther: „Dann haben wir wohl unseren ersten großen Kampf!“ – Termin und Details offen. Wolski: „Ab morgen beginnt dein härtestes Training.“
+
+- **Cliffhanger:** Emre hat die Herausforderung von „Stahl“ angenommen – kommt es bei der Rostfaust Fight Night wirklich zum Kampf? Termin, Vertrag und Ausgang offen.
+- **Abstimmung:** Kann Emre den Herausforderer „Stahl“ besiegen? A: JA – Emre schafft das! · B: NEIN – Stahl ist zu stark
+- **TikTok-Text:** Folge 9: Emre wird herausgefordert! 🥊😤 Ein Unbekannter steht plötzlich in unserer Halle – „Merk dir einfach: Stahl.“ Hat Emre gegen ihn überhaupt eine Chance? Schreibt JA oder NEIN! ❤️ Jedes Like = 2 € symbolisch für die Vereinskasse #boxclubrostfaust #boxen #herausforderung #animationserie #teil9
+- **Datei:** data/media/episodes/ep-009/boxclub_folge_009.mp4
+
 ## Performance-Tracking
 | Folge | Aufrufe | Likes | Kommentare | Geteilt | Neue Follower | Follower gesamt | Ø Wiedergabe | Ø angesehen | Vollständig | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -86,5 +95,6 @@ Emre schlägt im Ring unbeholfen ins Leere – Günther: „So wird das nichts!�
 | 5 | 729 | 25 | – | – | 0 | 43 | – | – | – | Laut Screenshot des Produzenten vor Folge 6: 729 Aufrufe, 25 Likes. Followerstand weiterhin 43. Höchste bisherige Aufrufzahl der Serie: 958 (Folge nicht angegeben). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 | 6 | 1858 | 36 | – | – | 7 | 50 | – | – | – | Gemeldet vor Folge 7: 1.858 Aufrufe (Rekord, erstmals deutlich > 1.000), 36 Likes, 50 Follower. Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 | 7 | 889 | 46 | – | – | 2 | 52 | – | – | – | Gemeldet vor Folge 8 (Screenshot): 889 Aufrufe, 46 Likes, 52 Follower. Rekord bleibt Folge 6 (1.858). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
+| 8 | 756 | 29 | – | – | 0 | 52 | – | – | – | Gemeldet vor Folge 9: 756 Aufrufe, 29 Likes, weiterhin 52 Follower (letzter bestätigter Stand). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet. |
 
 **Analyse:** Erst ab mehreren Folgen mit vollständigen Zahlen sinnvoll – keine voreiligen Schlüsse.

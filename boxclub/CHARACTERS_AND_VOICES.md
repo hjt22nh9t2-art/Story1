@@ -1,6 +1,6 @@
 # CHARACTERS AND VOICES – Boxclub Rostfaust
 
-Stand nach Folge 8 (2026-11-16). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
+Stand nach Folge 9 (2026-11-17). Quelle: `data/characters.json`. Referenzbilder: `docs/charakterbibel/`.
 
 ## Stimmen-Übersicht (verbindlich)
 | Figur | Stimme | Anbieter / Modell | Voice-ID | Status | Hinweis |
@@ -16,6 +16,7 @@ Stand nach Folge 8 (2026-11-16). Quelle: `data/characters.json`. Referenzbilder:
 | Der Kurier | – | elevenlabs / Standard | `` | Vorschlag | Stumm. |
 | J’ | Sebastian (Cartesia, deutsch) | cartesia / sonic-3.5 | `b7187e84-fe22-4344-ba4a-bc013fcb533e` | 🔒 fest | Ab Folge 8: Cartesia „Sebastian“ (deutsch, männlich). |
 | Marek Wolski | Adrian (Soniox) | soniox / tts-rt-v1 | `Adrian` | 🔒 fest | Ab Folge 8: Soniox „Adrian“ (tief, autoritär, männlich). |
+| Rico Stahl | Leo (xAI) | xai / tts | `leo` | 🔒 fest | Ab Folge 9: xAI „Leo“ (dunkel, markant, männlich). |
 
 **Regel:** Stimmen mit 🔒 werden nie ohne ausdrückliche Zustimmung des Produzenten geändert. Prüfung jeder Zeile: Grundtonhöhe (`scripts/pitch.py`) + Spracherkennung.
 
@@ -150,4 +151,16 @@ Stand nach Folge 8 (2026-11-16). Quelle: `data/characters.json`. Referenzbilder:
 - **Stärken/Schwächen:** Technik, Trainingsplanung, Ruhe / wenig Geduld mit Ausreden
 - **Ziel:** Emre zu einem richtigen Boxer machen · **Spruch:** „Erst die Grundlagen.“
 - **Hintergrund:** Fiktiver Ex-Profi und Trainer. Eingeführt nach dem Community-Kommentar „Jetzt kommt ein Profi und bringt Emre das Boxen bei“ (ohne sichtbaren Nutzernamen). KEIN Wing-Tsun-Trainer, NICHT Örlando.
+
+## Rico Stahl „Stahl“
+![Rico Stahl](docs/charakterbibel/rico-stahl.png)
+
+- **Rolle:** Unbekannter Herausforderer (nennt sich nur „Stahl“) · **Status:** gast (seit Folge 9)
+- **Daten:** 20 J., 181 cm, 73 kg Weltergewicht
+- **Aussehen (fest):** Haut #e6bc98, Haare seitenscheitel #e2c780, Bart keiner, Nase spitz, Statur muskulös; tshirt #f2f2f2/#4a5568 „STAHL“, trainingshose #3a3f4a, Schuhe #1a1a1a; Accessoires: –
+- **Persönlichkeit:** Selbstbewusst, athletisch, provokant, etwas arrogant – aber kein Clown und kein Bösewicht. Technisch stark, respektiert Leistung.
+- **Sprechstil:** Ruhig, kühl, kurze Sätze mit Spitze.
+- **Stärken/Schwächen:** Technik, Schnelligkeit, Selbstvertrauen / unterschätzt Gegner, Arroganz
+- **Ziel:** Beweisen, dass Rostfaust überschätzt wird · **Spruch:** „Merk dir einfach: Stahl.“
+- **Hintergrund:** Taucht in Folge 9 unangekündigt in der neuen Halle auf, hat von Emre gehört und hält ihn für nicht bereit. Herkunft und Verein noch unbekannt (bewusst offen). Fordert Emre zur „Rostfaust Fight Night“ heraus. Erfundene Serienfigur, kein Kommentator.
 

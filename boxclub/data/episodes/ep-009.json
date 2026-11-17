@@ -2,9 +2,9 @@
   "id": "ep-009",
   "number": 9,
   "title": "Emre wird herausgefordert!",
-  "status": "vertont",
+  "status": "veroeffentlicht",
   "createdAt": "2026-11-17T16:02:29.108Z",
-  "publishedAt": null,
+  "publishedAt": "2026-11-17T16:27:23.643Z",
   "generator": "Claude im Chat (nach Vorgabe des Produzenten)",
   "userIdeas": "Ein unbekannter, selbstbewusster Boxer provoziert Emre, Trainer greift ein, kontrollierter Techniktest, Herausforderung zur Rostfaust Fight Night. Frage: Kann Emre ihn besiegen? JA/NEIN.",
   "resolvesDecisionId": null,
@@ -956,5 +956,10 @@
     "seatsTotal": 100,
     "seatsGoal": 75
   },
-  "video": null
+  "video": {
+    "file": "episodes/ep-009/boxclub_folge_009.mp4",
+    "poster": "episodes/ep-009/poster.jpg",
+    "renderedAt": "2026-11-17T16:26:50.622Z",
+    "durationSec": 81.6
+  }
 }

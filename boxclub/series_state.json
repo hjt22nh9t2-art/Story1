@@ -1,8 +1,8 @@
 {
   "stand": {
-    "nachFolge": 8,
-    "naechsteFolge": 9,
-    "aktualisiert": "2026-11-16",
+    "nachFolge": 9,
+    "naechsteFolge": 10,
+    "aktualisiert": "2026-11-17",
     "kapitel": "Akt 3 – Emres erster Kampf"
   },
   "finanzen": {
@@ -12,12 +12,12 @@
       "erklaerung": "Grundbestand der Serie (seit Folge 1), ohne Like-Einnahmen und ohne Story-Fonds"
     },
     "likeKasse": {
-      "betrag": 306,
+      "betrag": 364,
       "erklaerung": "Symbolisch: echte Likes × 2 € (nur mit genauer Like-Zahl gebucht)"
     },
     "storyFonds": {
       "eingegangen": 70000,
-      "angekuendigt": 40000,
+      "angekuendigt": 140000,
       "posten": [
         {
           "id": "k-001",
@@ -42,6 +42,14 @@
           "status": "angekuendigt",
           "seitFolge": 7,
           "notiz": "Nur ANGEKÜNDIGT, noch nicht eingegangen (auch nicht in der Serie)."
+        },
+        {
+          "id": "k-004",
+          "quelle": "Vexo_on_MTB 🌲🚲 – Angebot über weitere 100.000 € (laut Produzent vor Folge 9)",
+          "betrag": 100000,
+          "status": "angekuendigt",
+          "seitFolge": 9,
+          "notiz": "Nur angekündigt/angeboten – nicht eingegangen, auch nicht in der Serie."
         }
       ],
       "erklaerung": "Fiktive Unterstützung innerhalb der Geschichte (Koffer usw.). Real NICHT bestätigt."
@@ -52,7 +60,7 @@
   },
   "community": {
     "follower": 52,
-    "likes": 46,
+    "likes": 29,
     "likeEuroRate": 2,
     "likesGebucht": 0,
     "hinweis": "Spielerische Mechaniken – keine echten TikTok-Einnahmen. Fehlende Werte = vom Produzenten noch nicht gemeldet."
@@ -231,6 +239,15 @@
       "stimme": "",
       "stimmeFest": true,
       "seitFolge": 8
+    },
+    {
+      "id": "rico-stahl",
+      "name": "Rico Stahl",
+      "status": "gast",
+      "rolle": "Unbekannter Herausforderer (nennt sich nur „Stahl“)",
+      "stimme": "",
+      "stimmeFest": true,
+      "seitFolge": 9
     }
   ],
   "offeneAngebote": [
@@ -314,6 +331,33 @@
       "storyBedingung": "",
       "notiz": "IRON ist ein FIKTIVER Kooperationspartner in der Serie. Nur angekündigt (F8), Übergabe ggf. Folge 9. Keine echte Partnerschaft, keine echte Lieferung.",
       "seitFolge": 8
+    },
+    {
+      "id": "o-010",
+      "quelle": "Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)",
+      "inhalt": "Drei neue Profi-Trainer, einer davon (in der Geschichte) mit UFC-Gürtel",
+      "status": "offen",
+      "storyBedingung": "",
+      "notiz": "In F1–F8 NICHT erzählt, in F9 nicht gezeigt. Kann später eingeführt werden. Real nicht bestätigt.",
+      "seitFolge": 9
+    },
+    {
+      "id": "o-011",
+      "quelle": "Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)",
+      "inhalt": "Plakate aufgehängt, große Menschenmenge vor dem Club angekündigt",
+      "status": "offen",
+      "storyBedingung": "",
+      "notiz": "In F1–F8 NICHT erzählt, in F9 nicht gezeigt. Passt zur möglichen „Rostfaust Fight Night“.",
+      "seitFolge": 9
+    },
+    {
+      "id": "o-012",
+      "quelle": "Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)",
+      "inhalt": "Weitere 100.000 € Sponsoring angeboten",
+      "status": "offen",
+      "storyBedingung": "",
+      "notiz": "Nur Angebot. NICHT im Story-Fonds verbucht. Real nicht bestätigt.",
+      "seitFolge": 9
     }
   ],
   "offeneEntscheidungen": [
@@ -403,6 +447,19 @@
       "ergebnis": null,
       "stimmen": {},
       "notiz": ""
+    },
+    {
+      "id": "d-009",
+      "ausFolge": 9,
+      "frage": "Kann Emre den Herausforderer „Stahl“ besiegen?",
+      "optionen": [
+        "A: JA – Emre schafft das!",
+        "B: NEIN – Stahl ist zu stark"
+      ],
+      "status": "offen",
+      "ergebnis": null,
+      "stimmen": {},
+      "notiz": ""
     }
   ],
   "handlungsstraenge": [
@@ -428,7 +485,7 @@
       "id": "entwicklung-emre-yildiz",
       "titel": "Der Weg von Emre",
       "status": "offen",
-      "letzterStand": "Folge 8: Erstes Sparring – Deckung zu tief, „ich hab noch viel zu lernen“. Beginnt Grundlagentraining bei Wolski. „Ich bin bereit!“"
+      "letzterStand": "Folge 9: Lässt sich nicht provozieren („Ich bleib ruhig.“) – charakterliche Entwicklung. Im Techniktest noch unterlegen. Nimmt die Herausforderung an: „Wir sehen uns im Ring, Stahl.“"
     },
     {
       "id": "kampfabend",
@@ -482,7 +539,7 @@
       "id": "erster-kampf",
       "titel": "Emres erster Kampf",
       "status": "offen",
-      "letzterStand": "Folge 8: Ernsthafte Vorbereitung beginnt. Neuer Trainer Marek Wolski (Grundlagen: Stellung, Deckung, Beinarbeit, Jab, Cross). Sparringspartner J’. Wolski: „Bald können wir über den ersten Kampf sprechen.“ Gegner/Termin offen."
+      "letzterStand": "Folge 9: Möglicher erster Gegner: „Stahl“. Event-Name „Rostfaust Fight Night“ (Datum offen). Wolski: „Ab morgen beginnt dein härtestes Training.“ Folge 10 = direkte Vorbereitung."
     },
     {
       "id": "sparring",
@@ -495,9 +552,15 @@
       "titel": "Kooperation mit IRON",
       "status": "offen",
       "letzterStand": "Folge 8: Nachricht von IRON (fiktive Marke): Kooperation + komplette Boxausrüstung angekündigt. NICHT geliefert. Übergabe als möglicher Höhepunkt in Folge 9."
+    },
+    {
+      "id": "herausforderer-stahl",
+      "titel": "Der Herausforderer",
+      "status": "offen",
+      "letzterStand": "Folge 9: Ein Unbekannter („Merk dir einfach: Stahl.“ – Rico Stahl) provoziert Emre in der neuen Halle. Kontrollierter Techniktest: Stahl überlegen, Emre muss zurück, Wolski bricht ab. Stahl fordert Emre zur „Rostfaust Fight Night“ heraus, Emre nimmt an. Kein Termin, kein Vertrag, kein Sieger."
     }
   ],
-  "cliffhanger": "Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“ – Gegner und Termin offen; IRON-Ausrüstung angekündigt.",
+  "cliffhanger": "Emre hat die Herausforderung von „Stahl“ angenommen – kommt es bei der Rostfaust Fight Night wirklich zum Kampf? Termin, Vertrag und Ausgang offen.",
   "kennzahlen": [
     {
       "episode": 2,
@@ -582,6 +645,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 8 (Screenshot): 889 Aufrufe, 46 Likes, 52 Follower. Rekord bleibt Folge 6 (1.858). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
+    },
+    {
+      "episode": 8,
+      "reportedAt": "2026-11-17T16:27:23.639Z",
+      "views": 756,
+      "likes": 29,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 0,
+      "followersTotal": 52,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 9: 756 Aufrufe, 29 Likes, weiterhin 52 Follower (letzter bestätigter Stand). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ]
 }

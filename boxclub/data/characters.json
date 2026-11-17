@@ -1020,8 +1020,8 @@
       "gloves": "#a9b3c1",
       "accessories": []
     },
-    "firstEpisode": null,
-    "lookLocked": false,
+    "firstEpisode": 9,
+    "lookLocked": true,
     "lookHistory": [],
     "conceptImage": "",
     "notes": "Wiederkehrender Gegner ab Folge 9. Sieger des möglichen Kampfes NICHT festgelegt."

@@ -72,7 +72,16 @@
     }
   ],
   "fights": [],
-  "rivalries": [],
+  "rivalries": [
+    {
+      "id": "rico-stahl",
+      "club": "Rico „Stahl“",
+      "leader": "Rico Stahl",
+      "intensity": 3,
+      "since": 9,
+      "notes": "Folge 9: Provokation und Herausforderung zur Rostfaust Fight Night."
+    }
+  ],
   "sponsors": [],
   "storylines": [
     {
@@ -148,6 +157,10 @@
         {
           "episode": 8,
           "text": "Folge 8: Erstes Sparring – Deckung zu tief, „ich hab noch viel zu lernen“. Beginnt Grundlagentraining bei Wolski. „Ich bin bereit!“"
+        },
+        {
+          "episode": 9,
+          "text": "Folge 9: Lässt sich nicht provozieren („Ich bleib ruhig.“) – charakterliche Entwicklung. Im Techniktest noch unterlegen. Nimmt die Herausforderung an: „Wir sehen uns im Ring, Stahl.“"
         }
       ]
     },
@@ -288,6 +301,10 @@
         {
           "episode": 8,
           "text": "Folge 8: Ernsthafte Vorbereitung beginnt. Neuer Trainer Marek Wolski (Grundlagen: Stellung, Deckung, Beinarbeit, Jab, Cross). Sparringspartner J’. Wolski: „Bald können wir über den ersten Kampf sprechen.“ Gegner/Termin offen."
+        },
+        {
+          "episode": 9,
+          "text": "Folge 9: Möglicher erster Gegner: „Stahl“. Event-Name „Rostfaust Fight Night“ (Datum offen). Wolski: „Ab morgen beginnt dein härtestes Training.“ Folge 10 = direkte Vorbereitung."
         }
       ]
     },
@@ -312,6 +329,18 @@
         {
           "episode": 8,
           "text": "Folge 8: Nachricht von IRON (fiktive Marke): Kooperation + komplette Boxausrüstung angekündigt. NICHT geliefert. Übergabe als möglicher Höhepunkt in Folge 9."
+        }
+      ]
+    },
+    {
+      "id": "herausforderer-stahl",
+      "title": "Der Herausforderer",
+      "status": "offen",
+      "startedEpisode": 9,
+      "updates": [
+        {
+          "episode": 9,
+          "text": "Folge 9: Ein Unbekannter („Merk dir einfach: Stahl.“ – Rico Stahl) provoziert Emre in der neuen Halle. Kontrollierter Techniktest: Stahl überlegen, Emre muss zurück, Wolski bricht ab. Stahl fordert Emre zur „Rostfaust Fight Night“ heraus, Emre nimmt an. Kein Termin, kein Vertrag, kein Sieger."
         }
       ]
     }
@@ -534,6 +563,30 @@
       "votes": {},
       "note": "",
       "resolvedInEpisode": null
+    },
+    {
+      "id": "d-009",
+      "episode": 9,
+      "question": "Kann Emre den Herausforderer „Stahl“ besiegen?",
+      "options": [
+        {
+          "key": "A",
+          "label": "JA – Emre schafft das!",
+          "consequenceHint": "Die Community glaubt an Emre – Folge 10: Vorbereitung mit Rückenwind.",
+          "plan": "kampf:stimmung-ja"
+        },
+        {
+          "key": "B",
+          "label": "NEIN – Stahl ist zu stark",
+          "consequenceHint": "Emre muss die Zweifler überzeugen – Folge 10: härtestes Training.",
+          "plan": "kampf:stimmung-nein"
+        }
+      ],
+      "status": "offen",
+      "winner": null,
+      "votes": {},
+      "note": "",
+      "resolvedInEpisode": null
     }
   ],
   "chapter": "Akt 3 – Emres erster Kampf",
@@ -569,18 +622,22 @@
     {
       "episode": 8,
       "text": "Folge 8 „Emre bekommt seinen ersten Sparringspartner!“: Emre schlägt im Ring unbeholfen ins Leere – Günther: „So wird das nichts!“ Da kommt J’ in die Halle, der in den Kommentaren geschrieben hat: „ich bin emres sparing partner“. Erstes kontrolliertes Sparring: J’ ist schneller, Emre muss zurück, Paule ruft „Hände hoch!“. Dann stellt Günther den neuen Profi-Trainer Marek Wolski vor – Grundlagen statt Träume: Stellung, Deckung, Beinarbeit, Jab, Cross. Rosa liest eine Nachricht: Die Marke IRON will mit kompletter Boxausrüstung kooperieren (in der Serie, noch nicht geliefert). Wolski: „Ab heute musst du richtig arbeiten.“ Emre: „Ich bin bereit!“ J’: „Dann sehen wir uns morgen im Ring.“ Arena 52/100, Like-Kasse 306 €. Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“"
+    },
+    {
+      "episode": 9,
+      "text": "Folge 9 „Emre wird herausgefordert!“: Mitten in Emres Training steht ein Fremder in der neuen Halle: „Also das ist der berühmte Boxclub Rostfaust? Ich hab mir mehr erwartet.“ Seinen Namen verrät er nicht – „Merk dir einfach: Stahl.“ Er will sehen, ob Emre überhaupt boxen kann. Coach Wolski stellt sich dazwischen, Emre will aufbrausen – und bleibt ruhig. Beim kontrollierten Techniktest ist Stahl schneller, Emre muss zurück; Wolski bricht ab: „Du hast noch einiges zu lernen.“ Stahl zieht die Handschuhe aus: „Bei der Rostfaust Fight Night will ich dich im Ring sehen.“ Emre nimmt an. Günther: „Dann haben wir wohl unseren ersten großen Kampf!“ – Termin und Details offen. Wolski: „Ab morgen beginnt dein härtestes Training.“"
     }
   ],
-  "lastEpisode": 8,
-  "nextEpisodeNote": "Wolski: „Wenn Emre so weitermacht, können wir bald über seinen ersten Kampf sprechen.“ – Gegner und Termin offen; IRON-Ausrüstung angekündigt.",
+  "lastEpisode": 9,
+  "nextEpisodeNote": "Emre hat die Herausforderung von „Stahl“ angenommen – kommt es bei der Rostfaust Fight Night wirklich zum Kampf? Termin, Vertrag und Ausgang offen.",
   "community": {
     "followers": 52,
-    "likes": 46,
+    "likes": 29,
     "likeEuroRate": 2,
     "likesBooked": 0
   },
   "accounts": {
-    "likeKasse": 306,
+    "likeKasse": 364,
     "storyFonds": [
       {
         "id": "k-001",
@@ -605,6 +662,14 @@
         "status": "angekuendigt",
         "episode": 7,
         "note": "Nur ANGEKÜNDIGT, noch nicht eingegangen (auch nicht in der Serie)."
+      },
+      {
+        "id": "k-004",
+        "source": "Vexo_on_MTB 🌲🚲 – Angebot über weitere 100.000 € (laut Produzent vor Folge 9)",
+        "amount": 100000,
+        "status": "angekuendigt",
+        "episode": 9,
+        "note": "Nur angekündigt/angeboten – nicht eingegangen, auch nicht in der Serie."
       }
     ]
   },
@@ -689,6 +754,33 @@
       "storyCondition": "",
       "episode": 8,
       "note": "IRON ist ein FIKTIVER Kooperationspartner in der Serie. Nur angekündigt (F8), Übergabe ggf. Folge 9. Keine echte Partnerschaft, keine echte Lieferung."
+    },
+    {
+      "id": "o-010",
+      "source": "Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)",
+      "content": "Drei neue Profi-Trainer, einer davon (in der Geschichte) mit UFC-Gürtel",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 9,
+      "note": "In F1–F8 NICHT erzählt, in F9 nicht gezeigt. Kann später eingeführt werden. Real nicht bestätigt."
+    },
+    {
+      "id": "o-011",
+      "source": "Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)",
+      "content": "Plakate aufgehängt, große Menschenmenge vor dem Club angekündigt",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 9,
+      "note": "In F1–F8 NICHT erzählt, in F9 nicht gezeigt. Passt zur möglichen „Rostfaust Fight Night“."
+    },
+    {
+      "id": "o-012",
+      "source": "Vexo_on_MTB 🌲🚲 (laut Produzent vor Folge 9)",
+      "content": "Weitere 100.000 € Sponsoring angeboten",
+      "status": "offen",
+      "storyCondition": "",
+      "episode": 9,
+      "note": "Nur Angebot. NICHT im Story-Fonds verbucht. Real nicht bestätigt."
     }
   ],
   "metrics": [
@@ -775,6 +867,20 @@
       "avgWatchedPct": null,
       "fullViewsPct": null,
       "note": "Gemeldet vor Folge 8 (Screenshot): 889 Aufrufe, 46 Likes, 52 Follower. Rekord bleibt Folge 6 (1.858). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
+    },
+    {
+      "episode": 8,
+      "reportedAt": "2026-11-17T16:27:23.639Z",
+      "views": 756,
+      "likes": 29,
+      "comments": null,
+      "shares": null,
+      "newFollowers": 0,
+      "followersTotal": 52,
+      "avgWatchSec": null,
+      "avgWatchedPct": null,
+      "fullViewsPct": null,
+      "note": "Gemeldet vor Folge 9: 756 Aufrufe, 29 Likes, weiterhin 52 Follower (letzter bestätigter Stand). Kommentare, Shares, Wiedergabezeit, Anteil gesehen, vollständige Aufrufe: nicht gemeldet."
     }
   ],
   "upcomingEvent": {
