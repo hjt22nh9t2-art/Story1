@@ -5,7 +5,12 @@
   "drehbuch",
   "stimme",
   "plan",
-  "vorschau"
+  "vorschau",
+  "render",
+  "ton",
+  "export",
+  "qc",
+  "ausgabe"
  ],
  "anpassung": {
   "tts": "datei"
@@ -22,7 +27,145 @@
   "2026-11-18 10:34 plan ok",
   "2026-11-18 10:35 vorschau ok",
   "2026-11-18 10:47 plan ok",
-  "2026-11-18 10:48 vorschau ok"
+  "2026-11-18 10:48 vorschau ok",
+  "2026-11-18 12:19 render ok",
+  "2026-11-18 12:20 ton ok",
+  "2026-11-18 12:23 export ok",
+  "2026-11-18 12:24 ton ok",
+  "2026-11-18 12:27 export ok",
+  "2026-11-18 12:28 ton ok",
+  "2026-11-18 12:31 export ok",
+  "2026-11-18 12:34 ton ok",
+  "2026-11-18 12:37 export ok",
+  "2026-11-18 12:37 qc ok",
+  "2026-11-18 12:37 ausgabe ok"
  ],
- "render_fehler": 0
+ "render_fehler": 0,
+ "mp4": "wunder-von-lengede.mp4",
+ "qc": [
+  [
+   "Länge ≥ 60 s",
+   true,
+   "113.37 s",
+   "drehbuch"
+  ],
+  [
+   "Länge passt zum Plan",
+   true,
+   "Plan 113.35 s / Datei 113.37 s",
+   "render"
+  ],
+  [
+   "Auflösung 1080×1920",
+   true,
+   "1080×1920",
+   "render"
+  ],
+  [
+   "30 fps, H.264",
+   true,
+   "h264 30/1",
+   "export"
+  ],
+  [
+   "Tonspur AAC stereo 48 kHz",
+   true,
+   "aac",
+   "export"
+  ],
+  [
+   "Lautheit −16…−12 LUFS",
+   true,
+   "-14.1 LUFS",
+   "ton"
+  ],
+  [
+   "True Peak ≤ −1 dBTP",
+   true,
+   "-1.0 dBTP",
+   "ton"
+  ],
+  [
+   "Keine Schwarzbilder > 0,6 s",
+   true,
+   "keine",
+   "plan"
+  ],
+  [
+   "Keine Standbilder > 2,5 s",
+   true,
+   "keine",
+   "plan"
+  ],
+  [
+   "Bild nicht zu dunkel",
+   true,
+   "Ø Helligkeit 65/255, 0 % sehr dunkle Frames",
+   "plan"
+  ],
+  [
+   "Alle Szenen vollständig & lückenlos",
+   true,
+   "24 Szenen",
+   "plan"
+  ],
+  [
+   "Perspektivwechsel (keine Einstellung > 6 s)",
+   true,
+   "48 Einstellungen, längste 4.0 s",
+   "plan"
+  ],
+  [
+   "Figuren konsistent (nur definierte Figuren)",
+   true,
+   "ok",
+   "drehbuch"
+  ],
+  [
+   "Untertitel synchron (Wortzeiten)",
+   true,
+   "97 % der Wörter direkt aus der Stimme zugeordnet",
+   "stimme"
+  ],
+  [
+   "Untertitel enden vor Videoende",
+   true,
+   "letztes Wort 110.2 s",
+   "plan"
+  ],
+  [
+   "Stimme klar über der Musik (≥ 12 dB)",
+   true,
+   "22.1 dB",
+   "ton"
+  ],
+  [
+   "Stimmpegel",
+   true,
+   "-18.0 dBFS",
+   "ton"
+  ],
+  [
+   "Geschichte vollständig (Hook→Wendung→Auflösung→Outro)",
+   true,
+   "aufloesung, einleitung, hook, outro, spannung, wendung",
+   "drehbuch"
+  ],
+  [
+   "Renderer ohne Fehler",
+   true,
+   "ok",
+   "render"
+  ]
+ ],
+ "dauer": 113.366667,
+ "rechtschreibung": [
+  "dahlbusch-bombe",
+  "eisenerzgrube",
+  "klopfzeichen",
+  "klärteich",
+  "lengede",
+  "probebohrung",
+  "rettungskapsel"
+ ]
 }

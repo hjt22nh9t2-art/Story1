@@ -25,11 +25,11 @@ def cover(ordner):
 
 def exportieren(ordner, dauer, name, log=print):
     roh = ordner / 'roh'
-    # Mastering: feste Verstärkung + Limiter mit Oversampling (kein dynamisches loudnorm – das hebt Stille vor Schreckmomenten an)
+    # Mastering: Tiefpass 16 kHz (verhindert AAC-Überschwinger bei harten Transienten), feste Verstärkung + Limiter mit Oversampling (kein dynamisches loudnorm – das hebt Stille vor Schreckmomenten an)
     i = messen_lufs(roh / 'mix.wav')
     gain = max(-6.0, min(12.0, config.LUFS_ZIEL - i)) if i is not None else 4.0
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', str(roh / 'mix.wav'), '-af',
-                    f'afade=t=in:d=0.015,volume={gain:.2f}dB,aresample=192000,alimiter=limit=0.84:level=false:attack=0.5:release=60,aresample=48000',
+                    f'afade=t=in:d=0.015,lowpass=f=16000,volume={gain:.2f}dB,aresample=192000,alimiter=limit=0.84:level=false:attack=0.5:release=60,aresample=48000',
                     str(roh / 'master.wav')], check=True)
     ziel = ordner / f'{name}.mp4'
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', str(roh / 'video_stumm.mp4'), '-i', str(roh / 'master.wav'),
