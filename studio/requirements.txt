@@ -1,0 +1,8 @@
+numpy>=1.26
+scipy>=1.11
+pillow>=10
+requests>=2.31
+anthropic>=1.0        # Claude-API: Themenwahl, Recherche mit Websuche, Drehbuch, Faktencheck, Bildkritik
+edge-tts>=7.0         # kostenlose Ersatzstimme (Microsoft Neural Voices)
+pyspellchecker>=0.8   # Rechtschreibprüfung der Untertitel
+spekoai>=0.1          # optional: Stimme über den Speko-Router

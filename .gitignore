@@ -6,3 +6,12 @@ __pycache__/
 serie/teil_*/roh/video_stumm.mp4
 serie/teil_*/roh/master.wav
 serie/teil_*/roh/final.mp4
+studio/node_modules/
+studio/.env
+studio/folgen/*/roh/*
+!studio/folgen/*/roh/stimme_take.wav
+!studio/folgen/*/roh/transkript.json
+!studio/folgen/*/roh/stimme_woerter.json
+!studio/folgen/*/roh/ton_info.json
+studio/folgen/_*/
+studio/folgen/*/produktion.log

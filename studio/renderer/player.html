@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Story Studio Player</title>
+<style>html,body{margin:0;background:#000}canvas{width:270px;height:480px}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+  const plan = new URLSearchParams(location.search).get('plan');
+  const mod = await import('/renderer/engine/regie.js');
+  try { await mod.init(plan); window.renderFrame = mod.renderFrame; window.renderCover = mod.renderCover; window.debugInfo = mod.debugInfo; window.ready = true; }
+  catch (e) { window.initError = String(e && e.stack || e); console.error(e); }
+</script>
+</body></html>

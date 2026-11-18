@@ -1,0 +1,3056 @@
+{
+ "fps": 30,
+ "dauer": 113.35,
+ "titel": "14 Tage lebendig begraben: Das Wunder von Lengede",
+ "headline": {
+  "text": "14 Tage lebendig begraben",
+  "a": 0.0,
+  "b": 3.2
+ },
+ "figuren": {
+  "herbst": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#d9a98a",
+   "haare": "#2b1f17",
+   "bart": true,
+   "augen": "#3a2a1c",
+   "dreck": 0.8
+  },
+  "jung": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#e6b896",
+   "haare": "#8a6238",
+   "augen": "#3d5a78",
+   "dreck": 0.7
+  },
+  "alt": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#cf9f80",
+   "haare": "#9a9a96",
+   "bart": "#b8b8b2",
+   "augen": "#3a2a1c",
+   "dreck": 0.75
+  },
+  "vierter": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#c58f6e",
+   "haare": "#1d1a18",
+   "augen": "#2a1d14",
+   "dreck": 0.8,
+   "helmFarbe": "#c9c2ae"
+  },
+  "luft": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#e0ad8c",
+   "haare": "#5a3a22",
+   "augen": "#3a2a1c",
+   "dreck": 0.6,
+   "helmFarbe": "#b8b0a0"
+  },
+  "retter": {
+   "typ": "mann",
+   "outfit": "arbeiter",
+   "haut": "#d4a07e",
+   "haare": "#3a2a1e",
+   "augen": "#3a2a1c",
+   "oberteil": "#c7642a",
+   "helmFarbe": "#f0c030"
+  },
+  "ingenieur": {
+   "typ": "mann",
+   "outfit": "anzug",
+   "haut": "#e2b494",
+   "haare": "#2a2622",
+   "brille": true,
+   "kopf": "hut",
+   "helmFarbe": "#2a2a2a"
+  }
+ },
+ "woerter": [
+  {
+   "text": "Elf",
+   "s": 0.35,
+   "e": 0.45,
+   "hi": true
+  },
+  {
+   "text": "Männer,",
+   "s": 0.45,
+   "e": 1.05,
+   "hi": false
+  },
+  {
+   "text": "lebendig",
+   "s": 1.05,
+   "e": 1.65,
+   "hi": false
+  },
+  {
+   "text": "begraben",
+   "s": 1.65,
+   "e": 2.45,
+   "hi": true
+  },
+  {
+   "text": "und",
+   "s": 2.65,
+   "e": 2.75,
+   "hi": false
+  },
+  {
+   "text": "draußen",
+   "s": 2.75,
+   "e": 3.15,
+   "hi": false
+  },
+  {
+   "text": "glaubt",
+   "s": 3.15,
+   "e": 3.35,
+   "hi": false
+  },
+  {
+   "text": "kaum",
+   "s": 3.35,
+   "e": 3.55,
+   "hi": false
+  },
+  {
+   "text": "noch",
+   "s": 3.55,
+   "e": 3.75,
+   "hi": false
+  },
+  {
+   "text": "jemand",
+   "s": 3.75,
+   "e": 4.05,
+   "hi": false
+  },
+  {
+   "text": "an",
+   "s": 4.05,
+   "e": 4.15,
+   "hi": false
+  },
+  {
+   "text": "sie.",
+   "s": 4.15,
+   "e": 4.45,
+   "hi": false
+  },
+  {
+   "text": "24.",
+   "s": 4.45,
+   "e": 5.094,
+   "hi": false
+  },
+  {
+   "text": "Oktober",
+   "s": 5.15,
+   "e": 5.65,
+   "hi": false
+  },
+  {
+   "text": "1963.",
+   "s": 5.65,
+   "e": 7.65,
+   "hi": true
+  },
+  {
+   "text": "Lengede",
+   "s": 7.65,
+   "e": 8.294,
+   "hi": false
+  },
+  {
+   "text": "in",
+   "s": 8.35,
+   "e": 8.45,
+   "hi": false
+  },
+  {
+   "text": "Niedersachsen.",
+   "s": 8.45,
+   "e": 9.45,
+   "hi": false
+  },
+  {
+   "text": "Die",
+   "s": 9.55,
+   "e": 9.75,
+   "hi": false
+  },
+  {
+   "text": "Eisenerzgrube",
+   "s": 9.75,
+   "e": 10.55,
+   "hi": false
+  },
+  {
+   "text": "Mathilde.",
+   "s": 10.55,
+   "e": 11.05,
+   "hi": false
+  },
+  {
+   "text": "129",
+   "s": 11.85,
+   "e": 12.85,
+   "hi": true
+  },
+  {
+   "text": "Bergleute",
+   "s": 12.85,
+   "e": 13.35,
+   "hi": false
+  },
+  {
+   "text": "arbeiten",
+   "s": 13.35,
+   "e": 13.75,
+   "hi": false
+  },
+  {
+   "text": "unter",
+   "s": 13.75,
+   "e": 14.05,
+   "hi": false
+  },
+  {
+   "text": "Tage.",
+   "s": 14.05,
+   "e": 14.65,
+   "hi": false
+  },
+  {
+   "text": "Eine",
+   "s": 14.95,
+   "e": 15.05,
+   "hi": false
+  },
+  {
+   "text": "ganz",
+   "s": 15.05,
+   "e": 15.35,
+   "hi": false
+  },
+  {
+   "text": "normale",
+   "s": 15.35,
+   "e": 15.75,
+   "hi": false
+  },
+  {
+   "text": "Schicht.",
+   "s": 15.75,
+   "e": 16.35,
+   "hi": false
+  },
+  {
+   "text": "Über",
+   "s": 16.55,
+   "e": 16.85,
+   "hi": false
+  },
+  {
+   "text": "ihnen",
+   "s": 16.85,
+   "e": 17.05,
+   "hi": false
+  },
+  {
+   "text": "liegt",
+   "s": 17.05,
+   "e": 17.25,
+   "hi": false
+  },
+  {
+   "text": "ein",
+   "s": 17.25,
+   "e": 17.35,
+   "hi": false
+  },
+  {
+   "text": "riesiger",
+   "s": 17.35,
+   "e": 17.85,
+   "hi": false
+  },
+  {
+   "text": "Klärteich",
+   "s": 17.85,
+   "e": 18.35,
+   "hi": true
+  },
+  {
+   "text": "voller",
+   "s": 18.35,
+   "e": 18.65,
+   "hi": false
+  },
+  {
+   "text": "Wasser",
+   "s": 18.65,
+   "e": 18.95,
+   "hi": false
+  },
+  {
+   "text": "und",
+   "s": 18.95,
+   "e": 19.15,
+   "hi": false
+  },
+  {
+   "text": "Schlamm.",
+   "s": 19.15,
+   "e": 19.75,
+   "hi": false
+  },
+  {
+   "text": "Dann",
+   "s": 19.95,
+   "e": 20.15,
+   "hi": false
+  },
+  {
+   "text": "bricht",
+   "s": 20.15,
+   "e": 20.35,
+   "hi": true
+  },
+  {
+   "text": "der",
+   "s": 20.35,
+   "e": 20.45,
+   "hi": false
+  },
+  {
+   "text": "Teich",
+   "s": 20.45,
+   "e": 20.75,
+   "hi": false
+  },
+  {
+   "text": "ein.",
+   "s": 20.75,
+   "e": 21.05,
+   "hi": false
+  },
+  {
+   "text": "Fast",
+   "s": 21.45,
+   "e": 21.75,
+   "hi": false
+  },
+  {
+   "text": "eine",
+   "s": 21.75,
+   "e": 21.85,
+   "hi": false
+  },
+  {
+   "text": "halbe",
+   "s": 21.85,
+   "e": 22.25,
+   "hi": true
+  },
+  {
+   "text": "Million",
+   "s": 22.25,
+   "e": 22.55,
+   "hi": true
+  },
+  {
+   "text": "Kubikmeter",
+   "s": 22.55,
+   "e": 23.15,
+   "hi": false
+  },
+  {
+   "text": "Wasser",
+   "s": 23.15,
+   "e": 23.45,
+   "hi": false
+  },
+  {
+   "text": "und",
+   "s": 23.45,
+   "e": 23.55,
+   "hi": false
+  },
+  {
+   "text": "Schlamm",
+   "s": 23.55,
+   "e": 23.85,
+   "hi": false
+  },
+  {
+   "text": "stürzen",
+   "s": 23.85,
+   "e": 24.35,
+   "hi": false
+  },
+  {
+   "text": "in",
+   "s": 24.35,
+   "e": 24.45,
+   "hi": false
+  },
+  {
+   "text": "die",
+   "s": 24.45,
+   "e": 24.55,
+   "hi": false
+  },
+  {
+   "text": "Stollen.",
+   "s": 24.55,
+   "e": 25.15,
+   "hi": false
+  },
+  {
+   "text": "79",
+   "s": 25.15,
+   "e": 25.95,
+   "hi": true
+  },
+  {
+   "text": "Männer",
+   "s": 25.95,
+   "e": 26.25,
+   "hi": false
+  },
+  {
+   "text": "retten",
+   "s": 26.25,
+   "e": 26.45,
+   "hi": false
+  },
+  {
+   "text": "sich",
+   "s": 26.45,
+   "e": 26.65,
+   "hi": false
+  },
+  {
+   "text": "nach",
+   "s": 26.65,
+   "e": 26.85,
+   "hi": false
+  },
+  {
+   "text": "oben.",
+   "s": 26.85,
+   "e": 27.15,
+   "hi": false
+  },
+  {
+   "text": "Für",
+   "s": 28.25,
+   "e": 28.35,
+   "hi": false
+  },
+  {
+   "text": "die",
+   "s": 28.35,
+   "e": 28.45,
+   "hi": false
+  },
+  {
+   "text": "anderen",
+   "s": 28.45,
+   "e": 28.85,
+   "hi": false
+  },
+  {
+   "text": "beginnt",
+   "s": 28.85,
+   "e": 29.15,
+   "hi": false
+  },
+  {
+   "text": "ein",
+   "s": 29.15,
+   "e": 29.25,
+   "hi": false
+  },
+  {
+   "text": "Wettlauf",
+   "s": 29.25,
+   "e": 29.65,
+   "hi": true
+  },
+  {
+   "text": "gegen",
+   "s": 29.65,
+   "e": 29.85,
+   "hi": false
+  },
+  {
+   "text": "die",
+   "s": 29.85,
+   "e": 30.05,
+   "hi": false
+  },
+  {
+   "text": "Zeit.",
+   "s": 30.05,
+   "e": 30.45,
+   "hi": false
+  },
+  {
+   "text": "Tag",
+   "s": 31.15,
+   "e": 31.35,
+   "hi": true
+  },
+  {
+   "text": "und",
+   "s": 31.35,
+   "e": 31.45,
+   "hi": false
+  },
+  {
+   "text": "Nacht",
+   "s": 31.45,
+   "e": 31.75,
+   "hi": true
+  },
+  {
+   "text": "wird",
+   "s": 31.75,
+   "e": 31.85,
+   "hi": false
+  },
+  {
+   "text": "gepumpt,",
+   "s": 31.85,
+   "e": 32.65,
+   "hi": false
+  },
+  {
+   "text": "gebohrt",
+   "s": 32.65,
+   "e": 33.25,
+   "hi": false
+  },
+  {
+   "text": "und",
+   "s": 33.25,
+   "e": 33.45,
+   "hi": false
+  },
+  {
+   "text": "gesucht.",
+   "s": 33.45,
+   "e": 33.95,
+   "hi": false
+  },
+  {
+   "text": "Nach",
+   "s": 34.75,
+   "e": 34.85,
+   "hi": false
+  },
+  {
+   "text": "über",
+   "s": 34.85,
+   "e": 35.05,
+   "hi": false
+  },
+  {
+   "text": "einer",
+   "s": 35.05,
+   "e": 35.25,
+   "hi": false
+  },
+  {
+   "text": "Woche",
+   "s": 35.25,
+   "e": 35.55,
+   "hi": false
+  },
+  {
+   "text": "finden",
+   "s": 35.55,
+   "e": 35.85,
+   "hi": false
+  },
+  {
+   "text": "Retter",
+   "s": 35.85,
+   "e": 36.15,
+   "hi": false
+  },
+  {
+   "text": "drei",
+   "s": 36.15,
+   "e": 36.45,
+   "hi": true
+  },
+  {
+   "text": "Überlebende",
+   "s": 36.45,
+   "e": 37.05,
+   "hi": false
+  },
+  {
+   "text": "in",
+   "s": 37.05,
+   "e": 37.15,
+   "hi": false
+  },
+  {
+   "text": "einer",
+   "s": 37.15,
+   "e": 37.35,
+   "hi": false
+  },
+  {
+   "text": "Luftblase.",
+   "s": 37.35,
+   "e": 37.95,
+   "hi": true
+  },
+  {
+   "text": "Doch",
+   "s": 38.85,
+   "e": 38.95,
+   "hi": false
+  },
+  {
+   "text": "für",
+   "s": 38.95,
+   "e": 39.05,
+   "hi": false
+  },
+  {
+   "text": "die",
+   "s": 39.05,
+   "e": 39.15,
+   "hi": false
+  },
+  {
+   "text": "übrigen",
+   "s": 39.15,
+   "e": 39.45,
+   "hi": false
+  },
+  {
+   "text": "Vermissten",
+   "s": 39.45,
+   "e": 40.05,
+   "hi": false
+  },
+  {
+   "text": "schwindet",
+   "s": 40.05,
+   "e": 40.45,
+   "hi": false
+  },
+  {
+   "text": "die",
+   "s": 40.45,
+   "e": 40.55,
+   "hi": false
+  },
+  {
+   "text": "Hoffnung",
+   "s": 40.55,
+   "e": 40.85,
+   "hi": true
+  },
+  {
+   "text": "von",
+   "s": 40.85,
+   "e": 41.05,
+   "hi": false
+  },
+  {
+   "text": "Tag",
+   "s": 41.05,
+   "e": 41.25,
+   "hi": false
+  },
+  {
+   "text": "zu",
+   "s": 41.25,
+   "e": 41.45,
+   "hi": false
+  },
+  {
+   "text": "Tag.",
+   "s": 41.45,
+   "e": 41.75,
+   "hi": false
+  },
+  {
+   "text": "Was",
+   "s": 42.65,
+   "e": 42.75,
+   "hi": false
+  },
+  {
+   "text": "niemand",
+   "s": 42.75,
+   "e": 43.15,
+   "hi": false
+  },
+  {
+   "text": "ahnt:",
+   "s": 43.15,
+   "e": 43.85,
+   "hi": false
+  },
+  {
+   "text": "Elf",
+   "s": 43.85,
+   "e": 44.05,
+   "hi": true
+  },
+  {
+   "text": "Männer",
+   "s": 44.05,
+   "e": 44.35,
+   "hi": false
+  },
+  {
+   "text": "haben",
+   "s": 44.35,
+   "e": 44.65,
+   "hi": false
+  },
+  {
+   "text": "sich",
+   "s": 44.65,
+   "e": 44.75,
+   "hi": false
+  },
+  {
+   "text": "in",
+   "s": 44.75,
+   "e": 44.85,
+   "hi": false
+  },
+  {
+   "text": "einen",
+   "s": 44.85,
+   "e": 45.05,
+   "hi": false
+  },
+  {
+   "text": "alten,",
+   "s": 45.05,
+   "e": 45.65,
+   "hi": false
+  },
+  {
+   "text": "verlassenen",
+   "s": 45.65,
+   "e": 46.25,
+   "hi": true
+  },
+  {
+   "text": "Teil",
+   "s": 46.25,
+   "e": 46.55,
+   "hi": false
+  },
+  {
+   "text": "der",
+   "s": 46.55,
+   "e": 46.65,
+   "hi": false
+  },
+  {
+   "text": "Grube",
+   "s": 46.65,
+   "e": 46.95,
+   "hi": false
+  },
+  {
+   "text": "gerettet.",
+   "s": 46.95,
+   "e": 47.65,
+   "hi": false
+  },
+  {
+   "text": "Bergleute",
+   "s": 47.65,
+   "e": 48.15,
+   "hi": false
+  },
+  {
+   "text": "nennen",
+   "s": 48.15,
+   "e": 48.35,
+   "hi": false
+  },
+  {
+   "text": "so",
+   "s": 48.35,
+   "e": 48.45,
+   "hi": false
+  },
+  {
+   "text": "einen",
+   "s": 48.45,
+   "e": 48.75,
+   "hi": false
+  },
+  {
+   "text": "Ort",
+   "s": 48.75,
+   "e": 48.95,
+   "hi": false
+  },
+  {
+   "text": "den",
+   "s": 48.95,
+   "e": 49.05,
+   "hi": false
+  },
+  {
+   "text": "Alten",
+   "s": 49.05,
+   "e": 49.45,
+   "hi": true
+  },
+  {
+   "text": "Mann.",
+   "s": 49.45,
+   "e": 49.75,
+   "hi": true
+  },
+  {
+   "text": "Eine",
+   "s": 50.35,
+   "e": 50.65,
+   "hi": false
+  },
+  {
+   "text": "Sackgasse.",
+   "s": 50.65,
+   "e": 51.25,
+   "hi": true
+  },
+  {
+   "text": "Dunkel.",
+   "s": 52.15,
+   "e": 52.65,
+   "hi": false
+  },
+  {
+   "text": "Kalt.",
+   "s": 53.35,
+   "e": 53.85,
+   "hi": false
+  },
+  {
+   "text": "Und",
+   "s": 54.25,
+   "e": 54.45,
+   "hi": false
+  },
+  {
+   "text": "kein",
+   "s": 54.45,
+   "e": 54.75,
+   "hi": true
+  },
+  {
+   "text": "Weg",
+   "s": 54.75,
+   "e": 54.95,
+   "hi": true
+  },
+  {
+   "text": "nach",
+   "s": 54.95,
+   "e": 55.05,
+   "hi": false
+  },
+  {
+   "text": "draußen.",
+   "s": 55.05,
+   "e": 55.95,
+   "hi": false
+  },
+  {
+   "text": "Also",
+   "s": 56.55,
+   "e": 56.75,
+   "hi": false
+  },
+  {
+   "text": "klopfen",
+   "s": 56.75,
+   "e": 57.25,
+   "hi": true
+  },
+  {
+   "text": "sie.",
+   "s": 57.25,
+   "e": 57.65,
+   "hi": false
+  },
+  {
+   "text": "Immer",
+   "s": 57.85,
+   "e": 58.15,
+   "hi": false
+  },
+  {
+   "text": "wieder.",
+   "s": 58.15,
+   "e": 58.75,
+   "hi": false
+  },
+  {
+   "text": "In",
+   "s": 58.95,
+   "e": 59.15,
+   "hi": false
+  },
+  {
+   "text": "der",
+   "s": 59.15,
+   "e": 59.25,
+   "hi": false
+  },
+  {
+   "text": "Hoffnung,",
+   "s": 59.25,
+   "e": 59.95,
+   "hi": false
+  },
+  {
+   "text": "dass",
+   "s": 59.95,
+   "e": 60.25,
+   "hi": false
+  },
+  {
+   "text": "irgendjemand",
+   "s": 60.25,
+   "e": 60.75,
+   "hi": false
+  },
+  {
+   "text": "sie",
+   "s": 60.75,
+   "e": 60.95,
+   "hi": false
+  },
+  {
+   "text": "hört.",
+   "s": 60.95,
+   "e": 61.35,
+   "hi": false
+  },
+  {
+   "text": "3.",
+   "s": 61.35,
+   "e": 61.994,
+   "hi": false
+  },
+  {
+   "text": "November.",
+   "s": 62.05,
+   "e": 62.95,
+   "hi": false
+  },
+  {
+   "text": "Eine",
+   "s": 63.15,
+   "e": 63.35,
+   "hi": false
+  },
+  {
+   "text": "Probebohrung",
+   "s": 63.35,
+   "e": 64.05,
+   "hi": false
+  },
+  {
+   "text": "trifft",
+   "s": 64.05,
+   "e": 64.25,
+   "hi": false
+  },
+  {
+   "text": "genau",
+   "s": 64.25,
+   "e": 64.65,
+   "hi": true
+  },
+  {
+   "text": "ihren",
+   "s": 64.65,
+   "e": 64.85,
+   "hi": false
+  },
+  {
+   "text": "Hohlraum.",
+   "s": 64.85,
+   "e": 65.55,
+   "hi": false
+  },
+  {
+   "text": "Und",
+   "s": 65.85,
+   "e": 66.05,
+   "hi": false
+  },
+  {
+   "text": "dann:",
+   "s": 66.05,
+   "e": 66.55,
+   "hi": false
+  },
+  {
+   "text": "Klopfzeichen",
+   "s": 66.75,
+   "e": 67.55,
+   "hi": true
+  },
+  {
+   "text": "von",
+   "s": 67.55,
+   "e": 67.75,
+   "hi": false
+  },
+  {
+   "text": "unten.",
+   "s": 67.75,
+   "e": 68.15,
+   "hi": false
+  },
+  {
+   "text": "Elf",
+   "s": 68.55,
+   "e": 68.85,
+   "hi": false
+  },
+  {
+   "text": "Männer",
+   "s": 68.85,
+   "e": 69.15,
+   "hi": false
+  },
+  {
+   "text": "leben!",
+   "s": 69.15,
+   "e": 69.85,
+   "hi": true
+  },
+  {
+   "text": "Doch",
+   "s": 69.95,
+   "e": 70.15,
+   "hi": false
+  },
+  {
+   "text": "wie",
+   "s": 70.15,
+   "e": 70.25,
+   "hi": false
+  },
+  {
+   "text": "holt",
+   "s": 70.25,
+   "e": 70.55,
+   "hi": false
+  },
+  {
+   "text": "man",
+   "s": 70.55,
+   "e": 70.65,
+   "hi": false
+  },
+  {
+   "text": "sie",
+   "s": 70.65,
+   "e": 70.75,
+   "hi": false
+  },
+  {
+   "text": "durch",
+   "s": 70.75,
+   "e": 70.95,
+   "hi": false
+  },
+  {
+   "text": "dutzende",
+   "s": 70.95,
+   "e": 71.35,
+   "hi": false
+  },
+  {
+   "text": "Meter",
+   "s": 71.35,
+   "e": 71.65,
+   "hi": false
+  },
+  {
+   "text": "Gestein",
+   "s": 71.65,
+   "e": 71.95,
+   "hi": false
+  },
+  {
+   "text": "nach",
+   "s": 71.95,
+   "e": 72.15,
+   "hi": false
+  },
+  {
+   "text": "oben?",
+   "s": 72.15,
+   "e": 72.45,
+   "hi": true
+  },
+  {
+   "text": "Die",
+   "s": 73.15,
+   "e": 73.25,
+   "hi": false
+  },
+  {
+   "text": "Antwort:",
+   "s": 73.25,
+   "e": 73.85,
+   "hi": false
+  },
+  {
+   "text": "eine",
+   "s": 73.85,
+   "e": 74.05,
+   "hi": false
+  },
+  {
+   "text": "Rettungskapsel,",
+   "s": 74.05,
+   "e": 75.25,
+   "hi": false
+  },
+  {
+   "text": "nur",
+   "s": 75.25,
+   "e": 75.45,
+   "hi": false
+  },
+  {
+   "text": "38,5",
+   "s": 75.45,
+   "e": 76.85,
+   "hi": false
+  },
+  {
+   "text": "Zentimeter",
+   "s": 76.85,
+   "e": 77.402,
+   "hi": false
+  },
+  {
+   "text": "breit.",
+   "s": 77.45,
+   "e": 77.95,
+   "hi": false
+  },
+  {
+   "text": "Die",
+   "s": 78.35,
+   "e": 78.45,
+   "hi": false
+  },
+  {
+   "text": "Dahlbusch-Bombe.",
+   "s": 78.45,
+   "e": 80.014,
+   "hi": true
+  },
+  {
+   "text": "Ein",
+   "s": 80.15,
+   "e": 80.25,
+   "hi": false
+  },
+  {
+   "text": "neues",
+   "s": 80.25,
+   "e": 80.55,
+   "hi": true
+  },
+  {
+   "text": "Bohrloch",
+   "s": 80.55,
+   "e": 81.05,
+   "hi": true
+  },
+  {
+   "text": "wird",
+   "s": 81.05,
+   "e": 81.25,
+   "hi": false
+  },
+  {
+   "text": "gebohrt,",
+   "s": 81.25,
+   "e": 81.95,
+   "hi": false
+  },
+  {
+   "text": "genau",
+   "s": 81.95,
+   "e": 82.25,
+   "hi": false
+  },
+  {
+   "text": "zu",
+   "s": 82.25,
+   "e": 82.45,
+   "hi": false
+  },
+  {
+   "text": "den",
+   "s": 82.45,
+   "e": 82.55,
+   "hi": false
+  },
+  {
+   "text": "Eingeschlossenen.",
+   "s": 82.55,
+   "e": 83.45,
+   "hi": false
+  },
+  {
+   "text": "7.",
+   "s": 83.45,
+   "e": 84.002,
+   "hi": false
+  },
+  {
+   "text": "November.",
+   "s": 84.05,
+   "e": 84.65,
+   "hi": false
+  },
+  {
+   "text": "Einer",
+   "s": 85.45,
+   "e": 85.75,
+   "hi": true
+  },
+  {
+   "text": "nach",
+   "s": 85.75,
+   "e": 85.85,
+   "hi": false
+  },
+  {
+   "text": "dem",
+   "s": 85.85,
+   "e": 86.05,
+   "hi": false
+  },
+  {
+   "text": "anderen",
+   "s": 86.05,
+   "e": 86.55,
+   "hi": true
+  },
+  {
+   "text": "fährt",
+   "s": 86.55,
+   "e": 86.75,
+   "hi": false
+  },
+  {
+   "text": "in",
+   "s": 86.75,
+   "e": 86.85,
+   "hi": false
+  },
+  {
+   "text": "der",
+   "s": 86.85,
+   "e": 87.05,
+   "hi": false
+  },
+  {
+   "text": "engen",
+   "s": 87.05,
+   "e": 87.35,
+   "hi": false
+  },
+  {
+   "text": "Röhre",
+   "s": 87.35,
+   "e": 87.65,
+   "hi": false
+  },
+  {
+   "text": "nach",
+   "s": 87.65,
+   "e": 87.85,
+   "hi": false
+  },
+  {
+   "text": "oben.",
+   "s": 87.85,
+   "e": 88.45,
+   "hi": false
+  },
+  {
+   "text": "Nach",
+   "s": 88.45,
+   "e": 88.65,
+   "hi": false
+  },
+  {
+   "text": "14",
+   "s": 88.65,
+   "e": 89.15,
+   "hi": false
+  },
+  {
+   "text": "Tagen",
+   "s": 89.15,
+   "e": 89.45,
+   "hi": false
+  },
+  {
+   "text": "unter",
+   "s": 89.45,
+   "e": 89.65,
+   "hi": false
+  },
+  {
+   "text": "der",
+   "s": 89.65,
+   "e": 89.85,
+   "hi": false
+  },
+  {
+   "text": "Erde",
+   "s": 89.85,
+   "e": 90.15,
+   "hi": false
+  },
+  {
+   "text": "sind",
+   "s": 90.15,
+   "e": 90.45,
+   "hi": false
+  },
+  {
+   "text": "alle",
+   "s": 90.45,
+   "e": 90.75,
+   "hi": false
+  },
+  {
+   "text": "elf",
+   "s": 90.75,
+   "e": 91.05,
+   "hi": false
+  },
+  {
+   "text": "gerettet.",
+   "s": 91.05,
+   "e": 91.55,
+   "hi": false
+  },
+  {
+   "text": "Man",
+   "s": 92.15,
+   "e": 92.35,
+   "hi": false
+  },
+  {
+   "text": "nennt",
+   "s": 92.35,
+   "e": 92.55,
+   "hi": false
+  },
+  {
+   "text": "es:",
+   "s": 92.55,
+   "e": 92.95,
+   "hi": false
+  },
+  {
+   "text": "das",
+   "s": 93.25,
+   "e": 93.55,
+   "hi": false
+  },
+  {
+   "text": "Wunder",
+   "s": 93.55,
+   "e": 93.85,
+   "hi": true
+  },
+  {
+   "text": "von",
+   "s": 93.85,
+   "e": 94.05,
+   "hi": false
+  },
+  {
+   "text": "Lengede.",
+   "s": 94.05,
+   "e": 94.55,
+   "hi": true
+  },
+  {
+   "text": "Für",
+   "s": 95.45,
+   "e": 95.55,
+   "hi": false
+  },
+  {
+   "text": "29",
+   "s": 95.55,
+   "e": 96.35,
+   "hi": true
+  },
+  {
+   "text": "Bergleute",
+   "s": 96.35,
+   "e": 96.95,
+   "hi": false
+  },
+  {
+   "text": "kam",
+   "s": 96.95,
+   "e": 97.15,
+   "hi": false
+  },
+  {
+   "text": "an",
+   "s": 97.15,
+   "e": 97.25,
+   "hi": false
+  },
+  {
+   "text": "diesem",
+   "s": 97.25,
+   "e": 97.55,
+   "hi": false
+  },
+  {
+   "text": "Unglück",
+   "s": 97.55,
+   "e": 97.95,
+   "hi": false
+  },
+  {
+   "text": "jede",
+   "s": 97.95,
+   "e": 98.25,
+   "hi": false
+  },
+  {
+   "text": "Hilfe",
+   "s": 98.25,
+   "e": 98.55,
+   "hi": false
+  },
+  {
+   "text": "zu",
+   "s": 98.55,
+   "e": 98.75,
+   "hi": false
+  },
+  {
+   "text": "spät.",
+   "s": 98.75,
+   "e": 99.25,
+   "hi": false
+  },
+  {
+   "text": "Und",
+   "s": 100.25,
+   "e": 100.35,
+   "hi": false
+  },
+  {
+   "text": "die",
+   "s": 100.35,
+   "e": 100.55,
+   "hi": false
+  },
+  {
+   "text": "Kapsel?",
+   "s": 100.55,
+   "e": 101.25,
+   "hi": false
+  },
+  {
+   "text": "Eine",
+   "s": 101.25,
+   "e": 101.45,
+   "hi": false
+  },
+  {
+   "text": "Weiterentwicklung",
+   "s": 101.45,
+   "e": 102.25,
+   "hi": false
+  },
+  {
+   "text": "holte",
+   "s": 102.25,
+   "e": 102.55,
+   "hi": false
+  },
+  {
+   "text": "2010",
+   "s": 102.55,
+   "e": 103.35,
+   "hi": false
+  },
+  {
+   "text": "in",
+   "s": 103.35,
+   "e": 103.45,
+   "hi": false
+  },
+  {
+   "text": "Chile",
+   "s": 103.45,
+   "e": 103.85,
+   "hi": true
+  },
+  {
+   "text": "33",
+   "s": 103.85,
+   "e": 104.65,
+   "hi": true
+  },
+  {
+   "text": "Bergleute",
+   "s": 104.65,
+   "e": 105.15,
+   "hi": false
+  },
+  {
+   "text": "aus",
+   "s": 105.15,
+   "e": 105.35,
+   "hi": false
+  },
+  {
+   "text": "rund",
+   "s": 105.35,
+   "e": 105.55,
+   "hi": false
+  },
+  {
+   "text": "700",
+   "s": 105.55,
+   "e": 106.05,
+   "hi": false
+  },
+  {
+   "text": "Metern",
+   "s": 106.05,
+   "e": 106.326,
+   "hi": false
+  },
+  {
+   "text": "Tiefe.",
+   "s": 106.35,
+   "e": 106.85,
+   "hi": false
+  },
+  {
+   "text": "Hättest",
+   "s": 108.05,
+   "e": 108.15,
+   "hi": false
+  },
+  {
+   "text": "du",
+   "s": 108.15,
+   "e": 108.35,
+   "hi": false
+  },
+  {
+   "text": "14",
+   "s": 108.35,
+   "e": 108.75,
+   "hi": false
+  },
+  {
+   "text": "Tage",
+   "s": 108.75,
+   "e": 109.05,
+   "hi": false
+  },
+  {
+   "text": "im",
+   "s": 109.05,
+   "e": 109.15,
+   "hi": false
+  },
+  {
+   "text": "Dunkeln",
+   "s": 109.15,
+   "e": 109.55,
+   "hi": false
+  },
+  {
+   "text": "durchgehalten?",
+   "s": 109.55,
+   "e": 110.15,
+   "hi": true
+  }
+ ],
+ "szenen": [
+  {
+   "teil": "hook",
+   "ort": "hoehle",
+   "stimmung": "schock",
+   "licht": 0.22,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "links",
+     "aktion": "hocken",
+     "ausdruck": "erschoepft",
+     "blick": "kamera",
+     "lampe": 0.7
+    },
+    {
+     "id": "jung",
+     "mark": "rechts",
+     "aktion": "kauern",
+     "lampe": 0.4
+    }
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "a": 0.0,
+   "b": 4.33,
+   "shots": [
+    {
+     "kamera": "zoom_schock",
+     "yaw": 0.35,
+     "a": 0.0,
+     "b": 2.6
+    },
+    {
+     "kamera": "gesicht",
+     "ziel": "herbst",
+     "yaw": -0.5,
+     "a": 2.6,
+     "b": 4.33
+    }
+   ]
+  },
+  {
+   "teil": "einleitung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "nebel",
+   "stimmung": "ruhig",
+   "figuren": [
+    {
+     "id": "alt",
+     "von": [
+      -2,
+      0,
+      6
+     ],
+     "nach": [
+      -4.5,
+      0,
+      -10
+     ],
+     "aktion": "laufen"
+    },
+    {
+     "id": "vierter",
+     "von": [
+      -1.2,
+      0,
+      7
+     ],
+     "nach": [
+      -3.6,
+      0,
+      -9
+     ],
+     "aktion": "laufen"
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "24. Oktober 1963",
+    "sub": "Lengede · Niedersachsen",
+    "a": 4.48,
+    "b": 7.73
+   },
+   "uebergang": "schwarz",
+   "requisiten": [],
+   "effekte": [],
+   "a": 4.33,
+   "b": 11.73,
+   "shots": [
+    {
+     "kamera": "weit",
+     "yaw": 0.15,
+     "a": 4.33,
+     "b": 8.3
+    },
+    {
+     "kamera": "verfolgung",
+     "ziel": "alt",
+     "yaw": -0.3,
+     "a": 8.3,
+     "b": 11.73
+    }
+   ]
+  },
+  {
+   "teil": "einleitung",
+   "ort": "stollen",
+   "stimmung": "ruhig",
+   "figuren": [
+    {
+     "id": "herbst",
+     "von": "hinten",
+     "nach": [
+      0,
+      0,
+      1.5
+     ],
+     "aktion": "schieben"
+    },
+    {
+     "id": "jung",
+     "von": [
+      0.6,
+      0,
+      -9
+     ],
+     "nach": [
+      0.6,
+      0,
+      -0.5
+     ],
+     "aktion": "laufen"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "lore",
+     "pos": [
+      0,
+      0,
+      -5.4
+     ],
+     "anim": "fahren",
+     "strecke": 5.2
+    }
+   ],
+   "einblendung": {
+    "art": "zahl",
+    "text": "129",
+    "sub": "Bergleute unter Tage",
+    "a": 11.88,
+    "b": 15.13
+   },
+   "effekte": [],
+   "a": 11.73,
+   "b": 16.43,
+   "shots": [
+    {
+     "kamera": "vorlauf",
+     "yaw": 0.6,
+     "a": 11.73,
+     "b": 14.0
+    },
+    {
+     "kamera": "seitlich",
+     "ziel": "jung",
+     "yaw": -0.15,
+     "a": 14.0,
+     "b": 16.43
+    }
+   ]
+  },
+  {
+   "teil": "einleitung",
+   "ort": "stollen",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "spannung",
+   "effekte": [
+    {
+     "name": "wasserstrahl",
+     "pos": [
+      0.4,
+      0,
+      -3.2
+     ]
+    }
+   ],
+   "requisiten": [],
+   "licht": 0.9,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      0.2,
+      0,
+      -0.5
+     ],
+     "aktion": "graben"
+    },
+    {
+     "id": "jung",
+     "mark": [
+      -0.5,
+      0,
+      -2.2
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "angst"
+    }
+   ],
+   "a": 16.43,
+   "b": 19.83,
+   "shots": [
+    {
+     "kamera": "halbtotale",
+     "ziel": "jung",
+     "yaw": 0.3,
+     "a": 16.43,
+     "b": 18.3
+    },
+    {
+     "kamera": "kranfahrt",
+     "ziel": "herbst",
+     "yaw": 0.35,
+     "a": 18.3,
+     "b": 19.83
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "stollen",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "schock",
+   "effekte": [
+    {
+     "name": "beben",
+     "staerke": 1.3
+    },
+    "flackern",
+    {
+     "name": "wasserstrahl",
+     "pos": [
+      0,
+      0,
+      -3
+     ]
+    }
+   ],
+   "uebergang": "blitz",
+   "requisiten": [],
+   "licht": 1,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      0,
+      0,
+      -0.6
+     ],
+     "aktion": "erschrecken",
+     "blick": "kamera"
+    },
+    {
+     "id": "jung",
+     "mark": [
+      0.6,
+      0,
+      -2.4
+     ],
+     "aktion": "erschrecken"
+    }
+   ],
+   "a": 19.83,
+   "b": 21.33,
+   "shots": [
+    {
+     "kamera": "zoom_schock",
+     "ziel": "herbst",
+     "yaw": -0.5,
+     "a": 19.83,
+     "b": 21.33
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "stollen",
+   "stimmung": "schock",
+   "licht": 0.8,
+   "figuren": [
+    {
+     "id": "herbst",
+     "von": [
+      0,
+      0,
+      -6
+     ],
+     "nach": [
+      0,
+      0,
+      4
+     ],
+     "aktion": "rennen"
+    },
+    {
+     "id": "jung",
+     "von": [
+      0.5,
+      0,
+      -8
+     ],
+     "nach": [
+      0.5,
+      0,
+      3
+     ],
+     "aktion": "rennen"
+    }
+   ],
+   "effekte": [
+    {
+     "name": "flut",
+     "farbe": "schlamm",
+     "welle": true,
+     "start": -22,
+     "ziel": 6,
+     "von": -0.1,
+     "bis": 0.7
+    },
+    "flackern"
+   ],
+   "uebergang": "zoom",
+   "requisiten": [],
+   "a": 21.33,
+   "b": 25.03,
+   "shots": [
+    {
+     "kamera": "vorlauf",
+     "ziel": "herbst",
+     "yaw": 0.15,
+     "a": 21.33,
+     "b": 23.1
+    },
+    {
+     "kamera": "totale",
+     "yaw": 3.14,
+     "a": 23.1,
+     "b": 25.03
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "nebel",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "alt",
+     "von": [
+      -1,
+      0,
+      -8
+     ],
+     "nach": [
+      0.4,
+      0,
+      2
+     ],
+     "aktion": "taumeln"
+    },
+    {
+     "id": "vierter",
+     "von": [
+      -2.2,
+      0,
+      -9
+     ],
+     "nach": [
+      -0.8,
+      0,
+      1.2
+     ],
+     "aktion": "taumeln"
+    },
+    {
+     "id": "retter",
+     "mark": [
+      1.6,
+      0,
+      3
+     ],
+     "aktion": "rufen",
+     "blick": "zu:alt"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "scheinwerfer",
+     "pos": [
+      2.5,
+      0,
+      5
+     ],
+     "rot": 3.6
+    }
+   ],
+   "effekte": [],
+   "a": 25.03,
+   "b": 31.03,
+   "shots": [
+    {
+     "kamera": "vorlauf",
+     "yaw": -0.3,
+     "a": 25.03,
+     "b": 28.2
+    },
+    {
+     "kamera": "gesicht",
+     "ziel": "retter",
+     "yaw": 0.6,
+     "a": 28.2,
+     "b": 31.03
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "regen",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.6,
+      0,
+      -4
+     ],
+     "aktion": "graben"
+    },
+    {
+     "id": "ingenieur",
+     "mark": [
+      -1.5,
+      0,
+      -2.5
+     ],
+     "aktion": "zeigen",
+     "blick": "zu:retter"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "effekte": [],
+   "a": 31.03,
+   "b": 34.63,
+   "shots": [
+    {
+     "kamera": "totale",
+     "yaw": 0.4,
+     "a": 31.03,
+     "b": 32.6
+    },
+    {
+     "kamera": "nah",
+     "ziel": "retter",
+     "yaw": -0.15,
+     "a": 32.6,
+     "b": 34.63
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "stollen",
+   "stimmung": "hoffnung",
+   "licht": 0.35,
+   "figuren": [
+    {
+     "id": "luft",
+     "mark": [
+      0,
+      0,
+      -3
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "freude",
+     "lampe": 0.5
+    },
+    {
+     "id": "retter",
+     "von": [
+      0,
+      0,
+      3
+     ],
+     "nach": [
+      0.3,
+      0,
+      -1.6
+     ],
+     "aktion": "laufen",
+     "aktion2": "winken",
+     "ab2": 2.2
+    }
+   ],
+   "effekte": [
+    {
+     "name": "flut",
+     "farbe": "schlamm",
+     "von": 0.45,
+     "bis": 0.45
+    }
+   ],
+   "requisiten": [],
+   "a": 34.63,
+   "b": 38.73,
+   "shots": [
+    {
+     "kamera": "verfolgung",
+     "ziel": "retter",
+     "yaw": 0.35,
+     "a": 34.63,
+     "b": 36.4
+    },
+    {
+     "kamera": "gesicht",
+     "ziel": "luft",
+     "yaw": -0.5,
+     "a": 36.4,
+     "b": 38.73
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "werk",
+   "zeit": "daemmerung",
+   "wetter": "regen",
+   "stimmung": "trauer",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": "mitte",
+     "aktion": "sitzen",
+     "ausdruck": "trauer",
+     "blick": "kamera"
+    },
+    {
+     "id": "ingenieur",
+     "mark": [
+      1.3,
+      0,
+      -1
+     ],
+     "aktion": "nachdenken",
+     "ausdruck": "trauer"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kiste",
+     "pos": [
+      0,
+      0,
+      -0.3
+     ]
+    },
+    {
+     "name": "laterne",
+     "pos": [
+      0.5,
+      0.55,
+      0.1
+     ]
+    }
+   ],
+   "uebergang": "schwarz",
+   "effekte": [],
+   "a": 38.73,
+   "b": 42.53,
+   "shots": [
+    {
+     "kamera": "halbtotale",
+     "yaw": 0.3,
+     "a": 38.73,
+     "b": 40.5
+    },
+    {
+     "kamera": "gesicht",
+     "ziel": "retter",
+     "yaw": 0.15,
+     "a": 40.5,
+     "b": 42.53
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.3,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      -0.7,
+      0,
+      0.2
+     ],
+     "aktion": "sitzen",
+     "lampe": 0.8
+    },
+    {
+     "id": "jung",
+     "mark": [
+      0.6,
+      0,
+      0.6
+     ],
+     "aktion": "hocken",
+     "lampe": 0.5
+    },
+    {
+     "id": "alt",
+     "mark": [
+      0.1,
+      0,
+      -1.2
+     ],
+     "aktion": "liegen"
+    },
+    {
+     "id": "vierter",
+     "mark": [
+      1.4,
+      0,
+      -0.6
+     ],
+     "aktion": "sitzen",
+     "lampe": 0.4
+    }
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "a": 42.53,
+   "b": 47.53,
+   "shots": [
+    {
+     "kamera": "vogel",
+     "yaw": -0.3,
+     "a": 42.53,
+     "b": 45.0
+    },
+    {
+     "kamera": "orbit",
+     "yaw": 0.6,
+     "a": 45.0,
+     "b": 47.53
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.28,
+   "figuren": [
+    {
+     "id": "herbst",
+     "von": [
+      0,
+      0,
+      0.6
+     ],
+     "nach": [
+      0,
+      0,
+      -2.6
+     ],
+     "aktion": "schleichen",
+     "lampe": 1,
+     "danach": "umsehen"
+    }
+   ],
+   "einblendung": {
+    "art": "ort",
+    "text": "„Alter Mann“",
+    "sub": "aufgegebener Teil einer Grube",
+    "a": 47.68,
+    "b": 50.93
+   },
+   "requisiten": [],
+   "effekte": [],
+   "a": 47.53,
+   "b": 52.03,
+   "shots": [
+    {
+     "kamera": "verfolgung",
+     "ziel": "herbst",
+     "yaw": -0.15,
+     "a": 47.53,
+     "b": 49.4
+    },
+    {
+     "kamera": "totale",
+     "yaw": 2.6,
+     "a": 49.4,
+     "b": 52.03
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "hoehle",
+   "stimmung": "trauer",
+   "licht": 0.12,
+   "figuren": [
+    {
+     "id": "jung",
+     "mark": "mitte",
+     "aktion": "zittern",
+     "ausdruck": "angst",
+     "blick": "kamera",
+     "lampe": 0.35
+    }
+   ],
+   "effekte": [
+    {
+     "name": "dunkel",
+     "ab": 1.5
+    }
+   ],
+   "requisiten": [],
+   "a": 52.03,
+   "b": 56.43,
+   "shots": [
+    {
+     "kamera": "gesicht",
+     "ziel": "jung",
+     "yaw": 0.35,
+     "a": 52.03,
+     "b": 54.2
+    },
+    {
+     "kamera": "vertigo",
+     "ziel": "jung",
+     "yaw": -0.5,
+     "a": 54.2,
+     "b": 56.43
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.25,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "wand",
+     "aktion": "klopfen",
+     "blick": "weg",
+     "lampe": 1
+    },
+    {
+     "id": "alt",
+     "mark": [
+      0.9,
+      0,
+      -2.6
+     ],
+     "aktion": "knien",
+     "blick": "zu:herbst",
+     "lampe": 0.4
+    }
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "a": 56.43,
+   "b": 61.23,
+   "shots": [
+    {
+     "kamera": "seitlich",
+     "ziel": "herbst",
+     "yaw": 0.15,
+     "a": 56.43,
+     "b": 58.9
+    },
+    {
+     "kamera": "nah",
+     "ziel": "herbst",
+     "yaw": 2.5,
+     "a": 58.9,
+     "b": 61.23
+    }
+   ]
+  },
+  {
+   "teil": "wendung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.4,
+      0,
+      -4.5
+     ],
+     "aktion": "schieben",
+     "ausdruck": "entschlossen"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "3. November 1963",
+    "sub": "Tag 10",
+    "a": 61.38,
+    "b": 64.63
+   },
+   "effekte": [],
+   "a": 61.23,
+   "b": 65.73,
+   "shots": [
+    {
+     "kamera": "frosch",
+     "ziel": "prop:bohrgeraet",
+     "yaw": -0.3,
+     "a": 61.23,
+     "b": 63.3
+    },
+    {
+     "kamera": "abwaerts",
+     "ziel": [
+      0,
+      0.5,
+      -7
+     ],
+     "yaw": 0.6,
+     "a": 63.3,
+     "b": 65.73
+    }
+   ]
+  },
+  {
+   "teil": "wendung",
+   "ort": "hoehle",
+   "stimmung": "hoffnung",
+   "licht": 0.3,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      -0.5,
+      0,
+      0.3
+     ],
+     "aktion": "jubeln",
+     "lampe": 1
+    },
+    {
+     "id": "jung",
+     "mark": [
+      0.6,
+      0,
+      0.5
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "freude",
+     "lampe": 0.6
+    },
+    {
+     "id": "alt",
+     "mark": [
+      0.1,
+      0,
+      -0.7
+     ],
+     "aktion": "umarmen",
+     "lampe": 0.5
+    }
+   ],
+   "effekte": [
+    {
+     "name": "lichtstrahl",
+     "pos": [
+      0.05,
+      2.7,
+      0
+     ],
+     "laenge": 2.7,
+     "breite": 0.35,
+     "ab": 0.2
+    }
+   ],
+   "uebergang": "blitz",
+   "requisiten": [],
+   "a": 65.73,
+   "b": 69.83,
+   "shots": [
+    {
+     "kamera": "zoom_schock",
+     "yaw": -0.15,
+     "a": 65.73,
+     "b": 67.7
+    },
+    {
+     "kamera": "kranfahrt",
+     "ziel": "herbst",
+     "yaw": 0.35,
+     "a": 67.7,
+     "b": 69.83
+    }
+   ]
+  },
+  {
+   "teil": "wendung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "nebel",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "ingenieur",
+     "mark": "mitte",
+     "aktion": "nachdenken",
+     "ausdruck": "entschlossen",
+     "blick": "kamera"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "effekte": [],
+   "a": 69.83,
+   "b": 73.03,
+   "shots": [
+    {
+     "kamera": "gesicht",
+     "ziel": "ingenieur",
+     "yaw": -0.5,
+     "a": 69.83,
+     "b": 71.3
+    },
+    {
+     "kamera": "kranfahrt",
+     "ziel": [
+      0,
+      0,
+      -7
+     ],
+     "yaw": 0.15,
+     "a": 71.3,
+     "b": 73.03
+    }
+   ]
+  },
+  {
+   "teil": "aufloesung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "hoffnung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.7,
+      0,
+      -1.3
+     ],
+     "aktion": "zeigen",
+     "blick": "links"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kapsel",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "anim": "schweben"
+    },
+    {
+     "name": "scheinwerfer",
+     "pos": [
+      2.2,
+      0,
+      3.5
+     ],
+     "rot": 3.7
+    }
+   ],
+   "einblendung": {
+    "art": "zahl",
+    "text": "38,5 cm",
+    "sub": "breit",
+    "a": 73.18,
+    "b": 76.43
+   },
+   "effekte": [],
+   "a": 73.03,
+   "b": 80.03,
+   "shots": [
+    {
+     "kamera": "detail",
+     "ziel": "prop:kapsel",
+     "yaw": -0.3,
+     "a": 73.03,
+     "b": 76.8
+    },
+    {
+     "kamera": "frosch",
+     "ziel": "prop:kapsel",
+     "yaw": 0.6,
+     "a": 76.8,
+     "b": 80.03
+    }
+   ]
+  },
+  {
+   "teil": "aufloesung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.5,
+      0,
+      -4.2
+     ],
+     "aktion": "schieben"
+    },
+    {
+     "id": "ingenieur",
+     "mark": [
+      -1.6,
+      0,
+      -3
+     ],
+     "aktion": "reden",
+     "blick": "zu:retter"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "effekte": [
+    {
+     "name": "funken",
+     "pos": [
+      0,
+      0.6,
+      -6.6
+     ]
+    }
+   ],
+   "a": 80.03,
+   "b": 83.33,
+   "shots": [
+    {
+     "kamera": "orbit",
+     "yaw": -0.15,
+     "a": 80.03,
+     "b": 81.9
+    },
+    {
+     "kamera": "detail",
+     "ziel": "prop:bohrgeraet",
+     "yaw": 0.35,
+     "a": 81.9,
+     "b": 83.33
+    }
+   ]
+  },
+  {
+   "teil": "aufloesung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "hoffnung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.3,
+      0,
+      0.8
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "freude"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kapsel",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "anim": "hochziehen",
+     "vonY": -2.6,
+     "bisY": 0.15,
+     "dauer": 3.0
+    },
+    {
+     "name": "absperrung",
+     "pos": [
+      0,
+      0,
+      -2.2
+     ]
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "7. November 1963",
+    "sub": "Tag 14",
+    "a": 83.48,
+    "b": 86.73
+   },
+   "effekte": [],
+   "a": 83.33,
+   "b": 88.33,
+   "shots": [
+    {
+     "kamera": "frosch",
+     "ziel": "prop:kapsel",
+     "yaw": -0.5,
+     "a": 83.33,
+     "b": 85.8
+    },
+    {
+     "kamera": "halbtotale",
+     "ziel": "retter",
+     "yaw": 0.15,
+     "a": 85.8,
+     "b": 88.33
+    }
+   ]
+  },
+  {
+   "teil": "aufloesung",
+   "ort": "werk",
+   "zeit": "daemmerung",
+   "wetter": "klar",
+   "stimmung": "triumph",
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "mitte",
+     "aktion": "jubeln",
+     "lampe": 0
+    },
+    {
+     "id": "retter",
+     "mark": [
+      1.0,
+      0,
+      -0.4
+     ],
+     "aktion": "umarmen",
+     "blick": "zu:herbst"
+    },
+    {
+     "id": "jung",
+     "mark": [
+      -1.0,
+      0,
+      -0.6
+     ],
+     "aktion": "winken",
+     "lampe": 0
+    }
+   ],
+   "einblendung": {
+    "art": "zahl",
+    "text": "14 Tage",
+    "sub": "unter der Erde",
+    "a": 88.48,
+    "b": 91.73
+   },
+   "requisiten": [],
+   "effekte": [],
+   "a": 88.33,
+   "b": 95.33,
+   "shots": [
+    {
+     "kamera": "halbtotale",
+     "yaw": -0.3,
+     "a": 88.33,
+     "b": 92.1
+    },
+    {
+     "kamera": "kranfahrt",
+     "yaw": 0.6,
+     "a": 92.1,
+     "b": 95.33
+    }
+   ]
+  },
+  {
+   "teil": "aufloesung",
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "regen",
+   "stimmung": "trauer",
+   "figuren": [
+    {
+     "id": "alt",
+     "mark": "mitte",
+     "aktion": "knien",
+     "ausdruck": "trauer",
+     "blick": "weg",
+     "lampe": 0
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "laterne",
+     "pos": [
+      0.4,
+      0,
+      -0.9
+     ]
+    },
+    {
+     "name": "laterne",
+     "pos": [
+      -0.5,
+      0,
+      -1.1
+     ]
+    }
+   ],
+   "uebergang": "schwarz",
+   "effekte": [],
+   "a": 95.33,
+   "b": 100.13,
+   "shots": [
+    {
+     "kamera": "abwaerts",
+     "yaw": 2.8,
+     "a": 95.33,
+     "b": 97.9
+    },
+    {
+     "kamera": "nah",
+     "yaw": -0.15,
+     "a": 97.9,
+     "b": 100.13
+    }
+   ]
+  },
+  {
+   "teil": "aufloesung",
+   "ort": "wueste",
+   "zeit": "daemmerung",
+   "wetter": "klar",
+   "stimmung": "triumph",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.3,
+      0,
+      0.6
+     ],
+     "aktion": "jubeln"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kapsel",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "anim": "hochziehen",
+     "vonY": -2.6,
+     "bisY": 0.15,
+     "dauer": 3.5
+    },
+    {
+     "name": "scheinwerfer",
+     "pos": [
+      -2.5,
+      0,
+      3
+     ],
+     "rot": 2.6
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "2010 · Chile",
+    "sub": "Mine San José",
+    "a": 100.28,
+    "b": 103.53
+   },
+   "effekte": [],
+   "a": 100.13,
+   "b": 107.93,
+   "shots": [
+    {
+     "kamera": "weit",
+     "yaw": 0.35,
+     "a": 100.13,
+     "b": 102.5
+    },
+    {
+     "kamera": "frosch",
+     "ziel": "prop:kapsel",
+     "yaw": -0.5,
+     "a": 102.5,
+     "b": 105.3
+    },
+    {
+     "kamera": "totale",
+     "yaw": 0.15,
+     "a": 105.3,
+     "b": 107.93
+    }
+   ]
+  },
+  {
+   "teil": "outro",
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.2,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "mitte",
+     "aktion": "hocken",
+     "ausdruck": "erschoepft",
+     "blick": "kamera",
+     "lampe": 0.8
+    }
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "a": 107.93,
+   "b": 113.35,
+   "shots": [
+    {
+     "kamera": "gesicht",
+     "ziel": "herbst",
+     "yaw": -0.3,
+     "a": 107.93,
+     "b": 109.5
+    },
+    {
+     "kamera": "nah",
+     "yaw": 0.6,
+     "a": 109.5,
+     "b": 113.35
+    }
+   ]
+  }
+ ],
+ "outro": {
+  "start": 107.93,
+  "frage": "Hättest du 14 Tage im Dunkeln durchgehalten?",
+  "cta": "Schreib es in die Kommentare 👇"
+ },
+ "cover": {
+  "t": 63.48,
+  "text": "14 Tage lebendig begraben"
+ },
+ "ton": {
+  "schnitt": {
+   "offset": 0.25,
+   "gaps": [
+    [
+     55.75,
+     0.5
+    ],
+    [
+     98.7,
+     0.6
+    ]
+   ]
+  },
+  "stimme_dauer": 108.96
+ },
+ "treffer": 0.973
+}

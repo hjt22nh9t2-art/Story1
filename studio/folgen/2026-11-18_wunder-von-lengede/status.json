@@ -1,0 +1,26 @@
+{
+ "fertig": [
+  "thema",
+  "recherche",
+  "drehbuch",
+  "stimme",
+  "plan",
+  "vorschau"
+ ],
+ "anpassung": {
+  "tts": "datei"
+ },
+ "protokoll": [
+  "Stimme: Speko → Cartesia „Sebastian – Orator“ (sonic-3.5, Tempo 0,9), ElevenLabs nicht freigeschaltet",
+  "2026-11-18 10:27 thema ok",
+  "2026-11-18 10:27 recherche ok",
+  "2026-11-18 10:27 drehbuch ok",
+  "2026-11-18 10:27 stimme ok",
+  "2026-11-18 10:27 plan ok",
+  "2026-11-18 10:28 vorschau ok",
+  "2026-11-18 10:31 plan ok",
+  "2026-11-18 10:34 plan ok",
+  "2026-11-18 10:35 vorschau ok"
+ ],
+ "render_fehler": 0
+}

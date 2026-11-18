@@ -1,0 +1,1481 @@
+{
+ "titel": "14 Tage lebendig begraben: Das Wunder von Lengede",
+ "slug": "wunder-von-lengede",
+ "thema": "Grubenunglück von Lengede 1963 und die Rettung von elf Bergleuten nach 14 Tagen",
+ "kategorie": "Extreme Überlebensgeschichte",
+ "wahre_geschichte": true,
+ "hook_text": "14 Tage lebendig begraben",
+ "figuren": {
+  "herbst": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#d9a98a",
+   "haare": "#2b1f17",
+   "bart": true,
+   "augen": "#3a2a1c",
+   "dreck": 0.8
+  },
+  "jung": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#e6b896",
+   "haare": "#8a6238",
+   "augen": "#3d5a78",
+   "dreck": 0.7
+  },
+  "alt": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#cf9f80",
+   "haare": "#9a9a96",
+   "bart": "#b8b8b2",
+   "augen": "#3a2a1c",
+   "dreck": 0.75
+  },
+  "vierter": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#c58f6e",
+   "haare": "#1d1a18",
+   "augen": "#2a1d14",
+   "dreck": 0.8,
+   "helmFarbe": "#c9c2ae"
+  },
+  "luft": {
+   "typ": "mann",
+   "outfit": "bergmann",
+   "haut": "#e0ad8c",
+   "haare": "#5a3a22",
+   "augen": "#3a2a1c",
+   "dreck": 0.6,
+   "helmFarbe": "#b8b0a0"
+  },
+  "retter": {
+   "typ": "mann",
+   "outfit": "arbeiter",
+   "haut": "#d4a07e",
+   "haare": "#3a2a1e",
+   "augen": "#3a2a1c",
+   "oberteil": "#c7642a",
+   "helmFarbe": "#f0c030"
+  },
+  "ingenieur": {
+   "typ": "mann",
+   "outfit": "anzug",
+   "haut": "#e2b494",
+   "haare": "#2a2622",
+   "brille": true,
+   "kopf": "hut",
+   "helmFarbe": "#2a2a2a"
+  }
+ },
+ "szenen": [
+  {
+   "teil": "hook",
+   "text": "Elf Männer, lebendig begraben – und draußen glaubt kaum noch jemand an sie.",
+   "hervorheben": [
+    "Elf",
+    "begraben"
+   ],
+   "ort": "hoehle",
+   "stimmung": "schock",
+   "licht": 0.22,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "links",
+     "aktion": "hocken",
+     "ausdruck": "erschoepft",
+     "blick": "kamera",
+     "lampe": 0.7
+    },
+    {
+     "id": "jung",
+     "mark": "rechts",
+     "aktion": "kauern",
+     "lampe": 0.4
+    }
+   ],
+   "kamera": [
+    "zoom_schock",
+    {
+     "kamera": "gesicht",
+     "ziel": "herbst"
+    }
+   ],
+   "geraeusche": [
+    "herzschlag"
+   ],
+   "requisiten": [],
+   "effekte": []
+  },
+  {
+   "teil": "einleitung",
+   "text": "24. Oktober 1963. Lengede in Niedersachsen. Die Eisenerzgrube Mathilde.",
+   "hervorheben": [
+    "1963"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "nebel",
+   "stimmung": "ruhig",
+   "figuren": [
+    {
+     "id": "alt",
+     "von": [
+      -2,
+      0,
+      6
+     ],
+     "nach": [
+      -4.5,
+      0,
+      -10
+     ],
+     "aktion": "laufen"
+    },
+    {
+     "id": "vierter",
+     "von": [
+      -1.2,
+      0,
+      7
+     ],
+     "nach": [
+      -3.6,
+      0,
+      -9
+     ],
+     "aktion": "laufen"
+    }
+   ],
+   "kamera": [
+    "weit",
+    {
+     "kamera": "verfolgung",
+     "ziel": "alt"
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "24. Oktober 1963",
+    "sub": "Lengede · Niedersachsen"
+   },
+   "uebergang": "schwarz",
+   "requisiten": [],
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "einleitung",
+   "text": "129 Bergleute arbeiten unter Tage. Eine ganz normale Schicht.",
+   "hervorheben": [
+    "129"
+   ],
+   "ort": "stollen",
+   "stimmung": "ruhig",
+   "figuren": [
+    {
+     "id": "herbst",
+     "von": "hinten",
+     "nach": [
+      0,
+      0,
+      1.5
+     ],
+     "aktion": "schieben"
+    },
+    {
+     "id": "jung",
+     "von": [
+      0.6,
+      0,
+      -9
+     ],
+     "nach": [
+      0.6,
+      0,
+      -0.5
+     ],
+     "aktion": "laufen"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "lore",
+     "pos": [
+      0,
+      0,
+      -5.4
+     ],
+     "anim": "fahren",
+     "strecke": 5.2
+    }
+   ],
+   "kamera": [
+    "vorlauf",
+    {
+     "kamera": "seitlich",
+     "ziel": "jung"
+    }
+   ],
+   "einblendung": {
+    "art": "zahl",
+    "text": "129",
+    "sub": "Bergleute unter Tage"
+   },
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "einleitung",
+   "text": "Über ihnen liegt ein riesiger Klärteich voller Wasser und Schlamm.",
+   "hervorheben": [
+    "Klärteich"
+   ],
+   "ort": "stollen",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "spannung",
+   "effekte": [
+    {
+     "name": "wasserstrahl",
+     "pos": [
+      0.4,
+      0,
+      -3.2
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "halbtotale",
+     "ziel": "jung",
+     "yaw": 0.3
+    },
+    {
+     "kamera": "kranfahrt",
+     "ziel": "herbst"
+    }
+   ],
+   "geraeusche": [
+    "ticken"
+   ],
+   "requisiten": [],
+   "licht": 0.9,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      0.2,
+      0,
+      -0.5
+     ],
+     "aktion": "graben"
+    },
+    {
+     "id": "jung",
+     "mark": [
+      -0.5,
+      0,
+      -2.2
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "angst"
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "text": "Dann bricht der Teich ein.",
+   "hervorheben": [
+    "bricht"
+   ],
+   "ort": "stollen",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "schock",
+   "effekte": [
+    {
+     "name": "beben",
+     "staerke": 1.3
+    },
+    "flackern",
+    {
+     "name": "wasserstrahl",
+     "pos": [
+      0,
+      0,
+      -3
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "zoom_schock",
+     "ziel": "herbst"
+    }
+   ],
+   "uebergang": "blitz",
+   "geraeusche": [
+    "grollen"
+   ],
+   "requisiten": [],
+   "licht": 1,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      0,
+      0,
+      -0.6
+     ],
+     "aktion": "erschrecken",
+     "blick": "kamera"
+    },
+    {
+     "id": "jung",
+     "mark": [
+      0.6,
+      0,
+      -2.4
+     ],
+     "aktion": "erschrecken"
+    }
+   ]
+  },
+  {
+   "teil": "spannung",
+   "text": "Fast eine halbe Million Kubikmeter Wasser und Schlamm stürzen in die Stollen.",
+   "hervorheben": [
+    "halbe",
+    "Million"
+   ],
+   "ort": "stollen",
+   "stimmung": "schock",
+   "licht": 0.8,
+   "figuren": [
+    {
+     "id": "herbst",
+     "von": [
+      0,
+      0,
+      -6
+     ],
+     "nach": [
+      0,
+      0,
+      4
+     ],
+     "aktion": "rennen"
+    },
+    {
+     "id": "jung",
+     "von": [
+      0.5,
+      0,
+      -8
+     ],
+     "nach": [
+      0.5,
+      0,
+      3
+     ],
+     "aktion": "rennen"
+    }
+   ],
+   "effekte": [
+    {
+     "name": "flut",
+     "farbe": "schlamm",
+     "welle": true,
+     "start": -22,
+     "ziel": 6,
+     "von": -0.1,
+     "bis": 0.7
+    },
+    "flackern"
+   ],
+   "kamera": [
+    {
+     "kamera": "vorlauf",
+     "ziel": "herbst"
+    },
+    {
+     "kamera": "totale",
+     "yaw": 3.14
+    }
+   ],
+   "uebergang": "zoom",
+   "requisiten": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "79 Männer retten sich nach oben. Für die anderen beginnt ein Wettlauf gegen die Zeit.",
+   "hervorheben": [
+    "79",
+    "Wettlauf"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "nebel",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "alt",
+     "von": [
+      -1,
+      0,
+      -8
+     ],
+     "nach": [
+      0.4,
+      0,
+      2
+     ],
+     "aktion": "taumeln"
+    },
+    {
+     "id": "vierter",
+     "von": [
+      -2.2,
+      0,
+      -9
+     ],
+     "nach": [
+      -0.8,
+      0,
+      1.2
+     ],
+     "aktion": "taumeln"
+    },
+    {
+     "id": "retter",
+     "mark": [
+      1.6,
+      0,
+      3
+     ],
+     "aktion": "rufen",
+     "blick": "zu:alt"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "scheinwerfer",
+     "pos": [
+      2.5,
+      0,
+      5
+     ],
+     "rot": 3.6
+    }
+   ],
+   "kamera": [
+    "vorlauf",
+    {
+     "kamera": "gesicht",
+     "ziel": "retter"
+    }
+   ],
+   "geraeusche": [
+    "alarm"
+   ],
+   "effekte": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Tag und Nacht wird gepumpt, gebohrt und gesucht.",
+   "hervorheben": [
+    "Tag",
+    "Nacht"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "regen",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.6,
+      0,
+      -4
+     ],
+     "aktion": "graben"
+    },
+    {
+     "id": "ingenieur",
+     "mark": [
+      -1.5,
+      0,
+      -2.5
+     ],
+     "aktion": "zeigen",
+     "blick": "zu:retter"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "totale",
+     "yaw": 0.4
+    },
+    {
+     "kamera": "nah",
+     "ziel": "retter"
+    }
+   ],
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Nach über einer Woche finden Retter drei Überlebende in einer Luftblase.",
+   "hervorheben": [
+    "drei",
+    "Luftblase"
+   ],
+   "ort": "stollen",
+   "stimmung": "hoffnung",
+   "licht": 0.35,
+   "figuren": [
+    {
+     "id": "luft",
+     "mark": [
+      0,
+      0,
+      -3
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "freude",
+     "lampe": 0.5
+    },
+    {
+     "id": "retter",
+     "von": [
+      0,
+      0,
+      3
+     ],
+     "nach": [
+      0.3,
+      0,
+      -1.6
+     ],
+     "aktion": "laufen",
+     "aktion2": "winken",
+     "ab2": 2.2
+    }
+   ],
+   "effekte": [
+    {
+     "name": "flut",
+     "farbe": "schlamm",
+     "von": 0.45,
+     "bis": 0.45
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "verfolgung",
+     "ziel": "retter"
+    },
+    {
+     "kamera": "gesicht",
+     "ziel": "luft"
+    }
+   ],
+   "requisiten": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Doch für die übrigen Vermissten schwindet die Hoffnung von Tag zu Tag.",
+   "hervorheben": [
+    "Hoffnung"
+   ],
+   "ort": "werk",
+   "zeit": "daemmerung",
+   "wetter": "regen",
+   "stimmung": "trauer",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": "mitte",
+     "aktion": "sitzen",
+     "ausdruck": "trauer",
+     "blick": "kamera"
+    },
+    {
+     "id": "ingenieur",
+     "mark": [
+      1.3,
+      0,
+      -1
+     ],
+     "aktion": "nachdenken",
+     "ausdruck": "trauer"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kiste",
+     "pos": [
+      0,
+      0,
+      -0.3
+     ]
+    },
+    {
+     "name": "laterne",
+     "pos": [
+      0.5,
+      0.55,
+      0.1
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "halbtotale",
+     "yaw": 0.3
+    },
+    {
+     "kamera": "gesicht",
+     "ziel": "retter"
+    }
+   ],
+   "uebergang": "schwarz",
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Was niemand ahnt: Elf Männer haben sich in einen alten, verlassenen Teil der Grube gerettet.",
+   "hervorheben": [
+    "Elf",
+    "verlassenen"
+   ],
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.3,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      -0.7,
+      0,
+      0.2
+     ],
+     "aktion": "sitzen",
+     "lampe": 0.8
+    },
+    {
+     "id": "jung",
+     "mark": [
+      0.6,
+      0,
+      0.6
+     ],
+     "aktion": "hocken",
+     "lampe": 0.5
+    },
+    {
+     "id": "alt",
+     "mark": [
+      0.1,
+      0,
+      -1.2
+     ],
+     "aktion": "liegen"
+    },
+    {
+     "id": "vierter",
+     "mark": [
+      1.4,
+      0,
+      -0.6
+     ],
+     "aktion": "sitzen",
+     "lampe": 0.4
+    }
+   ],
+   "kamera": [
+    "vogel",
+    "orbit"
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Bergleute nennen so einen Ort den Alten Mann. Eine Sackgasse.",
+   "hervorheben": [
+    "Alten",
+    "Mann",
+    "Sackgasse"
+   ],
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.28,
+   "figuren": [
+    {
+     "id": "herbst",
+     "von": [
+      0,
+      0,
+      0.6
+     ],
+     "nach": [
+      0,
+      0,
+      -2.6
+     ],
+     "aktion": "schleichen",
+     "lampe": 1,
+     "danach": "umsehen"
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "verfolgung",
+     "ziel": "herbst"
+    },
+    {
+     "kamera": "totale",
+     "yaw": 2.6
+    }
+   ],
+   "einblendung": {
+    "art": "ort",
+    "text": "„Alter Mann“",
+    "sub": "aufgegebener Teil einer Grube"
+   },
+   "requisiten": [],
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Dunkel. Kalt. Und kein Weg nach draußen.",
+   "hervorheben": [
+    "kein",
+    "Weg"
+   ],
+   "ort": "hoehle",
+   "stimmung": "trauer",
+   "licht": 0.12,
+   "figuren": [
+    {
+     "id": "jung",
+     "mark": "mitte",
+     "aktion": "zittern",
+     "ausdruck": "angst",
+     "blick": "kamera",
+     "lampe": 0.35
+    }
+   ],
+   "effekte": [
+    {
+     "name": "dunkel",
+     "ab": 1.5
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "gesicht",
+     "ziel": "jung"
+    },
+    {
+     "kamera": "vertigo",
+     "ziel": "jung"
+    }
+   ],
+   "pause_danach": 0.5,
+   "requisiten": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "spannung",
+   "text": "Also klopfen sie. Immer wieder. In der Hoffnung, dass irgendjemand sie hört.",
+   "hervorheben": [
+    "klopfen"
+   ],
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.25,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "wand",
+     "aktion": "klopfen",
+     "blick": "weg",
+     "lampe": 1
+    },
+    {
+     "id": "alt",
+     "mark": [
+      0.9,
+      0,
+      -2.6
+     ],
+     "aktion": "knien",
+     "blick": "zu:herbst",
+     "lampe": 0.4
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "seitlich",
+     "ziel": "herbst"
+    },
+    {
+     "kamera": "nah",
+     "ziel": "herbst",
+     "yaw": 2.5
+    }
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "wendung",
+   "text": "3. November. Eine Probebohrung trifft genau ihren Hohlraum.",
+   "hervorheben": [
+    "genau"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.4,
+      0,
+      -4.5
+     ],
+     "aktion": "schieben",
+     "ausdruck": "entschlossen"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "frosch",
+     "ziel": "prop:bohrgeraet"
+    },
+    {
+     "kamera": "abwaerts",
+     "ziel": [
+      0,
+      0.5,
+      -7
+     ]
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "3. November 1963",
+    "sub": "Tag 10"
+   },
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "wendung",
+   "text": "Und dann: Klopfzeichen von unten. Elf Männer leben!",
+   "hervorheben": [
+    "Klopfzeichen",
+    "leben"
+   ],
+   "ort": "hoehle",
+   "stimmung": "hoffnung",
+   "licht": 0.3,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": [
+      -0.5,
+      0,
+      0.3
+     ],
+     "aktion": "jubeln",
+     "lampe": 1
+    },
+    {
+     "id": "jung",
+     "mark": [
+      0.6,
+      0,
+      0.5
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "freude",
+     "lampe": 0.6
+    },
+    {
+     "id": "alt",
+     "mark": [
+      0.1,
+      0,
+      -0.7
+     ],
+     "aktion": "umarmen",
+     "lampe": 0.5
+    }
+   ],
+   "effekte": [
+    {
+     "name": "lichtstrahl",
+     "pos": [
+      0.05,
+      2.7,
+      0
+     ],
+     "laenge": 2.7,
+     "breite": 0.35,
+     "ab": 0.2
+    }
+   ],
+   "kamera": [
+    "zoom_schock",
+    {
+     "kamera": "kranfahrt",
+     "ziel": "herbst"
+    }
+   ],
+   "uebergang": "blitz",
+   "geraeusche": [
+    "klopfen",
+    "einschlag"
+   ],
+   "requisiten": []
+  },
+  {
+   "teil": "wendung",
+   "text": "Doch wie holt man sie durch dutzende Meter Gestein nach oben?",
+   "hervorheben": [
+    "oben"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "nebel",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "ingenieur",
+     "mark": "mitte",
+     "aktion": "nachdenken",
+     "ausdruck": "entschlossen",
+     "blick": "kamera"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "gesicht",
+     "ziel": "ingenieur"
+    },
+    {
+     "kamera": "kranfahrt",
+     "ziel": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "aufloesung",
+   "text": "Die Antwort: eine Rettungskapsel, nur 38,5 Zentimeter breit. Die Dahlbusch-Bombe.",
+   "hervorheben": [
+    "Dahlbusch-Bombe"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "hoffnung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      2.4,
+      0,
+      -2.8
+     ],
+     "aktion": "zeigen",
+     "blick": "links"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kapsel",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "anim": "schweben"
+    },
+    {
+     "name": "scheinwerfer",
+     "pos": [
+      2.2,
+      0,
+      3.5
+     ],
+     "rot": 3.7
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "detail",
+     "ziel": "prop:kapsel"
+    },
+    {
+     "kamera": "frosch",
+     "ziel": "prop:kapsel"
+    }
+   ],
+   "einblendung": {
+    "art": "zahl",
+    "text": "38,5 cm",
+    "sub": "breit"
+   },
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "aufloesung",
+   "text": "Ein neues Bohrloch wird gebohrt, genau zu den Eingeschlossenen.",
+   "hervorheben": [
+    "neues",
+    "Bohrloch"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "spannung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.5,
+      0,
+      -4.2
+     ],
+     "aktion": "schieben"
+    },
+    {
+     "id": "ingenieur",
+     "mark": [
+      -1.6,
+      0,
+      -3
+     ],
+     "aktion": "reden",
+     "blick": "zu:retter"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "bohrgeraet",
+     "pos": [
+      0,
+      0,
+      -7
+     ]
+    }
+   ],
+   "effekte": [
+    {
+     "name": "funken",
+     "pos": [
+      0,
+      0.6,
+      -6.6
+     ]
+    }
+   ],
+   "kamera": [
+    "orbit",
+    {
+     "kamera": "detail",
+     "ziel": "prop:bohrgeraet"
+    }
+   ],
+   "geraeusche": []
+  },
+  {
+   "teil": "aufloesung",
+   "text": "7. November. Einer nach dem anderen fährt in der engen Röhre nach oben.",
+   "hervorheben": [
+    "Einer",
+    "anderen"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "klar",
+   "stimmung": "hoffnung",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.3,
+      0,
+      0.8
+     ],
+     "aktion": "aufschauen",
+     "ausdruck": "freude"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kapsel",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "anim": "hochziehen",
+     "vonY": -2.6,
+     "bisY": 0.15,
+     "dauer": 3.0
+    },
+    {
+     "name": "absperrung",
+     "pos": [
+      0,
+      0,
+      -2.2
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "frosch",
+     "ziel": "prop:kapsel"
+    },
+    {
+     "kamera": "halbtotale",
+     "ziel": "retter"
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "7. November 1963",
+    "sub": "Tag 14"
+   },
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "aufloesung",
+   "text": "Nach 14 Tagen unter der Erde sind alle elf gerettet. Man nennt es: das Wunder von Lengede.",
+   "hervorheben": [
+    "Wunder",
+    "Lengede"
+   ],
+   "ort": "werk",
+   "zeit": "daemmerung",
+   "wetter": "klar",
+   "stimmung": "triumph",
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "mitte",
+     "aktion": "jubeln",
+     "lampe": 0
+    },
+    {
+     "id": "retter",
+     "mark": [
+      1.0,
+      0,
+      -0.4
+     ],
+     "aktion": "umarmen",
+     "blick": "zu:herbst"
+    },
+    {
+     "id": "jung",
+     "mark": [
+      -1.0,
+      0,
+      -0.6
+     ],
+     "aktion": "winken",
+     "lampe": 0
+    }
+   ],
+   "kamera": [
+    "halbtotale",
+    "kranfahrt"
+   ],
+   "einblendung": {
+    "art": "zahl",
+    "text": "14 Tage",
+    "sub": "unter der Erde"
+   },
+   "geraeusche": [
+    "jubel"
+   ],
+   "requisiten": [],
+   "effekte": []
+  },
+  {
+   "teil": "aufloesung",
+   "text": "Für 29 Bergleute kam an diesem Unglück jede Hilfe zu spät.",
+   "hervorheben": [
+    "29"
+   ],
+   "ort": "werk",
+   "zeit": "nacht",
+   "wetter": "regen",
+   "stimmung": "trauer",
+   "figuren": [
+    {
+     "id": "alt",
+     "mark": "mitte",
+     "aktion": "knien",
+     "ausdruck": "trauer",
+     "blick": "weg",
+     "lampe": 0
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "laterne",
+     "pos": [
+      0.4,
+      0,
+      -0.9
+     ]
+    },
+    {
+     "name": "laterne",
+     "pos": [
+      -0.5,
+      0,
+      -1.1
+     ]
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "abwaerts",
+     "yaw": 2.8
+    }
+   ],
+   "uebergang": "schwarz",
+   "pause_danach": 0.6,
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "aufloesung",
+   "text": "Und die Kapsel? Eine Weiterentwicklung holte 2010 in Chile 33 Bergleute aus rund 700 Metern Tiefe.",
+   "hervorheben": [
+    "Chile",
+    "33"
+   ],
+   "ort": "wueste",
+   "zeit": "daemmerung",
+   "wetter": "klar",
+   "stimmung": "triumph",
+   "figuren": [
+    {
+     "id": "retter",
+     "mark": [
+      1.3,
+      0,
+      0.6
+     ],
+     "aktion": "jubeln"
+    }
+   ],
+   "requisiten": [
+    {
+     "name": "kapsel",
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "anim": "hochziehen",
+     "vonY": -2.6,
+     "bisY": 0.15,
+     "dauer": 3.5
+    },
+    {
+     "name": "scheinwerfer",
+     "pos": [
+      -2.5,
+      0,
+      3
+     ],
+     "rot": 2.6
+    }
+   ],
+   "kamera": [
+    "weit",
+    {
+     "kamera": "frosch",
+     "ziel": "prop:kapsel"
+    }
+   ],
+   "einblendung": {
+    "art": "datum",
+    "text": "2010 · Chile",
+    "sub": "Mine San José"
+   },
+   "effekte": [],
+   "geraeusche": []
+  },
+  {
+   "teil": "outro",
+   "text": "Hättest du 14 Tage im Dunkeln durchgehalten?",
+   "hervorheben": [
+    "durchgehalten"
+   ],
+   "ort": "hoehle",
+   "stimmung": "spannung",
+   "licht": 0.2,
+   "figuren": [
+    {
+     "id": "herbst",
+     "mark": "mitte",
+     "aktion": "hocken",
+     "ausdruck": "erschoepft",
+     "blick": "kamera",
+     "lampe": 0.8
+    }
+   ],
+   "kamera": [
+    {
+     "kamera": "gesicht",
+     "ziel": "herbst"
+    }
+   ],
+   "requisiten": [],
+   "effekte": [],
+   "geraeusche": []
+  }
+ ],
+ "outro_frage": "Hättest du 14 Tage im Dunkeln durchgehalten?",
+ "fakten_im_video": [
+  {
+   "aussage": "Am 24. Oktober 1963 brach in Lengede ein Klärteich ein; fast 500.000 Kubikmeter Wasser und Schlamm strömten in die Eisenerzgrube Mathilde.",
+   "quelle": "https://www.evangelisch.de/inhalte/221585/05-10-2023/das-wunder-von-lengede"
+  },
+  {
+   "aussage": "129 Bergleute waren unter Tage, 79 konnten sich sofort retten.",
+   "quelle": "https://en.wikipedia.org/wiki/Lengede"
+  },
+  {
+   "aussage": "Nach rund acht Tagen wurden drei Männer aus einer Luftblase gerettet.",
+   "quelle": "https://www.t-online.de/nachrichten/panorama/wissen/geschichte/id_66131962/wunder-von-lengede-14-maenner-ueberlebten-hoelle-von-schacht-mathilde-.html"
+  },
+  {
+   "aussage": "Elf Männer hatten sich in einen „Alten Mann“ (aufgegebener Grubenteil, Sackgasse) gerettet; am 3. November traf eine Probebohrung sie, sie machten durch Klopfzeichen auf sich aufmerksam.",
+   "quelle": "https://www.evangelisch.de/inhalte/221585/05-10-2023/das-wunder-von-lengede"
+  },
+  {
+   "aussage": "Am 7. November 1963 wurden die elf Männer nach 14 Tagen mit der Dahlbusch-Bombe gerettet.",
+   "quelle": "https://en.wikipedia.org/wiki/Wunder_von_Lengede"
+  },
+  {
+   "aussage": "Die Dahlbusch-Bombe ist eine torpedoförmige Rettungskapsel, etwa 2,5 Meter lang und 38,5 Zentimeter breit.",
+   "quelle": "https://en.wikipedia.org/wiki/Dahlbusch_Bomb"
+  },
+  {
+   "aussage": "29 Bergleute kamen ums Leben.",
+   "quelle": "https://www.t-online.de/nachrichten/panorama/wissen/geschichte/id_66131962/wunder-von-lengede-14-maenner-ueberlebten-hoelle-von-schacht-mathilde-.html"
+  },
+  {
+   "aussage": "Die Fénix-Kapseln der Rettung in Chile 2010 (33 Bergleute, Mine San José) waren eine Weiterentwicklung der Dahlbusch-Bombe.",
+   "quelle": "https://en.wikipedia.org/wiki/Dahlbusch_Bomb"
+  }
+ ],
+ "dramatisierung": [
+  "Aussehen, Gesten und Gefühle der Bergleute und Retter sind nachgestellt; die Figuren sind keine Porträts realer Personen.",
+  "Die Bilder vom Einbruch des Klärteichs, von der Flutwelle im Stollen und vom Hohlraum sind künstlerische Darstellungen.",
+  "„Dunkel. Kalt.“ beschreibt die Lage atmosphärisch und ist nicht im Einzelnen belegt.",
+  "Die Tiefe in Chile (rund 700 Meter) ist ein gerundeter Wert."
+ ],
+ "quellen": [
+  {
+   "titel": "evangelisch.de – Das Wunder von Lengede (2023)",
+   "url": "https://www.evangelisch.de/inhalte/221585/05-10-2023/das-wunder-von-lengede"
+  },
+  {
+   "titel": "t-online – Wunder von Lengede: 14 Männer überlebten",
+   "url": "https://www.t-online.de/nachrichten/panorama/wissen/geschichte/id_66131962/wunder-von-lengede-14-maenner-ueberlebten-hoelle-von-schacht-mathilde-.html"
+  },
+  {
+   "titel": "Wikipedia (en) – Wunder von Lengede",
+   "url": "https://en.wikipedia.org/wiki/Wunder_von_Lengede"
+  },
+  {
+   "titel": "Wikipedia (en) – Lengede",
+   "url": "https://en.wikipedia.org/wiki/Lengede"
+  },
+  {
+   "titel": "Wikipedia (en) – Dahlbusch Bomb",
+   "url": "https://en.wikipedia.org/wiki/Dahlbusch_Bomb"
+  },
+  {
+   "titel": "Haus der Pressefreiheit – Grubenunglück in Lengede",
+   "url": "https://www.hausderpressefreiheit.de/Home/Geschichte(n)-im-Spiegel-der-Medien/Zeitstrahl/1950-1989/1960-1969/1963/Grubenungl%C3%BCck-in-Lengede.html"
+  }
+ ],
+ "beschreibung": "1963 bricht über einer Grube in Lengede ein Klärteich ein. Elf Männer überleben 14 Tage im Dunkeln – in einer Sackgasse, von der niemand weiß. Wie man sie rettete, rettet bis heute Leben. Hättest du durchgehalten?",
+ "hashtags": [
+  "#wahregeschichte",
+  "#lengede",
+  "#geschichte",
+  "#überleben",
+  "#bergbau",
+  "#storytime",
+  "#wunder",
+  "#fyp",
+  "#deutschland"
+ ],
+ "zusammenfassung": "Am 24. Oktober 1963 bricht in Lengede ein Klärteich ein, fast eine halbe Million Kubikmeter Wasser und Schlamm fluten die Eisenerzgrube Mathilde. 79 von 129 Bergleuten retten sich sofort, nach über einer Woche werden drei Männer aus einer Luftblase geborgen. Als kaum noch jemand hofft, trifft am 3. November eine Probebohrung einen alten, verlassenen Grubenteil: Elf Männer leben. Am 7. November werden sie mit der nur 38,5 Zentimeter breiten Dahlbusch-Bombe gerettet – das Wunder von Lengede. 29 Bergleute sterben. Eine Weiterentwicklung der Kapsel rettet 2010 in Chile 33 Bergleute."
+}
