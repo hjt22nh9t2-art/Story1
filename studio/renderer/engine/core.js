@@ -6,6 +6,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
 
 export const W = 1080, H = 1920, FPS = 30;
 // Sicherer Bereich für TikTok: oben Suchleiste, unten Beschreibung/Musik, rechts Buttons
@@ -76,16 +77,18 @@ export function createEngine() {
   const renderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: false, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(1); renderer.setSize(W, H, false);
   renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
   const camera = new THREE.PerspectiveCamera(40, W / H, 0.05, 900);
-  const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: 4 });
+  const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: (window.STUDIO_MSAA ?? 0) });
   const composer = new EffectComposer(renderer, rt);
   const renderPass = new RenderPass(new THREE.Scene(), camera); composer.addPass(renderPass);
   const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.5, 0.6, 0.86); composer.addPass(bloom);
   composer.addPass(new OutputPass());
   const grade = new ShaderPass(GradeShader); composer.addPass(grade);
+  // Kantenglättung: FXAA (günstig) statt Multisampling – auf CPU-Rendering ≈ 40 % schneller
+  if (!(window.STUDIO_MSAA > 0)) { const fxaa = new ShaderPass(FXAAShader); fxaa.uniforms.resolution.value.set(1 / W, 1 / H); composer.addPass(fxaa); }
 
   const out = document.createElement('canvas'); out.width = W; out.height = H; document.body.appendChild(out);
   const ctx = out.getContext('2d');

@@ -37,7 +37,7 @@ async function openPage() {
   const page = await browser.newPage({ viewport: { width: 400, height: 600 } });
   page.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') console.log('[page]', m.text()); });
   page.on('pageerror', (e) => { pageErrors++; console.log('[pageerror]', e.message); });
-  await page.goto(`http://localhost:${port}/renderer/player.html?plan=/${rel}/plan.json`);
+  await page.goto(`http://localhost:${port}/renderer/player.html?plan=/${rel}/plan.json&msaa=${opt('msaa', 0)}`);
   await page.waitForFunction(() => window.ready || window.initError, null, { timeout: 300000 });
   const err = await page.evaluate(() => window.initError); if (err) throw new Error(err);
   return page;

@@ -87,7 +87,7 @@ function updateFigures(S, t, l, d, cam) {
 function figHead(fig) { fig.F.root.updateMatrixWorld(true); return fig.F.head.getWorldPosition(v3(0, 0, 0)); }
 function focusOf(S, shot) {
   const z = shot.ziel;
-  if (z && typeof z === 'string' && z.startsWith('prop:')) { const p = S.props.find((x) => x.cfg.name === z.slice(5)); if (p) { p.o.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(p.o); const c = b.getCenter(v3(0, 0, 0)); if (b.max.y - b.min.y > 6) c.y = b.min.y + 1.5; return c; } }
+  if (z && typeof z === 'string' && z.startsWith('prop:')) { const p = S.props.find((x) => x.cfg.name === z.slice(5)); if (p) { p.o.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(p.o); const c = p.o.getWorldPosition(v3(0, 0, 0)); c.y = Math.min(b.min.y + 1.2, (b.min.y + b.max.y) / 2); return c; } }
   if (Array.isArray(z)) return v3(z[0], z[1], z[2]);
   if (z && S.set.marks[z]) return markPos(S.set, z).add(v3(0, 1.2, 0));
   const figs = z ? S.figs.filter((f) => f.cfg.id === z) : S.figs;
@@ -203,7 +203,7 @@ export function renderFrame(t, type = 'image/jpeg') {
   return E.out.toDataURL(type, 0.93);
 }
 
-export function debugInfo(t) { renderFrame(t); return { cam: E.camera.position.toArray(), fov: E.camera.fov, figs: scenes[sceneAt(t)].figs.map((f) => f.F.root.position.toArray()), info: E.renderer.info.render }; }
+export function debugInfo(t) { renderFrame(t); const S = scenes[sceneAt(t)]; return { props: S.props.map((p) => [p.cfg.name, p.o.position.toArray(), new THREE.Box3().setFromObject(p.o).min.toArray(), new THREE.Box3().setFromObject(p.o).max.toArray()]), tgt: (() => { const sh = (S.sc.shots || []).find((x) => t >= x.a && t < x.b); return [sh, focusOf(S, sh).toArray()]; })(), cam: E.camera.position.toArray(), fov: E.camera.fov, figs: scenes[sceneAt(t)].figs.map((f) => f.F.root.position.toArray()), info: E.renderer.info.render }; }
 
 export function renderCover() {
   const t = plan.cover?.t ?? 1.0; renderFrame(t, 'image/png');

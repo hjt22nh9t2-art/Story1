@@ -74,7 +74,7 @@ export const REQUISITEN = {
   telefon() { const g = new THREE.Group(); g.add(box(0.22, 0.08, 0.2, M(0x111111), 0, 0.04, 0)); const h = box(0.22, 0.05, 0.05, M(0x111111), 0, 0.11, 0); g.add(h); return g; },
   monitor() { const g = new THREE.Group(); g.add(box(0.7, 0.45, 0.05, M(0x111111), 0, 0.5, 0)); const s = new THREE.Mesh(new THREE.PlaneGeometry(0.64, 0.39), new THREE.MeshStandardMaterial({ color: 0x050505, emissive: 0x4a90c0, emissiveIntensity: 1.2 })); s.position.set(0, 0.5, 0.03); g.add(s); g.add(box(0.06, 0.25, 0.06, M(0x222222), 0, 0.15, 0)); return g; },
   scheinwerfer() { const g = new THREE.Group(); const pole = cyl(0.04, 0.05, 2.2, M(0x333333), 8); pole.position.y = 1.1; g.add(pole); const h = box(0.5, 0.4, 0.3, M(0x222222), 0, 2.25, 0); g.add(h);
-    const gl = glowSprite(0xfff0d8, 1.5); gl.position.set(0, 2.25, 0.2); g.add(gl); const sp = new THREE.SpotLight(0xfff0d8, 80, 20, 0.6, 0.5, 1.5); sp.position.set(0, 2.25, 0.2); sp.target.position.set(0, 0, 6); g.add(sp, sp.target);
+    const gl = glowSprite(0xfff0d8, 1.5); gl.position.set(0, 2.25, 0.2); g.add(gl); const sp = new THREE.SpotLight(0xfff0d8, 40, 20, 0.6, 0.5, 1.5); sp.position.set(0, 2.25, 0.2); sp.target.position.set(0, 0, 6); g.add(sp, sp.target);
     const cone = makeBeamCone(7, 2.2, 0xfff0d8); cone.position.set(0, 2.25, 0.2); cone.rotation.x = -Math.PI / 2 + 0.33; cone.material.uniforms.uInt.value = 0.2; g.add(cone); return g; },
 };
 
